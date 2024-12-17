@@ -6,7 +6,9 @@ import tiktoken
 import math
 
 def main():
-    file_name = 'abstract_algebra'
+    # file_name = 'abstract_algebra'
+    # file_name = 'anatomy'
+    file_name = 'college_biology'
     answerDirect(file_name)
     answerAfterThinking(file_name)
 
@@ -28,6 +30,7 @@ def answerDirect(file_name):
     print(message_system)
     # assistant_content = "{'sol': '"
     try:
+        result_dict = {}
         for model_name in model_names:
             for index, row in df.iterrows():
                 try:
@@ -84,10 +87,17 @@ def answerDirect(file_name):
 
                     for option, total_probability in merged.items():
                         print(f"{option}  probability  {total_probability}")
-                        df.at[index, option] = str(total_probability)
+                        if index not in result_dict:
+                            result_dict[index] = {}
+                        result_dict[index][option] = str(total_probability)
                 except Exception as row_e:
                     print(f"Error processing index {index} with model {model_name}: {row_e}")
-                    df.at[index, 'processing_error'] = str(row_e)
+                    if index not in result_dict:
+                        result_dict[index] = {'processing_error': str(row_e)}
+        for index, results in result_dict.items():
+            for option, value in results.items():
+                df.at[index, option] = value
+
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
     finally:
@@ -111,6 +121,7 @@ def answerAfterThinking(file_name):
     print(message_system)
     # assistant_content = "{'sol': '"
     try:
+        result_dict = {}
         for model_name in model_names:
             for index, row in df.iterrows():
                 try:
@@ -167,10 +178,17 @@ def answerAfterThinking(file_name):
 
                     for option, total_probability in merged.items():
                         print(f"{option}  probability  {total_probability}")
-                        df.at[index, option] = str(total_probability)
+                        if index not in result_dict:
+                            result_dict[index] = {}
+                        result_dict[index][option] = str(total_probability)
                 except Exception as row_e:
                     print(f"Error processing index {index} with model {model_name}: {row_e}")
-                    df.at[index, 'processing_error'] = str(row_e)
+                    if index not in result_dict:
+                        result_dict[index] = {'processing_error': str(row_e)}
+        for index, results in result_dict.items():
+            for option, value in results.items():
+                df.at[index, option] = value
+
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
     finally:
