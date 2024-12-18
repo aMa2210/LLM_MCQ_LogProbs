@@ -1,6 +1,8 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
-from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy
+from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getDf,getCorrectDf
+import itertools
 
 def main():
     filenames_direct = ['Results/abstract_algebra_LogProbs_Direct.csv',
@@ -12,8 +14,47 @@ def main():
     # plotChosenProb(filenames_direct,filenames_think)
     # plotNotChosenProb(filenames_direct,filenames_think)
     # plotAccuracy(filenames_direct,filenames_think)
-    plotWrongAnswerProbChange(filenames_direct, filenames_think)
+    # plotWrongAnswerProbChange(filenames_direct, filenames_think)
     # plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
+    # plotHistogramsAll(filenames_direct, filenames_think)
+    # plotHistogramsCorrect(filenames_direct, filenames_think)
+    plotHistogramsWrong(filenames_direct, filenames_think)
+
+def plotHistogramsAll(filenames_direct,filenames_think):
+    logprob_dir = []
+    logprob_think = []
+    for filename_dir, filename_think in zip(filenames_direct, filenames_think):
+        df_dir, df_think = getDf(filename_dir, filename_think)
+        logprob_dir.append(df_dir[['a', 'b', 'c', 'd']].max(axis=1))
+        logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
+    logprob_dir = list(itertools.chain(*logprob_dir))
+    logprob_think = list(itertools.chain(*logprob_think))
+    plotHistograms(logprob_dir,'Probability Distribution of Answers for All Questions(Direct)')
+    plotHistograms(logprob_think,'Probability Distribution of Answers for All Questions(After Thinking)')
+
+def plotHistogramsCorrect(filenames_direct,filenames_think):
+    logprob_dir = []
+    logprob_think = []
+    for filename_dir, filename_think in zip(filenames_direct, filenames_think):
+        df_dir, df_think = getCorrectDf(filename_dir, filename_think)
+        logprob_dir.append(df_dir[['a', 'b', 'c', 'd']].max(axis=1))
+        logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
+    logprob_dir = list(itertools.chain(*logprob_dir))
+    logprob_think = list(itertools.chain(*logprob_think))
+    plotHistograms(logprob_dir,'Distribution of Probabilities for Correct Answers(Direct)')
+    plotHistograms(logprob_think,'Distribution of Probabilities for Correct Answers(After Thinking)')
+
+def plotHistogramsWrong(filenames_direct,filenames_think):
+    logprob_dir = []
+    logprob_think = []
+    for filename_dir, filename_think in zip(filenames_direct, filenames_think):
+        df_dir, df_think = getWrongDf(filename_dir, filename_think)
+        logprob_dir.append(df_dir[['a', 'b', 'c', 'd']].max(axis=1))
+        logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
+    logprob_dir = list(itertools.chain(*logprob_dir))
+    logprob_think = list(itertools.chain(*logprob_think))
+    plotHistograms(logprob_dir,'Distribution of Probabilities for Wrong Answers(Direct)')
+    plotHistograms(logprob_think,'Distribution of Probabilities for Wrong Answers(After Thinking)')
 
 def plotWrongAnswerProbChange(filenames_direct,filenames_think):
     average_logprob_dir = []
@@ -132,6 +173,20 @@ def plotAccuracyComparison(accuracies_direct, accuracies_think, xlabel_name='Dat
 
     plt.show()
 
+
+def plotHistograms(data, title):
+    bins = [i / 10 for i in range(11)]
+    plt.hist(data, bins=bins, density=True, alpha=0.75, color='blue', edgecolor='black')
+
+    fontsize = 16
+    # 设置图表标题和标签
+    plt.title(title,fontsize=fontsize)
+    plt.xlabel('Value Range',fontsize=fontsize)
+    plt.ylabel('Density',fontsize=fontsize)
+    plt.xticks([i / 10 for i in range(11)])
+    plt.tick_params(axis='both', labelsize=fontsize)
+    # 显示图表
+    plt.show()
 
 if __name__ == '__main__':
     main()
