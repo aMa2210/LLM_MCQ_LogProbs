@@ -12,8 +12,8 @@ def main():
     # plotChosenProb(filenames_direct,filenames_think)
     # plotNotChosenProb(filenames_direct,filenames_think)
     # plotAccuracy(filenames_direct,filenames_think)
-    # plotWrongAnswerProbChange(filenames_direct, filenames_think)
-    plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
+    plotWrongAnswerProbChange(filenames_direct, filenames_think)
+    # plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
 
 def plotWrongAnswerProbChange(filenames_direct,filenames_think):
     average_logprob_dir = []
@@ -48,6 +48,7 @@ def plotWrongAnswerRemainingProbChange(filenames_direct,filenames_think):
         average_sum_remaining2 = df_think['sum_remaining'].mean()
         average_logprob_think.append(average_sum_remaining2)
 
+    print(average_logprob_think)
     plotAccuracyComparison(average_logprob_dir, average_logprob_think, xlabel_name='Dataset',
                            ylabel_name='Average Probability',
                            title='Comparison of Average Probability for Remaining Option in Wrong Answer Only')

@@ -18,7 +18,10 @@ def answerDirect(file_name):
 
     mapping = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
 
-    message_system = "Please respond with only the letter of the solution, in the format {'sol': 'solution'}."
+    message_system = "Please respond with only the letter of the solution, in the format {'sol': 'solution'}. Do not " \
+                     "respond with any other information. Here is an example: " \
+                     "'Input: What is the capital of France? a)Berlin b)Madrid c)Paris d) Rome Output: {'sol': 'c'}'"
+
     model_names = ['gpt-4o-mini-2024-07-18']
     tokenizer = tiktoken.get_encoding('o200k_base')
 
@@ -60,7 +63,7 @@ def answerDirect(file_name):
                         # max_tokens=1
                     )
                     # match = re.search(r"([a-d])", completion.choices[0].message.content)
-                    # print(str(index) + completion.choices[0].message.content)
+                    print(str(index) + completion.choices[0].message.content)
                     tokens = tokenizer.encode(completion.choices[0].message.content)
                     target_word = "sol"
 
@@ -109,7 +112,11 @@ def answerAfterThinking(file_name):
 
     mapping = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
 
-    message_system = "Please think step by step before providing an answer, once you have the solution end the respond only with the letter of the solution, in the format {'sol': 'solution'}."
+    message_system = "Please think step by step before providing an answer, once you have the solution end the " \
+                     "respond only with the letter of the solution, in the format {'sol': 'solution'}. Here is " \
+                     "an example: 'Input: What is the capital of France? a)Berlin b)Madrid c)Paris d) Rome Output: " \
+                     "First, I know that Paris is the capital of France. Therefore, the correct answer is {'sol': " \
+                     "'c'}' "
     model_names = ['gpt-4o-mini-2024-07-18']
     tokenizer = tiktoken.get_encoding('o200k_base')
 
