@@ -5,19 +5,28 @@ from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getD
 import itertools
 
 def main():
-    filenames_direct = ['Results/abstract_algebra_LogProbs_Direct.csv',
-                        'Results/anatomy_LogProbs_Direct.csv',
-                        'Results/college_biology_LogProbs_Direct.csv']
-    filenames_think = ['Results/abstract_algebra_LogProbs_afterThinking.csv',
-                       'Results/anatomy_LogProbs_afterThinking.csv',
-                       'Results/college_biology_LogProbs_afterThinking.csv']
-    # plotChosenProb(filenames_direct,filenames_think)
-    # plotNotChosenProb(filenames_direct,filenames_think)
-    # plotAccuracy(filenames_direct,filenames_think)
-    # plotWrongAnswerProbChange(filenames_direct, filenames_think)
-    # plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
-    # plotHistogramsAll(filenames_direct, filenames_think)
-    # plotHistogramsCorrect(filenames_direct, filenames_think)
+
+    filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
+                        'anatomy_LogProbs_Direct.csv',
+                        'college_biology_LogProbs_Direct.csv']
+    filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
+                       'anatomy_LogProbs_afterThinking.csv',
+                       'college_biology_LogProbs_afterThinking.csv']
+    # prefix = 'Results/gpt4o-mini/'
+    # prefix = 'Results/llama3.1-8B/'
+    prefix = 'Results/gemma2-9b-it/'
+    filenames_direct = [prefix + name for name in filenames_direct]
+    filenames_think = [prefix + name for name in filenames_think]
+
+    plotAccuracy(filenames_direct,filenames_think)
+
+    plotChosenProb(filenames_direct,filenames_think)
+    plotNotChosenProb(filenames_direct,filenames_think)
+
+    plotWrongAnswerProbChange(filenames_direct, filenames_think)
+    plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
+    plotHistogramsAll(filenames_direct, filenames_think)
+    plotHistogramsCorrect(filenames_direct, filenames_think)
     plotHistogramsWrong(filenames_direct, filenames_think)
 
 def plotHistogramsAll(filenames_direct,filenames_think):
@@ -92,7 +101,7 @@ def plotWrongAnswerRemainingProbChange(filenames_direct,filenames_think):
     print(average_logprob_think)
     plotAccuracyComparison(average_logprob_dir, average_logprob_think, xlabel_name='Dataset',
                            ylabel_name='Average Probability',
-                           title='Comparison of Average Probability for Remaining Option in Wrong Answer Only')
+                           title='Comparison of Average Probability for Remaining Option in Wrong Answer Only', pos='upper right')
 
 
 
@@ -114,7 +123,7 @@ def plotNotChosenProb(filenames_direct,filenames_think):
         average_logprob_think.append(average_sum_remaining2)
 
     plotAccuracyComparison(average_logprob_dir, average_logprob_think, xlabel_name='Dataset', ylabel_name='Average Probability',
-                           title='Comparison of Average Sum of Probabilities for Remaining Options')
+                           title='Comparison of Average Sum of Probabilities for Remaining Options', pos='upper right')
 
 def plotChosenProb(filenames_direct,filenames_think):
     # plot logprob when two results agree on the option
@@ -149,7 +158,7 @@ def plotAccuracy(filenames_direct, filenames_think):
 
 
 def plotAccuracyComparison(accuracies_direct, accuracies_think, xlabel_name='Dataset', ylabel_name='Accuracy',
-                           title='Comparison of Accuracy for Different Datasets'):
+                           title='Comparison of Accuracy for Different Datasets',pos = 'upper left'):
 
     labels = ['abstract_algebra', 'anatomy', 'college_biology']
 
@@ -169,7 +178,7 @@ def plotAccuracyComparison(accuracies_direct, accuracies_think, xlabel_name='Dat
     ax.set_xticklabels(labels, fontsize=fontsize)
     ax.tick_params(axis='y', labelsize=fontsize)
 
-    ax.legend(fontsize=fontsize,loc='upper left')
+    ax.legend(fontsize=fontsize,loc=pos)
 
     plt.show()
 
