@@ -14,7 +14,8 @@ def main():
                        'college_biology_LogProbs_afterThinking.csv']
     # prefix = 'Results/gpt4o-mini/'
     # prefix = 'Results/llama3.1-8B/'
-    prefix = 'Results/gemma2-9b-it/'
+    prefix = 'Results/llama3.2-11B-vision-instruct/'
+    # prefix = 'Results/gemma2-9b-it/'
     filenames_direct = [prefix + name for name in filenames_direct]
     filenames_think = [prefix + name for name in filenames_think]
 
@@ -196,6 +197,7 @@ def plotHistograms(data, title):
     plt.tick_params(axis='both', labelsize=fontsize)
     # 显示图表
     plt.show()
+
 
 if __name__ == '__main__':
     main()
