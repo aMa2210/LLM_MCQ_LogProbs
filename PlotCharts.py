@@ -14,8 +14,10 @@ def main():
                        'college_biology_LogProbs_afterThinking.csv']
     # prefix = 'Results/gpt4o-mini/'
     # prefix = 'Results/llama3.1-8B/'
-    prefix = 'Results/llama3.2-11B-vision-instruct/'
+    # prefix = 'Results/llama3.2-11B-vision-instruct/'
     # prefix = 'Results/gemma2-9b-it/'
+    # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
+    prefix = 'Results/Yi-1.5-9B-Chat/'
     filenames_direct = [prefix + name for name in filenames_direct]
     filenames_think = [prefix + name for name in filenames_think]
 
