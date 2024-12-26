@@ -17,20 +17,95 @@ def main():
     # prefix = 'Results/llama3.2-11B-vision-instruct/'
     # prefix = 'Results/gemma2-9b-it/'
     # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
-    prefix = 'Results/Yi-1.5-9B-Chat/'
-    filenames_direct = [prefix + name for name in filenames_direct]
-    filenames_think = [prefix + name for name in filenames_think]
+    # prefix = 'Results/Yi-1.5-9B-Chat/'
+    #
+    # filenames_direct = [prefix + name for name in filenames_direct]
+    # filenames_think = [prefix + name for name in filenames_think]
 
-    plotAccuracy(filenames_direct,filenames_think)
+    # plotAccuracy(filenames_direct,filenames_think)
+    #
+    # plotChosenProb(filenames_direct,filenames_think)
+    # plotNotChosenProb(filenames_direct,filenames_think)
+    #
+    # plotWrongAnswerProbChange(filenames_direct, filenames_think)
+    # plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
+    # plotHistogramsAll(filenames_direct, filenames_think)
+    # plotHistogramsCorrect(filenames_direct, filenames_think)
+    # plotHistogramsWrong(filenames_direct, filenames_think)
 
-    plotChosenProb(filenames_direct,filenames_think)
-    plotNotChosenProb(filenames_direct,filenames_think)
+    filenames_direct = ['college_biology_LogProbs_Direct.csv']
+    filenames_think = ['college_biology_LogProbs_afterThinking.csv']
 
-    plotWrongAnswerProbChange(filenames_direct, filenames_think)
-    plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
-    plotHistogramsAll(filenames_direct, filenames_think)
-    plotHistogramsCorrect(filenames_direct, filenames_think)
-    plotHistogramsWrong(filenames_direct, filenames_think)
+    prefixs = ['Results/gpt4o-mini/','Results/llama3.1-8B/','Results/llama3.2-11B-vision-instruct/',
+               'Results/gemma2-9b-it/','Results/Mistral-7B-Instruct-v0.3/','Results/Yi-1.5-9B-Chat/']
+    model_names = ['GPT-4o-mini','Llama-3.1-8B-Instruct','Llama-3.2-11B-Vision-Instruct','gemma-2-9b-it','Mistral-7B-Instruct-v0.3','Yi-1.5-9B-Chat']
+    filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
+    filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
+
+    plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
+    plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
+
+
+
+def plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names):
+    data = []
+    labels = []
+    for f_dir,f_think,model_name  in zip(filenames_direct, filenames_think, model_names):
+        logprob_dir = []
+        logprob_think = []
+        for filename_dir, filename_think in zip(f_dir, f_think):
+            df_dir, df_think = getCorrectDf(filename_dir, filename_think)
+            logprob_dir.append(df_dir[['a', 'b', 'c', 'd']].max(axis=1))
+            logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
+        logprob_dir = list(itertools.chain(*logprob_dir))
+        logprob_think = list(itertools.chain(*logprob_think))
+        data.append(logprob_dir)
+        data.append(logprob_think)
+        labels.append(f"{model_name} - Direct")
+        labels.append(f"{model_name} - Think")
+    PlotComparisonHistogram(filenames_direct,data,labels)
+
+def plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names):
+    data = []
+    labels = []
+    for f_dir,f_think,model_name  in zip(filenames_direct, filenames_think, model_names):
+        logprob_dir = []
+        logprob_think = []
+        for filename_dir, filename_think in zip(f_dir, f_think):
+            df_dir, df_think = getWrongDf(filename_dir, filename_think)
+            logprob_dir.append(df_dir[['a', 'b', 'c', 'd']].max(axis=1))
+            logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
+        logprob_dir = list(itertools.chain(*logprob_dir))
+        logprob_think = list(itertools.chain(*logprob_think))
+        data.append(logprob_dir)
+        data.append(logprob_think)
+        labels.append(f"{model_name} - Direct")
+        labels.append(f"{model_name} - Think")
+    PlotComparisonHistogram(filenames_direct,data,labels)
+
+def PlotComparisonHistogram(filenames_direct,data,labels):
+    bins = [i / 10 for i in range(11)]
+    colors = ['red','red', 'green','green', 'blue', 'blue','yellow', 'yellow', 'purple', 'purple','orange','orange']
+    hatches = ['', '/']
+    hatches = hatches*len(filenames_direct)
+    n, bins, patches = plt.hist(data, bins=bins, density=True, alpha=0.75, color=colors,edgecolor='black')
+    for patch_set, hatch in zip(patches, hatches):
+        for patch in patch_set.patches:
+            patch.set_hatch(hatch)
+
+    fontsize = 16
+
+    # plt.title(title,fontsize=fontsize)
+    plt.xlabel('Value Range',fontsize=fontsize)
+    plt.ylabel('Density',fontsize=fontsize)
+    plt.xticks([i / 10 for i in range(11)])
+    plt.xlim(left=0, right=1)
+    plt.tick_params(axis='both', labelsize=fontsize)
+    plt.legend(labels, fontsize=12)
+    # plt.subplots_adjust(left=0.05, right=0.95)
+    plt.show()
+
+
 
 def plotHistogramsAll(filenames_direct,filenames_think):
     logprob_dir = []
@@ -191,13 +266,13 @@ def plotHistograms(data, title):
     plt.hist(data, bins=bins, density=True, alpha=0.75, color='blue', edgecolor='black')
 
     fontsize = 16
-    # 设置图表标题和标签
+
     plt.title(title,fontsize=fontsize)
     plt.xlabel('Value Range',fontsize=fontsize)
     plt.ylabel('Density',fontsize=fontsize)
     plt.xticks([i / 10 for i in range(11)])
     plt.tick_params(axis='both', labelsize=fontsize)
-    # 显示图表
+
     plt.show()
 
 
