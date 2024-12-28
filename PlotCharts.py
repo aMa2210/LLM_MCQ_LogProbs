@@ -6,32 +6,32 @@ import itertools
 
 def main():
 
-    # filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
-    #                     'anatomy_LogProbs_Direct.csv',
-    #                     'college_biology_LogProbs_Direct.csv']
-    # filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
-    #                    'anatomy_LogProbs_afterThinking.csv',
-    #                    'college_biology_LogProbs_afterThinking.csv']
-    # # prefix = 'Results/gpt4o-mini/'
-    # # prefix = 'Results/llama3.1-8B/'
-    # # prefix = 'Results/llama3.2-11B-vision-instruct/'
-    # # prefix = 'Results/gemma2-9b-it/'
-    # # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
-    # prefix = 'Results/Yi-1.5-9B-Chat/'
-    #
-    # filenames_direct = [prefix + name for name in filenames_direct]
-    # filenames_think = [prefix + name for name in filenames_think]
-    #
-    # plotAccuracy(filenames_direct,filenames_think)
-    #
-    # plotChosenProb(filenames_direct,filenames_think)
-    # plotNotChosenProb(filenames_direct,filenames_think)
-    #
-    # plotWrongAnswerProbChange(filenames_direct, filenames_think)
-    # plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
-    # plotHistogramsAll(filenames_direct, filenames_think)
-    # plotHistogramsCorrect(filenames_direct, filenames_think)
-    # plotHistogramsWrong(filenames_direct, filenames_think)
+    filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
+                        'anatomy_LogProbs_Direct.csv',
+                        'college_biology_LogProbs_Direct.csv']
+    filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
+                       'anatomy_LogProbs_afterThinking.csv',
+                       'college_biology_LogProbs_afterThinking.csv']
+    # prefix = 'Results/gpt4o-mini/'
+    # prefix = 'Results/llama3.1-8B/'
+    # prefix = 'Results/llama3.2-11B-vision-instruct/'
+    # prefix = 'Results/gemma2-9b-it/'
+    # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
+    prefix = 'Results/Yi-1.5-9B-Chat/'
+
+    filenames_direct = [prefix + name for name in filenames_direct]
+    filenames_think = [prefix + name for name in filenames_think]
+
+    plotAccuracy(filenames_direct,filenames_think)
+
+    plotChosenProb(filenames_direct,filenames_think)
+    plotNotChosenProb(filenames_direct,filenames_think)
+
+    plotWrongAnswerProbChange(filenames_direct, filenames_think)
+    plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
+    plotHistogramsAll(filenames_direct, filenames_think)
+    plotHistogramsCorrect(filenames_direct, filenames_think)
+    plotHistogramsWrong(filenames_direct, filenames_think)
 
 ## ******************************
     # filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
@@ -54,30 +54,30 @@ def main():
     # plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
 
 ## **************************
-    model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
-                   'Mistral-7B-Instruct-v0.3', 'Yi-1.5-9B-Chat']
-
-    prefixs = ['Results/gpt4o-mini/','Results/llama3.1-8B/','Results/llama3.2-11B-vision-instruct/',
-               'Results/gemma2-9b-it/','Results/Mistral-7B-Instruct-v0.3/','Results/Yi-1.5-9B-Chat/']
-
-    filenames_direct = ['abstract_algebra_LogProbs_Direct.csv']
-    filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv']
-    filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
-    filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
-    plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
-    plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
-    filenames_direct = ['anatomy_LogProbs_Direct.csv']
-    filenames_think = ['anatomy_LogProbs_afterThinking.csv']
-    filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
-    filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
-    plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
-    plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
-    filenames_direct = ['college_biology_LogProbs_Direct.csv']
-    filenames_think = ['college_biology_LogProbs_afterThinking.csv']
-    filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
-    filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
-    plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
-    plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
+    # model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
+    #                'Mistral-7B-Instruct-v0.3', 'Yi-1.5-9B-Chat']
+    #
+    # prefixs = ['Results/gpt4o-mini/','Results/llama3.1-8B/','Results/llama3.2-11B-vision-instruct/',
+    #            'Results/gemma2-9b-it/','Results/Mistral-7B-Instruct-v0.3/','Results/Yi-1.5-9B-Chat/']
+    #
+    # filenames_direct = ['abstract_algebra_LogProbs_Direct.csv']
+    # filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv']
+    # filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
+    # filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
+    # plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
+    # plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
+    # filenames_direct = ['anatomy_LogProbs_Direct.csv']
+    # filenames_think = ['anatomy_LogProbs_afterThinking.csv']
+    # filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
+    # filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
+    # plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
+    # plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
+    # filenames_direct = ['college_biology_LogProbs_Direct.csv']
+    # filenames_think = ['college_biology_LogProbs_afterThinking.csv']
+    # filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
+    # filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
+    # plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
+    # plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
 
 
 
