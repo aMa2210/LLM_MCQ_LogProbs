@@ -6,22 +6,22 @@ import itertools
 
 def main():
 
-    filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
-                        'anatomy_LogProbs_Direct.csv',
-                        'college_biology_LogProbs_Direct.csv']
-    filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
-                       'anatomy_LogProbs_afterThinking.csv',
-                       'college_biology_LogProbs_afterThinking.csv']
-    # prefix = 'Results/gpt4o-mini/'
+    # filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
+    #                     'anatomy_LogProbs_Direct.csv',
+    #                     'college_biology_LogProbs_Direct.csv']
+    # filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
+    #                    'anatomy_LogProbs_afterThinking.csv',
+    #                    'college_biology_LogProbs_afterThinking.csv']
+    # # prefix = 'Results/gpt4o-mini/'
     # prefix = 'Results/llama3.1-8B/'
-    # prefix = 'Results/llama3.2-11B-vision-instruct/'
-    # prefix = 'Results/gemma2-9b-it/'
-    # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
-    # prefix = 'Results/Yi-1.5-9B-Chat/'
+    # # prefix = 'Results/llama3.2-11B-vision-instruct/'
+    # # prefix = 'Results/gemma2-9b-it/'
+    # # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
+    # # prefix = 'Results/Yi-1.5-9B-Chat/'
     #
     # filenames_direct = [prefix + name for name in filenames_direct]
     # filenames_think = [prefix + name for name in filenames_think]
-
+    #
     # plotAccuracy(filenames_direct,filenames_think)
     #
     # plotChosenProb(filenames_direct,filenames_think)
@@ -33,8 +33,16 @@ def main():
     # plotHistogramsCorrect(filenames_direct, filenames_think)
     # plotHistogramsWrong(filenames_direct, filenames_think)
 
-    filenames_direct = ['college_biology_LogProbs_Direct.csv']
-    filenames_think = ['college_biology_LogProbs_afterThinking.csv']
+
+    filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
+                        'anatomy_LogProbs_Direct.csv',
+                        'college_biology_LogProbs_Direct.csv']
+    filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
+                       'anatomy_LogProbs_afterThinking.csv',
+                       'college_biology_LogProbs_afterThinking.csv']
+
+    # filenames_direct = ['anatomy_LogProbs_Direct.csv']
+    # filenames_think = ['anatomy_LogProbs_afterThinking.csv']
 
     prefixs = ['Results/gpt4o-mini/','Results/llama3.1-8B/','Results/llama3.2-11B-vision-instruct/',
                'Results/gemma2-9b-it/','Results/Mistral-7B-Instruct-v0.3/','Results/Yi-1.5-9B-Chat/']
@@ -50,7 +58,7 @@ def main():
 def plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names):
     data = []
     labels = []
-    for f_dir,f_think,model_name  in zip(filenames_direct, filenames_think, model_names):
+    for f_dir,f_think,model_name in zip(filenames_direct, filenames_think, model_names):
         logprob_dir = []
         logprob_think = []
         for filename_dir, filename_think in zip(f_dir, f_think):
@@ -59,6 +67,9 @@ def plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
             logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
         logprob_dir = list(itertools.chain(*logprob_dir))
         logprob_think = list(itertools.chain(*logprob_think))
+
+        print(model_name+'Correct_dir:'+str(np.std([x - 1 for x in logprob_dir])))
+        print(model_name+'Correct_think:'+str(np.std([x - 1 for x in logprob_think])))
         data.append(logprob_dir)
         data.append(logprob_think)
         labels.append(f"{model_name} - Direct")
@@ -77,6 +88,8 @@ def plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names):
             logprob_think.append(df_think[['a', 'b', 'c', 'd']].max(axis=1))
         logprob_dir = list(itertools.chain(*logprob_dir))
         logprob_think = list(itertools.chain(*logprob_think))
+        print(model_name+'Wrong_dir:'+str(np.std([x - 1 for x in logprob_dir])))
+        print(model_name+'Wrong_think:'+str(np.std([x - 1 for x in logprob_think])))
         data.append(logprob_dir)
         data.append(logprob_think)
         labels.append(f"{model_name} - Direct")
