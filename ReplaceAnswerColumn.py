@@ -2,11 +2,12 @@ import pandas as pd
 
 def main():
 
-    # model_name = 'Yi-1.5-9B-Chat/'
+
     # model_name = 'Mistral-7B-instruct-v0.3/'
-    model_name = 'llama3.1-8B/'
-    model_name = 'gemma2-9b-it/'
-    model_name = 'llama3.2-11B-vision-instruct/'
+    # model_name = 'llama3.1-8B/'
+    # model_name = 'gemma2-9b-it/'
+    # model_name = 'llama3.2-11B-vision-instruct/'
+    model_name = 'Yi-1.5-9B-Chat/'
     ori_files = ['abstract_algebra.xlsx','anatomy.xlsx','college_biology.xlsx']
     ori_files = ['MMLU/'+ file for file in ori_files]
     result_files = [['abstract_algebra_LogProbs_afterThinking.csv','abstract_algebra_LogProbs_Direct.csv'],
