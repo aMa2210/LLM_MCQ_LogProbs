@@ -1,0 +1,192 @@
+answer
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'c'}
+"To determine the relationship between the propositions ~O ⊃ P and O ∨ P, we can construct a truth table.
+
+| O | P | ~O | ~O ⊃ P | O ∨ P |
+|---|---|----|--------|-------|
+| T | T | F  | T      | T     |
+| T | F | F  | T      | T     |
+| F | T | T  | T      | T     |
+| F | F | T  | F      | F     |
+
+Now, we analyze the columns for ~O ⊃ P and O ∨ P:
+
+- ~O ⊃ P: T, T, T, F
+- O ∨ P: T, T, T, F
+
+Since the truth values for both propositions are the same in all cases except for the last row, they are not logically equivalent. However, they are not contradictory either, as there are instances where both can be true.
+
+Thus, the correct choice is:
+
+{'sol': 'c'}"
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+"To determine the relationship between the propositions I ≡ ~H and ~(~I ≡ H), we will construct a truth table for both statements.
+
+Let:
+- I = True (T) or False (F)
+- H = True (T) or False (F)
+
+We will evaluate both propositions for all combinations of truth values for I and H.
+
+| I | H | ~H | ~I | ~I ≡ H | ~(~I ≡ H) | I ≡ ~H |
+|---|---|----|----|--------|-----------|---------|
+| T | T |  F |  F |   T    |     F     |    F    |
+| T | F |  T |  F |   F    |     T     |    T    |
+| F | T |  F |  T |   F    |     T     |    T    |
+| F | F |  T |  T |   T    |     F     |    F    |
+
+Now we analyze the results:
+- I ≡ ~H is True for (T, F) and (F, T) and False for (T, T) and (F, F).
+- ~(~I ≡ H) is True for (T, F) and (F, T) and False for (T, T) and (F, F).
+
+Both propositions are True in the same scenarios and False in the same scenarios. Therefore, they are logically equivalent.
+
+The answer is: {'sol': 'a'}"
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'b'}
+"To determine the relationship between the propositions ~(J ∨ K) · L and (L ⊃ J) · K, we will construct a truth table for both expressions.
+
+1. **Constructing the truth table:**
+
+| J | K | L | J ∨ K | ~(J ∨ K) | L ⊃ J | (L ⊃ J) · K | ~(J ∨ K) · L |
+|---|---|---|-------|----------|-------|-------------|--------------|
+| T | T | T |   T   |    F     |   T   |      T      |      F       |
+| T | T | F |   T   |    F     |   F   |      F      |      F       |
+| T | F | T |   T   |    F     |   T   |      F      |      F       |
+| T | F | F |   T   |    F     |   F   |      F      |      F       |
+| F | T | T |   T   |    F     |   T   |      T      |      F       |
+| F | T | F |   T   |    F     |   F   |      F      |      F       |
+| F | F | T |   F   |    T     |   T   |      F      |      T       |
+| F | F | F |   F   |    T     |   F   |      F      |      F       |
+
+2. **Analyzing the results:**
+   - The column for ~(J ∨ K) · L has the values: F, F, F, F, F, F, T, F.
+   - The column for (L ⊃ J) · K has the values: T, F, F, F, T, F, F, F.
+
+3. **Conclusion:**
+   - The two propositions are not logically equivalent because their truth values differ in some cases.
+   - They are not contradictory because there are cases where both can be true (e.g., when J is F, K is F, and L is T).
+   - They are inconsistent because there is no case where both propositions are true at the same time.
+
+Thus, the answer is:
+
+{'sol': 'd'}"
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
