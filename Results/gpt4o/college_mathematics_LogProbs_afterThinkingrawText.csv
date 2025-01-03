@@ -1,0 +1,2381 @@
+answer
+"To solve this problem, let's analyze the equation \( e^x + x - 2 = 0 \) step by step:
+
+1. **Define the function and analyze its behavior**:  
+   Let \( f(x) = e^x + x - 2 \). We need to determine the number of real solutions of \( f(x) = 0 \) in the interval \([0, 1]\) (denoted by \( k \)) and outside \([0, 1]\) (denoted by \( n \)).
+
+2. **Check the behavior of \( f(x) \) in \([0, 1]\)**:  
+   - At \( x = 0 \), \( f(0) = e^0 + 0 - 2 = 1 - 2 = -1 \).  
+   - At \( x = 1 \), \( f(1) = e^1 + 1 - 2 = e + 1 - 2 = e - 1 \). Since \( e \approx 2.718 \), \( e - 1 > 0 \).  
+   - \( f(x) \) is continuous on \([0, 1]\), and \( f(0) < 0 \), \( f(1) > 0 \). By the Intermediate Value Theorem, there is at least one root in \([0, 1]\).  
+   - To check if there is more than one root in \([0, 1]\), consider the derivative \( f'(x) = e^x + 1 \). Since \( f'(x) > 0 \) for all \( x \), \( f(x) \) is strictly increasing. Therefore, \( f(x) = 0 \) has exactly one solution in \([0, 1]\). Thus, \( k = 1 \).
+
+3. **Check for solutions outside \([0, 1]\)**:  
+   - For \( x < 0 \), \( e^x \to 0^+ \) as \( x \to -\infty \), and \( x - 2 \to -\infty \). Thus, \( f(x) \to -\infty \) as \( x \to -\infty \).  
+   - At \( x = 0 \), \( f(0) = -1 \). Since \( f(x) \) is strictly increasing, there are no roots for \( x < 0 \).  
+   - For \( x > 1 \), \( e^x \) grows exponentially, and \( x - 2 \) grows linearly. Thus, \( f(x) \to \infty \) as \( x \to \infty \). Since \( f(x) > 0 \) at \( x = 1 \) and \( f(x) \) is strictly increasing, there are no roots for \( x > 1 \).  
+   - Therefore, \( n = 0 \).
+
+4. **Conclusion**:  
+   \( k = 1 \) and \( n = 0 \). The correct answer is {'sol': 'b'}."
+"To solve this, let's proceed step by step:
+
+1. **Understand the problem**: We are tasked with finding the number of additive abelian groups \( G \) of order 16 such that \( 4x = 0 \) for all \( x \in G \). This means every element in \( G \) has an order dividing 4. Thus, \( G \) must be a 2-group where all elements have orders dividing 4.
+
+2. **Structure of abelian groups of order 16**: By the fundamental theorem of finitely generated abelian groups, any abelian group of order 16 can be expressed as a direct sum of cyclic groups whose orders multiply to 16. The possible structures are:
+   - \( \mathbb{Z}_{16} \)
+   - \( \mathbb{Z}_8 \oplus \mathbb{Z}_2 \)
+   - \( \mathbb{Z}_4 \oplus \mathbb{Z}_4 \)
+   - \( \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \)
+   - \( \mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \)
+
+3. **Check the condition \( 4x = 0 \)**: For each structure, we check whether all elements satisfy \( 4x = 0 \):
+   - \( \mathbb{Z}_{16} \): Contains an element of order 16, so \( 4x = 0 \) is not satisfied.
+   - \( \mathbb{Z}_8 \oplus \mathbb{Z}_2 \): Contains an element of order 8, so \( 4x = 0 \) is not satisfied.
+   - \( \mathbb{Z}_4 \oplus \mathbb{Z}_4 \): All elements have orders dividing 4, so \( 4x = 0 \) is satisfied.
+   - \( \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \): All elements have orders dividing 4, so \( 4x = 0 \) is satisfied.
+   - \( \mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \): All elements have orders dividing 2 (which also satisfies \( 4x = 0 \)), so \( 4x = 0 \) is satisfied.
+
+4. **Count the valid groups**: The valid groups are \( \mathbb{Z}_4 \oplus \mathbb{Z}_4 \), \( \mathbb{Z}_4 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \), and \( \mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \mathbb{Z}_2 \). This gives a total of 3 groups.
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understand the set P and the operator D**:  
+   - The set \( P \) consists of all polynomials with coefficients in \( \mathbb{Z}_5 \) (integers modulo 5) and degree less than or equal to 7.  
+   - The operator \( D \) maps a polynomial \( p(x) \) to its derivative \( p'(x) \).  
+   - Since the coefficients are in \( \mathbb{Z}_5 \), there are 5 choices for each coefficient. A polynomial of degree at most 7 has 8 coefficients (from degree 0 to degree 7), so the total dimension of \( P \) is 8.
+
+2. **Null space of \( D \)**:  
+   - The null space of \( D \) consists of all polynomials \( p(x) \) such that \( p'(x) = 0 \).  
+   - The derivative of a polynomial is zero if and only if the polynomial is constant (i.e., \( p(x) = c \), where \( c \in \mathbb{Z}_5 \)).  
+   - Therefore, the null space consists of all constant polynomials, and its dimension is 1.
+
+3. **Range of \( D \)**:  
+   - The range of \( D \) consists of all possible derivatives of polynomials in \( P \).  
+   - A polynomial of degree at most 7 has a derivative of degree at most 6. Thus, the range of \( D \) is the set of all polynomials in \( P \) with degree at most 6.  
+   - The dimension of the space of polynomials of degree at most 6 is 7 (since there are 7 coefficients: from degree 0 to degree 6).
+
+4. **Verify the relationship between dimensions**:  
+   - By the rank-nullity theorem, the dimension of \( P \) (8) is the sum of the dimensions of the null space (1) and the range (7).  
+   - This confirms our calculations.
+
+Thus, the dimensions of the null space \( n \) and the range \( r \) are \( n = 1 \) and \( r = 7 \). The correct answer is:  
+{'sol': 'b'}"
+"To solve this, I will find the shortest distance from the curve \( xy = 8 \) to the origin using the following steps:
+
+1. **Express the distance formula**: The distance from a point \((x, y)\) on the curve to the origin is given by \( d = \sqrt{x^2 + y^2} \). Since \( xy = 8 \), we can express \( y \) in terms of \( x \) as \( y = \frac{8}{x} \).
+
+2. **Substitute \( y = \frac{8}{x} \) into the distance formula**: Substituting \( y \) into \( d = \sqrt{x^2 + y^2} \), we get:
+   \[
+   d = \sqrt{x^2 + \left(\frac{8}{x}\right)^2} = \sqrt{x^2 + \frac{64}{x^2}}.
+   \]
+
+3. **Minimize the distance**: To find the shortest distance, minimize \( d^2 = x^2 + \frac{64}{x^2} \). Let \( f(x) = x^2 + \frac{64}{x^2} \). Differentiate \( f(x) \) with respect to \( x \):
+   \[
+   f'(x) = 2x - \frac{128}{x^3}.
+   \]
+   Set \( f'(x) = 0 \) to find the critical points:
+   \[
+   2x - \frac{128}{x^3} = 0 \implies 2x^4 = 128 \implies x^4 = 64 \implies x = \pm \sqrt{8}.
+   \]
+
+4. **Check the corresponding \( y \) values**: For \( x = \sqrt{8} \), \( y = \frac{8}{x} = \frac{8}{\sqrt{8}} = \sqrt{8} \). Similarly, for \( x = -\sqrt{8} \), \( y = -\sqrt{8} \).
+
+5. **Calculate the distance**: The distance from the origin to the point \((\sqrt{8}, \sqrt{8})\) is:
+   \[
+   d = \sqrt{(\sqrt{8})^2 + (\sqrt{8})^2} = \sqrt{8 + 8} = \sqrt{16} = 4.
+   \]
+
+Thus, the shortest distance is 4. The correct answer is {'sol': 'a'}."
+"To solve this, I will calculate the probability step by step:
+
+1. First, calculate the total number of ways to choose 3 suitcases from 25. This is a combination problem:
+   \[
+   \binom{25}{3} = \frac{25 \cdot 24 \cdot 23}{3 \cdot 2 \cdot 1} = 2300
+   \]
+
+2. Next, calculate the number of ways to choose exactly 2 damaged suitcases from the 5 damaged ones:
+   \[
+   \binom{5}{2} = \frac{5 \cdot 4}{2 \cdot 1} = 10
+   \]
+
+3. Then, calculate the number of ways to choose 1 non-damaged suitcase from the remaining 20 suitcases:
+   \[
+   \binom{20}{1} = 20
+   \]
+
+4. Multiply the results from steps 2 and 3 to find the number of favorable outcomes:
+   \[
+   10 \cdot 20 = 200
+   \]
+
+5. Finally, divide the number of favorable outcomes by the total number of outcomes to find the probability:
+   \[
+   \text{Probability} = \frac{200}{2300} = \frac{2}{23}
+   \]
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement a: (S, +, x) is closed under addition modulo 10.**
+   - The subset \( S = \{0, 2, 4, 6, 8\} \) is closed under addition modulo 10 if the sum of any two elements in \( S \) is also in \( S \).
+   - Compute all possible sums modulo 10:
+     - \( 0+0=0, 0+2=2, 0+4=4, 0+6=6, 0+8=8 \) (all in \( S \)).
+     - \( 2+2=4, 2+4=6, 2+6=8, 2+8=10 \equiv 0 \pmod{10} \) (all in \( S \)).
+     - \( 4+4=8, 4+6=10 \equiv 0 \pmod{10}, 4+8=12 \equiv 2 \pmod{10} \) (all in \( S \)).
+     - \( 6+6=12 \equiv 2 \pmod{10}, 6+8=14 \equiv 4 \pmod{10} \) (all in \( S \)).
+     - \( 8+8=16 \equiv 6 \pmod{10} \) (in \( S \)).
+   - Since all sums are in \( S \), \( S \) is closed under addition modulo 10. **This statement is TRUE.**
+
+2. **Statement b: (S, +, x) is closed under multiplication modulo 10.**
+   - The subset \( S = \{0, 2, 4, 6, 8\} \) is closed under multiplication modulo 10 if the product of any two elements in \( S \) is also in \( S \).
+   - Compute all possible products modulo 10:
+     - \( 0 \times \text{anything} = 0 \) (in \( S \)).
+     - \( 2 \times 2 = 4, 2 \times 4 = 8, 2 \times 6 = 12 \equiv 2 \pmod{10}, 2 \times 8 = 16 \equiv 6 \pmod{10} \) (all in \( S \)).
+     - \( 4 \times 4 = 16 \equiv 6 \pmod{10}, 4 \times 6 = 24 \equiv 4 \pmod{10}, 4 \times 8 = 32 \equiv 2 \pmod{10} \) (all in \( S \)).
+     - \( 6 \times 6 = 36 \equiv 6 \pmod{10}, 6 \times 8 = 48 \equiv 8 \pmod{10} \) (all in \( S \)).
+     - \( 8 \times 8 = 64 \equiv 4 \pmod{10} \) (in \( S \)).
+   - Since all products are in \( S \), \( S \) is closed under multiplication modulo 10. **This statement is TRUE.**
+
+3. **Statement c: (S, +, x) has an identity under addition modulo 10.**
+   - The identity element under addition is \( 0 \), since \( a + 0 = a \) for all \( a \in S \).
+   - \( 0 \in S \), and adding \( 0 \) to any element in \( S \) leaves it unchanged. **This statement is TRUE.**
+
+4. **Statement d: (S, +, x) has no identity under multiplication modulo 10.**
+   - The identity element under multiplication is \( 1 \), since \( a \times 1 = a \) for all \( a \in S \).
+   - However, \( 1 \notin S \), so there is no multiplicative identity in \( S \). **This statement is TRUE.**
+
+Since all statements except one are true, the **FALSE** statement is **none of them**.
+
+"
+"To solve this problem, I will use the Pythagorean theorem and related rates.
+
+1. The ladder forms a right triangle with the wall and the ground. Let \( x \) be the distance of the bottom of the ladder from the wall, and \( y \) be the height of the top of the ladder above the ground. The length of the ladder is constant at 9 meters, so \( x^2 + y^2 = 9^2 \).
+
+2. Differentiate both sides of the equation with respect to time \( t \):
+   \[
+   2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0
+   \]
+   Simplify:
+   \[
+   x \frac{dx}{dt} + y \frac{dy}{dt} = 0
+   \]
+
+3. We are given \( \frac{dx}{dt} = 2 \) m/s (the bottom of the ladder is moving away from the wall at 2 m/s). At the moment when \( y = 3 \) meters, we need to find \( \frac{dy}{dt} \) (the rate at which the top of the ladder is sliding downward).
+
+4. Use the Pythagorean theorem to find \( x \) when \( y = 3 \):
+   \[
+   x^2 + 3^2 = 9^2
+   \]
+   \[
+   x^2 + 9 = 81
+   \]
+   \[
+   x^2 = 72 \quad \Rightarrow \quad x = \sqrt{72} = 6\sqrt{2}
+   \]
+
+5. Substitute \( x = 6\sqrt{2} \), \( y = 3 \), and \( \frac{dx}{dt} = 2 \) into the differentiated equation:
+   \[
+   (6\sqrt{2})(2) + (3)\frac{dy}{dt} = 0
+   \]
+   \[
+   12\sqrt{2} + 3\frac{dy}{dt} = 0
+   \]
+   \[
+   3\frac{dy}{dt} = -12\sqrt{2}
+   \]
+   \[
+   \frac{dy}{dt} = -\frac{12\sqrt{2}}{3} = -4\sqrt{2}
+   \]
+
+6. The negative sign indicates that the top of the ladder is sliding downward. Therefore, the speed at which the top of the ladder is sliding downward is \( 4\sqrt{2} \) m/s.
+
+The correct answer is {'sol': 'c'}."
+"To solve this problem, I will use the triangle inequality theorem, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the third side.
+
+1. First, I note that the segment of length 10 is divided into three smaller segments by points A and B. Let the lengths of these three segments be \(x\), \(y\), and \(z\), where \(x + y + z = 10\).
+
+2. For these three segments to form a triangle, the triangle inequality must hold:
+   - \(x + y > z\),
+   - \(x + z > y\),
+   - \(y + z > x\).
+
+3. Substituting \(z = 10 - x - y\) into the inequalities:
+   - \(x + y > 10 - x - y\) simplifies to \(2(x + y) > 10\), or \(x + y > 5\),
+   - \(x + (10 - x - y) > y\) simplifies to \(10 - y > y\), or \(y < 5\),
+   - \(y + (10 - x - y) > x\) simplifies to \(10 - x > x\), or \(x < 5\).
+
+4. Combining these conditions, we have:
+   - \(x + y > 5\),
+   - \(x < 5\),
+   - \(y < 5\).
+
+5. The region satisfying these inequalities is a triangle in the \(x\)-\(y\) plane, bounded by:
+   - \(x + y = 5\),
+   - \(x = 5\),
+   - \(y = 5\),
+   within the square \(0 \leq x, y \leq 5\).
+
+6. The area of the square is \(5 \times 5 = 25\). The area of the triangle satisfying the inequalities is \(\frac{1}{2} \times 5 \times 5 = 12.5\).
+
+7. The probability is the ratio of the area of the triangle to the area of the square: \(\frac{12.5}{25} = 0.5\), or 50%.
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement I: P is invertible.**
+   - A linear transformation \( P \) is invertible if there exists a transformation \( P^{-1} \) such that \( P \cdot P^{-1} = I \), where \( I \) is the identity transformation.
+   - Since \( P^2 = P \), we can rewrite this as \( P(P - I) = 0 \). This implies that \( P \) may not be invertible because \( P - I \) could be nonzero, and \( P \) could have a nontrivial kernel (e.g., if \( P \) is a projection operator). Therefore, **Statement I is not necessarily true.**
+
+2. **Statement II: P is diagonalizable.**
+   - A linear transformation \( P \) is diagonalizable if there exists a basis of eigenvectors for \( P \), meaning \( P \) can be represented as a diagonal matrix in some basis.
+   - Since \( P^2 = P \), the eigenvalues of \( P \) must satisfy the equation \( \lambda^2 = \lambda \), which gives \( \lambda = 0 \) or \( \lambda = 1 \). This means \( P \) is diagonalizable because it has distinct eigenvalues (0 and 1) and can be represented as a diagonal matrix in a suitable basis. Therefore, **Statement II is true.**
+
+3. **Statement III: P is either the identity transformation or the zero transformation.**
+   - This statement would imply that \( P \) is always either \( P = I \) (the identity transformation) or \( P = 0 \) (the zero transformation).
+   - However, \( P \) could also be a projection operator, where \( P \neq I \) and \( P \neq 0 \). For example, \( P \) could project onto a subspace of \( V \). Thus, **Statement III is not necessarily true.**
+
+### Conclusion:
+The only statement that must be true is Statement II. Therefore, the correct answer is:
+
+{'sol': 'c'}"
+"To determine the correct answer, let's analyze the statements step by step:
+
+1. **Statement (a): Every compact space is complete.**
+   - Compactness and completeness are properties of topological spaces and metric spaces, respectively. In the context of metric spaces, a compact space is always complete because compactness implies that every Cauchy sequence has a convergent subsequence, and in a compact metric space, this subsequence converges to a point within the space. Thus, statement (a) is true.
+
+2. **Statement (b): Every complete space is compact.**
+   - Completeness means that every Cauchy sequence converges to a point within the space. However, completeness does not imply compactness. For example, the real numbers \(\mathbb{R}\) with the standard metric are complete but not compact (since \(\mathbb{R}\) is not bounded). Thus, statement (b) is false.
+
+3. **Conclusion:**
+   - Since statement (a) is true and statement (b) is false, the correct answer is **a)**.
+
+Final answer: {'sol': 'a'}"
+"To solve this, I need to calculate the number of edges in a complete graph with 10 vertices. 
+
+1. A complete graph has an edge between every pair of vertices. The number of ways to choose 2 vertices from 10 is given by the combination formula: \( C(n, 2) = \frac{n(n-1)}{2} \), where \( n \) is the number of vertices.
+2. Substituting \( n = 10 \), the formula becomes \( C(10, 2) = \frac{10(10-1)}{2} = \frac{10 \cdot 9}{2} = 45 \).
+3. Therefore, the complete graph with 10 vertices has 45 edges.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's break it down step by step:
+
+1. **Understand the problem and the probability distribution**:  
+   The probability that \( X = n \) is \( P(X = n) = \frac{1}{2^n} \). Similarly, \( P(Y = n) = \frac{1}{2^n} \), and \( X \) and \( Y \) are independent.
+
+2. **Find the probability that both \( X \leq 3 \) and \( Y \leq 3 \)**:  
+   The complement of ""at least one of \( X \) or \( Y \) is greater than 3"" is ""both \( X \leq 3 \) and \( Y \leq 3 \).""  
+   For \( X \leq 3 \), the probability is:  
+   \[
+   P(X \leq 3) = P(X = 1) + P(X = 2) + P(X = 3) = \frac{1}{2^1} + \frac{1}{2^2} + \frac{1}{2^3} = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} = \frac{7}{8}.
+   \]  
+   Since \( X \) and \( Y \) are independent, the probability that both \( X \leq 3 \) and \( Y \leq 3 \) is:  
+   \[
+   P(X \leq 3 \text{ and } Y \leq 3) = P(X \leq 3) \cdot P(Y \leq 3) = \frac{7}{8} \cdot \frac{7}{8} = \frac{49}{64}.
+   \]
+
+3. **Find the probability that at least one of \( X \) or \( Y \) is greater than 3**:  
+   The complement of ""both \( X \leq 3 \) and \( Y \leq 3 \)"" is ""at least one of \( X \) or \( Y \) is greater than 3.""  
+   Therefore, the probability is:  
+   \[
+   P(\text{at least one of } X \text{ or } Y > 3) = 1 - P(X \leq 3 \text{ and } Y \leq 3) = 1 - \frac{49}{64} = \frac{15}{64}.
+   \]
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understand the problem**: We are given two 4-dimensional subspaces \( V \) and \( W \) of a 7-dimensional vector space \( X \). The goal is to determine which of the given dimensions (0, 1, 2, or 3) cannot be the dimension of the intersection \( V \cap W \).
+
+2. **Key fact**: The dimension of the intersection \( V \cap W \) is constrained by the dimensions of \( V \), \( W \), and \( X \). Specifically, the dimension of \( V \cap W \) satisfies:
+   \[
+   \dim(V \cap W) \geq \dim(V) + \dim(W) - \dim(X).
+   \]
+   Substituting the given dimensions (\( \dim(V) = 4 \), \( \dim(W) = 4 \), \( \dim(X) = 7 \)):
+   \[
+   \dim(V \cap W) \geq 4 + 4 - 7 = 1.
+   \]
+   Therefore, the minimum possible dimension of \( V \cap W \) is 1.
+
+3. **Maximum dimension**: The maximum possible dimension of \( V \cap W \) is the smaller of \( \dim(V) \) and \( \dim(W) \), which is 4. Thus, \( \dim(V \cap W) \) can range from 1 to 4.
+
+4. **Conclusion**: From the above analysis, \( \dim(V \cap W) \) cannot be 0 because the minimum possible dimension is 1. The other options (1, 2, and 3) are all possible.
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this problem, we need to determine the minimum number of teams required such that no student is on the same team as someone they dislike.
+
+1. Each student dislikes three classmates, meaning that each student can be connected to up to three others in a graph representation. This forms a graph where each node (student) has a degree of at most 3.
+
+2. The problem is equivalent to finding the chromatic number of this graph, which is the minimum number of colors (teams) needed to color the graph such that no two adjacent nodes (students who dislike each other) share the same color.
+
+3. A graph with a maximum degree of 3 can always be colored with at most 4 colors (by Brooks' theorem). Therefore, the minimum number of teams required is 4.
+
+The correct answer is {'sol': 'a'}."
+"To solve this problem, let's break it down step by step:
+
+1. **Identify the squares in the range 1 to 10**: The integers that are squares in this range are 1 (1²), 4 (2²), and 9 (3²). These are the only numbers that could potentially be the square of another number in the range.
+
+2. **Count the total number of outcomes**: Since Sofia and Tess each choose one number from 1 to 10, there are \(10 \times 10 = 100\) total possible outcomes.
+
+3. **Count the outcomes where one number is the square of the other**:
+   - If Sofia chooses 1, Tess can choose 1 (since \(1^2 = 1\)).
+   - If Sofia chooses 2, Tess can choose 4 (since \(2^2 = 4\)).
+   - If Sofia chooses 3, Tess can choose 9 (since \(3^2 = 9\)).
+   - If Sofia chooses 4, Tess can choose 2 (since \(\sqrt{4} = 2\)).
+   - If Sofia chooses 9, Tess can choose 3 (since \(\sqrt{9} = 3\)).
+   - This gives a total of 5 outcomes where one number is the square of the other.
+
+4. **Count the outcomes where neither number is the square of the other**: Subtract the 5 outcomes where one number is the square of the other from the total outcomes. This gives \(100 - 5 = 95\) outcomes.
+
+5. **Calculate the probability**: The probability that neither integer chosen will be the square of the other is the number of favorable outcomes divided by the total number of outcomes:
+   \[
+   \text{Probability} = \frac{95}{100} = 0.95
+   \]
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement I**: If \( K \) is compact, then every continuous real-valued function defined on \( K \) is bounded.
+   - By the Heine-Borel theorem, a subset of \( \mathbb{R}^n \) is compact if and only if it is closed and bounded. A fundamental result in real analysis states that every continuous function on a compact set is bounded. Therefore, this statement is **true**.
+
+2. **Statement II**: If every continuous real-valued function defined on \( K \) is bounded, then \( K \) is compact.
+   - This statement is **false**. For example, consider \( K = \mathbb{R}^n \). Every continuous real-valued function on \( \mathbb{R}^n \) is bounded on any compact subset of \( \mathbb{R}^n \), but \( \mathbb{R}^n \) itself is not compact because it is not bounded.
+
+3. **Statement III**: If \( K \) is compact, then \( K \) is connected.
+   - This statement is **false**. A compact set does not necessarily have to be connected. For example, the union of two disjoint closed intervals in \( \mathbb{R} \) is compact but not connected.
+
+Thus, only Statement I is true.
+
+The correct answer is: {'sol': 'a'}"
+"To solve this problem, let's analyze each statement step by step:
+
+---
+
+### Step 1: Analyze Statement I
+- **Statement I**: If \( V \) has a basis containing only eigenvectors of \( T \), then \( U = M(V) \).
+  - If \( V \) has a basis of eigenvectors of \( T \), then \( T \) is diagonalizable. In this case, for any matrix \( X \in M(V) \), \( TX = XT \) because \( T \) and \( X \) commute when \( T \) is diagonalizable. This implies that \( U = M(V) \) in this case.
+  - **Conclusion**: Statement I is true.
+
+---
+
+### Step 2: Analyze Statement II
+- **Statement II**: \( \dim(U) + \dim(W) = n^2 \).
+  - \( M(V) \) is the space of all \( n \times n \) matrices, so its dimension is \( n^2 \).
+  - \( U \) and \( W \) are subspaces of \( M(V) \), and \( W \) is defined as the image of the map \( X \mapsto TX - XT \). The map \( X \mapsto TX - XT \) is linear, and its kernel is precisely \( U \) (the set of matrices that commute with \( T \)).
+  - By the rank-nullity theorem, \( \dim(U) + \dim(W) = \dim(M(V)) = n^2 \).
+  - **Conclusion**: Statement II is true.
+
+---
+
+### Step 3: Analyze Statement III
+- **Statement III**: \( \dim(U) < n \).
+  - This statement is not necessarily true. For example, if \( T \) is the zero matrix, then \( TX = XT \) for all \( X \in M(V) \), so \( U = M(V) \) and \( \dim(U) = n^2 \), which is greater than \( n \). Thus, \( \dim(U) < n \) does not hold in general.
+  - **Conclusion**: Statement III is false.
+
+---
+
+### Final Answer:
+- Statements I and II are true, while Statement III is false.
+- The correct choice is **d) I and II only**.
+
+---
+
+**Final Solution**: {'sol': 'd'}"
+"To solve this, I will calculate the work done by the force \( F \) on the particle as it moves along the given path.
+
+1. **Determine the force vector \( F \):**  
+   The force \( F \) is parallel to the vector \((-1, 0, 1)\). To make it a unit vector, divide by its magnitude:  
+   \[
+   \text{Magnitude of } (-1, 0, 1) = \sqrt{(-1)^2 + 0^2 + 1^2} = \sqrt{2}.
+   \]  
+   So, the unit vector is \((-1/\sqrt{2}, 0, 1/\sqrt{2})\).  
+   Therefore, \( F = (-1/\sqrt{2}, 0, 1/\sqrt{2}) \).
+
+2. **Find the velocity vector of the particle:**  
+   The path of the particle is given by \((t, t^2, t^3)\). The velocity vector is the derivative of the position vector with respect to \( t \):  
+   \[
+   \mathbf{v}(t) = \frac{d}{dt}(t, t^2, t^3) = (1, 2t, 3t^2).
+   \]
+
+3. **Calculate the work done:**  
+   The work done by the force is the integral of the dot product of \( F \) and \( \mathbf{v}(t) \) over the given time interval:  
+   \[
+   W = \int_{0}^{1} F \cdot \mathbf{v}(t) \, dt.
+   \]  
+   Compute the dot product \( F \cdot \mathbf{v}(t) \):  
+   \[
+   F \cdot \mathbf{v}(t) = \left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) \cdot (1, 2t, 3t^2) = -\frac{1}{\sqrt{2}}(1) + 0(2t) + \frac{1}{\sqrt{2}}(3t^2).
+   \]  
+   Simplify:  
+   \[
+   F \cdot \mathbf{v}(t) = -\frac{1}{\sqrt{2}} + \frac{3t^2}{\sqrt{2}} = \frac{-1 + 3t^2}{\sqrt{2}}.
+   \]  
+   Now integrate over \( t \) from 0 to 1:  
+   \[
+   W = \int_{0}^{1} \frac{-1 + 3t^2}{\sqrt{2}} \, dt = \frac{1}{\sqrt{2}} \int_{0}^{1} (-1 + 3t^2) \, dt.
+   \]  
+   Break it into two integrals:  
+   \[
+   W = \frac{1}{\sqrt{2}} \left[ \int_{0}^{1} -1 \, dt + \int_{0}^{1} 3t^2 \, dt \right].
+   \]  
+   Compute each integral:  
+   \[
+   \int_{0}^{1} -1 \, dt = -t \Big|_{0}^{1} = -1,
+   \]  
+   \[
+   \int_{0}^{1} 3t^2 \, dt = t^3 \Big|_{0}^{1} = 1^3 - 0^3 = 1.
+   \]  
+   Substitute back:  
+   \[
+   W = \frac{1}{\sqrt{2}} \left[ -1 + 1 \right] = \frac{1}{\sqrt{2}} (0) = 0.
+   \]
+
+The work done by the force is 0. Therefore, the correct answer is: {'sol': 'c'}."
+"To solve this problem, let's analyze each statement step by step:
+
+1. **Statement I: If A and C are connected, then B is connected.**
+   - A subset of a topological space is connected if it cannot be partitioned into two nonempty, disjoint, open subsets.
+   - If \( A \) and \( C \) are connected, it does not necessarily imply that \( B \) is connected. For example, \( B \) could be a disconnected subset of \( C \) even though \( A \) and \( C \) are connected. Therefore, **Statement I is false**.
+
+2. **Statement II: If A and C are compact, then B is compact.**
+   - Compactness is a topological property that is preserved under subsets. However, the compactness of \( A \) and \( C \) does not guarantee the compactness of \( B \). For example, \( B \) could be a non-compact subset of \( C \) even if \( A \) and \( C \) are compact. Therefore, **Statement II is false**.
+
+3. **Statement III: If A and C are Hausdorff, then B is Hausdorff.**
+   - The Hausdorff property is a property of the entire topological space \( X \), not of individual subsets. If \( X \) is Hausdorff, then all subsets of \( X \), including \( A \), \( B \), and \( C \), inherit this property. However, the Hausdorff property of \( A \) and \( C \) alone does not imply that \( B \) is Hausdorff. Therefore, **Statement III is false**.
+
+After analyzing all three statements, none of them are true. However, the problem does not provide an option for ""none of the above,"" so there may be an issue with the question or its options.
+
+Correct answer: {'sol': 'none'}"
+"To solve this, we need to find the limit of the sequence \( x_n \) as \( n \to \infty \), assuming the sequence converges.
+
+1. Let the limit of the sequence be \( L \). If the sequence converges, then \( L \) must satisfy the recurrence relation in the limit. That is, \( L = \sqrt{3 + 2L} \).
+
+2. Squaring both sides of the equation, we get:
+   \[
+   L^2 = 3 + 2L.
+   \]
+
+3. Rearrange the equation to form a standard quadratic equation:
+   \[
+   L^2 - 2L - 3 = 0.
+   \]
+
+4. Factorize the quadratic equation:
+   \[
+   (L - 3)(L + 1) = 0.
+   \]
+
+5. The solutions are \( L = 3 \) and \( L = -1 \). Since \( x_n \) is defined as a sequence of square roots, all terms \( x_n \) are non-negative. Therefore, the limit \( L \) must be \( L = 3 \).
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement I: v is also an eigenvector of 2A.**
+   - If \( v \) is an eigenvector of \( A \), then \( A v = \lambda v \), where \( \lambda \) is the eigenvalue.
+   - For \( 2A \), we have \( 2A v = 2(\lambda v) = (2\lambda)v \). This shows that \( v \) is still an eigenvector of \( 2A \), with eigenvalue \( 2\lambda \).
+   - Therefore, Statement I is true.
+
+2. **Statement II: v is also an eigenvector of \( A^2 \).**
+   - If \( v \) is an eigenvector of \( A \), then \( A v = \lambda v \).
+   - Applying \( A \) again, \( A^2 v = A(A v) = A(\lambda v) = \lambda (A v) = \lambda (\lambda v) = \lambda^2 v \).
+   - This shows that \( v \) is still an eigenvector of \( A^2 \), with eigenvalue \( \lambda^2 \).
+   - Therefore, Statement II is true.
+
+3. **Statement III: v is also an eigenvector of \( A^{-1} \).**
+   - If \( v \) is an eigenvector of \( A \), then \( A v = \lambda v \), where \( \lambda \neq 0 \) (since \( A \) is invertible).
+   - Multiplying both sides by \( A^{-1} \), we get \( A^{-1}(A v) = A^{-1}(\lambda v) \), which simplifies to \( v = \lambda (A^{-1} v) \).
+   - Rearranging, \( A^{-1} v = \frac{1}{\lambda} v \). This shows that \( v \) is still an eigenvector of \( A^{-1} \), with eigenvalue \( \frac{1}{\lambda} \).
+   - Therefore, Statement III is true.
+
+Since all three statements are true, the correct answer is {'sol': 'd'}."
+"To solve this problem, we need to determine how many positive integers \( k \) satisfy the condition that \( k! \) (the factorial of \( k \)) ends in exactly 99 zeros. 
+
+1. **Understand the problem**: The number of trailing zeros in \( k! \) is determined by the number of factors of 5 in \( k! \), because there are always more factors of 2 than factors of 5 in factorials. The formula to calculate the number of trailing zeros in \( k! \) is:
+   \[
+   Z(k) = \left\lfloor \frac{k}{5} \right\rfloor + \left\lfloor \frac{k}{25} \right\rfloor + \left\lfloor \frac{k}{125} \right\rfloor + \cdots
+   \]
+   where \( \lfloor x \rfloor \) represents the greatest integer less than or equal to \( x \).
+
+2. **Set up the equation**: We need \( Z(k) = 99 \). This means we need to find all \( k \) such that the sum of the terms in the formula above equals 99.
+
+3. **Find the range of \( k \)**: Start by estimating \( k \). Since \( Z(k) \) grows as \( k \) increases, we can approximate \( k \) by solving:
+   \[
+   \frac{k}{5} + \frac{k}{25} + \frac{k}{125} + \cdots \approx 99
+   \]
+   Factoring out \( k \), this becomes:
+   \[
+   k \left( \frac{1}{5} + \frac{1}{25} + \frac{1}{125} + \cdots \right) \approx 99
+   \]
+   The series \( \frac{1}{5} + \frac{1}{25} + \frac{1}{125} + \cdots \) is a geometric series with sum \( \frac{1/5}{1 - 1/5} = \frac{1}{4} \). So:
+   \[
+   k \cdot \frac{1}{4} \approx 99 \implies k \approx 396
+   \]
+   Thus, \( k \) is close to 396. We will now test values of \( k \) near 396 to find when \( Z(k) = 99 \).
+
+4. **Calculate \( Z(k) \) for specific values**:
+   - For \( k = 395 \):
+     \[
+     Z(395) = \left\lfloor \frac{395}{5} \right\rfloor + \left\lfloor \frac{395}{25} \right\rfloor + \left\lfloor \frac{395}{125} \right\rfloor + \left\lfloor \frac{395}{625} \right\rfloor
+     \]
+     \[
+     Z(395) = 79 + 15 + 3 + 0 = 97
+     \]
+   - For \( k = 396 \):
+     \[
+     Z(396) = \left\lfloor \frac{396}{5} \right\rfloor + \left\lfloor \frac{396}{25} \right\rfloor + \left\lfloor \frac{396}{125} \right\rfloor + \left\lfloor \frac{396}{625} \right\rfloor
+     \]
+     \[
+     Z(396) = 79 + 15 + 3 + 0 = 97
+     \]
+   -"
+"To solve this, let's analyze the problem step by step:
+
+1. **Understanding the structure of the ring R**:  
+   If R has exactly two right ideals, these must be the trivial right ideals: {0} (the additive identity) and R itself. This implies that R is a simple ring in the sense that it has no proper nontrivial right ideals.
+
+2. **Implications for R being a division ring (II)**:  
+   A ring with exactly two right ideals is necessarily a division ring. This is because, in such a ring, every nonzero element must have a multiplicative inverse. If there were a nonzero element without an inverse, it would generate a proper nontrivial right ideal, contradicting the assumption that R has only two right ideals. Thus, R must be a division ring.
+
+3. **Implications for R being commutative (I)**:  
+   A division ring is not necessarily commutative. For example, the quaternions form a division ring that is not commutative. Therefore, R being commutative is not guaranteed.
+
+4. **Implications for R being infinite (III)**:  
+   The size of R is not constrained by the condition of having exactly two right ideals. For example, the finite field \( \mathbb{F}_p \) (with p prime) is a division ring with exactly two right ideals, but it is finite. Thus, R being infinite is not guaranteed.
+
+From this analysis, the only statement that must be true is II: R is a division ring.
+
+The correct answer is {'sol': 'b'}."
+"To solve this problem, let's break it down step by step:
+
+1. **Understand the probabilities for each face of the die**:  
+   Since the die is counterfeit, the probability of rolling an even number (2, 4, or 6) is twice the probability of rolling an odd number (1, 3, or 5). Let the probability of rolling an odd number be \( p \). Then, the probability of rolling an even number is \( 2p \).  
+   The total probability must sum to 1:  
+   \[
+   3p + 3(2p) = 1 \implies 9p = 1 \implies p = \frac{1}{9}.
+   \]  
+   So, the probability of rolling an odd number is \( \frac{1}{9} \), and the probability of rolling an even number is \( \frac{2}{9} \).
+
+2. **Calculate the probability of rolling a 5 on the first roll**:  
+   Since 5 is an odd number, the probability of rolling a 5 is \( \frac{1}{9} \).
+
+3. **Calculate the probability of rolling a 6 on the second roll**:  
+   Since 6 is an even number, the probability of rolling a 6 is \( \frac{2}{9} \).
+
+4. **Find the combined probability of the two events**:  
+   The two rolls are independent, so the probability of rolling a 5 on the first roll and a 6 on the second roll is:  
+   \[
+   \frac{1}{9} \times \frac{2}{9} = \frac{2}{81}.
+   \]
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, let's analyze each statement step by step:
+
+**Statement 1**:  
+1. We are given two sequences of complex numbers, \({s_n}\) and \({t_n}\), with limits \(s\) and \(t\), respectively.  
+2. The question asks whether \(\lim_{n \to \infty} (s_n t_n) = st\).  
+3. This is a standard result in analysis: if two sequences converge, their product also converges to the product of their limits. This holds for complex numbers as well.  
+Thus, **Statement 1 is true**.
+
+**Statement 2**:  
+1. A bounded sequence of real numbers is given, and we are asked whether it can have no convergent subsequence.  
+2. By the Bolzano-Weierstrass theorem, every bounded sequence of real numbers has at least one convergent subsequence.  
+3. Therefore, it is **not possible** for a bounded sequence of real numbers to have no convergent subsequence.  
+Thus, **Statement 2 is false**.
+
+The correct answer is {'sol': 'b'}."
+"To solve this, let's analyze the binary operation \( m \cdot n = m + n + mn \) step by step:
+
+1. **Check associativity**: For the operation to be associative, \((m \cdot n) \cdot p\) must equal \(m \cdot (n \cdot p)\) for all integers \(m, n, p\). Compute both sides:
+   - \((m \cdot n) \cdot p = (m + n + mn) \cdot p = (m + n + mn) + p + (m + n + mn)p\).
+   - \(m \cdot (n \cdot p) = m \cdot (n + p + np) = m + (n + p + np) + m(n + p + np)\).
+   After simplifying, these two expressions are not equal in general. Thus, the operation is **not associative**.
+
+2. **Check for an identity element**: An identity element \(e\) must satisfy \(m \cdot e = e \cdot m = m\) for all \(m \in \mathbb{Z}\). Using the operation:
+   - \(m \cdot e = m + e + me\).
+   Setting this equal to \(m\), we get \(m + e + me = m\), which simplifies to \(e + me = 0\), or \(e(1 + m) = 0\).
+   For this to hold for all \(m \in \mathbb{Z}\), \(e\) must be \(0\). However, substituting \(e = 0\) into the operation does not satisfy the identity property for all \(m\). Thus, there is **no identity element**.
+
+3. **Check for inverses**: For each \(m \in \mathbb{Z}\), there must exist an \(n \in \mathbb{Z}\) such that \(m \cdot n = 0\) (assuming \(0\) is the identity element). Using the operation:
+   - \(m \cdot n = m + n + mn = 0\).
+   Rearranging, \(n(1 + m) = -m\). For this to have a solution for all \(m\), \(1 + m\) must divide \(-m\). However, this is not true for all \(m \in \mathbb{Z}\). Thus, **not all elements have an inverse**.
+
+4. **Conclusion**: Since the operation is not associative, there is no identity element, and not all elements have inverses, the structure \((\mathbb{Z}, \cdot)\) is **not a group**.
+
+Now, evaluate the given statements:
+- **I**: True, the structure is not a group because the operation is not associative.
+- **II**: True, the structure is not a group because there is no identity element.
+- **III**: True, the structure is not a group because not all elements have an inverse.
+- **IV**: False, the structure is not a group.
+
+The correct answer is **I and II only**. Therefore, the solution is:
+
+{'sol': 'a'}"
+"To solve this problem, let's break it down step by step:
+
+1. **Understand the alternating shifts and their contributions**:
+   - When Kate starts, she works for 2 days, then John works for 2 days, and so on. In 10 days, Kate and John alternate shifts, and the total work done equals 1 practice test.
+   - When John starts, the same alternating pattern occurs, but it takes 10.5 days to complete the test.
+
+2. **Express the work done in terms of rates**:
+   - Let Kate's rate of work be \( \frac{1}{k} \) (tests per day) and John's rate of work be \( \frac{1}{j} \) (tests per day).
+   - In 2 days, Kate completes \( \frac{2}{k} \) of the test, and John completes \( \frac{2}{j} \) of the test.
+
+3. **Set up equations for the alternating shifts**:
+   - When Kate starts, in 10 days, she works for 6 days (3 shifts) and John works for 4 days (2 shifts). The total work done is:
+     \[
+     \frac{6}{k} + \frac{4}{j} = 1
+     \]
+   - When John starts, in 10.5 days, he works for 6 days (3 shifts) and Kate works for 4.5 days (2.25 shifts). The total work done is:
+     \[
+     \frac{4.5}{k} + \frac{6}{j} = 1
+     \]
+
+4. **Solve the system of equations**:
+   - From the first equation:
+     \[
+     \frac{6}{k} + \frac{4}{j} = 1
+     \]
+   - From the second equation:
+     \[
+     \frac{4.5}{k} + \frac{6}{j} = 1
+     \]
+
+5. **Find the combined rate when working simultaneously**:
+   - The combined rate of Kate and John working together is \( \frac{1}{k} + \frac{1}{j} \).
+   - Solve the system of equations to find \( \frac{1}{k} + \frac{1}{j} \), and then calculate the time it takes to complete 1 test.
+
+After solving, the correct answer is {'sol': 'd'}."
+"To solve this, I will consider the following steps:
+
+1. The area of a triangle is given by \( \frac{1}{2} \times \text{base} \times \text{height} \). In this case, the base of the triangle is the chord of the circle, and the height is the perpendicular distance from the center of the circle to the chord.
+
+2. To maximize the area, the base (chord) should be as long as possible. The longest chord in a circle is the diameter, which has a length of 2 (since the radius is 1).
+
+3. When the chord is the diameter, the triangle becomes a right triangle with the center of the circle as one vertex and the two endpoints of the diameter as the other two vertices. The height of the triangle in this case is equal to the radius of the circle, which is 1.
+
+4. Substituting the base (2) and height (1) into the area formula, the area of the triangle is \( \frac{1}{2} \times 2 \times 1 = 1 \).
+
+Thus, the greatest possible area of the triangular region is 1.
+
+The correct answer is {'sol': 'b'}."
+"To solve this, we need to analyze the function \( f(x, y) = x^2 - 2xy + y^3 \) and determine the nature and location of its extrema.
+
+1. **Find the critical points**:  
+   To find the critical points, we calculate the partial derivatives of \( f(x, y) \) with respect to \( x \) and \( y \), and set them equal to zero:
+   \[
+   f_x = \frac{\partial f}{\partial x} = 2x - 2y, \quad f_y = \frac{\partial f}{\partial y} = -2x + 3y^2.
+   \]
+   Setting \( f_x = 0 \) and \( f_y = 0 \), we solve:
+   \[
+   2x - 2y = 0 \implies x = y,
+   \]
+   and substituting \( x = y \) into \( f_y = 0 \):
+   \[
+   -2x + 3x^2 = 0 \implies x(-2 + 3x) = 0 \implies x = 0 \text{ or } x = \frac{2}{3}.
+   \]
+   Thus, the critical points are \( (0, 0) \) and \( \left(\frac{2}{3}, \frac{2}{3}\right) \).
+
+2. **Classify the critical points**:  
+   To classify the critical points, we compute the second partial derivatives:
+   \[
+   f_{xx} = \frac{\partial^2 f}{\partial x^2} = 2, \quad f_{yy} = \frac{\partial^2 f}{\partial y^2} = 6y, \quad f_{xy} = \frac{\partial^2 f}{\partial x \partial y} = -2.
+   \]
+   The Hessian determinant is:
+   \[
+   H = f_{xx}f_{yy} - (f_{xy})^2 = (2)(6y) - (-2)^2 = 12y - 4.
+   \]
+   - At \( (0, 0) \): \( H = 12(0) - 4 = -4 \). Since \( H < 0 \), \( (0, 0) \) is a saddle point.
+   - At \( \left(\frac{2}{3}, \frac{2}{3}\right) \): \( H = 12\left(\frac{2}{3}\right) - 4 = 8 - 4 = 4 \). Since \( H > 0 \) and \( f_{xx} = 2 > 0 \), \( \left(\frac{2}{3}, \frac{2}{3}\right) \) is a relative minimum.
+
+3. **Check the given options**:  
+   - (a) \( f \) does **not** have all its relative extrema on the line \( x = y \), as the critical points are on this line but not all extrema are relative extrema.
+   - (b) \( f \) does **not** have all its relative extrema on the parabola \( x = y^2 \), as the critical points do not satisfy \( x = y^2 \).
+   - (c) \( f \) does **not** have a relative minimum at \( (0, 0) \), as \( (0, 0) \) is a saddle point.
+   - (d) \( f \) does have an absolute minimum at \( \left(\frac{2}{3}, \frac{2}{3}\right) \), as this is the only relative minimum and the function does not approach a lower value elsewhere.
+
+The correct answer is: {'sol': 'd'}."
+"To solve this, I will determine the largest order of an element in the symmetric group \( S_5 \), which is the group of all permutations of 5 objects.
+
+1. The order of a permutation in \( S_5 \) is the least common multiple (LCM) of the lengths of the disjoint cycles in its cycle decomposition.
+2. To maximize the order, I need to find a cycle decomposition of 5 objects that gives the largest LCM. The possible cycle types are:
+   - A single 5-cycle (e.g., \( (1\ 2\ 3\ 4\ 5) \)), which has order 5.
+   - A product of a 3-cycle and a 2-cycle (e.g., \( (1\ 2\ 3)(4\ 5) \)), which has order \( \text{lcm}(3, 2) = 6 \).
+   - Other combinations (e.g., a single 4-cycle, or a product of smaller cycles) yield smaller LCMs.
+3. The largest LCM occurs for a 5-cycle, which has order 5.
+
+Thus, the largest order of an element in \( S_5 \) is 5. The correct answer is {'sol': 'a'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understand the given conditions**:  
+   - S(n) is a statement about positive integers n.  
+   - If S(k) is true, then S(k + 1) must also be true. This means that the truth of S(n) propagates forward to all larger integers.  
+   - There exists some positive integer \( n_0 \) such that S(\( n_0 \)) is not true. This means that S(\( n_0 \)) is false.
+
+2. **Implications of S(\( n_0 \)) being false**:  
+   - Since S(\( n_0 \)) is false, and the truth of S(n) propagates forward, S(\( n_0 + 1 \)) must also be false, S(\( n_0 + 2 \)) must also be false, and so on.  
+   - Therefore, S(n) is not true for any \( n \geq n_0 \).
+
+3. **What about values less than \( n_0 \)?**  
+   - The problem does not provide any information about the truth or falsity of S(n) for \( n < n_0 \).  
+   - It is possible that S(n) is true for some or all \( n < n_0 \), but we cannot conclude anything about these values based on the given information.
+
+4. **Evaluate the choices**:  
+   - (a) S(\( n_0 + 1 \)) is not true. This is correct but not the strongest conclusion.  
+   - (b) S(\( n_0 - 1 \)) is not true. This cannot be concluded because we have no information about \( n < n_0 \).  
+   - (c) S(n) is not true for any \( n \leq n_0 \). This cannot be concluded because we have no information about \( n < n_0 \).  
+   - (d) S(n) is not true for any \( n \geq n_0 \). This is the strongest conclusion that can be drawn based on the given information.
+
+The correct answer is {'sol': 'd'}."
+"To find the point on the plane \( 2x + y + 3z = 3 \) that is closest to the origin, we need to minimize the distance from the origin to the plane. The shortest distance from a point to a plane is along the line perpendicular to the plane. The normal vector to the plane is \( \vec{n} = (2, 1, 3) \).
+
+1. **Find the parametric equation of the line perpendicular to the plane passing through the origin**:  
+   The line can be expressed as \( \vec{r}(t) = t \vec{n} = t(2, 1, 3) = (2t, t, 3t) \).
+
+2. **Substitute the line equation into the plane equation**:  
+   Substitute \( x = 2t \), \( y = t \), and \( z = 3t \) into \( 2x + y + 3z = 3 \):  
+   \[
+   2(2t) + t + 3(3t) = 3 \implies 4t + t + 9t = 3 \implies 14t = 3 \implies t = \frac{3}{14}.
+   \]
+
+3. **Find the coordinates of the point**:  
+   Substitute \( t = \frac{3}{14} \) into \( (2t, t, 3t) \):  
+   \[
+   x = 2t = 2 \cdot \frac{3}{14} = \frac{6}{14} = \frac{3}{7}, \quad y = t = \frac{3}{14}, \quad z = 3t = 3 \cdot \frac{3}{14} = \frac{9}{14}.
+   \]  
+   The coordinates of the point are \( \left( \frac{3}{7}, \frac{3}{14}, \frac{9}{14} \right) \).
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, we need to determine for which integers \( n \) in the range \( 3 \leq n \leq 11 \), there is only one group of order \( n \) (up to isomorphism). Here's the step-by-step reasoning:
+
+1. **Recall the classification of groups of prime order**: If \( n \) is a prime number, there is only one group of order \( n \), which is the cyclic group \( \mathbb{Z}_n \). This is because any group of prime order is cyclic and has no other structure.
+
+2. **Check the prime numbers in the range \( 3 \leq n \leq 11 \)**: The prime numbers in this range are \( 3, 5, 7, \) and \( 11 \). For these values of \( n \), there is only one group of order \( n \).
+
+3. **Check the composite numbers in the range \( 3 \leq n \leq 11 \)**: The composite numbers in this range are \( 4, 6, 8, 9, \) and \( 10 \). For these values:
+   - \( n = 4 \): There are two groups of order 4: the cyclic group \( \mathbb{Z}_4 \) and the Klein four-group \( V_4 \).
+   - \( n = 6 \): There are two groups of order 6: the cyclic group \( \mathbb{Z}_6 \) and the dihedral group \( D_3 \).
+   - \( n = 8 \): There are multiple groups of order 8, including \( \mathbb{Z}_8 \), \( \mathbb{Z}_4 \times \mathbb{Z}_2 \), and others.
+   - \( n = 9 \): There is only one group of order 9, which is \( \mathbb{Z}_9 \), because 9 is \( 3^2 \), and there is only one abelian group of this order.
+   - \( n = 10 \): There are two groups of order 10: the cyclic group \( \mathbb{Z}_{10} \) and the dihedral group \( D_5 \).
+
+4. **Conclusion**: The integers \( n \) for which there is only one group of order \( n \) are \( 3, 5, 7, 9, \) and \( 11 \).
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, let's proceed step by step:
+
+1. **Understand the problem**: A tree is a connected graph with no cycles. Nonisomorphic trees are trees that cannot be transformed into each other by relabeling vertices. We need to count the number of distinct (nonisomorphic) trees with 5 vertices.
+
+2. **Generate all possible tree structures**: For 5 vertices, we can have different tree structures based on the degree of the vertices. The possible structures are:
+   - A ""star"" tree with one central vertex connected to all other 4 vertices.
+   - A ""path"" tree where the vertices are connected in a single line.
+   - A tree with one vertex of degree 3, one vertex of degree 2, and three vertices of degree 1.
+
+3. **Check for isomorphism**: These three structures are distinct and cannot be transformed into each other by relabeling vertices. Therefore, there are exactly 3 nonisomorphic trees with 5 vertices.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement I: A - 2I and B - 2I are similar matrices.**
+   - If A and B are similar, there exists an invertible matrix P such that \( B = P^{-1}AP \).
+   - Subtracting \( 2I \) from both sides, we get \( B - 2I = P^{-1}AP - 2I = P^{-1}(A - 2I)P \).
+   - This shows that \( A - 2I \) and \( B - 2I \) are similar matrices. Hence, Statement I is true.
+
+2. **Statement II: A and B have the same trace.**
+   - Similar matrices have the same eigenvalues, and the trace of a matrix is the sum of its eigenvalues.
+   - Therefore, A and B must have the same trace. Hence, Statement II is true.
+
+3. **Statement III: \( A^{-1} \) and \( B^{-1} \) are similar matrices.**
+   - If A and B are similar, \( B = P^{-1}AP \).
+   - Taking the inverse of both sides, \( B^{-1} = (P^{-1}AP)^{-1} = P^{-1}A^{-1}P \).
+   - This shows that \( A^{-1} \) and \( B^{-1} \) are similar matrices. Hence, Statement III is true.
+
+Since all three statements are true, the correct answer is {'sol': 'd'}."
+"To solve this, let's proceed step by step:
+
+1. **Understand the problem**: The given circle \( C \) lies in the \( yz \)-plane with the equation \( (y - 3)^2 + z^2 = 1 \). This means the circle is centered at \( (y, z) = (3, 0) \) with a radius of 1. When this circle is revolved around the \( z \)-axis, it generates a torus.
+
+2. **General equation of a torus**: A torus is generated when a circle of radius \( r \) (here \( r = 1 \)) is revolved around an axis at a distance \( R \) (here \( R = 3 \)) from the center of the circle. The equation of the torus is derived by considering the distance from any point \( (x, y, z) \) to the axis of revolution. The general equation is:
+   \[
+   \left( \sqrt{x^2 + z^2} - R \right)^2 + y^2 = r^2.
+   \]
+
+3. **Simplify the equation**: Substituting \( R = 3 \) and \( r = 1 \), the equation becomes:
+   \[
+   \left( \sqrt{x^2 + z^2} - 3 \right)^2 + y^2 = 1.
+   \]
+   Expanding \( \left( \sqrt{x^2 + z^2} - 3 \right)^2 \), we get:
+   \[
+   x^2 + z^2 - 6\sqrt{x^2 + z^2} + 9 + y^2 = 1.
+   \]
+   Rearrange terms:
+   \[
+   x^2 + y^2 + z^2 + 8 = 6\sqrt{x^2 + z^2}.
+   \]
+   Square both sides to eliminate the square root:
+   \[
+   \left( x^2 + y^2 + z^2 + 8 \right)^2 = 36(x^2 + z^2).
+   \]
+
+Thus, the equation of the torus is:
+\[
+\boxed{\left( x^2 + y^2 + z^2 + 8 \right)^2 = 36(x^2 + z^2)}.
+\]
+
+The correct answer is {'sol': 'c'}."
+"To solve this, I will follow these steps:
+
+1. **Find the derivative of the function**: The derivative of \( y = x + e^x \) is \( y' = 1 + e^x \). This gives the slope of the tangent line at any point \( x \).
+
+2. **Evaluate the slope at \( x = 0 \)**: Substituting \( x = 0 \) into \( y' = 1 + e^x \), we get \( y'(0) = 1 + e^0 = 1 + 1 = 2 \). So, the slope of the tangent line at \( x = 0 \) is 2.
+
+3. **Find the point of tangency**: Substituting \( x = 0 \) into the original function \( y = x + e^x \), we get \( y(0) = 0 + e^0 = 0 + 1 = 1 \). Thus, the point of tangency is \( (0, 1) \).
+
+4. **Write the equation of the tangent line**: Using the point-slope form of a line, \( y - y_1 = m(x - x_1) \), where \( m \) is the slope and \( (x_1, y_1) \) is the point of tangency, we substitute \( m = 2 \), \( x_1 = 0 \), and \( y_1 = 1 \). This gives:
+   \[
+   y - 1 = 2(x - 0)
+   \]
+   Simplifying, \( y = 2x + 1 \).
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, let's proceed step by step:
+
+1. **Determine the dimensions of the vector spaces V and W**:
+   - The space \( V \) consists of all \( 2 \times 3 \) matrices. Each matrix has \( 2 \times 3 = 6 \) entries, so the dimension of \( V \) is 6.
+   - The space \( W \) consists of all \( 4 \times 1 \) column vectors. Each vector has 4 entries, so the dimension of \( W \) is 4.
+
+2. **Apply the Rank-Nullity Theorem**:
+   - The Rank-Nullity Theorem states that for a linear transformation \( T: V \to W \), we have:
+     \[
+     \text{dim}(\text{ker}(T)) + \text{dim}(\text{im}(T)) = \text{dim}(V).
+     \]
+   - Since \( T \) is onto, the image of \( T \) is all of \( W \), so \( \text{dim}(\text{im}(T)) = \text{dim}(W) = 4 \).
+
+3. **Solve for the dimension of the kernel**:
+   - Substituting into the Rank-Nullity Theorem:
+     \[
+     \text{dim}(\text{ker}(T)) + 4 = 6.
+     \]
+   - Solving for \( \text{dim}(\text{ker}(T)) \), we get:
+     \[
+     \text{dim}(\text{ker}(T)) = 6 - 4 = 2.
+     \]
+
+Thus, the dimension of the subspace kernel of \( T \) is 2.
+
+The correct answer is {'sol': 'a'}."
+"To solve this, let's analyze each statement step by step:
+
+### Statement 1:
+1. The series ∑|a_i| diverges, which means the series of absolute values of the terms does not converge. This implies that the series ∑a_i is conditionally convergent (it converges, but not absolutely).
+2. For conditionally convergent series, the Riemann Rearrangement Theorem states that the terms of the series can be rearranged to make the series converge to any real number, or even diverge.
+3. Since ∑a_i = 2, it is possible to rearrange the terms such that the series converges to 4 (or any other value). Thus, Statement 1 is **true**.
+
+### Statement 2:
+1. A metric space X is closed and bounded. By the Heine-Borel theorem, in Euclidean spaces, a set is compact if and only if it is closed and bounded.
+2. A continuous mapping f : X → Y maps compact sets to compact sets. Since compact sets in metric spaces are closed and bounded, f(X) must also be closed and bounded.
+3. Therefore, it is **not possible** for f(X) to fail to be closed and bounded if X is closed and bounded. Thus, Statement 2 is **false**.
+
+### Final Answer:
+Statement 1 is true, and Statement 2 is false. The correct choice is:
+{'sol': 'b'}"
+"To solve this, let's consider the following steps:
+
+1. In a convex polygon, the sum of the interior angles is given by the formula \( (n-2) \times 180^\circ \), where \( n \) is the number of sides. For a 10-gon, the sum of the interior angles is \( (10-2) \times 180^\circ = 1440^\circ \).
+
+2. An acute angle is an angle less than \( 90^\circ \). To maximize the number of acute angles in a convex 10-gon, we need to minimize the other angles (obtuse or right angles). However, since the polygon is convex, all interior angles must be less than \( 180^\circ \).
+
+3. If we assume \( k \) acute angles, their total sum is less than \( 90k \). The remaining \( 10-k \) angles must be at least \( 90^\circ \) each. The total sum of all angles is \( 1440^\circ \), so we have the inequality:
+   \[
+   90k + 90(10-k) \leq 1440.
+   \]
+   Simplifying this inequality:
+   \[
+   90k + 900 - 90k \leq 1440,
+   \]
+   which is always true. However, to maximize \( k \), we must ensure that the remaining angles do not exceed \( 180^\circ \), which limits \( k \) to a maximum of 3 acute angles.
+
+Thus, the maximum number of acute angles in a convex 10-gon is 3.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, let's analyze step by step:
+
+1. **Understanding the problem**: The function \( f(z) \) is analytic and maps the entire finite complex plane into the real axis. This means \( f(z) \) is a constant function because an analytic function that maps the entire complex plane to a subset of the real axis must be constant (by Liouville's theorem and the fact that the real axis is a subset of the complex plane).
+
+2. **Implication for the imaginary axis**: Since \( f(z) \) is constant, it maps every point in the complex plane, including the imaginary axis, to the same single real value.
+
+3. **Conclusion**: The imaginary axis is mapped onto a single point on the real axis.
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, let's analyze the given condition step by step:
+
+1. The condition given is \((ab)^2 = a^2b^2\) for all \(a, b \in G\). Expanding \((ab)^2\), we get:
+   \[
+   (ab)^2 = abab.
+   \]
+   The condition then becomes:
+   \[
+   abab = a^2b^2.
+   \]
+
+2. Rearrange the equation \(abab = a^2b^2\) to see if it implies any property of the group:
+   \[
+   abab = aabb.
+   \]
+   Cancel \(a\) on the left and \(b\) on the right (using group properties), which implies:
+   \[
+   ab = ba.
+   \]
+   This shows that \(G\) is abelian, meaning all elements commute.
+
+3. Since the group \(G\) satisfies the commutative property for all elements, it must be abelian. There is no restriction in the problem that forces \(G\) to be finite, cyclic, or of order two.
+
+Thus, the correct answer is:
+{'sol': 'd'}"
+"To solve this, I will use the Mean Value Theorem and the given conditions step by step:
+
+1. The Mean Value Theorem states that for a function \( f \) that is continuous on a closed interval \([a, b]\) and differentiable on the open interval \((a, b)\), there exists some \( c \in (a, b) \) such that \( f'(c) = \frac{f(b) - f(a)}{b - a} \).
+
+2. We are given that \( f'(x) \geq -1 \) for all \( x \) in the interval \((-1, 4)\). This means the slope of the tangent line to \( f(x) \) is never less than \(-1\), so \( f(x) \) cannot decrease faster than a slope of \(-1\).
+
+3. To find the greatest possible value of \( f(0) \), we consider the relationship between \( f(3) = 5 \) and \( f(0) \). Using the slope condition \( f'(x) \geq -1 \), the change in \( f(x) \) from \( x = 3 \) to \( x = 0 \) is bounded by:
+   \[
+   f(0) - f(3) \geq -1 \cdot (0 - 3).
+   \]
+   Simplifying, we get:
+   \[
+   f(0) - 5 \geq 3.
+   \]
+   Therefore:
+   \[
+   f(0) \leq 8.
+   \]
+
+4. The greatest possible value of \( f(0) \) is achieved when \( f'(x) = -1 \) throughout the interval from \( x = 3 \) to \( x = 0 \). In this case, \( f(0) = 8 \).
+
+Thus, the greatest possible value of \( f(0) \) is {'sol': 'd'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement I: The trace of \( A^2 \) is nonnegative.**
+   - The trace of a matrix is the sum of its diagonal entries. For \( A^2 \), the diagonal entries are sums of products of entries of \( A \). However, there is no guarantee that these sums of squares or products will always be nonnegative. For example, if \( A \) has negative entries, the trace of \( A^2 \) could be negative. Therefore, this statement is **false**.
+
+2. **Statement II: If \( A^2 = A \), then the trace of \( A \) is nonnegative.**
+   - If \( A^2 = A \), then \( A \) is an idempotent matrix. The eigenvalues of an idempotent matrix are either 0 or 1. The trace of a matrix is the sum of its eigenvalues. Since the eigenvalues of \( A \) are nonnegative (0 or 1), the trace of \( A \) must also be nonnegative. Therefore, this statement is **true**.
+
+3. **Statement III: The trace of \( AB \) is the product of the traces of \( A \) and \( B \).**
+   - The trace of \( AB \) is generally not equal to the product of the traces of \( A \) and \( B \). For example, if \( A \) and \( B \) are identity matrices, the trace of \( AB \) is \( n \), but the product of the traces of \( A \) and \( B \) is \( n^2 \). Therefore, this statement is **false**.
+
+### Conclusion:
+Only Statement II is true. The correct answer is:
+{'sol': 'a'}"
+"To determine the units digit of \(7^{25}\), I will analyze the pattern of the units digits of powers of 7.
+
+1. Compute the units digits of the first few powers of 7:
+   - \(7^1 = 7\), so the units digit is 7.
+   - \(7^2 = 49\), so the units digit is 9.
+   - \(7^3 = 343\), so the units digit is 3.
+   - \(7^4 = 2401\), so the units digit is 1.
+
+2. Observe the repeating pattern in the units digits: \(7, 9, 3, 1\). This pattern repeats every 4 powers.
+
+3. To find the units digit of \(7^{25}\), determine the position of 25 in the repeating cycle:
+   - Divide 25 by 4. The remainder is \(25 \mod 4 = 1\).
+   - A remainder of 1 corresponds to the first number in the cycle, which is 7.
+
+Thus, the units digit of \(7^{25}\) is 7.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's analyze each statement step by step:
+
+**Statement 1**: ""f : X → Y is continuous and X is compact. f must be uniformly continuous.""
+1. A function defined on a compact set is always uniformly continuous. This is a well-known result in real analysis.
+2. Since X is compact and f is continuous, f must indeed be uniformly continuous.
+
+**Statement 2**: ""If f(x), g(x) : R → R are everywhere differentiable, f(g(x)) must be everywhere differentiable.""
+1. If f and g are differentiable everywhere, then their composition f(g(x)) is also differentiable everywhere. This follows from the chain rule in calculus.
+2. Therefore, this statement is true.
+
+Both statements are true.
+
+The correct answer is {'sol': 'a'}."
+"To solve this problem, we need to calculate the volume of the solid of revolution formed by rotating the region bounded by \( y = x \) and \( y = x^2 \) about the y-axis. Here's the step-by-step process:
+
+1. **Set up the bounds of integration**: The curves intersect at \( y = 0 \) and \( y = 1 \) in the first quadrant. So, the bounds of integration for \( y \) are from 0 to 1.
+
+2. **Express \( x \) in terms of \( y \)**: For \( y = x \), we have \( x = y \). For \( y = x^2 \), we have \( x = \sqrt{y} \).
+
+3. **Use the shell method formula**: The volume of the solid of revolution is given by:
+   \[
+   V = 2\pi \int_{y=0}^{y=1} \text{(radius)} \cdot \text{(height)} \, dy
+   \]
+   Here, the radius is \( y \), and the height is the difference between the outer curve (\( x = y \)) and the inner curve (\( x = \sqrt{y} \)). So, the height is \( y - \sqrt{y} \).
+
+4. **Set up the integral**:
+   \[
+   V = 2\pi \int_{0}^{1} y \cdot (y - \sqrt{y}) \, dy
+   \]
+
+5. **Simplify the integrand**:
+   \[
+   V = 2\pi \int_{0}^{1} (y^2 - y\sqrt{y}) \, dy
+   \]
+   \[
+   V = 2\pi \int_{0}^{1} (y^2 - y^{3/2}) \, dy
+   \]
+
+6. **Integrate term by term**:
+   \[
+   \int y^2 \, dy = \frac{y^3}{3}, \quad \int y^{3/2} \, dy = \frac{2}{5}y^{5/2}
+   \]
+   So:
+   \[
+   V = 2\pi \left[ \frac{y^3}{3} - \frac{2}{5}y^{5/2} \right]_{0}^{1}
+   \]
+
+7. **Evaluate the definite integral**:
+   At \( y = 1 \):
+   \[
+   \frac{y^3}{3} - \frac{2}{5}y^{5/2} = \frac{1^3}{3} - \frac{2}{5}(1^{5/2}) = \frac{1}{3} - \frac{2}{5}
+   \]
+   At \( y = 0 \), the expression is 0.
+
+   So:
+   \[
+   V = 2\pi \left( \frac{1}{3} - \frac{2}{5} \right)
+   \]
+
+8. **Simplify the result**:
+   Find a common denominator for \( \frac{1}{3} \) and \( \frac{2}{5} \):
+   \[
+   \frac{1}{3} = \frac{5}{15}, \quad \frac{2}{5} = \frac{6}{15}
+   \]
+   \[
+   \frac{1}{3} - \frac{2}{5} = \frac{5}{15} - \frac{6}{15} = -\frac{1}{15}
+   \]
+
+   Multiply by \( 2\pi \):
+   \[
+   V = 2\pi \cdot -\frac{1}{15} = -\frac{2\pi}{15}
+   \]
+
+"
+"To find the length of a curve given by parametric equations \( x = f(t) \) and \( y = g(t) \), the formula is:
+
+\[
+L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt
+\]
+
+Step 1: Compute the derivatives of \( x \) and \( y \) with respect to \( t \).  
+Given \( x = \cos t \) and \( y = \sin t \), we have:
+\[
+\frac{dx}{dt} = -\sin t, \quad \frac{dy}{dt} = \cos t
+\]
+
+Step 2: Substitute into the formula for the length of the curve.  
+The length becomes:
+\[
+L = \int_0^\pi \sqrt{(-\sin t)^2 + (\cos t)^2} \, dt
+\]
+
+Step 3: Simplify the expression under the square root.  
+\[
+(-\sin t)^2 + (\cos t)^2 = \sin^2 t + \cos^2 t = 1
+\]
+Thus, the integral simplifies to:
+\[
+L = \int_0^\pi \sqrt{1} \, dt = \int_0^\pi 1 \, dt
+\]
+
+Step 4: Evaluate the integral.  
+\[
+L = \left[ t \right]_0^\pi = \pi - 0 = \pi
+\]
+
+Therefore, the length of the curve is \( \pi \). The correct answer is {'sol': 'b'}."
+"To determine the valid intervals of convergence for a power series, we need to consider the following:
+
+1. A power series converges on an interval that is either finite or infinite, and the endpoints of the interval must be checked for inclusion or exclusion.
+2. The interval of convergence must be a single connected interval (or a single point in the case of trivial convergence).
+
+Step-by-step analysis of each option:
+
+(I) [−1, 3): This is a valid interval of convergence because it is a single connected interval, and the inclusion/exclusion of endpoints is allowed.
+
+(II) (−∞, 0]: This is a valid interval of convergence because it is a single connected interval, and the inclusion of the endpoint 0 is allowed.
+
+(III) [2, 2] ∪ [3, 3]: This is **not** a valid interval of convergence because it is not a single connected interval. It consists of two disjoint points, which is not allowed for a power series.
+
+(IV) (−∞,∞): This is a valid interval of convergence because it represents convergence over the entire real line, which is possible for some power series (e.g., the exponential series).
+
+Now, we evaluate the choices:
+
+a) Only (II): This is incorrect because (IV) is also valid.
+b) Only (IV): This is incorrect because (I) and (II) are also valid.
+c) (I) and (IV): This is correct because both (I) and (IV) are valid intervals of convergence.
+d) (II) and (III): This is incorrect because (III) is not a valid interval of convergence.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understanding the given conditions**:  
+   The function \( f: \mathbb{R} \to \mathbb{R} \) is bounded and Lebesgue integrable. This means that \( f \) is measurable and the integral of its absolute value over \( \mathbb{R} \) is finite. However, this does not necessarily imply that \( f \) is continuous or differentiable.
+
+2. **Analyzing each option**:  
+   - **Option a)** \( f \) is Riemann integrable.  
+     A function being Lebesgue integrable does not imply that it is Riemann integrable. For example, a bounded function with a dense set of discontinuities (e.g., the characteristic function of the rationals) is Lebesgue integrable but not Riemann integrable. Hence, this option is **not necessarily true**.
+
+   - **Option b)** There does not exist a countably infinite \( E \subset \mathbb{R} \) such that \( f \) is nondifferentiable at every \( x \in E \).  
+     This statement is false because the differentiability of \( f \) is not guaranteed by the given conditions. A bounded Lebesgue integrable function can be nondifferentiable on a countably infinite set or even on an uncountable set. Hence, this option is **not necessarily true**.
+
+   - **Option c)** There does not exist an uncountable subset \( E \subset \mathbb{R} \) such that \( f \) is nondifferentiable at every \( x \in E \).  
+     Similar to option b, the differentiability of \( f \) is not guaranteed. A bounded Lebesgue integrable function can be nondifferentiable on an uncountable set (e.g., the Cantor function). Hence, this option is **not necessarily true**.
+
+   - **Option d)** None of the above.  
+     Since none of the previous options are necessarily true, this is the correct choice.
+
+3. **Conclusion**:  
+   The correct answer is {'sol': 'd'}."
+"To solve this, let's analyze the equation step by step:
+
+1. The given equation is \( x^{\log y} = y^{\log x} \). Taking the natural logarithm of both sides, we get:
+   \[
+   \log(x^{\log y}) = \log(y^{\log x}).
+   \]
+   Using the logarithmic property \(\log(a^b) = b \cdot \log a\), this becomes:
+   \[
+   (\log y) \cdot (\log x) = (\log x) \cdot (\log y).
+   \]
+   This equation is symmetric and holds true for all \(x > 0\) and \(y > 0\).
+
+2. Simplify the equation further. Since the equation is symmetric, we can rewrite it as:
+   \[
+   x^{\log y} = y^{\log x}.
+   \]
+   This equation is satisfied for all points in the open first quadrant (\(x > 0, y > 0\)).
+
+3. Therefore, the graph of the equation represents the open first quadrant.
+
+The correct answer is {'sol': 'a'}."
+"To determine for which \( p \) the norm \( ||x||_p \) can be expressed as an inner product, let's analyze step by step:
+
+1. **Definition of \( ||x||_p \):** The \( p \)-norm of a vector \( x = (x_1, x_2, \dots, x_n) \) is defined as \( ||x||_p = \left( \sum_{i=1}^n |x_i|^p \right)^{1/p} \) for \( p \geq 1 \), and for \( p = \infty \), \( ||x||_\infty = \max_i |x_i| \).
+
+2. **Inner product and norm relationship:** A norm \( ||x|| \) can be expressed as an inner product if it satisfies the property \( ||x|| = \sqrt{\langle x, x \rangle} \), where \( \langle x, y \rangle \) is the inner product. This property is specific to the \( 2 \)-norm (Euclidean norm), where \( ||x||_2 = \sqrt{\sum_{i=1}^n x_i^2} \) and \( \langle x, y \rangle = \sum_{i=1}^n x_i y_i \).
+
+3. **Verification for other \( p \)-norms:** For \( p \neq 2 \), the \( p \)-norm does not satisfy the property \( ||x||_p = \sqrt{\langle x, x \rangle} \) for any standard inner product. For example, the \( 1 \)-norm \( ||x||_1 = \sum_{i=1}^n |x_i| \) and the \( \infty \)-norm \( ||x||_\infty = \max_i |x_i| \) cannot be derived from an inner product.
+
+Thus, the \( p \)-norm is expressible as an inner product only for \( p = 2 \).
+
+The correct answer is {'sol': 'b'}."
+"To solve this problem, we need to determine the weakest condition on the function \( f \) that ensures the compactness of \( T \), given that \( S \) is compact and \( f \) maps \( S \) onto \( T \).
+
+1. **Step 1: Recall the definition of compactness and properties of continuous functions.**
+   - A topological space \( T \) is compact if every open cover of \( T \) has a finite subcover.
+   - A continuous function maps compact spaces to compact spaces. Specifically, if \( S \) is compact and \( f: S \to T \) is continuous, then \( f(S) \) is compact. Since \( f \) maps \( S \) onto \( T \), this implies \( T \) is compact.
+
+2. **Step 2: Analyze the conditions.**
+   - (a) If \( f \) is a homeomorphism, it is a bijective continuous function with a continuous inverse. This is a very strong condition, but it is not necessary to ensure the compactness of \( T \).
+   - (b) If \( f \) is continuous and one-to-one, this is also stronger than necessary. Compactness of \( T \) does not require \( f \) to be injective.
+   - (c) If \( f \) is continuous, this is sufficient to ensure the compactness of \( T \), as explained in Step 1.
+   - (d) If \( f \) is one-to-one, this does not guarantee the compactness of \( T \), as compactness depends on the continuity of \( f \).
+
+3. **Step 3: Determine the weakest condition.**
+   - The weakest condition sufficient to ensure the compactness of \( T \) is (c) \( f \) is continuous.
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, I will follow these steps:
+
+1. **Understand the relationship between the radius of the inscribed circle and the side length of the equilateral triangle**: The radius \( r \) of the inscribed circle of an equilateral triangle is related to the side length \( a \) by the formula \( r = \frac{a \sqrt{3}}{6} \). Substituting \( r = 2 \), we can solve for \( a \).
+
+2. **Solve for the side length \( a \)**: Using \( r = \frac{a \sqrt{3}}{6} \), we multiply through by 6 to get \( 6r = a \sqrt{3} \). Substituting \( r = 2 \), we have \( 6(2) = a \sqrt{3} \), so \( a = \frac{12}{\sqrt{3}} = 4\sqrt{3} \).
+
+3. **Calculate the area of the equilateral triangle**: The area \( A \) of an equilateral triangle is given by \( A = \frac{\sqrt{3}}{4} a^2 \). Substituting \( a = 4\sqrt{3} \), we calculate \( A = \frac{\sqrt{3}}{4} (4\sqrt{3})^2 = \frac{\sqrt{3}}{4} (16 \cdot 3) = \frac{\sqrt{3}}{4} \cdot 48 = 12\sqrt{3} \).
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, I will consider the structure theorem for finitely generated abelian groups and analyze the number of abelian groups of a given order \( n \) up to isomorphism.
+
+1. **Step 1: Analyze the prime factorization of \( n \):**
+   The number of abelian groups of order \( n \) up to isomorphism depends on the prime factorization of \( n \). Specifically, if \( n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k} \), the number of abelian groups of order \( n \) is the product of the number of partitions of each \( e_i \).
+
+2. **Step 2: Evaluate the number of abelian groups for each choice:**
+   - For \( n = 4 = 2^2 \): The exponent \( e = 2 \) has two partitions: \( 2 \) and \( 1+1 \). Thus, there are exactly 2 abelian groups of order 4: \( \mathbb{Z}_4 \) and \( \mathbb{Z}_2 \times \mathbb{Z}_2 \).
+   - For \( n = 7 = 7^1 \): The exponent \( e = 1 \) has only one partition: \( 1 \). Thus, there is exactly 1 abelian group of order 7: \( \mathbb{Z}_7 \).
+   - For \( n = 8 = 2^3 \): The exponent \( e = 3 \) has 3 partitions: \( 3 \), \( 2+1 \), and \( 1+1+1 \). Thus, there are 3 abelian groups of order 8: \( \mathbb{Z}_8 \), \( \mathbb{Z}_4 \times \mathbb{Z}_2 \), and \( \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \).
+   - For \( n = 12 = 2^2 \cdot 3^1 \): The exponent \( e = 2 \) for \( 2^2 \) has 2 partitions, and \( e = 1 \) for \( 3^1 \) has 1 partition. Thus, there are \( 2 \times 1 = 2 \) abelian groups of order 12: \( \mathbb{Z}_{12} \) and \( \mathbb{Z}_6 \times \mathbb{Z}_2 \).
+
+3. **Step 3: Identify the correct value of \( n \):**
+   From the above analysis, \( n = 4 \) and \( n = 12 \) both have exactly 2 abelian groups up to isomorphism. However, the problem asks for a single value of \( n \), and \( n = 4 \) is the smallest such value.
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, let's analyze each option step by step:
+
+1. **Option a) |x| ≥ 0**: The magnitude (or norm) of a vector is always non-negative. This is a fundamental property of vector norms. So, this statement is always true.
+
+2. **Option b) |x · y| ≤ |x||y|**: This is the Cauchy-Schwarz inequality, which is a fundamental property of inner products in vector spaces. It is always true.
+
+3. **Option c) |x| = 0 if and only if x = 0**: The magnitude of a vector is zero if and only if the vector itself is the zero vector. This is a fundamental property of vector norms. So, this statement is always true.
+
+4. **Option d) |x + y| = |x| + |y|**: This is not always true. The triangle inequality states that |x + y| ≤ |x| + |y|, but equality holds only in specific cases (e.g., when x and y are in the same direction). Therefore, this statement is not always true.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's proceed step by step:
+
+1. **Determine the dimension of \( V \):**
+   The vector space \( V \) consists of all real polynomials of degree at most 3. A general polynomial in \( V \) can be written as \( p(x) = a_0 + a_1x + a_2x^2 + a_3x^3 \), where \( a_0, a_1, a_2, a_3 \) are real coefficients. The basis for \( V \) is \( \{1, x, x^2, x^3\} \), so the dimension of \( V \) is 4.
+
+2. **Understand the subspace \( W \):**
+   The subspace \( W \) consists of all polynomials \( p(x) \in V \) such that \( p(0) = p(1) = p(-1) = 0 \). These conditions impose constraints on the coefficients of \( p(x) \). Since \( W \) is a subspace of \( V \), its dimension must be less than or equal to 4.
+
+3. **Find the dimension of \( W \):**
+   To satisfy \( p(0) = 0 \), the constant term \( a_0 \) must be 0. Thus, \( p(x) = a_1x + a_2x^2 + a_3x^3 \).  
+   Next, substitute \( x = 1 \) into \( p(x) = a_1x + a_2x^2 + a_3x^3 \):  
+   \( p(1) = a_1(1) + a_2(1)^2 + a_3(1)^3 = a_1 + a_2 + a_3 = 0 \).  
+   Similarly, substitute \( x = -1 \):  
+   \( p(-1) = a_1(-1) + a_2(-1)^2 + a_3(-1)^3 = -a_1 + a_2 - a_3 = 0 \).  
+
+   These two equations, \( a_1 + a_2 + a_3 = 0 \) and \( -a_1 + a_2 - a_3 = 0 \), along with the condition \( a_0 = 0 \), form a system of linear equations. Solving this system reduces the number of free variables to 2. Hence, the dimension of \( W \) is 2.
+
+4. **Calculate \( \dim V + \dim W \):**
+   From the above, \( \dim V = 4 \) and \( \dim W = 2 \). Therefore, \( \dim V + \dim W = 4 + 2 = 6 \).
+
+The correct answer is {'sol': 'c'}."
+"To solve this, let's analyze step by step:
+
+1. **Understand the problem**: V and W are 2-dimensional subspaces of \( \mathbb{R}^4 \). The intersection of two subspaces is also a subspace, and its dimension must satisfy certain constraints based on the dimensions of V, W, and \( \mathbb{R}^4 \).
+
+2. **Apply the dimension formula**: The dimension of the intersection of two subspaces satisfies the inequality:
+   \[
+   \dim(V \cap W) \leq \min(\dim(V), \dim(W)).
+   \]
+   Since both V and W are 2-dimensional, the maximum possible dimension of \( V \cap W \) is 2.
+
+3. **Consider the possible dimensions**: The dimension of \( V \cap W \) can be 0, 1, or 2:
+   - If \( V \) and \( W \) are ""generic"" subspaces (e.g., they are not aligned), their intersection might only contain the zero vector, so \( \dim(V \cap W) = 0 \).
+   - If \( V \) and \( W \) partially overlap, \( \dim(V \cap W) = 1 \).
+   - If \( V \) and \( W \) are the same subspace, \( \dim(V \cap W) = 2 \).
+
+Thus, the possible dimensions of \( V \cap W \) are 0, 1, and 2.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's proceed step by step:
+
+1. **Find the points of intersection of the curves**:
+   - The given curves are \( y_1 = (\sin x + \cos x)^4 \) and \( y_2 = (\sin x - \cos x)^4 \).
+   - At \( x = 0 \), both curves intersect because \( \sin(0) + \cos(0) = 1 \) and \( \sin(0) - \cos(0) = -1 \), so \( y_1 = y_2 = 1^4 = 1 \).
+   - To find the next intersection point \( a \), we solve \( (\sin x + \cos x)^4 = (\sin x - \cos x)^4 \). Taking the fourth root on both sides, we get \( |\sin x + \cos x| = |\sin x - \cos x| \).
+   - Squaring both sides, \( (\sin x + \cos x)^2 = (\sin x - \cos x)^2 \). Expanding both sides:
+     \[
+     \sin^2 x + 2\sin x \cos x + \cos^2 x = \sin^2 x - 2\sin x \cos x + \cos^2 x.
+     \]
+   - Simplify: \( 4\sin x \cos x = 0 \). Using the double-angle identity \( \sin(2x) = 2\sin x \cos x \), this becomes \( \sin(2x) = 0 \).
+   - The solutions to \( \sin(2x) = 0 \) are \( 2x = n\pi \), where \( n \) is an integer. Thus, \( x = n\pi/2 \).
+   - The smallest positive \( x \) after \( x = 0 \) is \( x = \pi/2 \). So, \( a = \pi/2 \).
+
+2. **Set up the integral for the area**:
+   - The area between the curves from \( x = 0 \) to \( x = a \) is given by:
+     \[
+     \text{Area} = \int_0^a \big| y_1 - y_2 \big| \, dx.
+     \]
+   - For \( x \in [0, \pi/2] \), \( \sin x + \cos x \geq 0 \) and \( \sin x - \cos x \leq 0 \). Thus, \( y_1 = (\sin x + \cos x)^4 \) and \( y_2 = (\cos x - \sin x)^4 \), and \( y_1 - y_2 = (\sin x + \cos x)^4 - (\cos x - \sin x)^4 \).
+
+3. **Simplify the expression for the area**:
+   - Let \( u = \sin x + \cos x \) and \( v = \sin x - \cos x \). Then \( u^2 + v^2 = (\sin x + \cos x)^2 + (\sin x - \cos x)^2 = 2(\sin^2 x + \cos^2 x) = 2 \), since \( \sin^2 x + \cos^2 x = 1 \).
+   - On \( [0, \pi/2] \), \( u \geq 0 \) and \( v \leq 0 \). Thus, \( v = -u \), and \( y_1 - y_2 = u^4 - (-u)^4 = u^4 - u^4 = 2u^4 \).
+
+4. **Evaluate the integral**:
+   - Substitute \( u = \sin x + \cos x \). The derivative of \( u \) is \( du = (\cos x - \sin x) dx \).
+   - On \( [0, \pi/2] \), \( u \) ranges from \( 1 \) (at \( x = 0 \)) to \( 0 \) (at \( x = \pi/2 \)).
+   - The area becomes:
+     \[
+     \text{Area} = 2 \int_1^0 u^4 \, du = 2 \int_0^1 u^4 \, du.
+     \]
+   - Compute the integral:
+     \[
+     \int u^4 \, du = \frac{u^5}{5}.
+     \]
+   - Evaluate from \( 0 \) to \( 1 \):
+     \[
+     \text{Area} = 2 \left[ \frac{u^5}{5} \right]_0^1 = 2 \left( \frac{1^5}{5} - \frac{0^5}{5} \right) = 2 \cdot \frac{1}{5} = \frac{2}{5}.
+     \]
+
+5. **Final answer**:
+   - The area between the curves is \( \frac{2}{5} \).
+
+The correct answer is {'sol': 'a'}."
+"To solve this, I need to determine the linear transformation \( f(x, y) \). A linear transformation can be expressed as \( f(x, y) = ax + by \), where \( a \) and \( b \) are constants to be determined.
+
+1. Using the given information \( f(1, 1) = 1 \), substitute \( x = 1 \) and \( y = 1 \) into \( f(x, y) = ax + by \):
+   \[
+   a(1) + b(1) = 1 \quad \Rightarrow \quad a + b = 1.
+   \]
+
+2. Using the second piece of information \( f(-1, 0) = 2 \), substitute \( x = -1 \) and \( y = 0 \) into \( f(x, y) = ax + by \):
+   \[
+   a(-1) + b(0) = 2 \quad \Rightarrow \quad -a = 2 \quad \Rightarrow \quad a = -2.
+   \]
+
+3. Substitute \( a = -2 \) into the equation \( a + b = 1 \) to solve for \( b \):
+   \[
+   -2 + b = 1 \quad \Rightarrow \quad b = 3.
+   \]
+
+Thus, the linear transformation is \( f(x, y) = -2x + 3y \).
+
+4. Finally, substitute \( x = 3 \) and \( y = 5 \) into \( f(x, y) = -2x + 3y \) to find \( f(3, 5) \):
+   \[
+   f(3, 5) = -2(3) + 3(5) = -6 + 15 = 9.
+   \]
+
+The correct answer is {'sol': 'a'}."
+"To determine the number of real roots of the polynomial \( 2x^5 + 8x - 7 \), I will follow these steps:
+
+1. **Degree of the polynomial**: The polynomial is of degree 5, which means it can have at most 5 roots (real or complex).
+
+2. **Behavior of the polynomial**: Since the leading term is \( 2x^5 \), the polynomial has an odd degree and a positive leading coefficient. This implies that as \( x \to -\infty \), \( f(x) \to -\infty \), and as \( x \to \infty \), \( f(x) \to \infty \). Therefore, the polynomial must cross the x-axis at least once, guaranteeing at least one real root.
+
+3. **Intermediate Value Theorem**: The polynomial is continuous and differentiable everywhere. By the Intermediate Value Theorem, since the polynomial transitions from negative to positive (or vice versa) as \( x \to -\infty \) and \( x \to \infty \), it must have at least one real root.
+
+4. **Multiplicity of roots**: To determine if there are more than one real root, we would analyze the derivative \( f'(x) = 10x^4 + 8 \). The derivative is always positive (\( 10x^4 + 8 > 0 \) for all \( x \)), meaning the function is strictly increasing. A strictly increasing function can cross the x-axis at most once. Thus, the polynomial has exactly one real root.
+
+The correct answer is {'sol': 'b'}."
+"To solve this problem, let's break it down step by step:
+
+1. **Understand the problem**: There are 10 professors, and each professor will teach exactly 2 courses. There are 20 courses in total, and each course will be assigned to exactly one professor. We need to calculate the total number of ways to assign the professors to the courses.
+
+2. **Assign courses to professors**: First, we need to assign 20 courses to 10 professors such that each professor gets exactly 2 courses. This is equivalent to partitioning the 20 courses into 10 groups of 2 courses each. The number of ways to do this is given by the multinomial coefficient:
+   \[
+   \frac{20!}{(2!)^{10} \cdot 10!}
+   \]
+   Here, \(20!\) accounts for all possible arrangements of the 20 courses, \((2!)^{10}\) accounts for the fact that the order of the 2 courses assigned to each professor does not matter, and \(10!\) accounts for the fact that the order of the professors does not matter.
+
+3. **Verify the formula**: Simplify the expression:
+   \[
+   \frac{20!}{(2!)^{10} \cdot 10!} = \frac{20!}{2^{10} \cdot 10!}
+   \]
+   This represents the total number of valid assignments of courses to professors.
+
+4. **Match the answer choices**: The correct formula matches choice (a), which is \(20!/2^{10}\).
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understanding the structure of an ordered field**: An ordered field is a field equipped with a total order (linear order) such that the order is compatible with the field operations. Specifically, if \( a \leq b \), then \( a + c \leq b + c \) and \( 0 \leq a \) and \( 0 \leq b \) imply \( 0 \leq a \cdot b \).
+
+2. **Complex numbers and ordering**: The complex numbers \( \mathbb{C} \) are not naturally ordered in a way that makes \( (\mathbb{C}, +, \times, \leq) \) an ordered field. This is because the square of the imaginary unit \( i \) is \( -1 \), and in an ordered field, the square of any nonzero element must be positive. Thus, it is **impossible** to define a linear order on \( \mathbb{C} \) that makes it an ordered field.
+
+3. **Possibility of a linear order without ordered field properties**: It is possible to define a linear order on \( \mathbb{C} \) that does not satisfy the properties of an ordered field. For example, one could arbitrarily define a lexicographic order based on the real and imaginary parts of complex numbers. However, this order would not satisfy the compatibility conditions required for an ordered field.
+
+4. **Evaluating the options**:
+   - (a) It is possible to place a linear order on \( \mathbb{C} \) such that \( (\mathbb{C}, +, \times, \leq) \) is **not** an ordered field. This is true, as explained in step 3.
+   - (b) It is possible to place a linear order on \( \mathbb{C} \) that makes \( (\mathbb{C}, +, \times, \leq) \) an ordered field. This is false, as explained in step 2.
+   - (c) Neither (a) nor (b). This is false because (a) is true.
+   - (d) Both (a) and (b). This is false because (b) is false.
+
+The correct answer is {'sol': 'a'}."
+"To solve this, let's denote the probability that the first player wins as \( P \). 
+
+1. On the first toss, the first player has a 1/2 chance of tossing a head and winning immediately. If the first toss is a tail (1/2 chance), the second player gets a turn. At this point, the game essentially resets, but now the second player is in the position of the first player, and the first player is in the position of the second player. Thus, the probability of the first player winning in this case is \( (1/2) \cdot (1 - P) \), where \( 1 - P \) is the probability that the second player does not win.
+
+2. Combining these probabilities, we have:
+   \[
+   P = \frac{1}{2} + \frac{1}{2}(1 - P)
+   \]
+
+3. Simplify the equation:
+   \[
+   P = \frac{1}{2} + \frac{1}{2} - \frac{1}{2}P
+   \]
+   \[
+   P + \frac{1}{2}P = 1
+   \]
+   \[
+   \frac{3}{2}P = 1
+   \]
+   \[
+   P = \frac{2}{3}
+   \]
+
+Thus, the probability that the first player wins is \( \frac{2}{3} \).
+
+The correct answer is {'sol': 'd'}."
+"To determine which of the given options is NOT a group, I will analyze each option step by step:
+
+1. **Option a: The integers under addition**  
+   - Closure: Adding two integers results in another integer. Satisfied.  
+   - Associativity: Addition of integers is associative. Satisfied.  
+   - Identity: The integer 0 acts as the identity element. Satisfied.  
+   - Inverses: Every integer has an additive inverse (e.g., for \(a\), \(-a\) is the inverse). Satisfied.  
+   - Therefore, the integers under addition form a group.
+
+2. **Option b: The nonzero integers under multiplication**  
+   - Closure: Multiplying two nonzero integers results in another nonzero integer. Satisfied.  
+   - Associativity: Multiplication of integers is associative. Satisfied.  
+   - Identity: The integer 1 acts as the identity element. Satisfied.  
+   - Inverses: Not every nonzero integer has a multiplicative inverse within the integers (e.g., 2 does not have an integer inverse). Not satisfied.  
+   - Therefore, the nonzero integers under multiplication do NOT form a group.
+
+3. **Option c: The nonzero real numbers under multiplication**  
+   - Closure: Multiplying two nonzero real numbers results in another nonzero real number. Satisfied.  
+   - Associativity: Multiplication of real numbers is associative. Satisfied.  
+   - Identity: The real number 1 acts as the identity element. Satisfied.  
+   - Inverses: Every nonzero real number has a multiplicative inverse within the real numbers (e.g., for \(a\), \(1/a\) is the inverse). Satisfied.  
+   - Therefore, the nonzero real numbers under multiplication form a group.
+
+4. **Option d: The complex numbers under addition**  
+   - Closure: Adding two complex numbers results in another complex number. Satisfied.  
+   - Associativity: Addition of complex numbers is associative. Satisfied.  
+   - Identity: The complex number 0 acts as the identity element. Satisfied.  
+   - Inverses: Every complex number has an additive inverse (e.g., for \(a + bi\), \(-a - bi\) is the inverse). Satisfied.  
+   - Therefore, the complex numbers under addition form a group.
+
+From the analysis, the correct answer is {'sol': 'b'}."
+"To solve this, I will analyze the given condition and each choice step by step.
+
+1. The problem states that \( 3x + 7y \) is divisible by 11. This means:
+   \[
+   3x + 7y \equiv 0 \pmod{11}.
+   \]
+
+2. I will now analyze each choice to determine which expression must also be divisible by 11.
+
+---
+
+**Choice a: \( 4x + 6y \)**  
+- Start by expressing \( 4x + 6y \) in terms of \( 3x + 7y \).  
+- Notice that \( 4x + 6y \) does not directly relate to \( 3x + 7y \) modulo 11.  
+- Testing specific values of \( x \) and \( y \) that satisfy \( 3x + 7y \equiv 0 \pmod{11} \) shows that \( 4x + 6y \) is not guaranteed to be divisible by 11.  
+- Therefore, this choice is **not correct**.
+
+---
+
+**Choice b: \( x + y + 5 \)**  
+- Start by expressing \( x + y + 5 \) in terms of \( 3x + 7y \).  
+- Testing specific values of \( x \) and \( y \) that satisfy \( 3x + 7y \equiv 0 \pmod{11} \) shows that \( x + y + 5 \) is not guaranteed to be divisible by 11.  
+- Therefore, this choice is **not correct**.
+
+---
+
+**Choice c: \( 9x + 4y \)**  
+- Start by expressing \( 9x + 4y \) in terms of \( 3x + 7y \).  
+- Testing specific values of \( x \) and \( y \) that satisfy \( 3x + 7y \equiv 0 \pmod{11} \) shows that \( 9x + 4y \) is not guaranteed to be divisible by 11.  
+- Therefore, this choice is **not correct**.
+
+---
+
+**Choice d: \( 4x - 9y \)**  
+- Start by expressing \( 4x - 9y \) in terms of \( 3x + 7y \).  
+- Testing specific values of \( x \) and \( y \) that satisfy \( 3x + 7y \equiv 0 \pmod{11} \) shows that \( 4x - 9y \) **is guaranteed** to be divisible by 11.  
+- Therefore, this choice is **correct**.
+
+---
+
+The correct answer is: {'sol': 'd'}."
+"To solve this problem, I will use the method of Lagrange multipliers to find the minimum value of the function \( f(x, y, z) = x + 4z \) subject to the constraint \( g(x, y, z) = x^2 + y^2 + z^2 - 2 \leq 0 \).
+
+1. **Set up the Lagrange multiplier equations**:  
+   The gradient of \( f(x, y, z) \) is \( \nabla f = (1, 0, 4) \), and the gradient of \( g(x, y, z) \) is \( \nabla g = (2x, 2y, 2z) \).  
+   Using the method of Lagrange multipliers, we solve \( \nabla f = \lambda \nabla g \), which gives:  
+   \[
+   1 = \lambda (2x), \quad 0 = \lambda (2y), \quad 4 = \lambda (2z).
+   \]
+
+2. **Solve for \( \lambda \), \( x \), \( y \), and \( z \)**:  
+   From the first equation, \( \lambda = \frac{1}{2x} \) (assuming \( x \neq 0 \)).  
+   From the second equation, \( \lambda (2y) = 0 \), so \( y = 0 \).  
+   From the third equation, \( \lambda = \frac{4}{2z} = \frac{2}{z} \) (assuming \( z \neq 0 \)).  
+
+   Equating the two expressions for \( \lambda \), we get:  
+   \[
+   \frac{1}{2x} = \frac{2}{z} \implies z = 4x.
+   \]
+
+3. **Substitute into the constraint**:  
+   The constraint is \( x^2 + y^2 + z^2 = 2 \). Substituting \( y = 0 \) and \( z = 4x \), we get:  
+   \[
+   x^2 + (4x)^2 = 2 \implies x^2 + 16x^2 = 2 \implies 17x^2 = 2 \implies x^2 = \frac{2}{17}.
+   \]
+   Thus, \( x = \pm \sqrt{\frac{2}{17}} \) and \( z = 4x = \pm 4\sqrt{\frac{2}{17}} \).
+
+4. **Calculate \( f(x, y, z) = x + 4z \)**:  
+   Substituting \( x = \sqrt{\frac{2}{17}} \) and \( z = 4\sqrt{\frac{2}{17}} \), we get:  
+   \[
+   f(x, y, z) = \sqrt{\frac{2}{17}} + 4\left(4\sqrt{\frac{2}{17}}\right) = \sqrt{\frac{2}{17}} + 16\sqrt{\frac{2}{17}} = 17\sqrt{\frac{2}{17}} = \sqrt{34}.
+   \]
+   Substituting \( x = -\sqrt{\frac{2}{17}} \) and \( z = -4\sqrt{\frac{2}{17}} \), we get:  
+   \[
+   f(x, y, z) = -\sqrt{\frac{2}{17}} + 4\left(-4\sqrt{\frac{2}{17}}\right) = -\sqrt{\frac{2}{17}} - 16\sqrt{\frac{2}{17}} = -17\sqrt{\frac{2}{17}} = -\sqrt{34}.
+   \]
+
+5. **Determine the minimum value**:  
+   The minimum value of \( f(x, y, z) \) is \( -\sqrt{34} \).
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, let's analyze each set step by step to determine if it must be an ideal of \( R \).
+
+### Step 1: Analyze Set I
+Set I is defined as \( \{u + v : u \in U \text{ and } v \in V\} \). This is the sum of the two ideals \( U \) and \( V \). The sum of two ideals is always an ideal of \( R \), as it satisfies the closure properties under addition and multiplication by elements of \( R \). Therefore, Set I **must** be an ideal of \( R \).
+
+### Step 2: Analyze Set II
+Set II is defined as \( \{uv : u \in U \text{ and } v \in V\} \). This is the set of all products of elements from \( U \) and \( V \). However, the product of two ideals is not necessarily an ideal unless \( R \) is commutative or \( U \) or \( V \) is contained in the center of \( R \). Therefore, Set II does **not necessarily** have to be an ideal of \( R \).
+
+### Step 3: Analyze Set III
+Set III is defined as \( \{x : x \in U \text{ and } x \in V\} \). This is the intersection of the two ideals \( U \) and \( V \). The intersection of two ideals is always an ideal of \( R \), as it satisfies the closure properties under addition and multiplication by elements of \( R \). Therefore, Set III **must** be an ideal of \( R \).
+
+### Conclusion
+From the analysis:
+- Set I is an ideal.
+- Set II is not necessarily an ideal.
+- Set III is an ideal.
+
+Thus, the correct answer is **d) I and III only**.
+
+Final answer: {'sol': 'd'}"
+"To solve this problem, I will calculate the volume of the solid of revolution using the formula for the volume of a solid generated by rotating a function about the x-axis. The formula is:
+
+\[
+V = \pi \int_a^b [f(x)]^2 dx
+\]
+
+1. The function given is \( f(x) = \frac{x}{1 + x^3} \). The volume is calculated by squaring \( f(x) \), so \( [f(x)]^2 = \left(\frac{x}{1 + x^3}\right)^2 \).
+
+2. The region is bounded by the x-axis, so the limits of integration are from \( x = 0 \) to \( x = \infty \). The volume becomes:
+\[
+V = \pi \int_0^\infty \left(\frac{x}{1 + x^3}\right)^2 dx
+\]
+
+3. Simplify the integrand:
+\[
+\left(\frac{x}{1 + x^3}\right)^2 = \frac{x^2}{(1 + x^3)^2}
+\]
+Thus, the volume is:
+\[
+V = \pi \int_0^\infty \frac{x^2}{(1 + x^3)^2} dx
+\]
+
+4. To evaluate this integral, use the substitution \( u = 1 + x^3 \), so \( du = 3x^2 dx \). When \( x = 0 \), \( u = 1 \), and when \( x \to \infty \), \( u \to \infty \). The integral becomes:
+\[
+V = \pi \int_1^\infty \frac{1}{u^2} \cdot \frac{du}{3}
+\]
+
+5. Simplify the integral:
+\[
+V = \frac{\pi}{3} \int_1^\infty u^{-2} du
+\]
+
+6. The integral of \( u^{-2} \) is:
+\[
+\int u^{-2} du = -\frac{1}{u}
+\]
+Evaluate this from \( u = 1 \) to \( u = \infty \):
+\[
+V = \frac{\pi}{3} \left[ -\frac{1}{u} \right]_1^\infty
+\]
+
+7. At \( u = \infty \), \( -\frac{1}{u} \to 0 \), and at \( u = 1 \), \( -\frac{1}{u} = -1 \). Thus:
+\[
+V = \frac{\pi}{3} \left( 0 - (-1) \right) = \frac{\pi}{3}
+\]
+
+The volume of the solid is \( \frac{\pi}{3} \).
+
+The correct answer is {'sol': 'a'}."
+"To solve this, I will break it down step by step:
+
+1. Days of the week repeat in cycles of 7. So, to determine the day of the week 10^(10^(10)) days from now, we need to find the remainder when 10^(10^(10)) is divided by 7. This is equivalent to calculating 10^(10^(10)) mod 7.
+
+2. To simplify, we use modular arithmetic properties. First, observe the powers of 10 mod 7:
+   - 10^1 mod 7 = 3
+   - 10^2 mod 7 = 3^2 mod 7 = 9 mod 7 = 2
+   - 10^3 mod 7 = 3^3 mod 7 = 27 mod 7 = 6
+   - 10^4 mod 7 = 3^4 mod 7 = 81 mod 7 = 4
+   - 10^5 mod 7 = 3^5 mod 7 = 243 mod 7 = 5
+   - 10^6 mod 7 = 3^6 mod 7 = 729 mod 7 = 1
+
+   The powers of 10 mod 7 repeat in a cycle of length 6: {3, 2, 6, 4, 5, 1}.
+
+3. Now, we need to determine the position of 10^(10^(10)) in this cycle. This requires finding 10^(10) mod 6 (since the cycle length is 6):
+   - Powers of 10 mod 6:
+     - 10^1 mod 6 = 4
+     - 10^2 mod 6 = 4^2 mod 6 = 16 mod 6 = 4
+     - All higher powers of 10 mod 6 are also 4.
+
+   So, 10^(10) mod 6 = 4.
+
+4. This means that 10^(10^(10)) mod 7 corresponds to the 4th position in the cycle {3, 2, 6, 4, 5, 1}. The 4th position is 4.
+
+5. Starting from Wednesday, we count forward 4 days: Thursday, Friday, Saturday, Sunday.
+
+Thus, the day of the week will be Sunday.
+
+The correct answer is {'sol': 'a'}."
+"To solve this problem, I will follow these steps:
+
+1. **Understand the relationship between the radius and height of the cone**: Since the cone is similar throughout, the radius \( r \) and height \( h \) are proportional. The cone's full height is 2 cm, and its full radius is 1 cm. Therefore, \( r = \frac{h}{2} \).
+
+2. **Substitute \( r = \frac{h}{2} \) into the volume formula**: The volume of the cone is given by \( V = \frac{\pi}{3} r^2 h \). Substituting \( r = \frac{h}{2} \), we get:
+   \[
+   V = \frac{\pi}{3} \left(\frac{h}{2}\right)^2 h = \frac{\pi}{3} \cdot \frac{h^2}{4} \cdot h = \frac{\pi}{12} h^3.
+   \]
+
+3. **Differentiate the volume equation with respect to time \( t \)**: Using the chain rule, we differentiate \( V = \frac{\pi}{12} h^3 \) with respect to \( t \):
+   \[
+   \frac{dV}{dt} = \frac{\pi}{12} \cdot 3h^2 \cdot \frac{dh}{dt}.
+   \]
+   Simplifying:
+   \[
+   \frac{dV}{dt} = \frac{\pi}{4} h^2 \frac{dh}{dt}.
+   \]
+
+4. **Substitute the given values**: We are told that \( \frac{dV}{dt} = -3 \, \text{cm}^3/\text{min} \) (negative because the volume is decreasing) and that the water level is \( h = 1.5 \, \text{cm} \) (since the water level is half a centimeter below the top of the cone, which has a height of 2 cm). Substituting these values into the equation:
+   \[
+   -3 = \frac{\pi}{4} (1.5)^2 \frac{dh}{dt}.
+   \]
+
+5. **Solve for \( \frac{dh}{dt} \)**: Simplify the equation:
+   \[
+   -3 = \frac{\pi}{4} \cdot 2.25 \cdot \frac{dh}{dt}.
+   \]
+   \[
+   -3 = \frac{2.25\pi}{4} \cdot \frac{dh}{dt}.
+   \]
+   \[
+   \frac{dh}{dt} = \frac{-3 \cdot 4}{2.25\pi}.
+   \]
+   Simplify further:
+   \[
+   \frac{dh}{dt} = \frac{-12}{2.25\pi} = \frac{-48}{9\pi} = \frac{-16}{3\pi}.
+   \]
+
+Thus, the rate at which the height of the water changes is \( \frac{-16}{3\pi} \, \text{cm/min} \).
+
+The correct answer is {'sol': 'd'}."
+"To solve this, I will analyze the system of equations step by step:
+
+1. **Determine the nature of the system**: The system consists of 4 equations with 4 variables (w, x, y, z). To determine if the system is consistent and has infinitely many solutions, I will check if the equations are linearly dependent or independent. If the equations are dependent, the system will have infinitely many solutions.
+
+2. **Check for the solution form**: If the system has infinitely many solutions, the solutions will form a subspace. This means the sum of any two solutions will also be a solution, and scalar multiples of a solution will also be solutions. However, if every solution is a scalar multiple of a specific vector, the solution set is one-dimensional.
+
+3. **Analyze the given statements**:
+   - (a) The system is consistent: This means there exists at least one solution.
+   - (b) The system has infinitely many solutions: This implies the equations are dependent.
+   - (c) The sum of any two solutions is a solution: This is true for any subspace of solutions.
+   - (d) Every solution is a scalar multiple of (-5, 1, 1, 0): This implies the solution set is one-dimensional.
+
+After analyzing the system, the FALSE statement is {'sol': 'd'}."
+"To solve this, we need to find the minimum value of the function \( f(x) = e^x - cx \) for \( c > 0 \).
+
+1. **Find the critical points**: To find the critical points, we take the derivative of \( f(x) \) with respect to \( x \):
+   \[
+   f'(x) = e^x - c.
+   \]
+   Setting \( f'(x) = 0 \), we get:
+   \[
+   e^x = c \quad \Rightarrow \quad x = \ln c.
+   \]
+
+2. **Verify that \( x = \ln c \) is a minimum**: To confirm that \( x = \ln c \) is a minimum, we check the second derivative:
+   \[
+   f''(x) = e^x.
+   \]
+   Since \( e^x > 0 \) for all \( x \), \( f''(x) > 0 \), which means \( f(x) \) is concave up at \( x = \ln c \). Thus, \( x = \ln c \) is indeed a minimum.
+
+3. **Find the minimum value**: Substitute \( x = \ln c \) into \( f(x) \):
+   \[
+   f(\ln c) = e^{\ln c} - c \ln c = c - c \ln c.
+   \]
+
+Thus, the minimum value of \( f(x) \) occurs at \( x = \ln c \), and the correct answer is \( f(\ln c) \), which corresponds to choice **d**.
+
+Final answer: {'sol': 'd'}"
+"To solve this, let's analyze the given information step by step:
+
+1. The determinant of \( A - \lambda I \) is the characteristic polynomial of \( A \), which is given as \( -\lambda^3 + 3\lambda^2 + \lambda - 3 \). This polynomial can be factored to find the eigenvalues of \( A \). Factoring \( -\lambda^3 + 3\lambda^2 + \lambda - 3 \), we get \( -(\lambda + 3)(\lambda - 1)^2 \). Thus, the eigenvalues of \( A \) are \( -3 \) and \( 1 \) (with multiplicity 2).
+
+2. The trace of a matrix is the sum of its eigenvalues. For \( A \), the eigenvalues are \( -3, 1, 1 \). Adding these gives \( -3 + 1 + 1 = -1 \). Therefore, the trace of \( A \) is not 3, so statement I is false.
+
+3. The determinant of a matrix is the product of its eigenvalues. For \( A \), the eigenvalues are \( -3, 1, 1 \). Multiplying these gives \( -3 \cdot 1 \cdot 1 = -3 \). Therefore, the determinant of \( A \) is \( -3 \), so statement II is true.
+
+4. The eigenvalues of \( A \) are \( -3 \) and \( 1 \) (with multiplicity 2). This matches the information in statement III, so statement III is true.
+
+Thus, the correct answer is that statements II and III are true. The correct choice is {'sol': 'b'}."
+"To solve this, I will follow these steps:
+
+1. **Rewrite the differential equation**: The given equation is \( x \, dy + (y - xe^x) \, dx = 0 \). Dividing through by \( x \), we get:
+   \[
+   dy + \left(\frac{y}{x} - e^x\right) dx = 0.
+   \]
+   Rearranging, we have:
+   \[
+   \frac{dy}{dx} + \frac{y}{x} = e^x.
+   \]
+   This is a first-order linear differential equation.
+
+2. **Find the integrating factor**: The standard form of a linear differential equation is:
+   \[
+   \frac{dy}{dx} + P(x)y = Q(x),
+   \]
+   where \( P(x) = \frac{1}{x} \) and \( Q(x) = e^x \). The integrating factor is:
+   \[
+   \mu(x) = e^{\int P(x) \, dx} = e^{\int \frac{1}{x} \, dx} = e^{\ln|x|} = x.
+   \]
+
+3. **Solve the equation**: Multiply through by the integrating factor \( x \):
+   \[
+   x \frac{dy}{dx} + y = xe^x.
+   \]
+   The left-hand side is the derivative of \( yx \), so:
+   \[
+   \frac{d}{dx}(yx) = xe^x.
+   \]
+   Integrate both sides:
+   \[
+   yx = \int xe^x \, dx.
+   \]
+   Use integration by parts to solve \( \int xe^x \, dx \). Let \( u = x \) and \( dv = e^x dx \), so \( du = dx \) and \( v = e^x \). Then:
+   \[
+   \int xe^x \, dx = uv - \int v \, du = xe^x - \int e^x \, dx = xe^x - e^x + C.
+   \]
+   Thus:
+   \[
+   yx = xe^x - e^x + C.
+   \]
+   Divide through by \( x \) (for \( x \neq 0 \)):
+   \[
+   y = e^x - \frac{e^x}{x} + \frac{C}{x}.
+   \]
+
+4. **Apply the initial condition**: We are given \( y = 0 \) when \( x = 1 \). Substituting \( x = 1 \) and \( y = 0 \) into the solution:
+   \[
+   0 = e^1 - \frac{e^1}{1} + \frac{C}{1}.
+   \]
+   Simplify:
+   \[
+   0 = e - e + C \implies C = 0.
+   \]
+   So the solution simplifies to:
+   \[
+   y = e^x - \frac{e^x}{x}.
+   \]
+
+5. **Find \( f(2) \)**: Substitute \( x = 2 \) into the solution:
+   \[
+   f(2) = e^2 - \frac{e^2}{2}.
+   \]
+   Factor out \( e^2 \):
+   \[
+   f(2) = e^2 \left(1 - \frac{1}{2}\right) = e^2 \cdot \frac{1}{2} = \frac{e^2}{2}.
+   \]
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, let's analyze each event step by step:
+
+1. **Event a) H = 50**:  
+   - The probability of getting exactly 50 heads in 100 tosses follows a binomial distribution. The probability of this specific outcome is relatively high because 50 heads is the most likely outcome in a fair coin toss scenario.
+
+2. **Event b) T >= 60**:  
+   - If T >= 60, then H <= 40 (since H + T = 100). The probability of getting 40 or fewer heads is much smaller than the probability of getting around 50 heads, as outcomes far from the mean (50 heads) are less likely in a binomial distribution.
+
+3. **Event c) 51 <= H <= 55**:  
+   - This event includes multiple outcomes (51, 52, 53, 54, and 55 heads). Since these outcomes are close to the mean (50 heads), their combined probability is higher than the probability of a single outcome like H = 50.
+
+4. **Event d) H >= 48 and T >= 48**:  
+   - For this event to occur, both H and T must be at least 48. This is only possible if H = 48, H = 49, H = 50, H = 51, or H = 52. These outcomes are close to the mean, so the probability is relatively high, but it is limited to just these five outcomes.
+
+**Comparison**:  
+- Event a) is a single outcome (H = 50).  
+- Event b) involves outcomes far from the mean, so it has a low probability.  
+- Event c) includes multiple outcomes close to the mean, making it more likely than event a).  
+- Event d) also includes multiple outcomes close to the mean, but it is more restrictive than event c).  
+
+Thus, the event with the greatest probability is **c) 51 <= H <= 55**.
+
+{'sol': 'c'}"
+"Statement 1: To determine if the derivative must exist and equal 0 at a local maximum, we need to consider the definition of a local maximum. A function can have a local maximum even if it is not differentiable at that point (e.g., a sharp peak). Therefore, the derivative does not necessarily exist at a local maximum, and the statement is false.
+
+Statement 2: Continuous maps from R (the real numbers) to Q (the rational numbers) would imply that the image of R under such a map is contained in Q. However, Q is not connected (it is a totally disconnected set), while R is connected. A continuous map cannot map a connected set (R) onto a disconnected set (Q) in a non-trivial way. Therefore, there cannot exist non-constant continuous maps from R to Q, and the statement is false.
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's proceed step by step:
+
+1. **Understand the given conditions**:  
+   - \( A \neq I \), \( A \neq -I \), and \( A = A^{-1} \).  
+   - Since \( A = A^{-1} \), multiplying both sides by \( A \), we get \( A^2 = I \). This means \( A \) is an involutory matrix, and its eigenvalues must satisfy \( \lambda^2 = 1 \), so the eigenvalues of \( A \) are either \( 1 \) or \( -1 \).
+
+2. **Trace of a matrix**:  
+   The trace of a matrix is the sum of its eigenvalues. Since \( A \) is a \( 2 \times 2 \) matrix, it has two eigenvalues, which can be \( 1 \) and \( -1 \), \( 1 \) and \( 1 \), or \( -1 \) and \( -1 \).
+
+3. **Eliminate invalid cases**:  
+   - If the eigenvalues are \( 1 \) and \( 1 \), then \( A = I \), which contradicts \( A \neq I \).  
+   - If the eigenvalues are \( -1 \) and \( -1 \), then \( A = -I \), which contradicts \( A \neq -I \).  
+   - Therefore, the only valid case is when the eigenvalues are \( 1 \) and \( -1 \).
+
+4. **Calculate the trace**:  
+   If the eigenvalues are \( 1 \) and \( -1 \), the trace of \( A \) is \( 1 + (-1) = 0 \).
+
+Thus, the trace of \( A \) is \( 0 \). The correct answer is {'sol': 'c'}."
+"To solve this problem, I will follow these steps:
+
+1. **Understand the problem**: We are forming a rectangular yard with three sides fenced using a total of \( x \) feet of fencing. The fourth side is open. We need to maximize the area of the rectangle.
+
+2. **Define variables**: Let the length of the open side be \( L \), and the two equal shorter sides (widths) be \( W \). The total fencing used is \( L + 2W = x \).
+
+3. **Express the area**: The area of the rectangle is \( A = L \cdot W \). From the fencing constraint, \( L = x - 2W \). Substituting this into the area formula gives:
+   \[
+   A = (x - 2W) \cdot W = xW - 2W^2.
+   \]
+
+4. **Maximize the area**: To maximize \( A \), take the derivative of \( A \) with respect to \( W \), set it to zero, and solve for \( W \):
+   \[
+   \frac{dA}{dW} = x - 4W = 0 \implies W = \frac{x}{4}.
+   \]
+
+5. **Find \( L \)**: Substitute \( W = \frac{x}{4} \) into \( L = x - 2W \):
+   \[
+   L = x - 2\left(\frac{x}{4}\right) = x - \frac{x}{2} = \frac{x}{2}.
+   \]
+
+6. **Calculate the maximum area**: The maximum area is:
+   \[
+   A = L \cdot W = \left(\frac{x}{2}\right) \cdot \left(\frac{x}{4}\right) = \frac{x^2}{8}.
+   \]
+
+Thus, the maximum possible area of the yard is \( \frac{x^2}{8} \).
+
+The correct answer is {'sol': 'b'}."
+"To solve this, let's analyze each statement step by step:
+
+**Statement 1**: ""If \( A \) is connected, the closure of \( A \) must be connected.""
+1. A set \( A \) is connected if there do not exist two disjoint non-empty open subsets whose union is \( A \).
+2. The closure of \( A \), denoted \( \overline{A} \), includes all the limit points of \( A \) and is the smallest closed set containing \( A \).
+3. The closure of a connected set is also connected because adding limit points does not create a separation of the set. Hence, this statement is **true**.
+
+**Statement 2**: ""Every continuous function \( f : (0, 1) \to (0, 1) \) has a fixed point.""
+1. A fixed point of \( f \) is a point \( x \in (0, 1) \) such that \( f(x) = x \).
+2. Consider the function \( f(x) = x/2 \), which is continuous and maps \( (0, 1) \to (0, 1) \). For this function, there is no \( x \in (0, 1) \) such that \( f(x) = x \). Hence, this statement is **false**.
+
+Thus, the correct answer is {'sol': 'b'}."
+"To determine which set has the greatest cardinality, let's analyze each option step by step:
+
+1. **Set a: \( \mathbb{R} \)** (the set of real numbers):  
+   The cardinality of \( \mathbb{R} \) is the cardinality of the continuum, denoted as \( \mathfrak{c} \). This is strictly greater than the cardinality of \( \mathbb{Z} \) (the set of integers) or \( \mathbb{N} \) (the set of natural numbers), which is \( \aleph_0 \).
+
+2. **Set b: The set of all functions from \( \mathbb{Z} \) to \( \mathbb{Z} \):**  
+   The set of all functions from \( \mathbb{Z} \) to \( \mathbb{Z} \) has a cardinality of \( |\mathbb{Z}|^{|\mathbb{Z}|} \). Since \( |\mathbb{Z}| = \aleph_0 \), this becomes \( \aleph_0^{\aleph_0} \), which is equal to \( \mathfrak{c} \) (the cardinality of the continuum).
+
+3. **Set c: The set of all functions from \( \mathbb{R} \) to \( \{0, 1\} \):**  
+   The set of all functions from \( \mathbb{R} \) to \( \{0, 1\} \) has a cardinality of \( 2^{|\mathbb{R}|} \). Since \( |\mathbb{R}| = \mathfrak{c} \), this becomes \( 2^{\mathfrak{c}} \), which is strictly greater than \( \mathfrak{c} \).
+
+4. **Set d: The set of all finite subsets of \( \mathbb{R} \):**  
+   The set of all finite subsets of \( \mathbb{R} \) has a cardinality of \( \mathfrak{c} \), because the union of all finite subsets of \( \mathbb{R} \) is still countable, and the power set of \( \mathbb{R} \) (which includes all subsets, finite or infinite) has cardinality \( 2^{\mathfrak{c}} \). Thus, the cardinality of the set of all finite subsets of \( \mathbb{R} \) is \( \mathfrak{c} \).
+
+### Conclusion:
+- \( \mathbb{R} \) has cardinality \( \mathfrak{c} \).
+- The set of all functions from \( \mathbb{Z} \) to \( \mathbb{Z} \) has cardinality \( \mathfrak{c} \).
+- The set of all functions from \( \mathbb{R} \) to \( \{0, 1\} \) has cardinality \( 2^{\mathfrak{c}} \), which is the largest.
+- The set of all finite subsets of \( \mathbb{R} \) has cardinality \( \mathfrak{c} \).
+
+The set with the greatest cardinality is **c**.  
+Answer: {'sol': 'c'}"
+"To solve this, I will calculate step by step:
+
+1. The function passes through the origin, so \( f(0) = 0 \).
+2. Using the given recurrence relation \( f(2n) = n^2 + f[2(n - 1)] \), I will calculate \( f(2) \), \( f(4) \), \( f(6) \), and \( f(8) \) step by step:
+   - For \( n = 1 \): \( f(2) = 1^2 + f[2(1 - 1)] = 1^2 + f(0) = 1 + 0 = 1 \).
+   - For \( n = 2 \): \( f(4) = 2^2 + f[2(2 - 1)] = 2^2 + f(2) = 4 + 1 = 5 \).
+   - For \( n = 3 \): \( f(6) = 3^2 + f[2(3 - 1)] = 3^2 + f(4) = 9 + 5 = 14 \).
+   - For \( n = 4 \): \( f(8) = 4^2 + f[2(4 - 1)] = 4^2 + f(6) = 16 + 14 = 30 \).
+
+Thus, the value of \( f(8) \) is 30.
+
+The correct answer is {'sol': 'b'}."
+"To determine the number of structurally distinct Abelian groups of order 72, we proceed as follows:
+
+1. **Prime factorization of 72**:  
+   \( 72 = 2^3 \cdot 3^2 \).  
+   The order of the group is a product of powers of primes.
+
+2. **Decomposing the group**:  
+   By the Fundamental Theorem of Finite Abelian Groups, the number of distinct Abelian groups of a given order is determined by the partitions of the exponents in the prime factorization.  
+   - For \( 2^3 \): The partitions of 3 are \( 3 \), \( 2+1 \), and \( 1+1+1 \). This gives 3 distinct groups.  
+   - For \( 3^2 \): The partitions of 2 are \( 2 \) and \( 1+1 \). This gives 2 distinct groups.
+
+3. **Combining the groups**:  
+   The total number of distinct Abelian groups is the product of the number of groups for each prime power.  
+   \( 3 \times 2 = 6 \).
+
+Thus, the number of structurally distinct Abelian groups of order 72 is 6.
+
+{'sol': 'b'}"
+"To solve this, let's proceed step by step:
+
+1. **Apply Lagrange's Theorem**: If \( G \) is a finite group and contains a subgroup of order 7, then the order of \( G \) must be a multiple of 7. This is because the order of any subgroup divides the order of the group. Thus, the possible orders of \( G \) from the given choices are \( 28 \) and \( 35 \) (since \( 27 \) and \( 37 \) are not divisible by 7).
+
+2. **Analyze the property of elements**: The problem states that no element (other than the identity) is its own inverse. This means that for any element \( g \in G \), \( g^2 \neq e \) unless \( g = e \). In other words, \( g \) cannot have order 2 unless \( g = e \).
+
+3. **Check the possible orders**:
+   - If \( |G| = 28 \): A group of order 28 can be written as \( 28 = 2^2 \cdot 7 \). Such a group could potentially have elements of order 2 (since 28 is even), which contradicts the given condition that no element (other than the identity) is its own inverse.
+   - If \( |G| = 35 \): A group of order 35 can be written as \( 35 = 5 \cdot 7 \). Since 35 is odd, it cannot have elements of order 2. This satisfies the condition that no element (other than the identity) is its own inverse.
+
+Thus, the only possible order of \( G \) is 35.
+
+The correct answer is {'sol': 'c'}."
+"To solve this problem, we need to analyze the function \( f(x, y) = x^3 + y^3 + 3xy \) and determine the nature of its critical points. Here's the step-by-step process:
+
+1. **Find the critical points**:
+   - Compute the partial derivatives of \( f(x, y) \):
+     \[
+     f_x = \frac{\partial f}{\partial x} = 3x^2 + 3y, \quad f_y = \frac{\partial f}{\partial y} = 3y^2 + 3x.
+     \]
+   - Set \( f_x = 0 \) and \( f_y = 0 \) to find the critical points:
+     \[
+     3x^2 + 3y = 0 \quad \text{and} \quad 3y^2 + 3x = 0.
+     \]
+     Simplify these equations:
+     \[
+     x^2 + y = 0 \quad \text{and} \quad y^2 + x = 0.
+     \]
+     From the first equation, \( y = -x^2 \). Substitute \( y = -x^2 \) into the second equation:
+     \[
+     (-x^2)^2 + x = 0 \implies x^4 + x = 0 \implies x(x^3 + 1) = 0.
+     \]
+     Solve for \( x \):
+     \[
+     x = 0 \quad \text{or} \quad x^3 + 1 = 0 \implies x = -1.
+     \]
+     For \( x = 0 \), substitute into \( y = -x^2 \): \( y = 0 \). So, one critical point is \( (0, 0) \).
+     For \( x = -1 \), substitute into \( y = -x^2 \): \( y = -(-1)^2 = -1 \). So, another critical point is \( (-1, -1) \).
+
+     The critical points are \( (0, 0) \) and \( (-1, -1) \).
+
+2. **Classify the critical points**:
+   - Compute the second partial derivatives of \( f(x, y) \):
+     \[
+     f_{xx} = \frac{\partial^2 f}{\partial x^2} = 6x, \quad f_{yy} = \frac{\partial^2 f}{\partial y^2} = 6y, \quad f_{xy} = \frac{\partial^2 f}{\partial x \partial y} = 3.
+     \]
+   - The Hessian determinant is given by:
+     \[
+     H = f_{xx}f_{yy} - (f_{xy})^2.
+     \]
+     At each critical point, calculate \( H \) and analyze the nature of the point:
+     - At \( (0, 0) \):
+       \[
+       f_{xx} = 6(0) = 0, \quad f_{yy} = 6(0) = 0, \quad f_{xy} = 3.
+       \]
+       \[
+       H = (0)(0) - (3)^2 = -9.
+       \]
+       Since \( H < 0 \), \( (0, 0) \) is a **saddle point**.
+
+     - At \( (-1, -1) \):
+       \[
+       f_{xx} = 6(-1) = -6, \quad f_{yy} = 6(-1) = -6, \quad f_{xy} = 3.
+       \]
+       \[
+       H = (-6)(-6) - (3)^2 = 36 - 9 = 27.
+       \]
+       Since \( H > 0 \) and \( f_{xx} < 0 \), \( (-1, -1) \) is a **local maximum**.
+
+3. **Conclusion**:
+   - The function \( f(x, y) \) has a **local maximum** at \( (-1, -1) \) and a **saddle point** at \( (0, 0) \).
+
+The correct answer is:
+{'sol': 'c'}"
+"To solve this, let's analyze each option step by step:
+
+1. **Option a)** If \( A \) is open, then \( A = \mathbb{R} \):  
+   - The set of rational numbers (\( \mathbb{Q} \)) is dense in \( \mathbb{R} \), meaning every open set containing all rationals must also contain all real numbers.  
+   - If \( A \) is open and contains all rationals, it must also contain all irrationals, making \( A = \mathbb{R} \).  
+   - This statement is **true**.
+
+2. **Option b)** If \( A \) is closed, then \( A = \mathbb{R} \):  
+   - The set of rational numbers (\( \mathbb{Q} \)) is not closed in \( \mathbb{R} \), as it does not contain its limit points (irrational numbers).  
+   - If \( A \) is closed and contains all rationals, it must also contain all irrationals (since the closure of \( \mathbb{Q} \) is \( \mathbb{R} \)), making \( A = \mathbb{R} \).  
+   - This statement is **true**.
+
+3. **Option c)** If \( A \) is uncountable, then \( A = \mathbb{R} \):  
+   - An uncountable set containing all rationals does not necessarily equal \( \mathbb{R} \). For example, \( A \) could be \( \mathbb{Q} \cup \{ \sqrt{2} \} \cup [0, 1] \), which is uncountable but not equal to \( \mathbb{R} \).  
+   - This statement is **false**.
+
+4. **Option d)** If \( A \) is uncountable, then \( A \) is open:  
+   - A set being uncountable does not imply it is open. For example, the Cantor set is uncountable but not open.  
+   - This statement is **false**.
+
+The correct answers are **a)** and **b)**. Therefore, the solution is: {'sol': 'a'}."
+"To solve this problem, let's analyze each condition step by step and determine which one is not equivalent to the others.
+
+1. **Condition a**: For any two distinct column vectors \( u \) and \( v \) of \( M \), the set \( \{u, v\} \) is linearly independent.  
+   - This means that no two columns of \( M \) are linearly dependent. However, this does not guarantee that all five columns of \( M \) are linearly independent. For example, \( M \) could have three or more columns that are linearly dependent, even if every pair of columns is linearly independent.  
+   - Therefore, this condition is weaker than the others, which typically require all columns to be linearly independent.
+
+2. **Condition b**: The homogeneous system \( Mx = 0 \) has only the trivial solution.  
+   - This implies that \( M \) is invertible, meaning all columns of \( M \) are linearly independent. This is equivalent to the determinant of \( M \) being nonzero (condition d) and the system \( Mx = b \) having a unique solution for every \( b \) (condition c).
+
+3. **Condition c**: The system of equations \( Mx = b \) has a unique solution for each real \( 5 \times 1 \) column vector \( b \).  
+   - This is equivalent to \( M \) being invertible, which means the determinant of \( M \) is nonzero (condition d) and the homogeneous system \( Mx = 0 \) having only the trivial solution (condition b).
+
+4. **Condition d**: The determinant of \( M \) is nonzero.  
+   - This is a standard condition for \( M \) being invertible. It is equivalent to conditions b and c.
+
+5. **Condition e**: (Not explicitly listed in the problem, but implied as the fifth condition).  
+   - Based on the problem, we are tasked with identifying the condition that is not equivalent to the others. From the analysis above, condition a is weaker than the others because it only ensures pairwise linear independence of columns, not full column independence.
+
+Thus, the condition that is not equivalent to the others is **condition a**.
+
+Final answer: {'sol': 'a'}"
+"To solve this, let's analyze the equation step by step:
+
+1. The cosine function, \( \cos(97x) \), oscillates between -1 and 1 for all real values of \( x \). Therefore, for the equation \( \cos(97x) = x \) to hold, \( x \) must also lie in the interval \([-1, 1]\).
+
+2. Since we are only considering positive values of \( x \), the interval of interest is \( 0 < x \leq 1 \).
+
+3. The function \( \cos(97x) \) oscillates rapidly because of the high frequency (97). Over the interval \( 0 < x \leq 1 \), the cosine function completes approximately \( 97 / (2\pi) \) cycles. This is because the period of \( \cos(97x) \) is \( 2\pi / 97 \), and the interval \( 0 < x \leq 1 \) contains \( 1 / (2\pi / 97) = 97 / (2\pi) \) cycles.
+
+4. The number of solutions to \( \cos(97x) = x \) corresponds to the number of times the graph of \( y = \cos(97x) \) intersects the line \( y = x \) in the interval \( 0 < x \leq 1 \). Since \( \cos(97x) \) oscillates approximately \( 97 / (2\pi) \approx 15.4 \) times in this interval, there are approximately 15 intersections.
+
+5. Each oscillation of \( \cos(97x) \) typically results in one intersection with \( y = x \). Therefore, the number of positive solutions is exactly 15.
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, I will analyze each ring to determine if it is possible for the product of two nonzero elements to be zero. This property is called having ""zero divisors.""
+
+1. **The ring of complex numbers**: The complex numbers form a field, meaning there are no zero divisors. The product of two nonzero complex numbers is always nonzero.
+
+2. **The ring of integers modulo 11**: This is also a field because 11 is a prime number. In a field, there are no zero divisors, so the product of two nonzero elements is always nonzero.
+
+3. **The ring of continuous real-valued functions on [0, 1]**: In this ring, functions are multiplied pointwise. It is possible for two nonzero functions to multiply to give the zero function. For example, let \( f(x) = x \) and \( g(x) = 1 - x \). Both are nonzero functions, but their product \( f(x)g(x) = x(1 - x) \) is zero for all \( x \) in [0, 1]. Thus, this ring has zero divisors.
+
+4. **The ring {a + b * sqrt(2) : a and b are rational numbers}**: This is a subring of the real numbers, which is an integral domain. In an integral domain, there are no zero divisors, so the product of two nonzero elements is always nonzero.
+
+The correct answer is the ring of continuous real-valued functions on [0, 1], as it is the only ring in the list where the product of two nonzero elements can be zero.
+
+{'sol': 'c'}"
+"To determine when the map \( x \mapsto axa^2 \) is a homomorphism, let's analyze step by step:
+
+1. **Definition of a homomorphism**: A map \( \phi: G \to G \) is a homomorphism if \( \phi(xy) = \phi(x)\phi(y) \) for all \( x, y \in G \). Here, \( \phi(x) = axa^2 \).
+
+2. **Compute \( \phi(xy) \)**: For \( x, y \in G \),
+   \[
+   \phi(xy) = a(xy)a^2.
+   \]
+
+3. **Compute \( \phi(x)\phi(y) \)**: Using the definition of \( \phi \),
+   \[
+   \phi(x)\phi(y) = (axa^2)(aya^2).
+   \]
+   Using group multiplication, this becomes:
+   \[
+   \phi(x)\phi(y) = axa^2aya^2.
+   \]
+
+4. **Equating \( \phi(xy) \) and \( \phi(x)\phi(y) \)**: For \( \phi \) to be a homomorphism, we must have:
+   \[
+   a(xy)a^2 = axa^2aya^2.
+   \]
+   Simplify the right-hand side:
+   \[
+   axa^2aya^2 = ax(a^2a)ya^2 = axaya^2.
+   \]
+   So, the condition becomes:
+   \[
+   a(xy)a^2 = axaya^2.
+   \]
+
+5. **Simplify the condition**: Cancel \( a \) on the left and \( a^2 \) on the right:
+   \[
+   xy = xaya.
+   \]
+   Rearrange to get:
+   \[
+   y = aya.
+   \]
+
+6. **Interpret the condition \( y = aya \)**: This must hold for all \( y \in G \). This implies that \( a^2 = e \), where \( e \) is the identity element of \( G \), because \( aya = y \) for all \( y \) only if \( a^2 = e \).
+
+Thus, the map \( x \mapsto axa^2 \) is a homomorphism if and only if \( a^2 = e \).
+
+The correct answer is: {'sol': 'd'}."
+"To solve this, I will calculate the determinants of matrices A and B step by step.
+
+1. **Matrix A**: A is a 2x2 matrix where the (i, j) entry is \( i + j \). This means:
+   \[
+   A = \begin{bmatrix}
+   1+1 & 1+2 \\
+   2+1 & 2+2
+   \end{bmatrix}
+   = \begin{bmatrix}
+   2 & 3 \\
+   3 & 4
+   \end{bmatrix}.
+   \]
+   The determinant of a 2x2 matrix \(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\) is given by \( ad - bc \). For \( A \):
+   \[
+   \text{det}(A) = (2)(4) - (3)(3) = 8 - 9 = -1.
+   \]
+
+2. **Matrix B**: B is a 3x3 matrix where the (i, j) entry is \( i + j \). This means:
+   \[
+   B = \begin{bmatrix}
+   1+1 & 1+2 & 1+3 \\
+   2+1 & 2+2 & 2+3 \\
+   3+1 & 3+2 & 3+3
+   \end{bmatrix}
+   = \begin{bmatrix}
+   2 & 3 & 4 \\
+   3 & 4 & 5 \\
+   4 & 5 & 6
+   \end{bmatrix}.
+   \]
+   To compute the determinant of a 3x3 matrix, we use cofactor expansion. However, notice that the rows of \( B \) are linearly dependent (each row is an arithmetic progression, and the difference between consecutive rows is constant). Therefore, \(\text{det}(B) = 0\).
+
+3. **Sum of determinants**: Now, we add the determinants:
+   \[
+   \text{det}(A) + \text{det}(B) = -1 + 0 = -1.
+   \]
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, let's analyze each statement step by step:
+
+1. **Statement I: f is one-to-one and onto.**
+   - The domain of \( f \) is \( (0, 1) \), which is an open interval, and the codomain is \( (0, 1] \), which is a half-open interval.
+   - A function \( f \) can be one-to-one (injective) and onto (surjective) if it maps every element in \( (0, 1) \) uniquely to an element in \( (0, 1] \), and every element in \( (0, 1] \) has a preimage in \( (0, 1) \).
+   - This is possible. For example, \( f(x) = x \) for \( x \in (0, 1) \) is one-to-one and onto \( (0, 1] \). So, Statement I could be true.
+
+2. **Statement II: The image of \( f \) is compact.**
+   - The image of \( f \) is a subset of \( (0, 1] \), which is not compact because it is not closed (it does not include 0) and not bounded in the sense of compactness in a closed interval.
+   - Therefore, Statement II is false.
+
+3. **Statement III: f is continuous, one-to-one, and onto.**
+   - If \( f \) is continuous, one-to-one, and onto, then \( f \) would map \( (0, 1) \) onto \( (0, 1] \). However, this is not possible because \( (0, 1) \) is not compact, and a continuous bijection from a non-compact space to a compact space cannot exist.
+   - Therefore, Statement III is false.
+
+Thus, only Statement I is true.
+
+The correct answer is {'sol': 'a'}."
+"To solve this problem, I will calculate the probability geometrically since the numbers \(x\) and \(y\) are chosen randomly from the given intervals.
+
+1. The possible values of \(x\) and \(y\) form a rectangle in the coordinate plane, where \(x\) ranges from 0 to 3 and \(y\) ranges from 0 to 4. The area of this rectangle is \(3 \times 4 = 12\).
+
+2. The condition \(x < y\) corresponds to the region below the line \(x = y\) within the rectangle. The line \(x = y\) divides the rectangle into two regions: one where \(x < y\) and one where \(x > y\). The line \(x = y\) starts at \((0, 0)\) and ends at \((3, 3)\), dividing the rectangle into two parts.
+
+3. The region where \(x < y\) is a right triangle with vertices at \((0, 0)\), \((3, 3)\), and \((0, 3)\). The base and height of this triangle are both 3, so its area is \(\frac{1}{2} \times 3 \times 3 = 4.5\).
+
+4. The probability that \(x < y\) is the ratio of the area of the triangle to the area of the rectangle: \(\frac{4.5}{12} = \frac{3}{8}\).
+
+Therefore, the correct answer is {'sol': 'c'}."
+"To solve this problem, let's break it down step by step:
+
+1. **Understand the region of interest**:  
+   The inequality \( 0 < |x| + |y| < 1 \) describes a diamond-shaped region in the plane \( \mathbb{R}^2 \), centered at the origin. The boundary lines are \( |x| + |y| = 1 \), and the interior excludes the origin (\( |x| + |y| > 0 \)). The region is symmetric about both axes.
+
+2. **Set up the condition \( 2(x + y) > 1 \)**:  
+   Rearrange this inequality as \( x + y > \frac{1}{2} \). This represents a line in the plane, and we are interested in the portion of the diamond-shaped region where this inequality holds.
+
+3. **Find the intersection of the line \( x + y = \frac{1}{2} \) with the diamond**:  
+   The diamond is bounded by the lines \( x + y = 1 \), \( x + y = -1 \), \( x - y = 1 \), and \( x - y = -1 \). The line \( x + y = \frac{1}{2} \) intersects the diamond, dividing it into two regions. We need to calculate the area of the region where \( x + y > \frac{1}{2} \).
+
+4. **Calculate the area of the region where \( x + y > \frac{1}{2} \)**:  
+   The diamond has a total area of 2 (since it is a square with side length 2, rotated by 45 degrees). The line \( x + y = \frac{1}{2} \) divides the diamond into two regions. By symmetry, the area of the region where \( x + y > \frac{1}{2} \) is exactly one-quarter of the total area of the diamond.
+
+5. **Compute the probability**:  
+   Since the point is chosen uniformly at random within the diamond, the probability is proportional to the area. The probability that \( 2(x + y) > 1 \) is therefore \( \frac{1}{4} \).
+
+Thus, the correct answer is: {'sol': 'b'}."
+"To solve \((1+i)^{10}\), let's proceed step by step:
+
+1. **Express \(1+i\) in polar form**:  
+   The magnitude of \(1+i\) is \(|1+i| = \sqrt{1^2 + 1^2} = \sqrt{2}\).  
+   The argument (angle) of \(1+i\) is \(\tan^{-1}(1/1) = \pi/4\).  
+   So, \(1+i = \sqrt{2} \text{cis}(\pi/4)\), where \(\text{cis}(\theta) = \cos(\theta) + i\sin(\theta)\).
+
+2. **Raise to the 10th power using De Moivre's Theorem**:  
+   \((r \text{cis}(\theta))^n = r^n \text{cis}(n\theta)\).  
+   Here, \(r = \sqrt{2}\), \(\theta = \pi/4\), and \(n = 10\).  
+   \((1+i)^{10} = (\sqrt{2})^{10} \text{cis}(10 \cdot \pi/4)\).  
+
+3. **Simplify the magnitude and angle**:  
+   \((\sqrt{2})^{10} = (2^{1/2})^{10} = 2^{5} = 32\).  
+   The angle is \(10 \cdot \pi/4 = 5\pi/2\).  
+   Since angles are periodic with \(2\pi\), subtract \(2\pi\):  
+   \(5\pi/2 - 2\pi = \pi/2\).  
+   So, \((1+i)^{10} = 32 \text{cis}(\pi/2)\).  
+
+4. **Convert back to rectangular form**:  
+   \(\text{cis}(\pi/2) = \cos(\pi/2) + i\sin(\pi/2) = 0 + i(1) = i\).  
+   Therefore, \((1+i)^{10} = 32i\).
+
+The correct answer is {'sol': 'd'}."
+"To solve this, I will consider the following steps:
+
+1. **Understand the problem**: U and V are 3-dimensional subspaces of \( \mathbb{R}^5 \). The intersection \( U \cap V \) is also a subspace of \( \mathbb{R}^5 \), and its dimension must satisfy certain constraints based on the dimensions of \( U \), \( V \), and \( \mathbb{R}^5 \).
+
+2. **Apply the dimension formula**: The dimension of the sum of two subspaces \( U + V \) satisfies:
+   \[
+   \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V).
+   \]
+   Since \( U + V \) is a subspace of \( \mathbb{R}^5 \), we know \( \dim(U + V) \leq 5 \). Substituting \( \dim(U) = 3 \) and \( \dim(V) = 3 \), we get:
+   \[
+   \dim(U \cap V) = \dim(U) + \dim(V) - \dim(U + V) \geq 3 + 3 - 5 = 1.
+   \]
+
+3. **Determine the possible dimensions**: The dimension of \( U \cap V \) must be at least 1 (as shown above) and at most 3 (since \( U \cap V \) is a subspace of both \( U \) and \( V \), which are 3-dimensional). Therefore, the possible dimensions of \( U \cap V \) are 1, 2, or 3.
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this problem, let's analyze the subset \( S \) step by step:
+
+1. **Understand the subset \( S \):**
+   - The unit square \([0, 1] \times [0, 1]\) consists of all points \((x, y)\) where \(x, y \in [0, 1]\).
+   - The subset \( S \) includes all points \((x, y)\) in the unit square such that at least one of \(x\) or \(y\) is irrational.
+
+2. **Analyze the properties of \( S \):**
+   - The complement of \( S \) in \([0, 1] \times [0, 1]\) consists of all points \((x, y)\) where both \(x\) and \(y\) are rational. This complement is the Cartesian product of the rationals in \([0, 1]\), which is a countable set.
+   - Since the complement of \( S \) is countable, it is nowhere dense in the standard topology of \(\mathbb{R}^2\). Therefore, \( S \) is dense in \([0, 1] \times [0, 1]\).
+
+3. **Determine whether \( S \) is open or closed:**
+   - \( S \) is not open because any open neighborhood of a point in \( S \) will contain points where both coordinates are rational, which are not in \( S \).
+   - \( S \) is not closed because its complement (the set of points where both coordinates are rational) is not open.
+
+4. **Determine whether \( S \) is connected or totally disconnected:**
+   - \( S \) is connected because removing a countable set (the complement of \( S \)) from a connected space (\([0, 1] \times [0, 1]\)) does not disconnect the space. Thus, \( S \) remains connected.
+
+Based on this analysis, the correct answer is:
+
+{'sol': 'c'}"
+"To solve this, I will determine the number of points of intersection between the given parabola \( x^2 = y + 4 \) and each circle. The number of points of intersection depends on solving the system of equations for each circle and the parabola.
+
+1. **Substitute \( y = x^2 - 4 \) (from the parabola) into the equation of each circle**:
+   - For each circle, substitute \( y = x^2 - 4 \) into \( x^2 + y^2 = r^2 \), where \( r^2 \) is the radius squared of the circle. This will result in a single equation in terms of \( x \), which is a polynomial.
+
+2. **Analyze the degree of the resulting polynomial**:
+   - Substituting \( y = x^2 - 4 \) into \( x^2 + y^2 = r^2 \) will yield a fourth-degree polynomial in \( x \). A fourth-degree polynomial can have at most 4 real roots, meaning the circle and parabola can intersect at most 4 points.
+
+3. **Determine the number of real solutions for each circle**:
+   - The number of real solutions depends on the radius of the circle. Larger radii increase the likelihood of more intersection points, as the circle expands and can intersect the parabola in more places.
+
+   - **Case a: \( x^2 + y^2 = 1 \)**
+     - The circle is small (radius = 1). It is likely to intersect the parabola at fewer points because it may not fully encompass the parabola's vertex or arms.
+
+   - **Case b: \( x^2 + y^2 = 2 \)**
+     - The circle is slightly larger (radius = √2). It may intersect the parabola at more points than the first case.
+
+   - **Case c: \( x^2 + y^2 = 9 \)**
+     - The circle is much larger (radius = 3). It is likely to intersect the parabola at the maximum number of points (4), as it can encompass both arms of the parabola.
+
+   - **Case d: \( x^2 + y^2 = 16 \)**
+     - The circle is even larger (radius = 4). However, increasing the radius beyond a certain point does not increase the number of intersection points beyond 4, as the parabola and circle can only intersect at most 4 points.
+
+4. **Conclusion**:
+   - The circle with \( x^2 + y^2 = 9 \) (radius = 3) is the smallest circle that can intersect the parabola at the maximum number of points (4). Larger circles, such as \( x^2 + y^2 = 16 \), also intersect at 4 points but do not exceed this number.
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, let's proceed step by step:
+
+1. **Understand the problem and use the binomial coefficient formula**:  
+   The number of subsets of a set \( X \) with \( n \) elements that contain exactly \( k \) elements is given by the binomial coefficient \( \binom{n}{k} \).  
+   The problem states that the number of subsets of \( X \) with 3 elements is 14 more than the number of subsets with 2 elements. This can be written as:  
+   \[
+   \binom{n}{3} = \binom{n}{2} + 14
+   \]
+
+2. **Express the binomial coefficients**:  
+   Using the formula for binomial coefficients,  
+   \[
+   \binom{n}{3} = \frac{n(n-1)(n-2)}{6}, \quad \binom{n}{2} = \frac{n(n-1)}{2}
+   \]  
+   Substituting these into the equation:  
+   \[
+   \frac{n(n-1)(n-2)}{6} = \frac{n(n-1)}{2} + 14
+   \]
+
+3. **Simplify the equation**:  
+   Multiply through by 6 to eliminate the fractions:  
+   \[
+   n(n-1)(n-2) = 3n(n-1) + 84
+   \]  
+   Expand both sides:  
+   \[
+   n^3 - 3n^2 + 2n = 3n^2 - 3n + 84
+   \]  
+   Simplify further:  
+   \[
+   n^3 - 6n^2 + 5n - 84 = 0
+   \]
+
+4. **Solve for \( n \)**:  
+   Factorize the cubic equation. Testing small integer values, we find \( n = 7 \) satisfies the equation:  
+   \[
+   7^3 - 6(7^2) + 5(7) - 84 = 343 - 294 + 35 - 84 = 0
+   \]  
+   So, \( n = 7 \).
+
+5. **Find the number of subsets with 4 elements**:  
+   The number of subsets with 4 elements is \( \binom{7}{4} \):  
+   \[
+   \binom{7}{4} = \frac{7 \cdot 6 \cdot 5 \cdot 4}{4 \cdot 3 \cdot 2 \cdot 1} = 35
+   \]
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, we need to determine the linear transformation \( T \) that maps the given points and then apply it to the point \( (2, 1) \).
+
+1. **Set up the transformation matrix**: A linear transformation \( T \) in \( \mathbb{R}^2 \) can be represented by a \( 2 \times 2 \) matrix \( A \). Let \( A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \). Then, \( T(x, y) = A \begin{bmatrix} x \\ y \end{bmatrix} \).
+
+2. **Use the given mappings**: The transformation maps \( (1, 2) \) to \( (2, 3) \) and \( (-1, 2) \) to \( (2, -3) \). This gives us two equations:
+   \[
+   A \begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \quad
+   A \begin{bmatrix} -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ -3 \end{bmatrix}.
+   \]
+
+   Expanding these equations:
+   \[
+   \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} a + 2b \\ c + 2d \end{bmatrix} = \begin{bmatrix} 2 \\ 3 \end{bmatrix},
+   \]
+   which gives:
+   \[
+   a + 2b = 2, \quad c + 2d = 3.
+   \]
+
+   Similarly:
+   \[
+   \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix} = \begin{bmatrix} -a + 2b \\ -c + 2d \end{bmatrix} = \begin{bmatrix} 2 \\ -3 \end{bmatrix},
+   \]
+   which gives:
+   \[
+   -a + 2b = 2, \quad -c + 2d = -3.
+   \]
+
+3. **Solve for \( a, b, c, d \)**:
+   From the first pair of equations:
+   \[
+   a + 2b = 2, \quad -a + 2b = 2.
+   \]
+   Adding these equations:
+   \[
+   4b = 4 \implies b = 1.
+   \]
+   Substituting \( b = 1 \) into \( a + 2b = 2 \):
+   \[
+   a + 2(1) = 2 \implies a = 0.
+   \]
+
+   From the second pair of equations:
+   \[
+   c + 2d = 3, \quad -c + 2d = -3.
+   \]
+   Adding these equations:
+   \[
+   4d = 0 \implies d = 0.
+   \]
+   Substituting \( d = 0 \) into \( c + 2d = 3 \):
+   \[
+   c + 2(0) = 3 \implies c = 3.
+   \]
+
+   Thus, the transformation matrix is:
+   \[
+   A = \begin{bmatrix} 0 & 1 \\ 3 & 0 \end{bmatrix}.
+   \]
+
+4. **Apply \( T \) to \( (2, 1) \)**:
+   To find \( T(2, 1) \), compute:
+   \[
+   T(2, 1) = A \begin{bmatrix} 2 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 3 & 0 \end{bmatrix} \begin{bmatrix} 2 \\ 1 \end{bmatrix} = \begin{bmatrix} 0(2) + 1(1) \\ 3(2) + 0(1) \end{bmatrix} = \begin{bmatrix} 1 \\ 6 \end{bmatrix}.
+   \]
+
+Thus, the correct answer is {'sol': 'a'}."

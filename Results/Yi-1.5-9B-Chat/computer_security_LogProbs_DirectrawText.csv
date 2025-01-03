@@ -1,0 +1,213 @@
+answer
+"Input: Which of the following styles of fuzzer is more likely to explore paths covering every line of code in the following program?  Choices: a) Generational b) Blackbox c) Whitebox d) Mutation-based 
+ Output: {'sol': 'c'}"
+"Input: Assume that a TLS connection has been established successfully between a client and a server.  Establishing the session included checking the server certificate and executing a DiffieHelmann exchange,  but the client did not provide a client certificate.  Further,  assume that the client and server are honest,  that the client and server don’t leak their keys,  and that the cryptography is good.  Which of the following attacks does TLS protect against?
+1.  An attacker replaying bytes that a client sent earlier.
+2.  An attacker impersonating the server.  Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'c'}'"
+"Input: MIT’s Kerberos KDC server has a maximum ticket lifetime of 24  hours (for most user principals).  What ensures that an expired Kerberos ticket can no longer be used?  Choices: a) The Kerberos server (KDC) refuses to establish new connections between clients and servers for expired tickets.  b) When a client connects to a server,  the server sets a 24 -hour timer to terminate the connection,  which ensures a client cannot remain connected past the ticket’s maximum lifetime.  c) When a client connects to a server,  the server compares the ticket’s expiration time to the server’s current clock,  and refuses to authenticate the user if the ticket expiration time is in the past.  d) When a client connects to a server,  the server sends a query to the KDC to check if the ticket is still valid with respect to the KDC’s clock,  and refuses to authenticate the user if the KDC reports that the ticket is expired.  
+ Output: {'sol': 'd'}"
+"Input: In Message Condentiality,  the transmitted message must make sense to only intended Choices: a) Receiver b) Sender c) Modulor d) Translator 
+ Output: {'sol': 'a'}"
+"Input: Which of the following is a remote Trojan?  Choices: a) Troya b) DaCryptic c) BankerA d) Game-Troj 
+ Output: {'sol': 'a'}"
+"Input: ______________ is a widespread app’s coding mistake made by developers which could be exploited by an attacker for gaining access or malfunctioning your system.  Choices: a) Memory leakage b) Buffer-overrun c) Less processing power d) Inefficient programming 
+ Output: {'sol': 'b'}"
+"Input: Consider the paper Native Client: A Sandbox for Portable,  Untrusted x86  Native Code by Yee et al.  Ben Bitdiddle notes that NaCl uses Intel x86  segmentation to ensure that the sandboxed module does not read or write memory outside its own data area,  and does not execute instructions outside its own code.  Ben thinks that with these restrictions alone,  executing the sandboxed module must be safe; that is,  he thinks validation is not needed.  Ben is wrong.  Circle the types of x86  machine instructions that the validator always forbids in sandboxed code.  Please ignore trampoline and springboard code.  Choices: a) all instructions that modify segment state b) all loads or stores to addresses that are not 0  mod 32  c) all indirect loads or stores (via an address in a register or variable) d) all indirect jumps (via an address in a register or variable) 
+ Output: {'sol': 'a'}"
+"Input: ____________ is also a part of darknet that is employed for transferring files anonymously.  Choices: a) Freenet b) ARPANET c) Stuxnet d) Internet 
+ Output: {'sol': 'a'}"
+"Input: Why apps developed in languages like C,  C++ is prone to Buffer-overflow?  Choices: a) No string boundary checks in predefined functions b) No storage check in the external memory c) No processing power check d) No database check 
+ Output: {'sol': 'a'}"
+"Input: Man in the middle attack can endanger the security of Diffie Hellman method if two parties are not Choices: a) Joined b) Authenticated c) Submitted d) Shared 
+ Output: {'sol': 'b'}"
+"Input: An integer overflow occurs when Choices: a) an integer expression\ b) wraps around c)  d) ""an integer is used to access a buffer outside of the buffer 
+ Output: {'sol': 'a'}"
+"Input: Let HH be a Merkle-Damgard hash function is H:X^{\leq L} \to TH:X^≤L  →T.  Construct a MAC from this HH as follows: \ \ S(k, m) = H(k \| m)  S(k, m)=H(k∥m).  This mac is insecure because: Choices: a) Given H(k \\| m)H(k∥m) anyone can compute H(w \\| k \\| m \\| \\text{PB})H(w∥k∥m∥PB) for any ww b) Given H(k \\| m)H(k∥m) anyone can compute H(k \\| m \\| w)H(k∥m∥w) for any ww c) Given H(k \\| m)H(k∥m) anyone can compute H(k \\| m \\| \\text{PB} \\| w)H(k∥m∥PB∥w) for any ww d) Anyone can compute H( k \\| m )H(k∥m) for any mm 
+ Output: {'sol': 'b'}"
+"Input: Suppose that Alice and Bob sent confidential text messages to one another last month through an encrypted messaging system.  Alice and Bob are worried that an adversary might compromise one of their computers today,  while they are taking the 6.858  final exam,  and would then be able to decrypt those messages.  Which of the following security properties can address Alice and Bob’s concern?  Choices: a) Authentication.  b) Deniability.  c) Forward secrecy d) Backward secrecy.  
+ Output: {'sol': 'c'}"
+"Input: The AH Protocol provides source authentication and data integrity,  but not Choices: a) Integrity b) Privacy c) Nonrepudiation d) Both A & C 
+ Output: {'sol': 'b'}"
+"Input: Which of the following is not a security exploit?  Choices: a) Eavesdropping b) Cross-site scripting c) Authentication d) SQL Injection 
+ Output: {'sol': 'c'}"
+"Input: _______________ is the central node of 802.11  wireless operations.  Choices: a) WPA b) Access Point c) WAP d) Access Port 
+ Output: {'sol': 'b'}"
+"Input: In MD-5  the length of the message digest is Choices: a) 160  b) 128  c) 64  d) 54  
+ Output: {'sol': 'b'}"
+"Input: What is Nmap?  Choices: a) It is a scanner which works by injecting packets to a range of addresses,  and inferring what hosts and services might be at those addresses,  based on the responses b) It is a network fuzz testing tool c) It is a map of the Internet d) It is a suite of tools for scripting attacks: probe,  construct,  encode,  inject,  wait for response 
+ Output: {'sol': 'd'}"
+"Input: How do you prevent SQL injection?  Choices: a) Escape queries b) Interrupt requests c) Merge tables d) All of the above 
+ Output: {'sol': 'a'}"
+"Input: What does it mean to ""be stealthy"" during a penetration test?  Choices: a) Performing the tests from an undisclosed location b) Using encryption during tests to make the source of attacks impossible to determine c) Performing penetration testing without the target organization knowing d) Taking care to avoid activities during a penetration test that might attract attention,  e. g.,  by operators or IDS services 
+ Output: {'sol': 'd'}"
+"Input: Which of the following is not a transport layer vulnerability?  Choices: a) Mishandling of undefined,  poorly defined variables b) The Vulnerability that allows “fingerprinting” & other enumeration of host information c) Overloading of transport-layer mechanisms d) Unauthorized network access 
+ Output: {'sol': 'a'}"
+"Input: In Brumley and Boneh’s paper on side-channel attacks,  why does blinding prevent the timing attack from working?  Choices: a) Blinding prevents the server from using the CRT optimization,  which is essential to the timing attack.  b) Blinding changes the p and q primes that are used,  so an adversary cannot learn the server’s true p and q values.  c) Blinding randomizes the ciphertext being decrypted,  thus obscuring the correlation between an adversary’s input and the timing differences.  d) Blinding adds a random amount of time to the decryption due to the multiplication and division by the blinding random value r,  which obscures the timing differences used in the attack.  
+ Output: {'sol': 'd'}"
+"Input: The openSSL implementation described in “Remote Timing Attacks are Practical” (by Brumley and Boneh) uses the following performance optimizations: Chinese Remainder (CR),  Montgomery Representation (MR),  Karatsuba Multiplication (KM),  and Repeated squaring and Sliding windows (RS).  Which of the following options would close the timing channel attack described in the paper if you turned the listed optimizations off?
+1.  RS and KM
+2.  RS and MR Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'c'}'"
+"Input: Public key encryption is advantageous over Symmetric key Cryptography because of Choices: a) Speed b) Space c) Key exchange d) Key length 
+ Output: {'sol': 'c'}"
+"Input: The __________ was a huge marketplace of Dark Web specifically famous for selling of illegal drugs & narcotics as well as you can find a wide range of other goods for sale.  Choices: a) Silk Road b) Cotton Road c) Dark Road d) Drug Road 
+ Output: {'sol': 'a'}"
+"Input: The ______________ is categorized as an unknown segment of the Deep Web which has been purposely kept hidden & is inaccessible using standard web browsers.  Choices: a) Haunted web b) World Wide Web c) Dark web d) Surface web 
+ Output: {'sol': 'c'}"
+"Input: What does EXE do when the STP solver times out on a constraint query for a particular path?  Choices: a) Assume that the query is satisfiable and continue executing the path.  b) Assume that the query is not satisfiable and stop executing the path c) Restart STP and retry the query,  up to a limited number of retries.  d) Remove a subset of the constraints and retry the query.  
+ Output: {'sol': 'a'}"
+"Input: To verify a digital signature we need the Choices: a) Sender’s Private key b) Sender’s Public key c) Receiver’s Private key d) Receiver’s Public key 
+ Output: {'sol': 'b'}"
+"Input: Suppose you want to use fuzzing on a program to try to find memory errors; which of the following statements is true?  Choices: a) You should not use a grammar-based fuzzer,  because its adherence to the grammar means it will not find memory errors b) Compiling the program with address sanitizer (ASAN) will make errors harder to reproduce c) Compiling the program with address sanitizer (ASAN) will make the source of a memory error easier to find d) Fuzzing doesn't find memory errors,  it finds crashes and hangs 
+ Output: {'sol': 'c'}"
+"Input: Based on the paper “SoK: SSL and HTTPS: Revisiting past challenges and evaluating certificates trust model enhancements”,  which of the following statements are false?  Choices: a) Valid DV certificates provide more confidence to a user that she is connecting to the intended party than valid EV certificates.  b) OCSP stapling allows a server to prove to a browser that its certificate hasn’t been revoked.  c) DANE makes it difficult for an adversary to launch a SSL stripping attack.  d) Server key-pinning makes it harder for an adversary to convince a CA to mint a certificate for a site and launch an MITM attack on that site.  
+ Output: {'sol': 'a'}"
+"Input: What tool can be used to perform SNMP enumeration?  Choices: a) DNSlookup b) Whois c) Nslookup d) IP Network Browser 
+ Output: {'sol': 'd'}"
+"Input: Which among them has the strongest wireless security?  Choices: a) WEP b) WPA c) WPA2  d) WPA3  
+ Output: {'sol': 'd'}"
+"Input: Suppose Unix did not provide a way of passing file descriptors between processes,  but still allowed inheriting file descriptors from a parent on fork and exec.  What aspects of the OKWS design would break without file descriptor passing?
+1.  It would be impossible for services to get a TCP connection to the client web browser.
+2.  It would be impossible for okd to run as a non-root user.  Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'c'}"
+"Input: Failed sessions allow brute-force attacks on access credentials.  This type of attacks are done in which layer of the OSI model?  Choices: a) Physical layer b) Data-link Layer c) Session layer d) Presentation layer 
+ Output: {'sol': 'b'}"
+"Input: Which of the following is an authentication method?  Choices: a) Secret question b) Biometric c) SMS code d) All of the above 
+ Output: {'sol': 'd'}"
+"Input: When does a buffer overflow occur,  generally speaking?  Choices: a) when writing to a pointer that has been freed b) when copying a buffer from the stack to the heap c) when a pointer is used to access memory not allocated to it d) when the program notices a buffer has filled up,  and so starts to reject requests 
+ Output: {'sol': 'c'}"
+"Input: A digital signature needs a Choices: a) Private-key system b) Shared-key system c) Public-key system d) All of them 
+ Output: {'sol': 'c'}"
+"Input: A packet filter firewall filters at the Choices: a) Application or transport b) Data link layer c) Physical Layer d) Network or transport layer 
+ Output: {'sol': 'd'}"
+"Input: Let I = (S, V)I=(S, V) be a MAC.  Suppose S(k, m)S(k, m) is always 5  bits long.  Can this MAC be secure?  Choices: a) No,  an attacker can simply guess the tag for messages b) It depends on the details of the MAC c) Yes,  the attacker cannot generate a valid tag for any message d) Yes,  the PRG is pseudorandom 
+ Output: {'sol': 'a'}'"
+"Input: Which of the following deals with network intrusion detection and real-time traffic analysis?  Choices: a) John the Ripper b) L0 phtCrack c) Snort d) Nessus 
+ Output: {'sol': 'c'}"
+"Input: The Message condentiality or privacy means that the sender and the receiver expect Choices: a) Integrity b) Condentiality c) Authentication d) Nonrepudiation 
+ Output: {'sol': 'b'}"
+"Input: When a wireless user authenticates to any AP,  both of them go in the course of four-step authentication progression which is called _____________ Choices: a) AP-handshaking b) 4 -way handshake c) 4 -way connection d) wireless handshaking 
+ Output: {'sol': 'b'}"
+"Input: Message authentication is a service beyond Choices: a) Message Condentiality b) Message Integrity c) Message Splashing d) Message Sending 
+ Output: {'sol': 'b'}"
+"Input: Which of the following are most vulnerable to injection attacks?  Choices: a) Session IDs b) Registry keys c) Network communications d) SQL queries based on user input 
+ Output: {'sol': 'd'}"
+"Input: Assume that a TLS connection has been established successfully between a client and a server.  Establishing the session included checking the server certificate and executing a DiffieHelmann exchange,  but the client did not provide a client certificate.  Further,  assume that the client and server are honest,  that the client and server don’t leak their keys,  and that the cryptography is good.  Which of the following attacks does TLS protect against?
+1.  An attacker replacing bytes sent by a client with bytes of the attacker’s own choosing.
+2.  An attacker reading the plaintext bytes sent by a client.  Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'c'}'"
+"Input: Which of the following is a Wireless traffic Sniffing tool?  Choices: a) Maltego b) BurpSuit c) Nessus d) Wireshark 
+ Output: {'sol': 'd'}"
+"Input: A ___________ is a method in which a computer security mechanism is bypassed untraceable for accessing the computer or its information.  Choices: a) front-door b) backdoor c) clickjacking d) key-logging 
+ Output: {'sol': 'b'}"
+"Input: Which of the following is not a block cipher operating mode?  Choices: a) ECB b) CFB c) CBF d) CBC 
+ Output: {'sol': 'c'}"
+"Input: What is a web proxy?  Choices: a) A piece of software that intercepts and possibly modifies requests (and responses) between a web browser and web server b) An agent that makes decisions on the client's behalf when interacting with web applications c) A piece of software that makes a web application look like a standalone application,  making it easier to test d) A simulator for the web,  for use when off-line 
+ Output: {'sol': 'a'}"
+"Input: Buffer-overflow may remain as a bug in apps if __________ are not done fully.  Choices: a) boundary hacks b) memory checks c) boundary checks d) buffer checks 
+ Output: {'sol': 'c'}"
+"Input: Applications developed by programming languages like ____ and ______ have this common buffer-overflow error.  Choices: a) C,  Ruby b) Python,  Ruby c) C,  C++ d) Tcl,  C# 
+ Output: {'sol': 'c'}"
+"Input: Encryption and decryption provide secrecy,  or condentiality,  but not Choices: a) Authentication b) Integrity c) Privacy d) All of the above 
+ Output: {'sol': 'd'}"
+"Input: A/an ___________ is a program that steals your logins & passwords for instant messaging applications.  Choices: a) IM – Trojans b) Backdoor Trojans c) Trojan-Downloader d) Ransom Trojan 
+ Output: {'sol': 'a'}"
+"Input: The sub key length at each round of DES is__________ Choices: a) 32  b) 56  c) 48  d) 64  
+ Output: {'sol': 'c'}"
+"Input: Which of the following is true of mutation-based fuzzing?  Choices: a) It generates each different input by modifying a prior input b) It works by making small mutations to the target program to induce faults c) Each input is mutation that follows a given grammar d) It only makes sense for file-based fuzzing,  not network-based fuzzing 
+ Output: {'sol': 'b'}"
+"Input: What are the types of scanning?  Choices: a) Port,  network,  and services b) Network,  vulnerability,  and port c) Passive,  active,  and interactive d) Server,  client,  and network 
+ Output: {'sol': 'c'}"
+"Input: A sender must not be able to deny sending a message that was sent,  is known as Choices: a) Message Nonrepudiation b) Message Integrity c) Message Condentiality d) Message Sending 
+ Output: {'sol': 'a'}"
+"Input: A proxy rewall lters at the Choices: a) Physical layer b) Application layer c) Data link layer d) Network layer 
+ Output: {'sol': 'd'}"
+"Input: Encapsulating Security Payload (ESP) belongs to which Internet Security Protocol?  Choices: a) Secure Socket Layer Protocol b) Secure IP Protocol c) Secure Http Protocol d) Transport Layer Security Protocol 
+ Output: {'sol': 'b'}"
+"Input: A special tool is necessary for entering the network which is _______________ that helps the anonymous internet users to access into the Tor’s network and use various Tor services.  Choices: a) Opera browser b) Firefox c) Chrome d) Tor browser 
+ Output: {'sol': 'd'}"
+"Input: How does a buffer overflow on the stack facilitate running attacker-injected code?  Choices: a) By overwriting the return address to point to the location of that code b) By writing directly to the instruction pointer register the address of the code c) By writing directly to %eax the address of the code d) By changing the name of the running executable,  stored on the stack 
+ Output: {'sol': 'a'}"
+"Input: The digest created by a hash function is normally called a Choices: a) Modication detection code (MDC) b) Modify authentication connection c) Message authentication control d) Message authentication cipher 
+ Output: {'sol': 'd'}"
+"Input: Let F: K \times R \to MF:K×R→M be a secure PRF.  For m \in Mm∈M define E(k, m) = \big[ r \gets R, \ \text{output } \big(r, \ F(k, r) \oplus m\big)\ \big]E(k, m)=[r←R,  output (r,  F(k, r)⊕m) ] Is EE symantically secure under CPA?  Choices: a) Yes,  whenever F is a secure PRF b) No,  there is always a CPA attack on this system c) Yes,  but only if R is large enough so r never repeats (w. h. p) d) It depends on what F is used 
+ Output: {'sol': 'a'}"
+"Input: Old operating systems like _______ and NT-based systems have buffer-overflow attack a common vulnerability.  Choices: a) Windows 7  b) Chrome c) IOS12  d) UNIX 
+ Output: {'sol': 'd'}"
+"Input: What is a replay attack?  Choices: a) When the attacker replies to a message sent to it by the system b) An attack that continuously repeats,  probing for a weakness c) An attack that uses the system's own messages and so cannot be defended against d) The attacker resends a captured message,  and the site accept its and responds in the attacker's favor 
+ Output: {'sol': 'd'}"
+"Input: Statement 1 | A U2 F USB dongle prevents malware on the user’s computer from stealing the user’s second factor to authenticate as that user even when the user’s computer is turned off.  Statement 2 | A server using U2 F can reliably determine that the user who is attempting to login is indeed behind the computer that sent the login request.  Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'a'}"
+"Input: ____________________ is the anticipation of unauthorized access or break to computers or data by means of wireless networks.  Choices: a) Wireless access b) Wireless security c) Wired Security d) Wired device apps 
+ Output: {'sol': 'b'}"
+"Input: Which of the following are benefits of penetration testing?  Choices: a) Results are often reproducible b) Full evidence of security: a clean test means a secure system c) Compositionality of security properties means tested components are secure even if others change d) Makes an adversarial neural network converge more quickly 
+ Output: {'sol': 'b'}"
+"Input: 1.  _________ framework made cracking of vulnerabilities easy like point and click.  Choices: a) . Net b) Metasploit c) Zeus d) Ettercap 
+ Output: {'sol': 'b'}"
+"Input: You are given a message (m) and its OTP encryption (c).  Can you compute the OTP key from m and c ?  Choices: a) No,  I cannot compute the key.  b) Yes,  the key is k = m xor c.  c) I can only compute half the bits of the key.  d) Yes,  the key is k = m xor m.  
+ Output: {'sol': 'b'}"
+"Input: The openSSL implementation described in “Remote Timing Attacks are Practical” (by Brumley and Boneh) uses the following performance optimizations: Chinese Remainder (CR),  Montgomery Representation (MR),  Karatsuba Multiplication (KM),  and Repeated squaring and Sliding windows (RS).  Which of the following options would close the timing channel attack described in the paper if you turned the listed optimizations off?
+1.  CR and MR
+2.  CR Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'b'}"
+"Input: When the data must arrive at the receiver exactly as they were sent,  its called Choices: a) Message Condentiality b) Message Integrity c) Message Splashing d) Message Sending 
+ Output: {'sol': 'b'}"
+"Input: What is the difference between a direct leak and a side channel?  Choices: a) A direct leak creates a denial of service by failing to free memory,  while a channel frees memory as a side effect b) A direct leak is one that is intentional,  rather than by unintentional c) A direct leak comes via the software system's intended interaction mechanism,  where as a side channel leak comes from measurements of other system features,  like timing,  power usage,  or space usage d) There is no difference 
+ Output: {'sol': 'c'}"
+"Input: A session symmetric key between two parties is used Choices: a) Only once b) Twice c) Multiple times d) Conditions dependant 
+ Output: {'sol': 'a'}"
+"Input: What is a nop sled Choices: a) It is an anonymous version of a mop sled b) It is a sequence of nops preceding injected shellcode,  useful when the return address is unknown c) It is a method of removing zero bytes from shellcode d) It is another name for a branch instruction at the end of sequence of nops 
+ Output: {'sol': 'b'}"
+"Input: Which Nmap scan is does not completely open a TCP connection?  Choices: a) SYN stealth scan b) TCP connect c) XMAS tree scan d) ACK scan 
+ Output: {'sol': 'a'}"
+"Input: Based on the paper “Click Trajectories: End-to-End Analysis of the Spam Value Chain”,  which of the following statements are true?  “Spammers” here refer to operators of various parts of the “spam value chain. ” Choices: a) Spammers run their spam-advertised web sites on compromised user machines that are part of a botnet.  b) Spammers need to register domain names in order for their spam-based advertisements to be effective.  c) There is a high cost for spammers to switch acquiring banks.  d) B and C 
+ Output: {'sol': 'a'}"
+"Input: In a _____________ attack,  the extra data that holds some specific instructions in the memory for actions is projected by a cyber-criminal or penetration tester to crack the system.  Choices: a) Phishing b) MiTM c) Buffer-overflow d) Clickjacking 
+ Output: {'sol': 'c'}"
+"Input: _______________ is a popular tool used for network analysis in multiprotocol diverse network.  Choices: a) Snort b) SuperScan c) Burp Suit d) EtterPeak 
+ Output: {'sol': 'd'}"
+"Input: ___________________ is alike as that of Access Point (AP) from 802.11,  & the mobile operators uses it for offering signal coverage.  Choices: a) Base Signal Station b) Base Transmitter Station c) Base Transceiver Station d) Transceiver Station 
+ Output: {'sol': 'c'}"
+"Input: A __________ is a sequential segment of the memory location that is allocated for containing some data such as a character string or an array of integers.  Choices: a) stack b) queue c) external storage d) buffer 
+ Output: {'sol': 'd'}"
+"Input: Which form of encryption does WPA use?  Choices: a) Shared key b) LEAP c) TKIP d) AES 
+ Output: {'sol': 'c'}"
+"Input: Let suppose a search box of an application can take at most 200  words,  and you’ve inserted more than that and pressed the search button; the system crashes.  Usually this is because of limited __________ Choices: a) buffer b) external storage c) processing power d) local storage 
+ Output: {'sol': 'a'}"
+"Input: ___________________ began to show up few years back on wireless access points as a new way of adding or connecting new devices.  Choices: a) WPA2  b) WPA c) WPS d) WEP 
+ Output: {'sol': 'c'}"
+"Input: What are the port states determined by Nmap?  Choices: a) Active,  inactive,  standby b) Open,  half-open,  closed c) Open,  filtered,  unfiltered d) Active,  closed,  unused 
+ Output: {'sol': 'c'}"
+"Input: Which among the following is the least strong security encryption standard?  Choices: a) WEP b) WPA c) WPA2  d) WPA3  
+ Output: {'sol': 'a'}"
+"Input: Why is it that the compiler does not know the absolute address of a local variable?  Choices: a) Programs are not allowed to reference memory using absolute addresses b) The size of the address depends on the architecture the program will run on c) As a stack-allocated variable,  it could have different addresses depending on when its containing function is called d) Compiler writers are not very good at that sort of thing 
+ Output: {'sol': 'c'}"
+"Input: The stack is memory for storing Choices: a) Local variables b) Program code c) Dynamically linked libraries d) Global variables 
+ Output: {'sol': 'a'}"
+"Input: Can a stream cipher have perfect secrecy?  Choices: a) Yes,  if the PRG is really “secure” b) No,  there are no ciphers with perfect secrecy c) Yes,  every cipher has perfect secrecy d) No,  since the key is shorter than the message 
+ Output: {'sol': 'a'}"
+"Input: Which of the following does authorization aim to accomplish?  Choices: a) Restrict what operations/data the user can access b) Determine if the user is an attacker c) Flag the user if he/she misbehaves d) Determine who the user is 
+ Output: {'sol': 'a'}"
+"Input: The message must be encrypted at the sender site and decrypted at the Choices: a) Sender Site b) Site c) Receiver site d) Conferencing 
+ Output: {'sol': 'c'}"
+"Input: A _________________ may be a hidden part of a program,  a separate infected program a Trojan in disguise of an executable or code in the firmware of any system’s hardware.  Choices: a) crypter b) virus c) backdoor d) key-logger 
+ Output: {'sol': 'b'}"
+"Input: How is IP address spoofing detected?  Choices: a) Installing and configuring a IDS that can read the IP header b) Comparing the TTL values of the actual and spoofed addresses c) Implementing a firewall to the network d) Identify all TCP sessions that are initiated but does not complete successfully 
+ Output: {'sol': 'b'}"
+"Input: Which of the following is not an example of presentation layer issues?  Choices: a) Poor handling of unexpected input can lead to the execution of arbitrary instructions b) Unintentional or ill-directed use of superficially supplied input c) Cryptographic flaws in the system may get exploited to evade privacy d) Weak or non-existent authentication mechanisms 
+ Output: {'sol': 'b'}"
+"Input: Suppose Unix did not provide a way of passing file descriptors between processes,  but still allowed inheriting file descriptors from a parent on fork and exec.  What aspects of the OKWS design would break without file descriptor passing?
+1.  It would be impossible for services to send messages to oklogd.
+2.  It would be impossible for services to get a TCP connection to a database proxy.  Choices: a) True,  True b) False,  False c) True,  False d) False,  True 
+ Output: {'sol': 'c'}"
+"Input: Why would a ping sweep be used?  Choices: a) To identify live systems b) To locate live systems c) To identify open ports d) To locate firewalls 
+ Output: {'sol': 'a'}"
+"Input: The four Primary Security Principles related to messages are Choices: a) Confidentiality,  Integrity,  Non repudiation and Authentication b) Confidentiality,  Access Control,  Integrity,  Non repudiation c) Authentication,  Authorization,  Availability,  Integrity d) Availability,  Authorization,  Confidentiality,  Integrity 
+ Output: {'sol': 'a'}"
+"Input: What was the first buffer overflow attack?  Choices: a) Love Bug b) SQL Slammer c) Morris Worm d) Code Red 
+ Output: {'sol': 'c'}"
+"Input: The ______________ can cost you money,  by sending text messages from your mobile phone numbers.  Choices: a) IM – Trojans b) Backdoor Trojans c) SMS Trojan d) Ransom Trojan 
+ Output: {'sol': 'c'}"
+"Input: Three of the following are classic security properties; which one is not?  Choices: a) Confidentiality b) Availability c) Correctness d) Integrity 
+ Output: {'sol': 'c'}"

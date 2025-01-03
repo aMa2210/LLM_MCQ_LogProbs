@@ -1,0 +1,1758 @@
+answer
+"First, I need to calculate the average number of photons detected. The quantum efficiency of the detector is 0.1, meaning it detects 10% of the photons. If 100 photons are sent, the average number of photons detected is 0.1 × 100 = 10.
+
+Next, I need to calculate the root mean square (rms) deviation. The detection of photons follows a binomial distribution, where the variance is given by \( Np(1-p) \), where \( N \) is the total number of trials (100), \( p \) is the probability of success (0.1), and \( 1-p \) is the probability of failure (0.9). The variance is \( 100 × 0.1 × 0.9 = 9 \).
+
+Finally, the rms deviation is the square root of the variance, \( \sqrt{9} = 3 \).
+
+Therefore, the correct answer is {'sol': 'b'}."
+"To solve this, we need to consider the interference of light reflected from the top and bottom surfaces of the oil layer. Here's the step-by-step reasoning:
+
+1. **Determine the phase change upon reflection**: 
+   - When light reflects off a medium with a higher index of refraction (air to oil, \( n = 1 \) to \( n = 1.5 \)), a \( \pi \) phase shift (equivalent to half a wavelength) occurs.
+   - When light reflects off a medium with a lower index of refraction (oil to water, \( n = 1.5 \) to \( n = 1.33 \)), no phase shift occurs.
+
+2. **Condition for constructive interference**:
+   - For constructive interference, the optical path difference (OPD) must be an integer multiple of the wavelength in the medium. The OPD is given by \( 2t \), where \( t \) is the thickness of the oil layer, adjusted for the wavelength in the oil.
+   - The effective wavelength in the oil is \( \lambda_{\text{oil}} = \lambda / n_{\text{oil}} \), where \( n_{\text{oil}} = 1.5 \).
+
+3. **Calculate the most strongly reflected wavelength**:
+   - The condition for constructive interference is \( 2t = m \lambda_{\text{oil}} \), where \( m \) is an integer.
+   - Substituting \( \lambda_{\text{oil}} = \lambda / 1.5 \), we get \( 2t = m (\lambda / 1.5) \), or \( \lambda = 3t / m \).
+   - Given \( t = 500 \, \text{nm} \), we calculate \( \lambda \) for different values of \( m \) to find the wavelength closest to the given options.
+
+   For \( m = 1 \): \( \lambda = 3(500) / 1 = 1500 \, \text{nm} \) (not visible).  
+   For \( m = 2 \): \( \lambda = 3(500) / 2 = 750 \, \text{nm} \) (not in the options).  
+   For \( m = 3 \): \( \lambda = 3(500) / 3 = 500 \, \text{nm} \).  
+
+   The wavelength \( 500 \, \text{nm} \) matches one of the options.
+
+4. **Verify the result**:
+   - The wavelength \( 500 \, \text{nm} \) corresponds to constructive interference and is within the visible spectrum.
+
+Thus, the most strongly reflected wavelength is {'sol': 'a'}."
+"To determine the correct answer, let's analyze the options step by step:
+
+1. **Option a**: ""There are no changes in the internal energy of the system.""  
+   This is not necessarily true for a reversible thermodynamic process. The internal energy of the system can change depending on the type of process (e.g., isothermal, adiabatic, etc.). For example, in an isothermal process, the internal energy might remain constant, but in an adiabatic process, it can change. Therefore, this option is incorrect.
+
+2. **Option b**: ""The temperature of the system remains constant during the process.""  
+   This is also not necessarily true. While the temperature remains constant in an isothermal process, it can change in other types of reversible processes, such as adiabatic or isobaric processes. Thus, this option is incorrect.
+
+3. **Option c**: ""The entropy of the system and its environment remains unchanged.""  
+   In a reversible process, the total entropy of the system and its surroundings does not change. This is a defining characteristic of a reversible process. The entropy change of the system is exactly balanced by the entropy change of the surroundings, resulting in no net change in total entropy. This option is correct.
+
+4. **Option d**: ""The entropy of the system and its environment must increase.""  
+   This is true for irreversible processes, not reversible ones. In a reversible process, the total entropy remains constant, as explained in option c. Therefore, this option is incorrect.
+
+The correct answer is {'sol': 'c'}."
+"First, I need to consider the characteristics of each type of laser. A dye laser is tunable over a wide range of wavelengths, including the visible spectrum, making it suitable for spectroscopy over a range of visible wavelengths. 
+
+Next, a helium-neon laser typically emits light at a fixed wavelength (e.g., 632.8 nm in the red part of the spectrum), so it is not ideal for spectroscopy over a range of visible wavelengths.
+
+An excimer laser emits ultraviolet light and is not suitable for visible wavelength spectroscopy.
+
+A ruby laser emits light at a fixed wavelength in the red part of the spectrum (694.3 nm), so it is also not suitable for spectroscopy over a range of visible wavelengths.
+
+Therefore, the best choice is the dye laser, as it is tunable over a wide range of visible wavelengths.
+
+{'sol': 'a'}"
+"To solve this, let's analyze the situation step by step:
+
+1. The question involves the energy difference between ortho- and para- states of helium, which are determined by the spin alignment of the two electrons in the atom. Ortho-states have parallel spins, while para-states have antiparallel spins.
+
+2. The energy difference arises due to the quantum mechanical interaction between the two electrons. Specifically, the spatial wavefunction of the electrons is affected by their spin alignment. For ortho-states (parallel spins), the Pauli exclusion principle requires the spatial wavefunction to be antisymmetric, which reduces the probability of the two electrons being close to each other. This reduces the electron-electron repulsion, leading to a lower energy state.
+
+3. For para-states (antiparallel spins), the spatial wavefunction is symmetric, increasing the probability of the electrons being close to each other. This increases the electron-electron repulsion, resulting in a higher energy state.
+
+4. Among the choices, the Pauli exclusion principle is the key concept that explains why the spatial wavefunction is antisymmetric for ortho-states and symmetric for para-states, leading to the observed energy difference.
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, let's proceed step by step:
+
+1. **Determine the electron configuration of nitrogen (Z = 7):**  
+   Nitrogen has 7 electrons. The electron configuration is 1s² 2s² 2p³. The 2p³ means there are three electrons in the p orbital.
+
+2. **Understand the spin quantum number (ms):**  
+   Each electron has a spin quantum number of either +1/2 or -1/2. In the ground state, electrons in the same subshell (like the 2p orbital) will occupy different orbitals with parallel spins (Hund's rule). This means the three 2p electrons will all have ms = +1/2.
+
+3. **Calculate the total spin quantum number (S):**  
+   The total spin quantum number (S) is the sum of the ms values of all unpaired electrons. Since there are three unpaired electrons in the 2p orbital, each with ms = +1/2, the total spin is:  
+   S = (1/2) + (1/2) + (1/2) = 3/2.
+
+Thus, the total spin quantum number of the electrons in the ground state of neutral nitrogen is **3/2**.
+
+The correct answer is {'sol': 'c'}."
+"To solve this problem, let's proceed step by step:
+
+1. **Initial charge on the first capacitor**:  
+   The first capacitor is charged to a voltage \( V_0 \). Its charge is given by \( Q_1 = C \cdot V_0 \), where \( C \) is the capacitance of the capacitor.
+
+2. **Connecting the other two capacitors in series**:  
+   The two uncharged capacitors are connected in series. The equivalent capacitance of two capacitors in series is given by:  
+   \[
+   C_{\text{eq}} = \frac{C \cdot C}{C + C} = \frac{C}{2}.
+   \]
+
+3. **Connecting the series combination to the first capacitor**:  
+   When the series combination of the two capacitors is connected across the first capacitor, charge redistributes among the capacitors. The total charge in the system remains conserved. Initially, the total charge is \( Q_{\text{total}} = Q_1 = C \cdot V_0 \).
+
+   After redistribution, the equivalent capacitance of the system is:  
+   \[
+   C_{\text{total}} = C + C_{\text{eq}} = C + \frac{C}{2} = \frac{3C}{2}.
+   \]
+
+   The final voltage across the system is:  
+   \[
+   V_{\text{final}} = \frac{Q_{\text{total}}}{C_{\text{total}}} = \frac{C \cdot V_0}{\frac{3C}{2}} = \frac{2V_0}{3}.
+   \]
+
+4. **Voltage on the first capacitor**:  
+   Since the first capacitor is directly connected to the series combination, the final voltage across it is the same as the final voltage across the system, which is \( \frac{2V_0}{3} \).
+
+Thus, the final voltage on the first capacitor is \( \frac{2V_0}{3} \).
+
+The correct answer is: {'sol': 'd'}."
+"To solve this, I will calculate the work done using the relativistic kinetic energy formula, which is \( KE = (\gamma - 1)mc^2 \), where \( \gamma = \frac{1}{\sqrt{1 - v^2/c^2}} \).
+
+1. First, calculate the Lorentz factor \( \gamma \) for \( v = 0.6c \):
+   \[
+   \gamma = \frac{1}{\sqrt{1 - (0.6)^2}} = \frac{1}{\sqrt{1 - 0.36}} = \frac{1}{\sqrt{0.64}} = \frac{1}{0.8} = 1.25.
+   \]
+
+2. Next, substitute \( \gamma \) into the kinetic energy formula:
+   \[
+   KE = (\gamma - 1)mc^2 = (1.25 - 1)mc^2 = 0.25mc^2.
+   \]
+
+3. Therefore, the work required to accelerate the particle to \( 0.6c \) is \( 0.25mc^2 \).
+
+The correct answer is {'sol': 'a'}."
+"First, I need to recall De Broglie's hypothesis, which states that the wavelength (\(\lambda\)) of a particle is inversely proportional to its momentum (\(p\)) and is given by the formula \(\lambda = h / p\), where \(h\) is Planck's constant.  
+Next, I need to identify which constant is involved in this relationship. From the formula, it is clear that Planck's constant (\(h\)) is the constant that relates the linear momentum and wavelength of a particle.  
+Finally, I confirm that the correct answer is Planck's constant.  
+
+{'sol': 'a'}"
+"To solve this, let's proceed step by step:
+
+1. **Understand the relationship between total energy, rest energy, and relativistic momentum**:
+   - The total energy \(E\) of a particle is given by \(E = \gamma mc^2\), where \(\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}\) is the Lorentz factor.
+   - The rest energy of the particle is \(E_0 = mc^2\).
+   - The problem states that the total energy \(E\) is twice the rest energy, so \(E = 2E_0 = 2mc^2\).
+
+2. **Relate total energy to relativistic momentum**:
+   - The total energy is also related to the relativistic momentum \(p\) by the equation:
+     \[
+     E^2 = (pc)^2 + (mc^2)^2
+     \]
+   - Substituting \(E = 2mc^2\) into this equation:
+     \[
+     (2mc^2)^2 = (pc)^2 + (mc^2)^2
+     \]
+
+3. **Solve for \(p\)**:
+   - Expand and simplify:
+     \[
+     4m^2c^4 = p^2c^2 + m^2c^4
+     \]
+   - Subtract \(m^2c^4\) from both sides:
+     \[
+     3m^2c^4 = p^2c^2
+     \]
+   - Divide through by \(c^2\):
+     \[
+     p^2 = 3m^2c^2
+     \]
+   - Take the square root:
+     \[
+     p = \sqrt{3}mc
+     \]
+
+Thus, the magnitude of the particle’s relativistic momentum is \((\sqrt{3})mc\).
+
+The correct answer is {'sol': 'd'}."
+"To solve this:
+
+1. The diamond structure of elemental carbon is a crystalline structure where each carbon atom is covalently bonded to four other carbon atoms.
+2. These four nearest neighbors are arranged symmetrically around the central carbon atom.
+3. The geometric arrangement of these four neighbors forms a tetrahedron.
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this problem, I will follow these steps:
+
+1. **Understand the forces acting on the coin**: The coin is subject to a centripetal force that keeps it moving in a circle. This force is provided by the static friction between the coin and the turntable. The maximum static friction force is given by \( F_{\text{friction}} = \mu_s \cdot m \cdot g \), where \( \mu_s \) is the coefficient of static friction, \( m \) is the mass of the coin, and \( g \) is the acceleration due to gravity.
+
+2. **Relate the centripetal force to the motion of the coin**: The centripetal force required to keep the coin in circular motion is \( F_{\text{centripetal}} = m \cdot \frac{v^2}{r} \), where \( v \) is the tangential velocity of the coin and \( r \) is the distance from the center of the turntable.
+
+3. **Set the maximum static friction equal to the centripetal force**: At the maximum distance \( r \), the static friction force is just enough to provide the required centripetal force. Thus, \( \mu_s \cdot m \cdot g = m \cdot \frac{v^2}{r} \). Simplify to find \( r = \frac{v^2}{\mu_s \cdot g} \).
+
+4. **Express \( v \) in terms of the rotational speed**: The tangential velocity \( v \) is related to the angular velocity \( \omega \) by \( v = \omega \cdot r \). The angular velocity \( \omega \) is given by \( \omega = 2\pi f \), where \( f \) is the frequency of rotation in revolutions per second. Convert the given rotational speed of 33.3 revolutions per minute to revolutions per second: \( f = \frac{33.3}{60} \approx 0.555 \, \text{rev/s} \). Thus, \( \omega = 2\pi \cdot 0.555 \approx 3.487 \, \text{rad/s} \).
+
+5. **Substitute \( v = \omega \cdot r \) into the equation for \( r \)**: Substituting \( v = \omega \cdot r \) into \( r = \frac{v^2}{\mu_s \cdot g} \), we get \( r = \frac{(\omega \cdot r)^2}{\mu_s \cdot g} \). Simplify to find \( r = \frac{\omega^2 \cdot r^2}{\mu_s \cdot g} \). Solve for \( r \): \( r = \frac{\mu_s \cdot g}{\omega^2} \).
+
+6. **Substitute the known values**: Use \( \mu_s = 0.30 \), \( g = 9.8 \, \text{m/s}^2 \), and \( \omega = 3.487 \, \text{rad/s} \). Calculate \( r = \frac{0.30 \cdot 9.8}{3.487^2} \approx \frac{2.94}{12.16} \approx 0.242 \, \text{m} \).
+
+The correct answer is {'sol': 'd'}."
+"To determine the sign of the charge carriers in a doped semiconductor, we need to consider the property that directly relates to the type of charge carriers (positive or negative). Let's analyze step by step:
+
+1. **Specific heat**: This property is related to the thermal energy capacity of the material and does not provide information about the type of charge carriers. So, this is not the correct choice.
+
+2. **Thermal conductivity**: While thermal conductivity can be influenced by the presence of charge carriers, it does not provide direct information about their sign. Thus, this is also not the correct choice.
+
+3. **Electrical resistivity**: Electrical resistivity measures how strongly a material opposes the flow of electric current, but it does not distinguish between positive and negative charge carriers. Therefore, this is not the correct choice.
+
+4. **Hall coefficient**: The Hall coefficient is determined by the Hall effect, which involves the deflection of charge carriers in a magnetic field. The sign of the Hall coefficient directly indicates whether the charge carriers are positive (holes) or negative (electrons). Hence, this is the correct choice.
+
+The correct answer is {'sol': 'd'}."
+"First, I need to identify the primary source of the Sun's energy. The Sun's energy is produced through nuclear fusion, specifically the proton-proton chain reaction, where hydrogen nuclei (protons) fuse to form helium.
+
+Next, I need to determine the mass difference involved in this process. In the proton-proton chain, four hydrogen nuclei (protons) combine to form one helium nucleus, with a small amount of mass converted into energy according to Einstein's equation \(E = mc^2\).
+
+Finally, I compare the options. The correct answer corresponds to the fusion of four hydrogen atoms into one helium atom, which is the primary source of the Sun's energy.
+
+{'sol': 'b'}"
+"To solve this, I will analyze each statement step by step:
+
+1. Statement a) claims that lines in the infrared, visible, and ultraviolet regions of the spectrum reveal primarily the nuclear structure of the sample. This is incorrect because these regions of the spectrum are associated with electronic transitions, not nuclear structure. Nuclear structure is typically studied using gamma rays or other high-energy radiation.
+
+2. Statement b) states that the wavelengths identified in an absorption spectrum of an element are among those in its emission spectrum. This is correct because the same energy levels are involved in both absorption and emission processes.
+
+3. Statement c) claims that absorption spectra can be used to determine which elements are present in distant stars. This is correct because the absorption lines in a star's spectrum correspond to specific elements in its atmosphere.
+
+4. Statement d) states that spectral analysis can be used to identify the composition of galactic dust. This is correct because spectral analysis can reveal the presence of specific molecules and elements in galactic dust.
+
+The incorrect statement is a).
+
+{'sol': 'a'}"
+"To determine the correct answer, let's analyze the properties of bosons and fermions step by step:
+
+1. **Bosons**: These particles have **integer spin** (e.g., 0, 1, 2, etc.) and their wave functions are **symmetric** under the exchange of two particles. Bosons do **not** obey the Pauli exclusion principle, meaning multiple bosons can occupy the same quantum state.
+
+2. **Fermions**: These particles have **half-integer spin** (e.g., 1/2, 3/2, etc.) and their wave functions are **antisymmetric** under the exchange of two particles. Fermions **do** obey the Pauli exclusion principle, meaning no two fermions can occupy the same quantum state.
+
+3. Now, let's evaluate the choices:
+   - a) Incorrect: Bosons have symmetric wave functions, but they do **not** obey the Pauli exclusion principle.
+   - b) Incorrect: Bosons do **not** have antisymmetric wave functions.
+   - c) Incorrect: Fermions do **not** have symmetric wave functions.
+   - d) Correct: Fermions have antisymmetric wave functions and obey the Pauli exclusion principle.
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's analyze the situation step by step:
+
+1. The question involves the energy difference between ortho- and para- states of the helium atom, which depends on the spin configuration of the two electrons.
+2. The ortho- state (parallel spins) has lower energy than the para- state (antiparallel spins). This is due to the quantum mechanical principle that electrons with parallel spins experience less repulsion because their spatial wavefunctions are more spread out, reducing the Coulomb repulsion between them.
+3. This phenomenon is explained by the Pauli exclusion principle, which states that no two electrons can occupy the same quantum state simultaneously. For parallel spins, the spatial wavefunctions must differ, leading to reduced electron repulsion and lower energy.
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, I will calculate the total mechanical energy of the system, which is the sum of the kinetic energy and potential energy. Since the system is frictionless, the total mechanical energy remains constant.
+
+1. The total mechanical energy \( E \) of the system is given by the kinetic energy at the equilibrium position, where the potential energy is zero. The kinetic energy is calculated using the formula:
+   \[
+   KE = \frac{1}{2} m v^2
+   \]
+   where \( m = 0.30 \, \text{kg} \) and \( v = 0.040 \, \text{m/s} \).
+
+2. Substituting the values:
+   \[
+   KE = \frac{1}{2} (0.30) (0.040)^2 = 0.5 \times 0.30 \times 0.0016 = 0.00024 \, \text{J}.
+   \]
+
+3. Since the total mechanical energy is equal to the kinetic energy at the equilibrium position, the total mechanical energy of the system is \( 0.00024 \, \text{J} \), or \( 0.24 \, \text{mJ} \).
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, I will follow these steps:
+
+1. **Determine the length of the meter stick in the observer's reference frame**: Due to length contraction in special relativity, the length of the stick in the observer's frame is shorter than its rest length. The contracted length \( L \) is given by \( L = L_0 \sqrt{1 - v^2/c^2} \), where \( L_0 \) is the rest length (1 meter), \( v = 0.8c \), and \( c \) is the speed of light.
+
+2. **Calculate the time it takes for the stick to pass the observer**: The time \( t \) is the contracted length \( L \) divided by the relative speed \( v \).
+
+3. **Perform the calculations and select the correct answer**.
+
+Step-by-step:
+
+1. The contracted length \( L \) is:
+   \[
+   L = L_0 \sqrt{1 - v^2/c^2} = 1 \times \sqrt{1 - (0.8c)^2/c^2} = 1 \times \sqrt{1 - 0.64} = 1 \times \sqrt{0.36} = 0.6 \, \text{meters}.
+   \]
+
+2. The time \( t \) it takes for the stick to pass the observer is:
+   \[
+   t = \frac{L}{v} = \frac{0.6 \, \text{meters}}{0.8c}.
+   \]
+   Since \( c = 3 \times 10^8 \, \text{m/s} \), we have:
+   \[
+   t = \frac{0.6}{0.8 \times 3 \times 10^8} = \frac{0.6}{2.4 \times 10^8} = 2.5 \times 10^{-9} \, \text{seconds} = 2.5 \, \text{ns}.
+   \]
+
+3. The correct answer is {'sol': 'b'}."
+"To solve this, I will calculate the work required to accelerate a particle of mass \( m \) from rest to a speed of \( 0.6c \) using relativistic energy principles.
+
+1. The total energy of a particle in relativistic mechanics is given by \( E = \gamma mc^2 \), where \( \gamma = \frac{1}{\sqrt{1 - v^2/c^2}} \) is the Lorentz factor. The rest energy of the particle is \( E_0 = mc^2 \).
+
+2. The work done on the particle is the change in its total energy, \( W = E - E_0 \). Substituting \( \gamma \), we have \( W = (\gamma - 1)mc^2 \).
+
+3. For \( v = 0.6c \), calculate \( \gamma \):
+   \[
+   \gamma = \frac{1}{\sqrt{1 - (0.6)^2}} = \frac{1}{\sqrt{1 - 0.36}} = \frac{1}{\sqrt{0.64}} = \frac{1}{0.8} = 1.25.
+   \]
+
+4. Substitute \( \gamma = 1.25 \) into \( W = (\gamma - 1)mc^2 \):
+   \[
+   W = (1.25 - 1)mc^2 = 0.25mc^2.
+   \]
+
+Thus, the work required is \( 0.25mc^2 \).
+
+The correct answer is {'sol': 'a'}."
+"To solve this, let's analyze the processes step by step:
+
+1. Characteristic X-rays are produced when high-energy electrons interact with a metal target. These X-rays are sharp lines superimposed on a continuous spectrum, indicating a specific atomic process.
+
+2. The sharp lines arise due to transitions of electrons between discrete energy levels in the atoms of the metal. Specifically, when high-energy electrons knock out inner-shell electrons (e.g., from the K or L shell), vacancies are created in these inner shells.
+
+3. Electrons from higher energy levels then transition to fill these inner-shell vacancies, releasing energy in the form of X-rays. These X-rays have characteristic energies specific to the element of the metal target.
+
+Thus, the correct process is electrons filling inner shell vacancies that are created in the metal atoms.
+
+The correct answer is {'sol': 'c'}."
+"First, I need to determine how many electrons can fit in the n = 1 energy level. The n = 1 level has only one orbital (1s), and each orbital can hold a maximum of 2 electrons. Therefore, the n = 1 level can hold 2 electrons.
+
+Next, I need to determine how many electrons can fit in the n = 2 energy level. The n = 2 level has four orbitals (2s and three 2p orbitals), and each orbital can hold a maximum of 2 electrons. Therefore, the n = 2 level can hold 4 + 2 = 6 electrons.
+
+Finally, I add the electrons from both levels: 2 (from n = 1) + 6 (from n = 2) = 8 electrons. 
+
+Therefore, the correct answer is {'sol': 'd'}."
+"To solve this, let's analyze step by step:
+
+1. The separation of bright fringes in a double-slit experiment is given by the formula:  
+   \( \Delta y = \frac{\lambda L}{d} \),  
+   where \( \Delta y \) is the fringe separation, \( \lambda \) is the wavelength of the light, \( L \) is the distance to the screen, and \( d \) is the slit separation.
+
+2. The wavelength \( \lambda \) of light is related to its frequency \( f \) by the equation:  
+   \( \lambda = \frac{c}{f} \),  
+   where \( c \) is the speed of light. If the frequency of the laser light is doubled, the wavelength \( \lambda \) will be halved.
+
+3. Since \( \Delta y \) is directly proportional to \( \lambda \), halving the wavelength will also halve the fringe separation. Initially, the fringe separation is 1.0 mm. After doubling the frequency, the new fringe separation will be:  
+   \( \Delta y_{\text{new}} = \frac{1.0 \, \text{mm}}{2} = 0.5 \, \text{mm} \).
+
+Thus, the correct answer is {'sol': 'b'}."
+"To solve this, I will calculate the radiation force step by step:
+
+1. The radiation pressure \( P \) for a completely reflecting surface is given by \( P = 2I/c \), where \( I \) is the solar flux (intensity) and \( c \) is the speed of light (\( c = 3 \times 10^8 \, \text{m/s} \)).
+   Substituting \( I = 1,000 \, \text{W/m}^2 \), we get:
+   \[
+   P = \frac{2 \times 1,000}{3 \times 10^8} = \frac{2,000}{3 \times 10^8} = 6.67 \times 10^{-6} \, \text{N/m}^2.
+   \]
+
+2. The total force \( F \) is the product of the radiation pressure \( P \) and the area \( A \) of the surface:
+   \[
+   F = P \times A.
+   \]
+   Substituting \( P = 6.67 \times 10^{-6} \, \text{N/m}^2 \) and \( A = 3 \, \text{m}^2 \), we get:
+   \[
+   F = 6.67 \times 10^{-6} \times 3 = 2.001 \times 10^{-5} \, \text{N}.
+   \]
+
+3. Rounding to significant figures, the total radiation force is approximately \( 2 \times 10^{-5} \, \text{N} \).
+
+Thus, the correct answer is {'sol': 'c'}."
+"To determine the correct answer, let's analyze the options step by step:
+
+1. **Magnetic susceptibility**: This property measures how a material responds to a magnetic field. It is not directly related to the type of charge carriers in a semiconductor, so this is not the correct answer.
+
+2. **Hall coefficient**: The Hall effect occurs when a magnetic field is applied perpendicular to the current in a conductor or semiconductor. The sign of the Hall coefficient depends on the type of charge carriers (positive for holes, negative for electrons). Thus, measuring the Hall coefficient can reveal the sign of the charge carriers.
+
+3. **Electrical resistivity**: This property measures how strongly a material opposes the flow of electric current. While it provides information about the material's conductivity, it does not directly indicate the sign of the charge carriers.
+
+4. **Thermal conductivity**: This property measures a material's ability to conduct heat. It is not directly related to the type of charge carriers in a semiconductor.
+
+From this analysis, the correct answer is {'sol': 'b'}."
+"To determine which ion cannot be used as a dopant in germanium to make an n-type semiconductor, let's analyze step by step:
+
+1. An n-type semiconductor is created by adding dopants that have more valence electrons than the host material. Germanium has 4 valence electrons, so n-type dopants should have 5 valence electrons (group 15 elements).
+
+2. Arsenic (As), Phosphorus (P), and Antimony (Sb) are all group 15 elements with 5 valence electrons. These can donate an extra electron to the conduction band, making them suitable n-type dopants.
+
+3. Boron (B), on the other hand, is a group 13 element with only 3 valence electrons. It creates ""holes"" rather than donating electrons, making it a p-type dopant instead of an n-type dopant.
+
+Thus, the ion that cannot be used as a dopant to make an n-type semiconductor is Boron (B).
+
+{'sol': 'd'}"
+"To solve this, let's analyze the problem step by step:
+
+1. **Mass of the moon**: The mass of the moon cannot be determined from the given data. The measurements provided (distances, maximum speed, and orbital period) are related to the gravitational interaction between the moon and the planet, which depends on the mass of the planet and the orbital characteristics, not the moon's mass.
+
+2. **Mass of the planet**: The mass of the planet can be calculated using the moon's orbital characteristics. By applying Kepler's third law or the formula for gravitational force, the mass of the planet can be determined from the moon's orbital speed, distances, and period.
+
+3. **Minimum speed of the moon**: The minimum speed of the moon can be calculated using the conservation of angular momentum or energy. Knowing the maximum speed and the distances, the minimum speed can be derived.
+
+4. **Period of the orbit**: The period of the orbit can be calculated using the distances and the maximum speed. By applying Kepler's laws or orbital mechanics, the time it takes for the moon to complete one orbit can be determined.
+
+Thus, the quantity that **cannot** be calculated is the **mass of the moon**.
+
+{'sol': 'a'}"
+"To solve this, I will use the concept of length contraction in special relativity. The formula for length contraction is \( L = L_0 \sqrt{1 - v^2/c^2} \), where \( L \) is the contracted length, \( L_0 \) is the proper length, \( v \) is the relative velocity, and \( c \) is the speed of light.
+
+1. The proper length \( L_0 \) is given as 1.00 m, and the contracted length \( L \) is given as 0.80 m. Substituting these values into the formula, we have:
+   \[
+   0.80 = 1.00 \sqrt{1 - v^2/c^2}.
+   \]
+
+2. Divide both sides by 1.00 to isolate the square root term:
+   \[
+   \sqrt{1 - v^2/c^2} = 0.80.
+   \]
+
+3. Square both sides to eliminate the square root:
+   \[
+   1 - v^2/c^2 = 0.80^2 = 0.64.
+   \]
+
+4. Solve for \( v^2/c^2 \):
+   \[
+   v^2/c^2 = 1 - 0.64 = 0.36.
+   \]
+
+5. Take the square root of both sides to find \( v/c \):
+   \[
+   v/c = \sqrt{0.36} = 0.60.
+   \]
+
+Thus, the observer must move at 0.60c relative to the rod. The correct answer is {'sol': 'b'}."
+"To solve this, let's analyze the situation step by step:
+
+1. **Initial Conditions**: The proton is accelerated from rest through a potential difference \( V \), gaining kinetic energy. The proton then moves in the \( +z \)-direction. In the region with electric field \( E \) in the \( +x \)-direction and magnetic field \( B \) in the \( +y \)-direction, the proton's trajectory is unaffected. This means the forces due to the electric and magnetic fields must cancel each other out.
+
+2. **Force Balance**: The electric force on the proton is \( F_E = qE \) in the \( +x \)-direction. The magnetic force is \( F_B = qvB \), where \( v \) is the proton's velocity, and it acts in the \( -x \)-direction (from the right-hand rule for a proton moving in the \( +z \)-direction in a \( +y \)-field). For the trajectory to remain unaffected, these forces must balance: \( qE = qvB \), or \( v = E/B \).
+
+3. **Effect of Doubling the Potential Difference**: If the potential difference is doubled to \( 2V \), the proton's kinetic energy will also double. Since kinetic energy is related to velocity by \( KE = \frac{1}{2}mv^2 \), doubling the kinetic energy increases the velocity by a factor of \( \sqrt{2} \): \( v' = \sqrt{2}v \). The new velocity \( v' \) is now greater than \( E/B \), so the magnetic force \( F_B = qv'B \) will exceed the electric force \( F_E = qE \). The net force will act in the \( -x \)-direction.
+
+Thus, the proton will be deflected in the \( -x \)-direction.
+
+The correct answer is {'sol': 'b'}."
+"First, I need to calculate the change in magnetic flux. The magnetic flux is given by the formula Φ = B * A, where B is the magnetic field and A is the area of the coil. The change in magnetic flux is ΔΦ = (B_final - B_initial) * A. Substituting the values, ΔΦ = (0.06 T - 0.01 T) * 0.2 m² = 0.01 Wb.
+
+Next, I calculate the induced EMF using Faraday's law of electromagnetic induction, which states that the induced EMF is given by EMF = -N * (ΔΦ / Δt), where N is the number of turns, ΔΦ is the change in magnetic flux, and Δt is the time interval. Substituting the values, EMF = -250 * (0.01 Wb / 0.25 s) = -10 V.
+
+Finally, the magnitude of the average induced EMF is 10 V. Therefore, the correct answer is {'sol': 'd'}."
+"First, I need to recall Einstein's photoelectric equation: \( E_k = hf - \phi \), where \( E_k \) is the kinetic energy of the emitted electrons, \( h \) is Planck's constant, \( f \) is the frequency of the light, and \( \phi \) is the work function of the metal.
+
+Next, the stopping potential \( V_s \) is related to the maximum kinetic energy of the electrons by \( eV_s = E_k \), where \( e \) is the charge of the electron. Substituting \( E_k = hf - \phi \), we get \( eV_s = hf - \phi \).
+
+Finally, this equation shows that the stopping potential \( V_s \) is linearly dependent on the frequency \( f \) of the light, provided \( f \) is above the threshold frequency (where \( hf = \phi \)).
+
+Therefore, the correct answer is {'sol': 'd'}."
+"First, I need to consider the gravitational force that governs the orbits of the planets. The gravitational force depends only on the mass of the central object and the distance between the object and the planets.
+
+Next, if the Sun were replaced by a black hole of the same mass, the mass of the central object would remain unchanged. Therefore, the gravitational force experienced by the planets would also remain the same.
+
+Finally, since the gravitational force remains unchanged, the orbits of the planets would not be affected. The planets would continue to orbit the black hole in the same way they orbited the Sun.
+
+The correct answer is {'sol': 'd'}."
+"First, I need to understand that the frequency of resonance in a pipe open at both ends is directly proportional to the speed of sound. If the speed of sound decreases by 3%, the frequency will also decrease by 3%.
+
+Next, I calculate 3% of the original frequency (440 Hz). This is 440 * 0.03 = 13.2 Hz.
+
+Finally, I subtract this value from the original frequency to find the new frequency: 440 - 13.2 = 426.8 Hz, which rounds to approximately 427 Hz.
+
+Therefore, the correct answer is {'sol': 'b'}."
+"First, I need to understand the problem. The quantum efficiency of the detector is 0.1, meaning it detects 10% of the photons on average. If 100 photons are sent, the average number of detections will be 0.1 × 100 = 10.
+
+Next, I need to consider the statistical nature of the detections. Photon detection follows a binomial distribution, where the number of detections has a mean of 10 and a variance of \( n \cdot p \cdot (1-p) \), where \( n = 100 \) and \( p = 0.1 \). The variance is \( 100 \cdot 0.1 \cdot 0.9 = 9 \).
+
+Finally, the root mean square (rms) deviation, or standard deviation, is the square root of the variance: \( \sqrt{9} = 3 \). Therefore, the detector will detect photons an average of 10 times, with an rms deviation of about 3.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's proceed step by step:
+
+1. A three-dimensional harmonic oscillator has three independent degrees of freedom, corresponding to motion in the x, y, and z directions.
+2. According to the equipartition theorem, each degree of freedom contributes an average energy of \((1/2)kT\), where \(k\) is the Boltzmann constant and \(T\) is the temperature.
+3. Since there are three degrees of freedom, the total average energy is \(3 \times (1/2)kT = (3/2)kT\).
+
+Thus, the correct answer is {'sol': 'c'}."
+"To solve this, I will follow these steps:
+
+1. **Calculate the average count rate**: Add up all the counts and divide by the number of measurements to find the average count rate.
+2. **Determine the uncertainty in the count rate**: The uncertainty in radioactive decay follows Poisson statistics, where the standard deviation is the square root of the total counts.
+3. **Find the required counting time**: To achieve an uncertainty of 1%, the relative uncertainty (standard deviation divided by the total counts) must be 0.01. Use this condition to calculate the required counting time.
+
+Step 1: Add up the counts: \( 3 + 0 + 2 + 1 + 2 + 4 + 0 + 1 + 2 + 5 = 20 \). The average count rate is \( 20 / 10 = 2 \) counts per second.
+
+Step 2: The total counts in time \( t \) seconds is \( 2t \). The standard deviation is \( \sqrt{2t} \). The relative uncertainty is \( \sqrt{2t} / 2t = 1 / \sqrt{2t} \).
+
+Step 3: Set the relative uncertainty to 0.01: \( 1 / \sqrt{2t} = 0.01 \). Solve for \( t \):
+\[
+\sqrt{2t} = 100 \quad \Rightarrow \quad 2t = 10,000 \quad \Rightarrow \quad t = 5,000 \, \text{seconds}.
+\]
+
+The correct answer is {'sol': 'd'}."
+"First, I need to recall the definition of the electric displacement current. It is related to the changing electric field and is proportional to the rate of change of the electric flux through a surface.
+
+Next, I analyze the options. Option a refers to the magnetic flux, which is unrelated to the electric displacement current. Option b refers to the rate of change of the magnetic flux, which is related to Faraday's law, not the displacement current. Option c refers to the time integral of the magnetic flux, which is also unrelated. Option d refers to the rate of change of the electric flux, which matches the definition of the electric displacement current.
+
+Therefore, the correct answer is {'sol': 'd'}."
+"To determine the correct answer, let's analyze the properties of the negative muon, mu^-:
+
+1. The muon, mu^-, is a lepton, just like the electron. It has a negative electric charge and a spin of 1/2, which are properties shared with the electron. However, the muon is much heavier than the electron.
+
+2. A meson is a type of hadron composed of a quark and an antiquark. Muons are not composed of quarks, so they are not mesons.
+
+3. A photon is a massless boson that mediates the electromagnetic force. Muons are massive particles and are not bosons, so they are not similar to photons.
+
+4. Bosons are particles with integer spin, such as photons, W and Z bosons, and gluons. Muons have a half-integer spin (1/2), so they are fermions, not bosons.
+
+Thus, the muon is most similar to the electron.
+
+{'sol': 'a'}"
+"First, I need to recall that the speed of light in a material is given by \( v = \frac{c}{\sqrt{\epsilon_r}} \), where \( c \) is the speed of light in a vacuum (\( 3.0 \times 10^8 \, \text{m/s} \)) and \( \epsilon_r \) is the dielectric constant of the material.
+
+Next, I substitute the given dielectric constant (\( \epsilon_r = 4.0 \)) into the formula. This gives \( v = \frac{3.0 \times 10^8}{\sqrt{4.0}} = \frac{3.0 \times 10^8}{2} \).
+
+Finally, I calculate \( v = 1.5 \times 10^8 \, \text{m/s} \).
+
+Therefore, the correct answer is {'sol': 'c'}."
+"To solve this, let's consider the following steps:
+
+1. The energy density of electromagnetic waves in a cavity is proportional to \( T^4 \), where \( T \) is the Kelvin temperature. This is derived from the Stefan-Boltzmann law for blackbody radiation.
+
+2. If the temperature \( T \) is increased by a factor of 2, the energy density increases by a factor of \( 2^4 = 16 \).
+
+3. The energy absorbed by the ice is directly proportional to the energy density, and the mass of ice melted is proportional to the energy absorbed. Therefore, the mass of ice melted will also increase by a factor of 16.
+
+Thus, the correct answer is {'sol': 'd'}."
+"First, the power dissipated by a resistor is given by \( P = \frac{V^2}{R} \), where \( V \) is the voltage across the resistor and \( R \) is the resistance.
+
+Next, if the voltage is doubled, the new voltage becomes \( 2V \). Substituting this into the power formula, the new power becomes \( P_{\text{new}} = \frac{(2V)^2}{R} = \frac{4V^2}{R} \).
+
+Finally, since the original power was \( P = \frac{V^2}{R} = 1 \, \text{W} \), the new power is \( P_{\text{new}} = 4 \times 1 = 4 \, \text{W} \).
+
+Therefore, the correct answer is {'sol': 'd'}."
+"To solve this problem, let's proceed step by step:
+
+1. **Understand the relationship between the number of fringes and the change in optical path length**:  
+   When the gas cell is evacuated, the optical path length changes because the refractive index of the gas changes from its original value \( n \) to 1 (the refractive index of a vacuum). The change in optical path length is given by:  
+   \[
+   \Delta L = 2 \cdot d \cdot (n - 1)
+   \]  
+   where \( d \) is the physical length of the gas cell (10 cm = 0.1 m), and the factor of 2 accounts for the round trip of light in the interferometer.
+
+2. **Relate the change in optical path length to the number of fringes**:  
+   Each fringe corresponds to a change in optical path length of one wavelength (\( \lambda \)). If 100 fringes are observed, the total change in optical path length is:  
+   \[
+   \Delta L = 100 \cdot \lambda
+   \]  
+   Substituting \( \lambda = 632.2 \, \text{nm} = 632.2 \times 10^{-9} \, \text{m} \), we get:  
+   \[
+   \Delta L = 100 \cdot 632.2 \times 10^{-9} = 6.322 \times 10^{-5} \, \text{m}.
+   \]
+
+3. **Solve for the refractive index \( n \)**:  
+   Using the formula for \( \Delta L \), we can solve for \( n \):  
+   \[
+   \Delta L = 2 \cdot d \cdot (n - 1)
+   \]  
+   Substituting \( \Delta L = 6.322 \times 10^{-5} \, \text{m} \) and \( d = 0.1 \, \text{m} \):  
+   \[
+   6.322 \times 10^{-5} = 2 \cdot 0.1 \cdot (n - 1).
+   \]  
+   Simplify:  
+   \[
+   6.322 \times 10^{-5} = 0.2 \cdot (n - 1).
+   \]  
+   Divide through by 0.2:  
+   \[
+   n - 1 = \frac{6.322 \times 10^{-5}}{0.2} = 3.161 \times 10^{-4}.
+   \]  
+   Add 1 to both sides:  
+   \[
+   n = 1 + 3.161 \times 10^{-4} = 1.0003161.
+   \]  
+   Rounding to the appropriate number of significant figures, \( n = 1.00032 \).
+
+The correct answer is {'sol': 'b'}."
+"To solve this, we need to use the concept of electron diffraction and the de Broglie wavelength. The de Broglie wavelength of an electron is given by:
+
+\[
+\lambda = \frac{h}{\sqrt{2m_e E_k}}
+\]
+
+where:
+- \( \lambda \) is the wavelength,
+- \( h \) is Planck's constant (\(6.626 \times 10^{-34} \, \text{Js}\)),
+- \( m_e \) is the mass of the electron (\(9.11 \times 10^{-31} \, \text{kg}\)),
+- \( E_k \) is the kinetic energy of the electron.
+
+### Step 1: Relating the wavelength to the lattice spacing
+For diffraction to occur, the wavelength of the electrons should be on the order of the lattice spacing of the crystal. Here, the lattice spacing is given as \( d = 0.4 \, \text{nm} = 0.4 \times 10^{-9} \, \text{m} \). Thus, we set \( \lambda \approx 0.4 \, \text{nm} \).
+
+### Step 2: Rearrange the de Broglie equation to solve for \( E_k \)
+Rewriting the de Broglie equation for \( E_k \):
+
+\[
+E_k = \frac{h^2}{2m_e \lambda^2}
+\]
+
+Substitute the known values:
+- \( h = 6.626 \times 10^{-34} \, \text{Js} \),
+- \( m_e = 9.11 \times 10^{-31} \, \text{kg} \),
+- \( \lambda = 0.4 \times 10^{-9} \, \text{m} \).
+
+\[
+E_k = \frac{(6.626 \times 10^{-34})^2}{2 (9.11 \times 10^{-31}) (0.4 \times 10^{-9})^2}
+\]
+
+### Step 3: Perform the calculation
+First, calculate the numerator:
+\[
+h^2 = (6.626 \times 10^{-34})^2 = 4.39 \times 10^{-67}
+\]
+
+Next, calculate the denominator:
+\[
+2m_e \lambda^2 = 2 (9.11 \times 10^{-31}) (0.4 \times 10^{-9})^2
+\]
+\[
+\lambda^2 = (0.4 \times 10^{-9})^2 = 1.6 \times 10^{-19}
+\]
+\[
+2m_e \lambda^2 = 2 (9.11 \times 10^{-31}) (1.6 \times 10^{-19}) = 2.92 \times 10^{-49}
+\]
+
+Now, divide the numerator by the denominator:
+\[
+E_k = \frac{4.39 \times 10^{-67}}{2.92 \times 10^{-49}} = 1.5 \times 10^{-18} \, \text{J}
+\]
+
+Convert \( E_k \) to electron volts (\( 1 \, \text{eV} = 1.6 \times 10^{-19} \, \text{J} \)):
+\[
+E_k = \frac{1.5 \times 10^{-18}}{1.6 \times 10^{-19}} \approx 10 \, \text{eV}
+\]
+
+### Final Answer:
+The approximate kinetic energy of the electrons needed is {'sol': 'c'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understand the energy distribution**: For a rolling object, the total kinetic energy is the sum of translational kinetic energy (\(K_t = \frac{1}{2}mv^2\)) and rotational kinetic energy (\(K_r = \frac{1}{2}I\omega^2\)), where \(I\) is the moment of inertia and \(\omega\) is the angular velocity.
+
+2. **Moment of inertia for a solid disk**: The moment of inertia of a solid disk about its central axis is \(I = \frac{1}{2}mR^2\), where \(m\) is the mass and \(R\) is the radius.
+
+3. **Relationship between linear and angular velocity**: Since the disk rolls without slipping, the linear velocity \(v\) and angular velocity \(\omega\) are related by \(v = R\omega\).
+
+4. **Express rotational kinetic energy in terms of \(v\)**: Substituting \(I = \frac{1}{2}mR^2\) and \(\omega = \frac{v}{R}\) into \(K_r = \frac{1}{2}I\omega^2\), we get:
+   \[
+   K_r = \frac{1}{2} \cdot \frac{1}{2}mR^2 \cdot \left(\frac{v}{R}\right)^2 = \frac{1}{4}mv^2.
+   \]
+
+5. **Total kinetic energy**: The total kinetic energy is the sum of translational and rotational kinetic energy:
+   \[
+   K_{\text{total}} = K_t + K_r = \frac{1}{2}mv^2 + \frac{1}{4}mv^2 = \frac{3}{4}mv^2.
+   \]
+
+6. **Fraction of rotational kinetic energy**: The fraction of the total kinetic energy that is rotational is:
+   \[
+   \text{Fraction} = \frac{K_r}{K_{\text{total}}} = \frac{\frac{1}{4}mv^2}{\frac{3}{4}mv^2} = \frac{1}{3}.
+   \]
+
+Thus, the fraction of the disk’s total kinetic energy that is rotational is **1/3**.
+
+The correct answer is {'sol': 'b'}."
+"To solve this problem, I will use the concept of thin-film interference. Here's the step-by-step reasoning:
+
+1. For constructive interference (strong reflection) to occur, the path difference between the light reflected from the top surface of the oil and the light reflected from the bottom surface of the oil must be an integer multiple of the wavelength in the oil. However, since there is a phase shift of half a wavelength upon reflection at the oil-glass interface (higher refractive index), the condition for constructive interference becomes:
+   \( 2t = (m + \frac{1}{2}) \lambda_{\text{oil}} \),
+   where \( t \) is the thickness of the oil film, \( m \) is an integer (0, 1, 2, ...), and \( \lambda_{\text{oil}} \) is the wavelength of light in the oil.
+
+2. The wavelength of light in the oil is related to the wavelength in air (\( \lambda_{\text{air}} \)) by:
+   \( \lambda_{\text{oil}} = \frac{\lambda_{\text{air}}}{n_{\text{oil}}} \),
+   where \( n_{\text{oil}} = 1.2 \). Substituting \( \lambda_{\text{air}} = 480 \, \text{nm} \), we get:
+   \( \lambda_{\text{oil}} = \frac{480}{1.2} = 400 \, \text{nm} \).
+
+3. For the minimum thickness (other than zero), we take \( m = 0 \). Substituting \( m = 0 \) into the constructive interference condition:
+   \( 2t = \frac{1}{2} \lambda_{\text{oil}} \),
+   \( t = \frac{1}{4} \lambda_{\text{oil}} \).
+
+4. Substituting \( \lambda_{\text{oil}} = 400 \, \text{nm} \), we find:
+   \( t = \frac{1}{4} \times 400 = 100 \, \text{nm} \).
+
+5. However, the problem asks for the minimum thickness other than zero. The next possible thickness corresponds to \( m = 1 \):
+   \( 2t = \frac{3}{2} \lambda_{\text{oil}} \),
+   \( t = \frac{3}{4} \lambda_{\text{oil}} \).
+
+6. Substituting \( \lambda_{\text{oil}} = 400 \, \text{nm} \), we find:
+   \( t = \frac{3}{4} \times 400 = 300 \, \text{nm} \).
+
+Thus, the minimum thickness of the oil film (other than zero) is 300 nm.
+
+{'sol': 'c'}"
+"To solve this, I will use the concept of the coefficient of performance (COP) for a heat pump. The COP for heating is given by:
+
+COP = \( \frac{T_h}{T_h - T_c} \),
+
+where \( T_h \) is the indoor temperature (in Kelvin) and \( T_c \) is the outdoor temperature (in Kelvin).
+
+Step 1: Convert the temperatures from Celsius to Kelvin.
+\( T_h = 27 + 273 = 300 \, K \),
+\( T_c = 7 + 273 = 280 \, K \).
+
+Step 2: Calculate the COP.
+COP = \( \frac{T_h}{T_h - T_c} = \frac{300}{300 - 280} = \frac{300}{20} = 15 \).
+
+Step 3: Relate the COP to the work input and heat delivered.
+The COP is also defined as:
+COP = \( \frac{Q_h}{W} \),
+where \( Q_h \) is the heat delivered indoors (15,000 J) and \( W \) is the work input.
+
+Rearranging for \( W \):
+\( W = \frac{Q_h}{COP} = \frac{15,000}{15} = 1,000 \, J \).
+
+Thus, the smallest amount of work that must be supplied to the heat pump is approximately 1,000 J.
+
+The correct answer is {'sol': 'b'}."
+"To solve this, I will use the Doppler effect formula for sound. The frequency of the echo heard by the driver is affected by the relative motion of the car and the wall. Here's the step-by-step solution:
+
+1. **Determine the frequency of the sound reaching the wall**:  
+   The car is moving toward the wall, so the frequency of the sound reaching the wall is increased due to the Doppler effect. The formula for the observed frequency \( f' \) is:  
+   \[
+   f' = f \left( \frac{v + v_s}{v} \right)
+   \]
+   where:  
+   \( f = 600 \, \text{Hz} \) (original frequency of the siren),  
+   \( v = 350 \, \text{m/s} \) (speed of sound),  
+   \( v_s = 3.5 \, \text{m/s} \) (speed of the car).  
+
+   Substituting the values:  
+   \[
+   f' = 600 \left( \frac{350 + 3.5}{350} \right) = 600 \left( \frac{353.5}{350} \right) \approx 600 \times 1.01 = 606 \, \text{Hz}.
+   \]
+
+2. **Determine the frequency of the echo heard by the driver**:  
+   The sound reflects off the wall and travels back to the car. The car is moving toward the reflected sound, so the frequency of the echo heard by the driver is further increased. The formula for the observed frequency \( f'' \) is:  
+   \[
+   f'' = f' \left( \frac{v + v_s}{v} \right)
+   \]
+   Substituting \( f' = 606 \, \text{Hz} \), \( v = 350 \, \text{m/s} \), and \( v_s = 3.5 \, \text{m/s} \):  
+   \[
+   f'' = 606 \left( \frac{350 + 3.5}{350} \right) = 606 \left( \frac{353.5}{350} \right) \approx 606 \times 1.01 = 612 \, \text{Hz}.
+   \]
+
+3. **Select the closest answer**:  
+   The frequency of the echo heard by the driver is approximately 612 Hz.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, I will use the concept of time dilation and the relationship between velocity, time, and distance.
+
+1. First, calculate the dilated time in the lab frame using the time dilation formula: \( t' = \frac{t}{\sqrt{1 - v^2/c^2}} \), where \( t \) is the proper time (2.0 ms), \( v = 0.60c \), and \( c \) is the speed of light. Substituting the values:
+   \[
+   t' = \frac{2.0 \, \text{ms}}{\sqrt{1 - (0.60)^2}} = \frac{2.0 \, \text{ms}}{\sqrt{1 - 0.36}} = \frac{2.0 \, \text{ms}}{\sqrt{0.64}} = \frac{2.0 \, \text{ms}}{0.8} = 2.5 \, \text{ms}.
+   \]
+
+2. Next, calculate the distance traveled in the lab frame using the formula \( d = v \cdot t' \). The velocity \( v = 0.60c \), and \( c = 3.0 \times 10^8 \, \text{m/s} \). Substituting the values:
+   \[
+   d = 0.60 \cdot (3.0 \times 10^8 \, \text{m/s}) \cdot (2.5 \times 10^{-3} \, \text{s}) = 0.60 \cdot 3.0 \cdot 2.5 \cdot 10^5 \, \text{m} = 4.5 \times 10^5 \, \text{m} = 450 \, \text{m}.
+   \]
+
+3. Therefore, the particle will travel 450 m in the lab frame before decaying.
+
+The correct answer is {'sol': 'd'}."
+"To solve this problem, we need to consider the relativistic addition of velocities and the effect of the index of refraction on the speed of light in the water.
+
+1. First, calculate the speed of light in the water relative to the water itself. The speed of light in a medium is given by \( v = \frac{c}{n} \), where \( n \) is the index of refraction. For water, \( n = \frac{4}{3} \), so the speed of light in the water is:
+   \[
+   v = \frac{c}{\frac{4}{3}} = \frac{3c}{4}.
+   \]
+
+2. Next, use the relativistic velocity addition formula to find the speed of light in the water relative to the lab frame. The formula is:
+   \[
+   u' = \frac{u + v}{1 + \frac{uv}{c^2}},
+   \]
+   where \( u \) is the speed of the light relative to the water (\( \frac{3c}{4} \)), and \( v \) is the speed of the water relative to the lab (\( \frac{c}{2} \)).
+
+3. Substitute the values into the formula:
+   \[
+   u' = \frac{\frac{3c}{4} + \frac{c}{2}}{1 + \frac{\left(\frac{3c}{4}\right)\left(\frac{c}{2}\right)}{c^2}}.
+   \]
+   Simplify the numerator:
+   \[
+   \frac{3c}{4} + \frac{c}{2} = \frac{3c}{4} + \frac{2c}{4} = \frac{5c}{4}.
+   \]
+   Simplify the denominator:
+   \[
+   1 + \frac{\left(\frac{3c}{4}\right)\left(\frac{c}{2}\right)}{c^2} = 1 + \frac{\frac{3c^2}{8}}{c^2} = 1 + \frac{3}{8} = \frac{8}{8} + \frac{3}{8} = \frac{11}{8}.
+   \]
+   So the formula becomes:
+   \[
+   u' = \frac{\frac{5c}{4}}{\frac{11}{8}}.
+   \]
+
+4. Simplify the fraction:
+   \[
+   u' = \frac{5c}{4} \cdot \frac{8}{11} = \frac{40c}{44} = \frac{10c}{11}.
+   \]
+
+Thus, the speed of light in the water relative to the lab frame is \( \frac{10c}{11} \).
+
+The correct answer is {'sol': 'd'}."
+"To solve this, I will use the relativistic energy-momentum relation: \( E^2 = (pc)^2 + (m_0c^2)^2 \), where \( E \) is the total energy, \( p \) is the momentum, and \( m_0 \) is the rest mass of the particle.
+
+1. Start by substituting the given values into the equation. The total energy \( E = 5.0 \, \text{GeV} \), and the momentum \( p = 4.9 \, \text{GeV}/c \). The equation becomes:
+   \[
+   (5.0)^2 = (4.9)^2 + (m_0c^2)^2
+   \]
+
+2. Calculate \( (5.0)^2 \) and \( (4.9)^2 \):
+   \[
+   25.0 = 24.01 + (m_0c^2)^2
+   \]
+
+3. Solve for \( (m_0c^2)^2 \):
+   \[
+   (m_0c^2)^2 = 25.0 - 24.01 = 0.99
+   \]
+
+4. Take the square root to find \( m_0c^2 \):
+   \[
+   m_0c^2 = \sqrt{0.99} \approx 0.1 \, \text{GeV}/c^2
+   \]
+
+Thus, the rest mass of the particle is approximately 0.1 GeV/\( c^2 \).
+
+The correct answer is {'sol': 'a'}."
+"To solve this, I will calculate the resolving power of the spectrometer using the formula for resolving power:
+
+1. The resolving power \( R \) is given by \( R = \frac{\lambda}{\Delta \lambda} \), where \( \lambda \) is the average wavelength and \( \Delta \lambda \) is the difference between the two wavelengths.
+2. The average wavelength is \( \lambda = \frac{500 + 502}{2} = 501 \, \text{nm} \).
+3. The difference between the two wavelengths is \( \Delta \lambda = 502 - 500 = 2 \, \text{nm} \).
+4. Substituting into the formula, \( R = \frac{501}{2} = 250.5 \), which is approximately 250.
+
+Therefore, the correct answer is {'sol': 'b'}."
+"To determine the best type of laser for spectroscopy over a range of visible wavelengths, I will evaluate the characteristics of each laser type:
+
+1. A dye laser is tunable over a wide range of wavelengths, including the visible spectrum, making it ideal for spectroscopy applications requiring flexibility in wavelength selection.
+2. A helium-neon laser typically emits light at a fixed wavelength (e.g., 632.8 nm in the red part of the spectrum) and is not tunable, so it is not suitable for spectroscopy over a range of visible wavelengths.
+3. An excimer laser emits ultraviolet light and is not designed for use in the visible spectrum, so it is not appropriate for this application.
+4. A ruby laser emits light at a fixed wavelength (694.3 nm in the red part of the spectrum) and is not tunable, so it is also not suitable for spectroscopy over a range of visible wavelengths.
+
+The best choice for spectroscopy over a range of visible wavelengths is the dye laser. 
+
+{'sol': 'a'}"
+"To solve this, let's analyze step by step:
+
+1. A Hermitian operator is defined as an operator that is equal to its own conjugate transpose. This property ensures that the operator has specific mathematical characteristics.
+2. One of the key properties of Hermitian operators is that their eigenvalues are always real. This is a fundamental result in linear algebra and quantum mechanics.
+3. The other options (imaginary, degenerate, linear) do not apply universally to the eigenvalues of Hermitian operators. While eigenvalues can sometimes be degenerate, this is not a guaranteed property of Hermitian operators.
+
+Therefore, the correct answer is {'sol': 'a'}."
+"To solve this, I will use Newton's second law, \( F = ma \), where \( F \) is the force, \( m \) is the mass, and \( a \) is the acceleration.
+
+1. Let the mass of object A be \( m_A \) and its acceleration be \( a_A \). Then the force acting on object A is \( F_A = m_A \cdot a_A \).
+2. The mass of object B is twice that of object A, so \( m_B = 2m_A \). The acceleration of object B is twice that of object A, so \( a_B = 2a_A \).
+3. The force acting on object B is \( F_B = m_B \cdot a_B = (2m_A) \cdot (2a_A) = 4m_A \cdot a_A \). This means \( F_B = 4F_A \).
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's analyze step by step:
+
+1. Inside a superconductor, the magnetic field \( B \) is zero due to the Meissner effect, which expels magnetic fields from the interior of the superconductor. This implies that the magnetic field just outside the surface of the superconductor must satisfy boundary conditions derived from Maxwell's equations.
+
+2. Maxwell's boundary conditions state that the perpendicular component of \( B \) (the magnetic flux density) is continuous across the boundary. Since \( B = 0 \) inside the superconductor, the perpendicular component of \( B \) just outside the surface must also be zero. This means that \( B \) just outside the surface must be tangential to the surface.
+
+3. Therefore, the correct answer is that \( B \) is tangential to the surface of the superconductor.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, let's analyze step by step:
+
+1. The kinetic energy of the ball is given by the formula \( KE = \frac{1}{2} m v^2 \), where \( m \) is the mass of the ball and \( v \) is its speed. Since the uncertainty in the mass is negligible, the uncertainty in \( KE \) will depend only on the uncertainty in \( v \).
+
+2. The speed \( v \) is squared in the formula for kinetic energy. When a quantity is raised to a power, the percentage uncertainty in that quantity is multiplied by the power. Here, the uncertainty in \( v \) is 10%, and since \( v \) is squared, the uncertainty in \( v^2 \) (and thus in \( KE \)) is \( 2 \times 10\% = 20\% \).
+
+3. Therefore, the uncertainty in the kinetic energy of the ball is 20%.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's break it down step by step:
+
+1. The particle is moving in a circle, so it has two components of acceleration: tangential acceleration and centripetal (radial) acceleration. The tangential acceleration is responsible for the increase in speed, and the centripetal acceleration is directed toward the center of the circle.
+
+2. The tangential acceleration is given as 10 m/s² (since the speed is increasing at this rate). The centripetal acceleration is calculated using the formula \( a_c = \frac{v^2}{r} \), where \( v \) is the speed and \( r \) is the radius of the circle. Substituting \( v = 10 \, \text{m/s} \) and \( r = 10 \, \text{m} \), we get:
+   \[
+   a_c = \frac{10^2}{10} = 10 \, \text{m/s}^2.
+   \]
+
+3. The angle between the velocity and acceleration vectors is determined by the direction of the net acceleration. The tangential acceleration is perpendicular to the centripetal acceleration, so the net acceleration forms a right triangle with these two components. The angle \( \theta \) between the velocity (tangential direction) and the net acceleration can be found using:
+   \[
+   \tan \theta = \frac{a_c}{a_t}.
+   \]
+   Substituting \( a_c = 10 \, \text{m/s}^2 \) and \( a_t = 10 \, \text{m/s}^2 \), we get:
+   \[
+   \tan \theta = \frac{10}{10} = 1.
+   \]
+
+4. Solving for \( \theta \), we find:
+   \[
+   \theta = \tan^{-1}(1) = 45^\circ.
+   \]
+
+Thus, the angle between the particle’s velocity and acceleration vectors is 45°.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, I will use the Stefan-Boltzmann law, which states that the energy radiated per second per unit area of a blackbody is proportional to the fourth power of its absolute temperature, \( E \propto T^4 \).
+
+1. If the temperature \( T \) is increased by a factor of 3, the new temperature becomes \( 3T \).
+2. Substituting \( 3T \) into the Stefan-Boltzmann law, the energy radiated becomes proportional to \( (3T)^4 = 3^4 \cdot T^4 = 81 \cdot T^4 \).
+3. This means the energy radiated per second per unit area increases by a factor of 81.
+
+Therefore, the correct answer is {'sol': 'd'}."
+"First, I need to calculate the change in magnetic flux. The magnetic flux is given by the formula Φ = B * A, where B is the magnetic field and A is the area of the coil. The change in magnetic flux is ΔΦ = (B_final - B_initial) * A = (0.06 T - 0.01 T) * 0.2 m² = 0.01 Wb.
+
+Next, I calculate the induced EMF using Faraday's law of electromagnetic induction, which states that the induced EMF is given by EMF = -N * (ΔΦ / Δt), where N is the number of turns, ΔΦ is the change in magnetic flux, and Δt is the time interval. Substituting the values, EMF = -250 * (0.01 Wb / 0.25 s) = 0.1 V.
+
+Finally, since the question asks for the magnitude of the average induced EMF, the answer is 0.1 V. Therefore, the correct answer is {'sol': 'b'}."
+"To determine the correct answer, let's analyze the options step by step:
+
+1. **Option a**: ""There are no changes in the internal energy of the system.""  
+   This is not necessarily true for a reversible thermodynamic process. The internal energy of the system can change depending on the type of process (e.g., isothermal, adiabatic, etc.). For example, in an isothermal process, the internal energy might remain constant, but in an adiabatic process, it can change. Thus, this option is incorrect.
+
+2. **Option b**: ""The temperature of the system remains constant during the process.""  
+   This is also not necessarily true. While the temperature remains constant in an isothermal process, a reversible process can also be adiabatic, isobaric, or isochoric, where the temperature may change. Therefore, this option is incorrect.
+
+3. **Option c**: ""The entropy of the system and its environment remains unchanged.""  
+   In a reversible process, the total entropy of the system and its surroundings does not change. This is a defining characteristic of a reversible process. The entropy change of the system is exactly balanced by the entropy change of the surroundings, resulting in no net change in total entropy. This option is correct.
+
+4. **Option d**: ""The entropy of the system and its environment must increase.""  
+   This is true for irreversible processes, not reversible ones. In a reversible process, the total entropy remains constant, as explained in option c. Therefore, this option is incorrect.
+
+The correct answer is {'sol': 'c'}."
+"To solve this, let's analyze the situation step by step:
+
+1. **Understand the harmonics of an open pipe**: An organ pipe open at both ends produces all harmonics (fundamental frequency and its multiples). The given harmonics are 50 Hz, 100 Hz, 150 Hz, 200 Hz, and 250 Hz.
+
+2. **Understand the harmonics of a closed pipe**: When one end of the pipe is closed, only odd harmonics (1st, 3rd, 5th, etc.) survive. This means the frequencies that survive will be odd multiples of the fundamental frequency.
+
+3. **Identify the odd harmonics**: The fundamental frequency is 50 Hz. The odd harmonics are 50 Hz (1st harmonic), 150 Hz (3rd harmonic), and 250 Hz (5th harmonic). These are the harmonics that will survive when the pipe is closed at one end.
+
+Thus, the correct answer is {'sol': 'a'}."
+"First, I need to consider the type of electromagnetic radiation typically emitted by a nucleus. Nuclei emit radiation during nuclear reactions or decay processes, and this radiation is usually of very high energy. 
+
+Next, I need to evaluate the energy levels of the given options. Gamma rays are the highest-energy form of electromagnetic radiation, followed by ultraviolet radiation, visible light, and microwaves, which are much lower in energy.
+
+Finally, since nuclear processes involve very high-energy transitions, the radiation emitted is most likely to be in the form of gamma rays.
+
+Therefore, the correct answer is {'sol': 'a'}."
+"To solve this, I will consider the properties of a pipe closed at one end and open at the other.
+
+1. For a pipe closed at one end, the harmonics are odd multiples of the fundamental frequency. The fundamental frequency is the first harmonic (131 Hz in this case).
+2. The next higher harmonic for such a pipe is the third harmonic, which is 3 times the fundamental frequency.
+3. Multiply the fundamental frequency (131 Hz) by 3 to find the third harmonic: \( 131 \times 3 = 393 \, \text{Hz} \).
+
+Thus, the correct answer is {'sol': 'd'}."
+"To solve this, let's break it down step by step:
+
+1. The quantum number \( l \) represents the orbital angular momentum of the electron. For a given \( l \), the magnetic quantum number \( m_l \) can take integer values ranging from \( -l \) to \( +l \), inclusive.
+
+2. In this case, \( l = 2 \). Therefore, \( m_l \) can take the values \( -2, -1, 0, +1, +2 \).
+
+3. Counting these values, there are 5 possible values for \( m_l \): \( -2, -1, 0, +1, +2 \).
+
+Thus, the number of allowed values of \( m_l \) is 5.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, I will use the formula for the period of a simple pendulum: \( T = 2\pi \sqrt{\frac{L}{g}} \), where \( T \) is the period, \( L \) is the length of the pendulum, and \( g \) is the acceleration due to gravity.
+
+1. The problem states that the period of pendulum B (\( T_B \)) is twice the period of pendulum A (\( T_A \)). Thus, \( T_B = 2T_A \).
+
+2. Substituting the formula for the period, we have:
+   \[
+   2\pi \sqrt{\frac{L_B}{g}} = 2 \cdot 2\pi \sqrt{\frac{L_A}{g}}
+   \]
+   Simplify by canceling \( 2\pi \) on both sides:
+   \[
+   \sqrt{\frac{L_B}{g}} = 2 \sqrt{\frac{L_A}{g}}
+   \]
+
+3. Square both sides to eliminate the square root:
+   \[
+   \frac{L_B}{g} = 4 \cdot \frac{L_A}{g}
+   \]
+   Cancel \( g \) on both sides:
+   \[
+   L_B = 4L_A
+   \]
+
+Thus, the correct answer is {'sol': 'a'}."
+"First, I need to recall the BCS (Bardeen-Cooper-Schrieffer) theory, which explains superconductivity. According to this theory, electrons in a superconductor form Cooper pairs due to an attractive interaction.
+
+Next, I need to identify the source of this attractive interaction. The attraction arises from interactions between the electrons and the vibrations of the ionic lattice, known as phonons.
+
+Finally, I confirm that this interaction with the ionic lattice is responsible for the formation of Cooper pairs, leading to superconductivity.
+
+Therefore, the correct answer is {'sol': 'd'}."
+"To solve this, I will use the concept of length contraction in special relativity. The formula for length contraction is \( L = L_0 \sqrt{1 - v^2/c^2} \), where \( L \) is the contracted length, \( L_0 \) is the proper length, \( v \) is the relative velocity, and \( c \) is the speed of light.
+
+1. The proper length \( L_0 \) is given as 1.00 m, and the contracted length \( L \) is 0.80 m. Substituting these values into the formula, we get:
+   \[
+   0.80 = 1.00 \sqrt{1 - v^2/c^2}.
+   \]
+
+2. Divide both sides by 1.00:
+   \[
+   0.80 = \sqrt{1 - v^2/c^2}.
+   \]
+
+3. Square both sides to eliminate the square root:
+   \[
+   0.80^2 = 1 - v^2/c^2.
+   \]
+   \[
+   0.64 = 1 - v^2/c^2.
+   \]
+
+4. Rearrange to solve for \( v^2/c^2 \):
+   \[
+   v^2/c^2 = 1 - 0.64.
+   \]
+   \[
+   v^2/c^2 = 0.36.
+   \]
+
+5. Take the square root of both sides:
+   \[
+   v/c = \sqrt{0.36}.
+   \]
+   \[
+   v/c = 0.60.
+   \]
+
+Thus, the observer must move at 0.60c. The correct answer is {'sol': 'b'}."
+"To solve this, I need to consider the energy required to remove the first electron and the second electron from the helium atom. The total energy required to remove both electrons is given as 79.0 eV.
+
+1. The energy required to remove the second electron (after the first electron is removed) is known to be 24.6 eV. This is because the second electron experiences less shielding and is more tightly bound to the nucleus.
+2. To find the energy required to remove the first electron, I subtract the energy required to remove the second electron from the total energy: 79.0 eV - 24.6 eV = 54.4 eV.
+3. Therefore, the energy required to ionize helium (remove one electron) is 54.4 eV.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, we need to consider the relationship between the temperature of the universe and its scale factor. The temperature of the universe is inversely proportional to the scale factor, meaning \( T \propto 1/a \), where \( T \) is the temperature and \( a \) is the scale factor.
+
+1. At present, the temperature of the universe is 3 K. When the temperature was 12 K, the temperature was 4 times higher than it is today.
+2. Since \( T \propto 1/a \), the scale factor \( a \) at that time must have been 1/4 of its current value.
+3. The distances between typical objects in the universe, such as galaxies, are proportional to the scale factor. Therefore, when the temperature was 12 K, galaxies were one-quarter as distant as they are today.
+
+Thus, the correct answer is {'sol': 'a'}."
+"First, I need to recall the definition of the electric displacement current. It is related to the changing electric field and is proportional to the rate of change of the electric flux through a surface.
+
+Next, I analyze the options. Option (a) mentions the rate of change of the electric flux through the surface, which aligns with the definition of the displacement current. Option (b) refers to the electric flux itself, not its rate of change, so it is incorrect. Option (c) involves the time integral of the magnetic flux, which is unrelated to the displacement current. Option (d) refers to the rate of change of the magnetic flux, which is related to Faraday's law, not the displacement current.
+
+Therefore, the correct answer is {'sol': 'a'}."
+"First, I need to calculate the potential energy lost by the elevator as it falls. The potential energy is given by \( PE = mgh \), where \( m \) is the mass of the elevator (1,000 kg), \( g \) is the acceleration due to gravity (9.8 m/s²), and \( h \) is the height (100 m). Substituting the values, \( PE = 1,000 \times 9.8 \times 100 = 980,000 \, \text{J} \).
+
+Next, since the elevator starts from rest and is brought to rest by the brakes, all of the potential energy lost is converted into heat energy that the brakes must dissipate. Therefore, the heat energy dissipated by the brakes is equal to the potential energy lost, which is 980,000 J.
+
+Finally, rounding 980,000 J to the closest option, the correct answer is 1,000,000 J.
+
+{'sol': 'd'}"
+"To solve this, we use the concept of redshift in the context of special relativity. The redshift \( z \) is defined as:
+
+\[
+z = \frac{\lambda_{\text{observed}} - \lambda_{\text{rest}}}{\lambda_{\text{rest}}}
+\]
+
+Step 1: From the problem, the observed wavelength is three times the rest wavelength, so:
+
+\[
+\lambda_{\text{observed}} = 3 \lambda_{\text{rest}}
+\]
+
+Substituting this into the redshift formula:
+
+\[
+z = \frac{3\lambda_{\text{rest}} - \lambda_{\text{rest}}}{\lambda_{\text{rest}}} = \frac{2\lambda_{\text{rest}}}{\lambda_{\text{rest}}} = 2
+\]
+
+Thus, the redshift \( z = 2 \).
+
+Step 2: The relationship between redshift \( z \) and the relative velocity \( v \) in special relativity is given by:
+
+\[
+1 + z = \sqrt{\frac{1 + v/c}{1 - v/c}}
+\]
+
+Substituting \( z = 2 \):
+
+\[
+1 + 2 = \sqrt{\frac{1 + v/c}{1 - v/c}}
+\]
+
+\[
+3 = \sqrt{\frac{1 + v/c}{1 - v/c}}
+\]
+
+Step 3: Square both sides to eliminate the square root:
+
+\[
+9 = \frac{1 + v/c}{1 - v/c}
+\]
+
+Multiply through by \( 1 - v/c \):
+
+\[
+9(1 - v/c) = 1 + v/c
+\]
+
+\[
+9 - 9v/c = 1 + v/c
+\]
+
+Combine terms involving \( v/c \):
+
+\[
+9 - 1 = 9v/c + v/c
+\]
+
+\[
+8 = 10v/c
+\]
+
+Solve for \( v/c \):
+
+\[
+v/c = \frac{8}{10} = 0.8
+\]
+
+Thus, the relative speed of the quasar is \( 0.8c \).
+
+The correct answer is {'sol': 'c'}."
+"To solve this, I will use the work-energy principle, which states that the work done on an object is equal to the change in its kinetic energy.
+
+1. First, calculate the initial kinetic energy of the box. The formula for kinetic energy is \( KE = \frac{1}{2}mv^2 \), where \( m \) is the mass and \( v \) is the velocity. For the initial velocity of 1 m/s, the initial kinetic energy is:
+   \[
+   KE_{\text{initial}} = \frac{1}{2}(10)(1^2) = 5 \, \text{J}.
+   \]
+
+2. Next, calculate the final kinetic energy of the box after the force is applied. The final velocity is 2 m/s, so:
+   \[
+   KE_{\text{final}} = \frac{1}{2}(10)(2^2) = 20 \, \text{J}.
+   \]
+
+3. The work done by the force is equal to the change in kinetic energy:
+   \[
+   W = KE_{\text{final}} - KE_{\text{initial}} = 20 - 5 = 15 \, \text{J}.
+   \]
+
+4. Work is also given by the formula \( W = F \cdot d \), where \( F \) is the force and \( d \) is the distance over which the force is applied. The box travels 5 m, so:
+   \[
+   15 = F \cdot 5.
+   \]
+
+5. Solve for \( F \):
+   \[
+   F = \frac{15}{5} = 3 \, \text{N}.
+   \]
+
+Therefore, the magnitude of the applied force is {'sol': 'c'}."
+"To solve this, we need to use the concept of length contraction from special relativity. Here's the step-by-step reasoning:
+
+1. **Length contraction formula**: The observed length \( L \) of an object moving at a relative speed \( v \) is given by:
+   \[
+   L = L_0 \sqrt{1 - \frac{v^2}{c^2}}
+   \]
+   where \( L_0 \) is the proper length (the length of the object in its rest frame), \( v \) is the relative speed, and \( c \) is the speed of light.
+
+2. **Given values**: The proper length of the meterstick is \( L_0 = 1 \, \text{m} = 100 \, \text{cm} \), and the observed length is \( L = 60 \, \text{cm} \). We need to find the relative speed \( v \) between the two spaceships.
+
+3. **Relative speed calculation**: Rearrange the length contraction formula to solve for \( v \):
+   \[
+   \sqrt{1 - \frac{v^2}{c^2}} = \frac{L}{L_0}
+   \]
+   \[
+   1 - \frac{v^2}{c^2} = \left(\frac{L}{L_0}\right)^2
+   \]
+   \[
+   \frac{v^2}{c^2} = 1 - \left(\frac{L}{L_0}\right)^2
+   \]
+   \[
+   v = c \sqrt{1 - \left(\frac{L}{L_0}\right)^2}
+   \]
+   Substituting \( L = 60 \, \text{cm} \) and \( L_0 = 100 \, \text{cm} \):
+   \[
+   v = c \sqrt{1 - \left(\frac{60}{100}\right)^2}
+   \]
+   \[
+   v = c \sqrt{1 - 0.36}
+   \]
+   \[
+   v = c \sqrt{0.64}
+   \]
+   \[
+   v = 0.8c
+   \]
+   This is the relative speed between the two spaceships.
+
+4. **Speed of each spaceship relative to Earth**: Since the spaceships are moving toward each other with equal speeds relative to Earth, the relative speed between them is given by the relativistic velocity addition formula:
+   \[
+   v_{\text{rel}} = \frac{2v}{1 + \frac{v^2}{c^2}}
+   \]
+   Substituting \( v_{\text{rel}} = 0.8c \):
+   \[
+   0.8c = \frac{2v}{1 + \frac{v^2}{c^2}}
+   \]
+   Multiply through by \( 1 + \frac{v^2}{c^2} \):
+   \[
+   0.8c \left(1 + \frac{v^2}{c^2}\right) = 2v
+   \]
+   Expand and rearrange:
+   \[
+   0.8c + 0.8c \frac{v^2}{c^2} = 2v
+   \]
+   \[
+   0.8c + 0.8 \frac{v^2}{c} = 2v
+   \]
+   Divide through by \( c \):
+   \[
+   0.8 + 0.8 \frac{v^2}{c^2} = 2 \frac{v}{c}
+   \]
+   Let \( x = \frac{v}{c} \), so \( v = xc \):
+   \[
+   0.8 + 0.8x^2 = 2x
+   \]
+   Rearrange into a standard quadratic equation:
+   \[
+   0.8x^2 - 2x + 0.8 = 0
+   \]
+   Divide through by 0.8:
+   \[
+   x^2 - 2.5x + 1 = 0
+   \]
+   Solve this quadratic equation using the quadratic formula:
+   \[
+   x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+   \]
+   Here, \( a = 1 \), \( b = -2.5 \), and \( c = 1 \):
+   \[
+   x = \frac{-(-2.5) \pm \sqrt{(-2.5)^2 - 4(1)(1)}}{2(1)}
+   \]
+   \[
+   x = \frac{2.5 \pm \sqrt{6.25 - 4}}{2}
+   \]
+   \[
+   x = \frac{2.5 \pm \sqrt{2.25}}{2}
+   \]
+   \[
+   x = \frac{2.5 \pm 1.5}{2}
+   \]
+   Taking the positive root (since speed must be positive):
+   \[
+   x = \frac{2.5 + 1.5}{2} = \frac{4}{2} = 2
+   \]
+   Thus, \( x = 0.5 \), so \( v = 0.5"
+"First, I need to calculate the potential energy lost by the elevator as it falls. The potential energy is given by the formula \( PE = m \cdot g \cdot h \), where \( m \) is the mass of the elevator (1,000 kg), \( g \) is the acceleration due to gravity (approximately 9.8 m/s²), and \( h \) is the height (100 m). Substituting the values, \( PE = 1,000 \cdot 9.8 \cdot 100 = 980,000 \, \text{J} \).
+
+Next, since the elevator starts from rest and is brought to rest by the brakes, all of the potential energy lost is converted into heat energy that the brakes must dissipate. Therefore, the heat energy dissipated by the brakes is equal to the potential energy lost, which is 980,000 J.
+
+Finally, I compare this value to the given choices. The closest value is 1,000,000 J.
+
+The correct answer is {'sol': 'c'}."
+"First, I need to consider the behavior of conduction electrons in metals. These electrons are described by quantum mechanics and form a degenerate Fermi gas at typical temperatures.
+
+Next, the mean kinetic energy of conduction electrons is determined by the Fermi-Dirac distribution, which accounts for the Pauli exclusion principle. At temperatures much lower than the Fermi temperature, most electrons occupy energy states near the Fermi energy, leading to a mean kinetic energy much higher than kT.
+
+Finally, the correct explanation is that the electrons form a degenerate Fermi gas, which results in their mean kinetic energy being much higher than kT.
+
+{'sol': 'c'}"
+"To solve this, I will use the work-energy principle, which states that the work done on an object is equal to the change in its kinetic energy.
+
+1. First, calculate the initial kinetic energy of the box. The formula for kinetic energy is \( KE = \frac{1}{2}mv^2 \), where \( m \) is the mass and \( v \) is the velocity. For the initial velocity of 1 m/s, the initial kinetic energy is:
+   \[
+   KE_{\text{initial}} = \frac{1}{2}(10)(1^2) = 5 \, \text{J}.
+   \]
+
+2. Next, calculate the final kinetic energy of the box after the force is applied. The final velocity is 2 m/s, so:
+   \[
+   KE_{\text{final}} = \frac{1}{2}(10)(2^2) = 20 \, \text{J}.
+   \]
+
+3. The work done by the force is equal to the change in kinetic energy:
+   \[
+   W = KE_{\text{final}} - KE_{\text{initial}} = 20 - 5 = 15 \, \text{J}.
+   \]
+
+4. Work is also given by the formula \( W = F \cdot d \), where \( F \) is the force and \( d \) is the distance over which the force is applied. Rearranging for \( F \), we get:
+   \[
+   F = \frac{W}{d} = \frac{15}{5} = 3 \, \text{N}.
+   \]
+
+Therefore, the magnitude of the applied force is {'sol': 'c'}."
+"First, I need to recall Einstein's photoelectric equation: \( E = hf - \phi \), where \( E \) is the kinetic energy of the emitted electrons, \( h \) is Planck's constant, \( f \) is the frequency of the light, and \( \phi \) is the work function of the metal.
+
+Next, I note that the work function \( \phi \) is a property of the metal and does not depend on the frequency or wavelength of the light. Therefore, options (a) and (b) are incorrect.
+
+Then, I consider the relationship between the stopping potential and the frequency. The stopping potential \( V_s \) is related to the maximum kinetic energy of the electrons: \( eV_s = hf - \phi \). This shows that \( V_s \) is a linear function of the frequency \( f \), provided \( f \) is above the threshold frequency.
+
+Finally, I evaluate option (c). The current in the tube depends on the intensity of the light, not directly on the wavelength, so this option is also incorrect.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's analyze step by step:
+
+1. The work done on a spring is given by the formula \( W = \frac{1}{2} k x^2 \), where \( k \) is the spring constant and \( x \) is the distance stretched.
+
+2. For the first spring, the work done is \( W_1 = \frac{1}{2} k x^2 \).
+
+3. For the second spring, the distance stretched is \( \frac{x}{2} \), and the work done is \( W_2 = \frac{1}{2} k_2 \left(\frac{x}{2}\right)^2 = \frac{1}{2} k_2 \frac{x^2}{4} = \frac{1}{8} k_2 x^2 \).
+
+4. It is given that the work done on the second spring is twice the work done on the first spring, i.e., \( W_2 = 2W_1 \). Substituting the expressions for \( W_1 \) and \( W_2 \), we get:
+   \[
+   \frac{1}{8} k_2 x^2 = 2 \left(\frac{1}{2} k x^2\right).
+   \]
+
+5. Simplify the equation:
+   \[
+   \frac{1}{8} k_2 x^2 = k x^2.
+   \]
+
+6. Cancel \( x^2 \) (since \( x \neq 0 \)):
+   \[
+   \frac{1}{8} k_2 = k.
+   \]
+
+7. Multiply through by 8:
+   \[
+   k_2 = 8k.
+   \]
+
+Thus, the force constant of the second spring is \( 8k \).
+
+The correct answer is {'sol': 'd'}."
+"To solve this problem, we will use the concept of relativity of simultaneity from Einstein's theory of special relativity.
+
+1. **Understand the problem**: Observer O sees the two light sources flash simultaneously. Observer O', moving relative to O, observes one flash occurring 13 ns before the other. The distance between the two sources is 10 m. We need to find the relative speed \( v \) of O' with respect to O.
+
+2. **Relativity of simultaneity formula**: The time difference between events as observed in the moving frame O' is given by:
+   \[
+   \Delta t' = \frac{v \Delta x}{c^2}
+   \]
+   where \( \Delta t' \) is the time difference observed by O', \( v \) is the relative speed, \( \Delta x \) is the spatial separation of the events in O's frame (10 m), and \( c \) is the speed of light.
+
+3. **Substitute known values**: The time difference \( \Delta t' \) is 13 ns (13 × \( 10^{-9} \) s), and \( \Delta x = 10 \, \text{m} \). Rearrange the formula to solve for \( v \):
+   \[
+   v = \frac{\Delta t' \cdot c^2}{\Delta x}
+   \]
+   Substituting \( c = 3 \times 10^8 \, \text{m/s} \), \( \Delta t' = 13 \times 10^{-9} \, \text{s} \), and \( \Delta x = 10 \, \text{m} \):
+   \[
+   v = \frac{(13 \times 10^{-9}) \cdot (3 \times 10^8)^2}{10}
+   \]
+
+4. **Simplify the calculation**:
+   \[
+   v = \frac{13 \cdot 9 \times 10^7}{10}
+   \]
+   \[
+   v = 11.7 \times 10^7 \, \text{m/s}
+   \]
+   \[
+   v = 0.36c
+   \]
+
+Thus, the speed of O' relative to O is \( 0.36c \).
+
+{'sol': 'c'}"
+"To solve this, I will use Wien's displacement law, which states that the wavelength at which the blackbody spectrum reaches its maximum is inversely proportional to the temperature of the blackbody. The formula is:
+
+\[
+\lambda_{\text{max}} = \frac{b}{T}
+\]
+
+where \( b \) is Wien's constant (\( b \approx 2.897 \times 10^{-3} \, \text{m·K} \)) and \( T \) is the temperature in kelvins.
+
+1. For the Sun, with \( T = 6000 \, \text{K} \), the maximum wavelength is near 500 nm (\( 500 \times 10^{-9} \, \text{m} \)). This agrees with Wien's law: \( \lambda_{\text{max}} = \frac{2.897 \times 10^{-3}}{6000} \approx 4.83 \times 10^{-7} \, \text{m} \), or 483 nm, which is close to 500 nm.
+
+2. For a body with \( T = 300 \, \text{K} \), we calculate:
+\[
+\lambda_{\text{max}} = \frac{2.897 \times 10^{-3}}{300} \approx 9.66 \times 10^{-6} \, \text{m}
+\]
+This is approximately \( 10 \, \mu\text{m} \), or 10 mm.
+
+3. Comparing this result with the choices, the correct answer is 10 mm.
+
+Thus, the correct answer is {'sol': 'c'}."
+"To determine which final state cannot be reached by an allowed transition, we need to consider the selection rules for electronic transitions in hydrogen. The key selection rules are:
+
+1. The change in the principal quantum number \( n \) can be any value (\( \Delta n \) unrestricted).
+2. The change in the orbital angular momentum quantum number \( l \) must satisfy \( \Delta l = \pm 1 \) (i.e., \( l \) can only increase or decrease by 1).
+
+Now, let's analyze each option step by step:
+
+1. **Option a: \( n = 3, l = 2 \)**  
+   Starting from \( n = 4, l = 1 \), the transition to \( n = 3, l = 2 \) involves \( \Delta n = -1 \) (allowed) and \( \Delta l = +1 \) (allowed).  
+   This transition is allowed.
+
+2. **Option b: \( n = 3, l = 1 \)**  
+   Starting from \( n = 4, l = 1 \), the transition to \( n = 3, l = 1 \) involves \( \Delta n = -1 \) (allowed) and \( \Delta l = 0 \) (not allowed).  
+   This transition is not allowed.
+
+3. **Option c: \( n = 3, l = 0 \)**  
+   Starting from \( n = 4, l = 1 \), the transition to \( n = 3, l = 0 \) involves \( \Delta n = -1 \) (allowed) and \( \Delta l = -1 \) (allowed).  
+   This transition is allowed.
+
+4. **Option d: \( n = 2, l = 0 \)**  
+   Starting from \( n = 4, l = 1 \), the transition to \( n = 2, l = 0 \) involves \( \Delta n = -2 \) (allowed) and \( \Delta l = -1 \) (allowed).  
+   This transition is allowed.
+
+The final state that cannot be reached by an allowed transition is **option b**.  
+
+{'sol': 'b'}"
+"First, I need to recall that the quantum number \( m_l \) represents the magnetic quantum number, which can take integer values ranging from \(-l\) to \(+l\), inclusive.
+
+Next, since \( l = 2 \), the possible values of \( m_l \) are \(-2, -1, 0, +1, +2\).
+
+Finally, I count the total number of allowed values for \( m_l \), which are 5 values in total.
+
+Therefore, the correct answer is {'sol': 'a'}."
+"To solve this, I will use the Doppler effect formula for sound. The frequency of the echo heard by the driver is affected by the relative motion of the car and the wall. Here's the step-by-step solution:
+
+1. **Determine the frequency of the sound reaching the wall**:  
+   The car is moving toward the wall, so the frequency of the sound reaching the wall is increased due to the Doppler effect. The formula for the observed frequency \( f' \) is:  
+   \[
+   f' = f \frac{v + v_s}{v}
+   \]  
+   where:  
+   \( f = 600 \, \text{Hz} \) (frequency of the siren),  
+   \( v = 350 \, \text{m/s} \) (speed of sound),  
+   \( v_s = 3.5 \, \text{m/s} \) (speed of the car).  
+
+   Substituting the values:  
+   \[
+   f' = 600 \frac{350 + 3.5}{350} = 600 \frac{353.5}{350} \approx 606 \, \text{Hz}.
+   \]  
+
+2. **Determine the frequency of the echo heard by the driver**:  
+   The sound reflects off the wall and travels back toward the moving car. The car is now moving toward the sound, so the frequency of the echo heard by the driver is further increased. The formula for the observed frequency \( f'' \) is:  
+   \[
+   f'' = f' \frac{v + v_s}{v}.
+   \]  
+   Substituting \( f' = 606 \, \text{Hz} \), \( v = 350 \, \text{m/s} \), and \( v_s = 3.5 \, \text{m/s} \):  
+   \[
+   f'' = 606 \frac{350 + 3.5}{350} = 606 \frac{353.5}{350} \approx 612 \, \text{Hz}.
+   \]  
+
+3. **Select the closest answer**:  
+   The frequency of the echo heard by the driver is approximately 612 Hz.  
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's analyze step by step:
+
+1. The emission spectrum of a hydrogen-like atom (such as Li++) is determined by the Rydberg formula, where the wavelength of emitted light is inversely proportional to the square of the atomic number \( Z \). For hydrogen, \( Z = 1 \), and for doubly ionized lithium, \( Z = 3 \).
+
+2. The wavelengths of the emission spectrum for a hydrogen-like atom are scaled by a factor of \( 1/Z^2 \). For Li++, the wavelengths will be scaled by \( 1/3^2 = 1/9 \) compared to hydrogen.
+
+3. This means the wavelengths of Li++ are decreased by a factor of 9 compared to hydrogen.
+
+Thus, the correct answer is {'sol': 'a'}."
+"First, I need to consider the conservation of energy. The energy of the photon is converted into the rest energy of the two electrons and the positron, as well as their kinetic energy.
+
+Next, the rest energy of each particle is \( mc^2 \). Since there are three particles (two electrons and one positron), the total rest energy is \( 3mc^2 \).
+
+Finally, since the particles are moving at equal speeds, their kinetic energy is zero in this case, and the energy of the photon is entirely used to create the rest energy of the three particles. Therefore, the energy of the photon is \( 3mc^2 \).
+
+The correct answer is {'sol': 'c'}."
+"To determine which laser utilizes transitions involving the energy levels of free atoms, let's analyze the options step by step:
+
+1. **Diode laser**: Diode lasers rely on semiconductor materials and involve electron-hole recombination in a solid-state medium, not free atoms. So, this is not the correct answer.
+
+2. **Dye laser**: Dye lasers use organic dye molecules in a liquid medium, and the transitions occur between molecular energy levels, not free atomic energy levels. This is also not the correct answer.
+
+3. **Free-electron laser**: Free-electron lasers do not involve atomic or molecular energy levels. Instead, they use a beam of high-speed electrons moving through a magnetic structure to produce laser light. This is not the correct answer.
+
+4. **Gas laser**: Gas lasers, such as helium-neon or argon-ion lasers, involve transitions between the energy levels of free atoms or ions in a gaseous state. This matches the description in the question.
+
+Thus, the correct answer is {'sol': 'd'}."
+"First, I need to consider the effect of the first polarizer. When unpolarized light passes through the first polarizer, the transmitted intensity is reduced to half of the incident intensity. This means the intensity after the first polarizer is \( I_1 = \frac{1}{2} I_0 \), where \( I_0 \) is the incident intensity.
+
+Next, I need to consider the effect of the second polarizer. The transmitted intensity through the second polarizer is given by Malus's law: \( I_2 = I_1 \cos^2\theta \), where \( \theta \) is the angle between the transmission axes of the two polarizers. Here, \( \theta = 45^\circ \), so \( \cos^2(45^\circ) = \frac{1}{2} \).
+
+Substituting \( I_1 = \frac{1}{2} I_0 \) and \( \cos^2(45^\circ) = \frac{1}{2} \), the transmitted intensity through both polarizers is \( I_2 = \frac{1}{2} I_0 \cdot \frac{1}{2} = \frac{1}{4} I_0 \).
+
+Finally, to express this as a percentage, \( \frac{1}{4} I_0 \) corresponds to 25% of the incident intensity.
+
+Therefore, the correct answer is {'sol': 'd'}."
+"To solve this, I will use the diffraction condition for a single slit, which is given by \( a \sin \theta = m \lambda \), where \( a \) is the width of the slit, \( \theta \) is the angle, \( m \) is the order of the minimum (for the first disappearance, \( m = 1 \)), and \( \lambda \) is the wavelength of the sound wave. The relationship between the speed of sound \( v \), frequency \( f \), and wavelength \( \lambda \) is \( v = f \lambda \).
+
+1. First, substitute the known values into the diffraction condition. The slit width \( a = 0.14 \, \text{m} \), the angle \( \theta = 45^\circ \), and \( m = 1 \). The equation becomes:
+   \[
+   0.14 \sin(45^\circ) = 1 \cdot \lambda
+   \]
+   Since \( \sin(45^\circ) = \frac{\sqrt{2}}{2} \), we have:
+   \[
+   \lambda = 0.14 \cdot \frac{\sqrt{2}}{2} = 0.14 \cdot 0.707 = 0.099 \, \text{m}.
+   \]
+
+2. Next, use the relationship \( v = f \lambda \) to find the frequency \( f \). The speed of sound \( v = 350 \, \text{m/s} \), and \( \lambda = 0.099 \, \text{m} \). Solving for \( f \):
+   \[
+   f = \frac{v}{\lambda} = \frac{350}{0.099} \approx 3,535 \, \text{Hz}.
+   \]
+
+3. Finally, compare the calculated frequency to the given choices. The closest option is \( 3,500 \, \text{Hz} \).
+
+The correct answer is {'sol': 'd'}."
+"To solve this, let's analyze step by step:
+
+1. The emission spectrum of a hydrogen-like atom is determined by the Rydberg formula, where the wavelength of emitted light is inversely proportional to the square of the nuclear charge \( Z \). For hydrogen, \( Z = 1 \), and for doubly ionized lithium (Li++), \( Z = 3 \).
+
+2. The wavelengths of the emission spectrum for a hydrogen-like atom are scaled by a factor of \( 1/Z^2 \). For Li++, the wavelengths will be scaled by \( 1/3^2 = 1/9 \) compared to hydrogen.
+
+3. This means the wavelengths of Li++ are decreased by a factor of 9 compared to hydrogen.
+
+Thus, the correct answer is {'sol': 'a'}."
+"To solve this, let's analyze the problem step by step:
+
+1. **Understand the energy distribution**: For a rolling object, the total kinetic energy is the sum of translational kinetic energy (\(K_t = \frac{1}{2}mv^2\)) and rotational kinetic energy (\(K_r = \frac{1}{2}I\omega^2\)), where \(I\) is the moment of inertia and \(\omega\) is the angular velocity.
+
+2. **Moment of inertia for a solid disk**: The moment of inertia of a solid disk about its central axis is \(I = \frac{1}{2}mR^2\), where \(m\) is the mass and \(R\) is the radius of the disk.
+
+3. **Relationship between linear and angular velocity**: Since the disk rolls without slipping, the linear velocity \(v\) and angular velocity \(\omega\) are related by \(v = R\omega\).
+
+4. **Express rotational kinetic energy in terms of \(v\)**: Substituting \(I = \frac{1}{2}mR^2\) and \(\omega = \frac{v}{R}\) into \(K_r = \frac{1}{2}I\omega^2\), we get:
+   \[
+   K_r = \frac{1}{2} \cdot \frac{1}{2}mR^2 \cdot \left(\frac{v}{R}\right)^2 = \frac{1}{4}mv^2.
+   \]
+
+5. **Total kinetic energy**: The total kinetic energy is the sum of translational and rotational kinetic energy:
+   \[
+   K_{\text{total}} = K_t + K_r = \frac{1}{2}mv^2 + \frac{1}{4}mv^2 = \frac{3}{4}mv^2.
+   \]
+
+6. **Fraction of rotational kinetic energy**: The fraction of the total kinetic energy that is rotational is:
+   \[
+   \text{Fraction} = \frac{K_r}{K_{\text{total}}} = \frac{\frac{1}{4}mv^2}{\frac{3}{4}mv^2} = \frac{1}{3}.
+   \]
+
+Thus, the fraction of the disk's total kinetic energy that is rotational kinetic energy is **1/3**.
+
+The correct answer is {'sol': 'b'}."
+"To solve this, I will follow these steps:
+
+1. The speed of light in a material is given by \( v = \frac{c}{\sqrt{\epsilon_r}} \), where \( c \) is the speed of light in a vacuum (\( 3.0 \times 10^8 \, \text{m/s} \)) and \( \epsilon_r \) is the dielectric constant of the material.
+2. Substitute \( \epsilon_r = 4.0 \) into the formula: \( v = \frac{3.0 \times 10^8}{\sqrt{4.0}} \).
+3. Calculate \( \sqrt{4.0} = 2.0 \), so \( v = \frac{3.0 \times 10^8}{2.0} = 1.5 \times 10^8 \, \text{m/s} \).
+
+The correct answer is {'sol': 'c'}."
+"First, I need to calculate the equivalent capacitance of the two capacitors connected in series. The formula for the equivalent capacitance \( C_{eq} \) in series is:
+
+\[
+\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2}
+\]
+
+Substituting \( C_1 = 3 \, \mu F \) and \( C_2 = 6 \, \mu F \):
+
+\[
+\frac{1}{C_{eq}} = \frac{1}{3} + \frac{1}{6} = \frac{2}{6} + \frac{1}{6} = \frac{3}{6} = \frac{1}{2}
+\]
+
+So, \( C_{eq} = 2 \, \mu F \).
+
+Next, I calculate the total energy stored in the capacitors using the formula for energy stored in a capacitor:
+
+\[
+E = \frac{1}{2} C_{eq} V^2
+\]
+
+Substituting \( C_{eq} = 2 \, \mu F = 2 \times 10^{-6} \, F \) and \( V = 300 \, V \):
+
+\[
+E = \frac{1}{2} (2 \times 10^{-6}) (300)^2
+\]
+
+\[
+E = (1 \times 10^{-6}) (90000) = 0.09 \, \text{J}
+\]
+
+Therefore, the total energy stored in the two capacitors is 0.09 J. The correct answer is:
+
+{'sol': 'a'}"
+"To determine the approximate kinetic energy of the electrons needed to observe a diffraction pattern, we can use the de Broglie wavelength formula and Bragg's law.
+
+1. The de Broglie wavelength of an electron is given by \(\lambda = \frac{h}{\sqrt{2m_e E_k}}\), where \(h\) is Planck's constant (\(6.626 \times 10^{-34} \, \text{Js}\)), \(m_e\) is the mass of the electron (\(9.11 \times 10^{-31} \, \text{kg}\)), and \(E_k\) is the kinetic energy of the electron.
+
+2. For diffraction to occur, the de Broglie wavelength \(\lambda\) of the electrons should be on the order of the lattice spacing \(d\) of the crystal. Here, \(d = 0.4 \, \text{nm} = 0.4 \times 10^{-9} \, \text{m}\).
+
+3. Rearranging the de Broglie wavelength formula to solve for \(E_k\), we get:
+   \[
+   E_k = \frac{h^2}{2m_e \lambda^2}.
+   \]
+
+4. Substituting the values:
+   \[
+   E_k = \frac{(6.626 \times 10^{-34})^2}{2 \times (9.11 \times 10^{-31}) \times (0.4 \times 10^{-9})^2}.
+   \]
+
+5. Simplifying the calculation:
+   - \(h^2 = (6.626 \times 10^{-34})^2 = 4.39 \times 10^{-67}\),
+   - \(2m_e = 2 \times 9.11 \times 10^{-31} = 1.822 \times 10^{-30}\),
+   - \(\lambda^2 = (0.4 \times 10^{-9})^2 = 1.6 \times 10^{-19}\),
+   - \(E_k = \frac{4.39 \times 10^{-67}}{1.822 \times 10^{-30} \times 1.6 \times 10^{-19}} = \frac{4.39 \times 10^{-67}}{2.915 \times 10^{-49}} = 1.5 \times 10^{-18} \, \text{J}\).
+
+6. Converting \(E_k\) to electron volts (\(1 \, \text{eV} = 1.6 \times 10^{-19} \, \text{J}\)):
+   \[
+   E_k = \frac{1.5 \times 10^{-18}}{1.6 \times 10^{-19}} \approx 10 \, \text{eV}.
+   \]
+
+Thus, the approximate kinetic energy of the electrons needed is 10 eV.
+
+{'sol': 'c'}"
+"To solve this, let's analyze step by step:
+
+1. **Angular Momentum Formula**: The angular momentum \( L \) of a satellite in a circular orbit is given by \( L = mvr \), where \( m \) is the mass of the satellite, \( v \) is its orbital velocity, and \( r \) is the orbital radius. For a satellite in a circular orbit, the orbital velocity \( v \) is determined by the gravitational force providing the centripetal force: \( v = \sqrt{\frac{GM}{r}} \), where \( G \) is the gravitational constant, \( M \) is the mass of Earth, and \( r \) is the orbital radius.
+
+2. **Substitute \( v \) into \( L \)**: Substituting \( v = \sqrt{\frac{GM}{r}} \) into \( L = mvr \), we get:
+   \[
+   L = m \cdot \sqrt{\frac{GM}{r}} \cdot r = m \cdot r \cdot \sqrt{\frac{GM}{r}} = m \cdot \sqrt{GMr}.
+   \]
+   Thus, the angular momentum \( L \) depends on \( \sqrt{r} \).
+
+3. **Ratio of Angular Momenta**: Let the orbital radius of satellite B be \( r \). Then the orbital radius of satellite A is \( 2r \). The angular momentum of A is proportional to \( \sqrt{2r} \), and the angular momentum of B is proportional to \( \sqrt{r} \). The ratio of the angular momentum of A to B is:
+   \[
+   \frac{L_A}{L_B} = \frac{\sqrt{2r}}{\sqrt{r}} = \sqrt{2}.
+   \]
+
+Therefore, the correct answer is {'sol': 'c'}."
+"To solve this, I will use the equations of motion under gravity. 
+
+1. The vertical motion of the object is independent of its horizontal motion. The time it takes to hit the ground is given as 2.0 seconds. The vertical displacement (height) can be calculated using the formula for free fall: \( h = \frac{1}{2} g t^2 \), where \( g \) is the acceleration due to gravity (9.8 m/s²) and \( t \) is the time.
+
+2. Substituting the values: \( h = \frac{1}{2} (9.8) (2.0)^2 \).
+
+3. Simplify: \( h = \frac{1}{2} (9.8) (4.0) = 19.6 \, \text{m} \).
+
+Therefore, the correct answer is {'sol': 'd'}."
+"To solve this, let's proceed step by step:
+
+1. **Initial Kinetic Energy**: The particle of mass 2m is moving, while the particle of mass m is at rest. The initial kinetic energy is given by \( KE_{\text{initial}} = \frac{1}{2}(2m)v^2 = mv^2 \), where \( v \) is the velocity of the particle of mass 2m.
+
+2. **Final Velocity After Collision**: Since the particles stick together after the collision, the final mass is \( 2m + m = 3m \). Using conservation of momentum, the initial momentum \( (2m)v \) equals the final momentum \( (3m)V_f \), where \( V_f \) is the final velocity. Solving for \( V_f \), we get:
+   \[
+   V_f = \frac{2m \cdot v}{3m} = \frac{2v}{3}.
+   \]
+
+3. **Final Kinetic Energy**: The final kinetic energy of the combined mass is:
+   \[
+   KE_{\text{final}} = \frac{1}{2}(3m)V_f^2 = \frac{1}{2}(3m)\left(\frac{2v}{3}\right)^2 = \frac{1}{2}(3m)\left(\frac{4v^2}{9}\right) = \frac{2mv^2}{3}.
+   \]
+
+4. **Kinetic Energy Lost**: The kinetic energy lost is the difference between the initial and final kinetic energies:
+   \[
+   KE_{\text{lost}} = KE_{\text{initial}} - KE_{\text{final}} = mv^2 - \frac{2mv^2}{3} = \frac{3mv^2}{3} - \frac{2mv^2}{3} = \frac{mv^2}{3}.
+   \]
+
+5. **Fraction of Kinetic Energy Lost**: The fraction of the initial kinetic energy lost is:
+   \[
+   \text{Fraction lost} = \frac{KE_{\text{lost}}}{KE_{\text{initial}}} = \frac{\frac{mv^2}{3}}{mv^2} = \frac{1}{3}.
+   \]
+
+Thus, the fraction of the initial kinetic energy lost in the collision is **1/3**.
+
+{'sol': 'c'}"
+"To solve this, we need to consider the interference of light reflected from the top and bottom surfaces of the oil layer. Here's the step-by-step reasoning:
+
+1. **Determine the phase change upon reflection**: 
+   - When light reflects off a medium with a higher index of refraction (air to oil, \( n = 1 \) to \( n = 1.5 \)), there is a \( \pi \) phase shift (equivalent to half a wavelength).
+   - When light reflects off a medium with a lower index of refraction (oil to water, \( n = 1.5 \) to \( n = 1.33 \)), there is no phase shift.
+
+2. **Condition for constructive interference**:
+   - For constructive interference, the total phase difference must be an integer multiple of \( 2\pi \). The effective path difference is due to the round trip through the oil layer and the phase shift at the first reflection.
+   - The condition for constructive interference is:
+     \[
+     2 n_{\text{oil}} d = m \lambda_{\text{in oil}}
+     \]
+     where \( n_{\text{oil}} = 1.5 \), \( d = 500 \, \text{nm} \), and \( \lambda_{\text{in oil}} = \frac{\lambda_{\text{vacuum}}}{n_{\text{oil}}} \).
+
+3. **Calculate the wavelength in vacuum**:
+   - Rearrange the equation to find \( \lambda_{\text{vacuum}} \):
+     \[
+     \lambda_{\text{vacuum}} = \frac{2 n_{\text{oil}} d}{m}
+     \]
+   - Substitute \( n_{\text{oil}} = 1.5 \) and \( d = 500 \, \text{nm} \):
+     \[
+     \lambda_{\text{vacuum}} = \frac{2 (1.5)(500)}{m} = \frac{1500}{m} \, \text{nm}.
+     \]
+
+4. **Find the most strongly reflected wavelength**:
+   - The visible spectrum ranges from approximately 400 nm to 700 nm. We need to find the integer \( m \) such that \( \lambda_{\text{vacuum}} \) falls within this range.
+   - For \( m = 3 \):
+     \[
+     \lambda_{\text{vacuum}} = \frac{1500}{3} = 500 \, \text{nm}.
+     \]
+   - For \( m = 2 \):
+     \[
+     \lambda_{\text{vacuum}} = \frac{1500}{2} = 750 \, \text{nm} \, (\text{outside the visible range}).
+     \]
+   - Therefore, the most strongly reflected wavelength is \( 500 \, \text{nm} \).
+
+The correct answer is {'sol': 'a'}."
+"To solve this, I will use the formula for the cyclotron frequency, which is given by \( f = \frac{qB}{2\pi m} \), where \( f \) is the cyclotron frequency, \( q \) is the charge of the particle, \( B \) is the magnetic field strength, and \( m \) is the mass of the particle.
+
+1. First, I will rearrange the formula to solve for the mass \( m \):  
+   \( m = \frac{qB}{2\pi f} \).
+
+2. Next, I will substitute the known values into the formula. The charge of the particle is twice the charge of an electron, so \( q = 2e = 2 \times 1.6 \times 10^{-19} \, \text{C} = 3.2 \times 10^{-19} \, \text{C} \). The magnetic field strength is \( B = \pi/4 \, \text{T} \), and the cyclotron frequency is \( f = 1,600 \, \text{Hz} \).
+
+3. Substituting these values into the formula:  
+   \( m = \frac{(3.2 \times 10^{-19})(\pi/4)}{2\pi(1,600)} \).  
+   Simplify the expression:  
+   \( m = \frac{3.2 \times 10^{-19} \cdot \pi}{4 \cdot 2\pi \cdot 1,600} \).  
+   Cancel \( \pi \) in the numerator and denominator:  
+   \( m = \frac{3.2 \times 10^{-19}}{4 \cdot 2 \cdot 1,600} \).  
+   \( m = \frac{3.2 \times 10^{-19}}{12,800} \).  
+   \( m = 2.5 \times 10^{-23} \, \text{kg} \).
+
+Therefore, the correct answer is {'sol': 'a'}."
+"To solve this, let's break it down step by step:
+
+1. The payload is released from the airplane, which is traveling at a constant speed of 100 m/s due north. Since air resistance is neglected, the horizontal velocity of the payload remains the same as the airplane's, i.e., 100 m/s north.
+
+2. In the vertical direction, the payload is subject to gravity. The acceleration due to gravity is \( g = 9.8 \, \text{m/s}^2 \). The vertical velocity of the payload after 4.0 seconds can be calculated using the formula:
+   \[
+   v_y = g \cdot t
+   \]
+   Substituting \( g = 9.8 \, \text{m/s}^2 \) and \( t = 4.0 \, \text{s} \):
+   \[
+   v_y = 9.8 \cdot 4.0 = 39.2 \, \text{m/s}
+   \]
+   Rounding to two significant figures, \( v_y \approx 40 \, \text{m/s} \) downward.
+
+3. The velocity of the payload relative to the plane is the combination of the horizontal and vertical components. Horizontally, the payload and the plane have the same velocity (100 m/s north), so there is no relative motion in that direction. Vertically, the payload has a downward velocity of 40 m/s relative to the plane.
+
+Thus, the velocity of the payload relative to the plane is 100 m/s north and 40 m/s down.
+
+The correct answer is {'sol': 'd'}."
+"To solve this, I will calculate the energy levels of positronium and the energy difference between the n=3 and n=1 states.
+
+1. The energy levels of positronium are given by a formula similar to that of the hydrogen atom, but with a reduced mass correction. The energy of a level is \( E_n = -\frac{13.6 \, \text{eV}}{n^2} \), where \( n \) is the principal quantum number. For positronium, the energy levels are halved compared to hydrogen because the reduced mass of the system is half that of the hydrogen atom. Thus, the energy levels for positronium are \( E_n = -\frac{13.6 \, \text{eV}}{2n^2} \).
+
+2. For \( n=3 \), the energy is \( E_3 = -\frac{13.6}{2 \cdot 3^2} = -\frac{13.6}{18} \approx -0.756 \, \text{eV} \). For \( n=1 \), the energy is \( E_1 = -\frac{13.6}{2 \cdot 1^2} = -6.8 \, \text{eV} \).
+
+3. The energy of the photon emitted during the transition is the difference between these two energy levels: \( \Delta E = E_1 - E_3 = -6.8 - (-0.756) = 6.044 \, \text{eV} \).
+
+Thus, the energy of the photon emitted is closest to 6.0 eV.
+
+{'sol': 'a'}"
+"To solve this, let's analyze step by step:
+
+1. The gravitational force provides the centripetal force for the satellite's circular motion. Using Newton's law of gravitation and centripetal force, we have:
+   \[
+   \frac{G M m}{R^2} = \frac{m v^2}{R},
+   \]
+   where \(G\) is the gravitational constant, \(M\) is the planet's mass, \(m\) is the satellite's mass, \(R\) is the orbital radius, and \(v\) is the orbital speed.
+
+2. Simplify the equation to find the orbital speed \(v\):
+   \[
+   v = \sqrt{\frac{G M}{R}}.
+   \]
+
+3. The orbital period \(T\) is the time required for one revolution, which is the circumference of the orbit divided by the orbital speed:
+   \[
+   T = \frac{2 \pi R}{v}.
+   \]
+
+4. Substitute \(v = \sqrt{\frac{G M}{R}}\) into the equation for \(T\):
+   \[
+   T = \frac{2 \pi R}{\sqrt{\frac{G M}{R}}} = 2 \pi \sqrt{\frac{R^3}{G M}}.
+   \]
+
+5. From this equation, we see that \(T\) is proportional to \(R^{3/2}\) and depends on \(M\), but it is independent of \(m\).
+
+Thus, the correct answer is {'sol': 'd'}."

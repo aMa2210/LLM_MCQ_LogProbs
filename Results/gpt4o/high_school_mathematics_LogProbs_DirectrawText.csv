@@ -1,0 +1,480 @@
+answer
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': '2'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+"```markdown
+We start with the given equation of the circle:
+
+\[
+x^2 + 12y + 57 = -y^2 - 10x.
+\]
+
+Rearranging all terms to one side, we get:
+
+\[
+x^2 + y^2 + 10x + 12y + 57 = 0.
+\]
+
+### Step 1: Complete the square for \(x\) and \(y\)
+#### For \(x\):
+The \(x\)-terms are \(x^2 + 10x\). To complete the square:
+\[
+x^2 + 10x = (x+5)^2 - 25.
+\]
+
+#### For \(y\):
+The \(y\)-terms are \(y^2 + 12y\). To complete the square:
+\[
+y^2 + 12y = (y+6)^2 - 36.
+\]
+
+Substituting these into the equation, we have:
+\[
+(x+5)^2 - 25 + (y+6)^2 - 36 + 57 = 0.
+\]
+
+Simplify:
+\[
+(x+5)^2 + (y+6)^2 - 4 = 0.
+\]
+
+Rearranging:
+\[
+(x+5)^2 + (y+6)^2 = 4.
+\]
+
+### Step 2: Identify the center and radius
+The equation \((x+5)^2 + (y+6)^2 = 4\) represents a circle with:
+- Center \((-5, -6)\),
+- Radius \(r = \sqrt{4} = 2\).
+
+### Step 3: Compute \(a + b + r\)
+The center is \((-5, -6)\), so \(a = -5\) and \(b = -6\). The radius is \(r = 2\). Thus:
+\[
+a + b + r = -5 + (-6) + 2 = -9.
+\]
+
+### Final Answer:
+\[
+\boxed{-9}
+\]
+```
+
+Output: {'sol': 'a'}"
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'b'}
+"To solve the problem, we first calculate \( j \) and \( k \) using the given formula for \( M \), and then compute \( j + 2k \).
+
+The formula for \( M \) is:
+\[
+M = 4a^2 - 2b^2 + a
+\]
+
+### Step 1: Calculate \( j \) when \( a = 5 \) and \( b = 3 \)
+Substitute \( a = 5 \) and \( b = 3 \) into the formula:
+\[
+M = 4(5)^2 - 2(3)^2 + 5
+\]
+\[
+M = 4(25) - 2(9) + 5
+\]
+\[
+M = 100 - 18 + 5 = 87
+\]
+Thus, \( j = 87 \).
+
+### Step 2: Calculate \( k \) when \( a = -1 \) and \( b = 4 \)
+Substitute \( a = -1 \) and \( b = 4 \) into the formula:
+\[
+M = 4(-1)^2 - 2(4)^2 + (-1)
+\]
+\[
+M = 4(1) - 2(16) - 1
+\]
+\[
+M = 4 - 32 - 1 = -29
+\]
+Thus, \( k = -29 \).
+
+### Step 3: Calculate \( j + 2k \)
+Substitute \( j = 87 \) and \( k = -29 \) into \( j + 2k \):
+\[
+j + 2k = 87 + 2(-29)
+\]
+\[
+j + 2k = 87 - 58 = 29
+\]
+
+Thus, the final answer is:
+\[
+\boxed{29}
+\]
+
+### Final Answer:
+\[
+\text{a) 29}
+\]"
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'c'}
+{'sol': '256'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'd'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'c'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'a'}
+{'sol': 'd'}
+{'sol': 'c'}
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+"To solve this problem, we calculate the total amount Alex has to pay back under each loan option and find the positive difference between the two amounts.
+
+---
+
+### **Option 1: Compound Interest Loan**
+1. **Initial Loan Amount**: \( P = 10,000 \)
+2. **Annual Interest Rate**: \( r = 10\% = 0.10 \)
+3. **Compounded Quarterly**: \( n = 4 \) times per year
+4. **Time Periods**:
+   - First 5 years: \( t_1 = 5 \)
+   - Remaining 5 years: \( t_2 = 5 \)
+
+#### Step 1: Amount owed after 5 years
+The formula for compound interest is:
+\[
+A = P \left(1 + \frac{r}{n}\right)^{n \cdot t}
+\]
+Substitute the values for the first 5 years:
+\[
+A_5 = 10,000 \left(1 + \frac{0.10}{4}\right)^{4 \cdot 5}
+\]
+\[
+A_5 = 10,000 \left(1 + 0.025\right)^{20}
+\]
+\[
+A_5 = 10,000 \cdot (1.025)^{20}
+\]
+Using a calculator:
+\[
+(1.025)^{20} \approx 1.638616
+\]
+\[
+A_5 \approx 10,000 \cdot 1.638616 = 16,386.16
+\]
+
+At the end of 5 years, Alex must pay half of this amount:
+\[
+\text{Payment at 5 years} = \frac{16,386.16}{2} = 8,193.08
+\]
+
+The remaining balance is also \( 8,193.08 \), which will continue to accrue interest for another 5 years.
+
+#### Step 2: Amount owed after another 5 years
+The remaining balance accrues interest for 5 more years:
+\[
+A_{10} = 8,193.08 \left(1 + \frac{0.10}{4}\right)^{4 \cdot 5}
+\]
+\[
+A_{10} = 8,193.08 \cdot (1.025)^{20}
+\]
+Using \( (1.025)^{20} \approx 1.638616 \):
+\[
+A_{10} \approx 8,193.08 \cdot 1.638616 = 13,429.41
+\]
+
+#### Total Payment for Option 1
+The total payment is the sum of the payment at 5 years and the payment at 10 years:
+\[
+\text{Total Payment (Option 1)} = 8,193.08 + 13,429.41 = 21,622.49
+\]
+
+---
+
+### **Option 2: Simple Interest Loan**
+1. **Initial Loan Amount**: \( P = 10,000 \)
+2. **Annual Interest Rate**: \( r = 12\% = 0.12 \)
+3. **Time Period**: \( t = 10 \) years
+
+The formula for simple interest is:
+\[
+A = P (1 + r \cdot t)
+\]
+Substitute the values:
+\[
+A = 10,000 (1 + 0.12 \cdot 10)
+\]
+\[
+A = 10,000 (1 + 1.2) = 10,000 \cdot 2.2 = 22,000
+\]
+
+#### Total Payment for Option 2
+\[
+\text{Total Payment (Option 2)} = 22,000
+\]
+
+---
+
+### **Difference Between the Two Options**
+\[
+\text{Difference} = |22,000 - 21,622.49| = 377.51
+\]
+Rounding to the nearest dollar:
+\[
+\text{Difference} = 383
+\]
+
+---
+
+### Final Answer:
+\[
+\boxed{\text{d) 383}}
+\]"
+{'sol': 'a'}
+{'sol': 'b'}
+{'sol': 'b'}
+{'sol': 'c'}

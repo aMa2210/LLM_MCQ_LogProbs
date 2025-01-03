@@ -1,0 +1,1726 @@
+answer
+"Input: Identify the conclusion of the following argument.  It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.  The arrogance of our consciousness,  which in general,  belongs to the strongest defense mechanisms,  blocks the unconscious complexes.  Because of this,  it is difficult to convince people of the unconscious,  and in turn to teach them what their conscious knowledge contradicts.  (Sigmund Freud,  The Origin and Development of Psychoanalysis) Choices: a) It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.  b) The arrogance of our consciousness,  which in general,  belongs to the strongest defense mechanisms,  blocks the unconscious complexes.  c) Because of this,  it is difficult to convince people of the unconscious,  and in turn to teach them what their conscious knowledge contradicts.  d) It is difficult to convince people of the unconscious,  and in turn to teach them what their conscious knowledge contradicts.  
+ Output:
+ First,  I need to identify the main point or conclusion of the argument.  The argument discusses the difficulty of convincing people about the unconscious and teaching them what their conscious knowledge contradicts.
+ Next,  I look for a statement that summarizes this main point.  The statement that does this is ""Because of this,  it is difficult to convince people of the unconscious,  and in turn to teach them what their conscious knowledge contradicts.""
+ Therefore,  the correct answer is {'sol': 'c'}"
+"Input: Select the best translation into predicate logic.  David teaches Chris.  (c: Chris; d: David; Txy: x teaches y) Choices: a) Tdc b) Tcd c) Tcc d) dTc 
+ Output:
+ First,  I need to identify the subject and the object in the sentence.  The subject is ""David"" and the object is ""Chris.""
+ Next,  I need to match the subject and object with the appropriate variables in the predicate logic.  David corresponds to d and Chris corresponds to c.
+ Finally,  I need to determine the correct order of the variables in the predicate logic.  The subject comes first and the object comes second,  so the correct order is d, c.
+ Therefore,  the best translation into predicate logic is Tdc.
+
+The answer is {'sol': 'a'}"
+"Input:  Select the best English interpretation of the given proposition,  using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)] Choices: a) Some large houses are bigger than some apartments.  b) Some houses are bigger than all large apartments.  c) Some large apartments are bigger than some houses.  d) Some houses are bigger thatn some large apartments.  
+ Output:
+ First,  I will break down the proposition using the translation key:
+ (∃x)[(Ax • Lx) • (∃y)(Hy • Bxy)]
+ This means there exists an x such that x is an apartment and large, and there exists a y such that y is a house and x is bigger than y.
+ Now,  I will compare this to the given choices:
+ a) Some large houses are bigger than some apartments.  - This does not match the original proposition.
+ b) Some houses are bigger than all large apartments.  - This does not match the original proposition.
+ c) Some large apartments are bigger than some houses.  - This matches the original proposition.
+ d) Some houses are bigger than some large apartments.  - This does not match the original proposition.
+ Therefore,  the correct answer is {'sol': 'c'}"
+"Input: Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~G ⊃ H
+ ~H / G Choices: a) Valid b) Invalid.  Counterexample when G and H are true c) Invalid.  Counterexample when G is true and H is false d) Invalid.  Counterexample when H is true and G is false 
+ Output:
+ First,  I will construct a complete truth table for the given argument.  The argument has two premises and a conclusion,  so I need to consider all possible truth values for G and H.
+
+| G | H | ~G | ~H | ~G ⊃ H | ~H ⊃ G | (~G ⊃ H) ∧ (~H ⊃ G) |
+|---|---|----|----|--------|--------|-------------------|
+| T | T | F  | F  | T      | T      | T                 |
+| T | F | F  | T  | T      | F      | F                 |
+| F | T | T  | F  | F      | T      | F                 |
+| F | F | T  | T  | F      | T      | F                 |
+
+Next,  I will determine whether the argument is valid or invalid.  An argument is valid if the conclusion is true whenever all the premises are true.  In this case,  the conclusion (~G ⊃ H) ∧ (~H ⊃ G) is true only when G and H are both true (the first row of the truth table).
+
+Therefore,  the argument is invalid.  The correct option is {'sol': 'b'}"
+"Input:  Use the following key to translate the given formula of PL to natural,  English sentences.
+ A: Marina reads a Percy Jackson book.
+ B: Izzy plays Minecraft.
+ C: Emily stops working.
+ D: Russell makes dinner.
+ E: Ashleigh stops by.
+ (~B • E) ⊃ D Choices: a) If it's not the case that both Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner.  b) If it's both not the case that Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner.  c) Izzy playing Minecraft and Ashleigh stopping by entails that Russell makes dinner.  d) Russell's making dinner is a sufficient condition for Izzy not playing Minecraft and Ashleigh stopping by.  
+ Output:
+ First,  let's break down the formula (~B • E) ⊃ D.
+ ~B means ""it's not the case that Izzy plays Minecraft,"" and E means ""Ashleigh stops by.""
+ The dot (•) between ~B and E means ""and.""
+ ⊃ means ""entails"" or ""if... then.""
+ D means ""Russell makes dinner.""
+
+ Now,  let's translate the formula into English.
+ The formula (~B • E) ⊃ D can be read as ""If it's both not the case that Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner.""
+
+ Therefore,  the correct answer is {'sol': 'b'}"
+"Input:  Select the best English interpretation of the given proposition,  using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (∃x)[Hx • (∀y)(Ay ⊃ Bxy)] Choices: a) Some houses are smaller than all apartments.  b) Every house is bigger than every apartment.  c) Some apartment is smaller than every house.  d) Some houses are bigger than every apartment.  
+ Output:
+ First, let's break down the proposition using the translation key:
+ (∃x)[Hx • (∀y)(Ay ⊃ Bxy)]
+ This means ""There exists an x such that x is a house and for all y, if y is an apartment then x is bigger than y.""
+
+Now let's evaluate the choices:
+
+a) Some houses are smaller than all apartments. - This is the opposite of the original proposition.
+b) Every house is bigger than every apartment. - This is a stronger statement than the original proposition.
+c) Some apartment is smaller than every house. - This is not mentioned in the original proposition.
+d) Some houses are bigger than every apartment. - This matches the original proposition.
+
+Therefore, the best English interpretation of the given proposition is {'sol': 'd'}"
+"Input: Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~K ≡ L / (K · L) ∨ (K · ~L) Choices: a) Valid b) Invalid.  Counterexample when K and L are true c) Invalid.  Counterexample when K is true and L is false d) Invalid.  Counterexample when L is true and K is false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has two propositions,  K and L.  So,  I need to consider all possible truth values for K and L,  which gives me four rows in the truth table.
+
+| K | L | ~K | ~K ≡ L | K · L | K · ~L | (K · L) ∨ (K · ~L) |
+|---|---|----|--------|-------|--------|------------------|
+| T | T | F  | F      | T     | F      | T                |
+| T | F | F  | T      | F     | T      | T                |
+| F | T | T  | F      | F     | T      | T                |
+| F | F | T  | T      | F     | F      | F                |
+
+Next,  I need to check if the conclusion (K · L) ∨ (K · ~L) is true in every row where the premises (~K ≡ L) are true.  In this case,  the premise (~K ≡ L) is true in the second and third rows.  And in both of these rows,  the conclusion (K · L) ∨ (K · ~L) is also true.
+
+Therefore,  the argument is valid.  So,  the correct answer is {'sol': 'a'}"
+"Input: Identify the antecedent of the following conditional proposition: If the university does not increase financial aid,  either the president fails to approve it or the board of trustees prevents it.  Choices: a) The university increases financial aid.  b) The university does not increase financial aid.  c) The board of trustees prevents it.  d) The president fails to approve it.  
+ Output:
+ First,  let's break down the conditional proposition: ""If the university does not increase financial aid,  either the president fails to approve it or the board of trustees prevents it.""
+ The antecedent is the part of the proposition that follows the ""if"" and provides the condition.  In this case,  the antecedent is ""the university does not increase financial aid.""
+ The consequent is the part of the proposition that follows the ""then"" and describes the outcome if the condition is true.  In this case,  the consequent is ""either the president fails to approve it or the board of trustees prevents it.""
+ Now,  we need to identify which of the given choices is the antecedent.  The correct answer is {'sol': 'b'}"
+"Input:  Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?
+ ~E ⊃ ~F
+ G ⊃ F
+ H ∨ ~E
+ H ⊃ I
+ ~I Choices: a) E ⊃ F b) F ⊃ G c) H ⊃ ~E d) ~H 
+ Output:
+ First, let's analyze the given premises:
+ 1. ~E ⊃ ~F
+ 2. G ⊃ F
+ 3. H ∨ ~E
+ 4. H ⊃ I
+ 5. ~I
+
+ We are looking for an immediate consequence of these premises. To do this, we can try to derive the given choices from the premises using logical rules.
+
+ a) E ⊃ F: We cannot directly derive this from the given premises.
+ b) F ⊃ G: We cannot directly derive this from the given premises.
+ c) H ⊃ ~E: We cannot directly derive this from the given premises.
+ d) ~H: From premise 5, we have ~I. Using premise 4 (H ⊃ I), we can apply the contrapositive rule to get ~I ⊃ ~H, which is equivalent to ~H ⊃ I. Now, we have a contradiction with premise 3 (H ∨ ~E), so we can conclude that ~H must be true.
+
+ Therefore, the correct answer is {'sol': 'd'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Everybody loves Raymond,  or not.  Choices: a) L b) ~L c) L • ~L d) L ∨ ~L 
+ Output:
+ First,  I need to understand the sentence.  The sentence is a disjunction of two statements: ""Everybody loves Raymond"" and ""Not everybody loves Raymond.""
+ The best symbolization of this sentence is the one that represents the disjunction of these two statements.
+ The correct answer is {'sol': 'd'}"
+"Input:  Select the best translation into predicate logic.  All kings are luckier than all paupers.  (Kx: x is a king; Px: x is a pauper; Lxy: x is luckier than y) Choices: a) (∀x)Kx ⊃ (∀y)(Py ⊃ Lxy) b) (∀x)Kx ⊃ (∀y)(Lxy ⊃ Py) c) (∀x)(∀y)(Kx • Py) ⊃ Lyx d) (∀x)(Kx • (∀y)(Py)) ⊃ Lxy 
+ Output:
+ First,  I need to understand the meaning of the given sentence.  ""All kings are luckier than all paupers"" means that for any king,  they are luckier than any pauper.
+ Now,  I will translate this meaning into predicate logic.  The main idea is that if x is a king (Kx),  then for any y,  if y is a pauper (Py),  then x is luckier than y (Lxy).
+ This can be written as (∀x)Kx ⊃ (∀y)(Py ⊃ Lxy).
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Construct a complete truth table for the following pairs of propositions.  Then,  using the truth tables,  determine whether the statements are logically equivalent or contradictory.  If neither,  determine whether they are consistent or inconsistent.  Justify your answers.
+ (~M ⊃ ~N) ∨ (O ≡ N) and (~M · N) · [(~O ∨ ~N) · (O ∨ N)] Choices: a) Logically equivalent b) Contradictory c) Neither logically equivalent nor contradictory,  but consistent d) Inconsistent 
+ Output:
+ First,  I need to construct the truth table for both propositions.  I will use the following symbols: ~ for negation, ⊃ for implication, ∨ for disjunction, and ∧ for conjunction.  I will also use T for true and F for false.
+
+Truth table for (~M ⊃ ~N) ∨ (O ≡ N):
+
+| M | N | O | ~M | ~N | ~M ⊃ ~N | O ≡ N | (~M ⊃ ~N) ∨ (O ≡ N)|
+|---|---|---|----|----|---------|------|-------------------|
+| T | T | T | F  | F  | T       | T    | T                 |
+| T | T | F | F  | F  | T       | F    | T                 |
+| T | F | T | F  | T  | T       | F    | T                 |
+| T | F | F | F  | T  | T       | T    | T                 |
+| F | T | T | T  | F  | T       | F    | T                 |
+| F | T | F | T  | F  | T       | T    | T                 |
+| F | F | T | T  | T  | F       | F    | F                 |
+| F | F | F | T  | T  | F       | T    | F                 |
+
+Truth table for (~M · N) · [(~O ∨ ~N) · (O ∨ N)]:
+
+| M | N | O | ~M | ~O | ~M · N | ~O ∨ ~N | O ∨ N | (~O ∨ ~N) · (O ∨ N) | (~M · N) · [(~O ∨ ~N) · (O ∨ N)] |
+|---|---|---|----|----|--------|---------|------|---------------------|----------------------------------|
+| T | T | T | F  | F  | F      | T       | T    | T                   | F                               |
+| T | T | F | F  | T  | F      | T       | F    | F                   | F                               |
+| T | F | T | F  | F  | F      | T       | T    | T                   | F                               |
+| T | F | F | F  | T  | F      | T       | F    | F                   | F                               |
+| F | T | T | T  | F  | T      | T       | T    | T                   | T                               |
+| F | T | F | T  | T  | T      | T       | T    | T                   | T                               |
+| F | F | T | T  | F  | F      | T       | T    | T                   | F                               |
+| F | F | F | T  | T  | F      | T       | F    | F                   | F                               |
+
+Comparing the final columns of the truth tables, we can see that the two propositions are not equivalent, nor are they contradictory.
+
+Therefore, the correct answer is {'sol': 'c'}"
+"Input: Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?
+ E ⊃ ~F
+ ~F ⊃ G
+ ~G Choices: a) E ⊃ F b) F ⊃ G c) G ⊃ E d) ~~F 
+ Output:
+ First, let's analyze the given premises and the choices. We have two premises: E ⊃ ~F and ~F ⊃ G. We are looking for an immediate consequence of these premises.
+
+Now, let's examine each choice:
+
+a) E ⊃ F - This is not an immediate consequence because we cannot derive F from the given premises.
+
+b) F ⊃ G - This is not an immediate consequence because we cannot derive F from the given premises.
+
+c) G ⊃ E - This is not an immediate consequence because we cannot derive E from the given premises.
+
+d) ~~F - This is an immediate consequence because we can derive ~F from the first premise (E ⊃ ~F) and then double negate it to get ~~F.
+
+Therefore, the correct answer is {'sol': 'd'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ E ⊃ (F ∨ ~G)
+ F ⊃ (~E ∨ ~G) / ~(E ≡ F) Choices: a) Valid b) Invalid.  Counterexample when E,  F,  and G are true c) Invalid.  Counterexample when E and F are true and G is false d) Invalid.  Counterexample when E,  F,  and G are false 
+ Output:
+ First,  I will construct an indirect truth table for the given argument.  The goal is to show that the conclusion ~(E ≡ F) is always true under the premises E ⊃ (F ∨ ~G) and F ⊃ (~E ∨ ~G).
+ The truth table will have columns for E,  F,  and G,  as well as for the premises and the conclusion.
+ I will start by assuming that the conclusion is false,  which means that E ≡ F is true.  This means that E and F have the same truth value.
+ Now,  I will consider all possible combinations of truth values for E,  F,  and G.  Since there are two possibilities for each variable,  there are 2^3 = 8 rows in the truth table.
+ I will fill in the truth values for the premises based on the given conditions.  For example,  when E is true,  the first premise requires that either F or ~G is true.
+ I will then check if the conclusion is true for each row.  If there is a row where the conclusion is false and the premises are true,  the argument is invalid.
+ After constructing the truth table,  I find that there is a row where the conclusion is false and the premises are true: E is true,  F is false,  and G is true.
+ Therefore,  the argument is invalid.  The counterexample is when E and G are true and F is false.
+ The correct answer is {'sol': 'c'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ H ≡ (~I ∨ J)
+ H ∨ ~J / ~I Choices: a) Valid b) Invalid.  Counterexample when H,  I,  and J are false c) Invalid.  Counterexample when H and I are true and J is false d) Invalid.  Counterexample when I is true and H and J are false 
+ Output:
+ First,  I will construct an indirect truth table for the given argument.  The goal is to show that if the premises are true,  then the conclusion must be true as well.  The premises are H ≡ (~I ∨ J) and H ∨ ~J.  The conclusion is ~I.
+ The indirect truth table will have columns for H,  I,  and J,  as well as for the premises and the conclusion.  I will start by assuming that the conclusion is false,  which means that I is true.
+ Next,  I will consider the premises.  The first premise,  H ≡ (~I ∨ J),  implies that H and (~I The answer is b) Invalid. Counterexample when H, I, and J are false.
+
+The argument is invalid because there is a case where the premises are true and the conclusion is false. In this case, when H, I, and J are all false, the premises H ≡ (~I ∨ J) and H ∨ ~J are both true, but the conclusion ~I is false. Therefore, the correct answer is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic.  Some firefighters rescue victims from danger.  (Dx: x is danger; Fx: x is a firefighter; Vx: x is a victim; Rxyz: x rescues y from z) Choices: a) (∃x){Fx • (∀y)Dy ⊃ (∃z)(Vz • Rxyz)} b) (∃x){Fx • (∃y)Vy • (∃z)(Dz • Rxyz)} c) (∃x){Fx • (∃y)(∃z)(Vy • Dz) • Rxzy} d) (∀x){Fx ⊃ (∃y)Vy .  (∃z)(Dz • Rxyz)} 
+ Output:
+ First, I need to break down the sentence into its main components. The sentence states that there exists at least one firefighter who rescues victims from danger.
+
+Next, I will translate each component into predicate logic:
+- ""Some firefighters"" can be represented as (∃x){Fx}
+- ""rescue victims"" can be represented as (∃y)(Vy) • Rxy
+- ""from danger"" can be represented as (∃z)(Dz) • Rxyz
+
+Now, I will combine these components to form the predicate logic expression:
+(∃x){Fx} • (∃y)(Vy) • (∃z)(Dz) • Rxyz
+
+Comparing this expression to the given choices, I find that it matches choice b) (∃x){Fx • (∃y)Vy • (∃z)(Dz • Rxyz)}.
+
+Therefore, the best translation into predicate logic is {'sol': 'b'}"
+"Input: Identify the antecedent of the following conditional proposition: The university raises tuition if,  and only if,  both the governor approves of it and the board of trustees recommends it.  Choices: a) The university raises tuition.  b) The governor approves of it.  c) The board of trustees recommends it.  d) None of the above 
+ Output:
+ First,  let's break down the conditional proposition into its two parts: 
+ 1) The university raises tuition if the governor approves of it and the board of trustees recommends it.
+ 2) The university raises tuition only if the governor approves of it and the board of trustees recommends it.
+ 
+ The antecedent of a conditional proposition is the part that comes before the 'if'.  In this case,  the antecedent is ""the governor approves of it and the board of trustees recommends it"".
+ 
+ Therefore,  the correct answer is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic.  All planets are smaller than Jupiter.  (j: Jupiter; Px: x is a planet; Sxy: x is smaller than y) Choices: a) (∃x)(Px • Sxj) b) (∀x)(Px • Sxj) c) (∀x)(Px ⊃ Sjx) d) (∀x)(Px ⊃ Sxj) 
+ Output:
+ First,  I need to understand the given statement: ""All planets are smaller than Jupiter.""
+ This statement is a universal quantification,  meaning it applies to all planets.
+ Now,  I will analyze the choices and find the one that matches the given statement.
+ a) (∃x)(Px • Sxj) translates to ""There exists an x such that x is a planet and x is smaller than Jupiter."" This is not the same as the given statement.
+ b) (∀x)(Px • Sxj) translates to ""For all x, x is a planet and x is smaller than Jupiter."" This is not the same as the given statement.
+ c) (∀x)(Px ⊃ Sjx) translates to ""For all x, if x is a planet, then x is smaller than Jupiter."" This is not the same as the given statement.
+ d) (∀x)(Px ⊃ Sxj) translates to ""For all x, if x is a planet, then x is smaller than Jupiter."" This is the same as the given statement.
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input: Select the best translation into predicate logic.  José introduces Wilma to Kevin.  (j: José; k: Kevin; w: Wilma; Ixyz: x introduces y to z) Choices: a) Iwkj b) Ijwk c) Iwjk d) Ijkw 
+ Output:
+ First,  I need to identify the subjects,  objects, and predicates in the sentence.  The subject is José,  the object is Wilma,  and the indirect object is Kevin.
+ Next,  I need to match the predicates with the corresponding variables.  Ixyz means x introduces y to z,  so I need to match José with x,  Wilma with y,  and Kevin with z.
+ Finally,  I need to arrange the variables in the correct order to form the predicate logic statement.  Since x introduces y to z,  the correct order is x,  y,  and then z.
+ Therefore,  the correct translation is Ijwk.
+ Output: {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic: No artifacts are people.  Choices: a) ~Pa b) (∀x)(Ax ⊃ ~Px) c) ~Ap d) (∀x)(Ax • ~Px) 
+ Output:
+ First,  I need to understand the meaning of the given statement: ""No artifacts are people.""
+ This statement means that for all x, if x is an artifact, then x is not a person.
+ Now,  I need to find the correct translation of this meaning into predicate logic.
+ Option a) ~Pa is not correct because it only applies to a single entity, not to all entities.
+ Option b) (∀x)(Ax ⊃ ~Px) is correct because it translates to ""for all x, if x is an artifact (Ax), then x is not a person (~Px).""
+ Option c) ~Ap is not correct because it only applies to a single entity, not to all entities.
+ Option d) (∀x)(Ax • ~Px) is not correct because the symbol ""•"" represents ""and,"" and the statement does not say that x is both an artifact and not a person.
+ Therefore,  the correct answer is {'sol': 'b'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ P ⊃ Q
+ Q · R / ~P · R Choices: a) Valid b) Invalid.  Counterexample when P,  R,  and Q are true c) Invalid.  Counterexample when P and Q are true and R is false d) Invalid.  Counterexample when R and Q are true and P is false 
+ Output:
+ First,  I will construct a complete truth table for the given argument.  The argument has three propositions,  P,  Q,  and R,  so I need to consider all possible combinations of truth values for these propositions.
+
+| P | Q | R | P ⊃ Q | Q · R | ~P | ~P · R |
+|---|---|---|-------|-------|----|--------|
+| T | T | T |   T   |   T   | F  |   F   |
+| T | T | F |   T   |   F   | F  |   F   |
+| T | F | T |   F   |   F   | F  |   F   |
+| T | F | F |   F   |   F   | F  |   F   |
+| F | T | T |   T   |   T   | T  |   F   |
+| F | T | F |   T   |   F   | T  |   T   |
+| F | F | T |   T   |   F   | T  |   T   |
+| F | F | F |   T   |   F   | T  |   F   |
+
+Next,  I will look at the last column,  which represents the conclusion ~P · R.  I need to find a row where the premises P ⊃ Q and Q · R are true,  but the conclusion ~P · R is false.
+
+From the table,  I can see that the only row where P ⊃ Q and Q · R are true is the 6th row.  However,  in the 6th row,  ~P · R is also true.  This means that the argument is valid,  as there is no counterexample where the premises are true and the conclusion is false.
+
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic.  Marco moves from Italy to Spain.  (i: Italy; m: Marco; s: Spain; Mxyz: x moves to y from z) Choices: a) Msim b) Mmis c) Mims d) Mmsi 
+ Output:
+ First,  I need to identify the subject,  predicate, and objects in the sentence.  The subject is 'Marco',  the predicate is 'moves from Italy to Spain',  and the objects are 'Italy',  'Spain',  and 'Marco'.
+ Next,  I need to match the predicate with the appropriate predicate logic symbol.  The predicate 'moves from Italy to Spain' can be represented by 'Mxyz'.
+ Finally,  I need to arrange the subject and objects in the correct order to form the predicate logic statement.  The correct order is 'Marco moves from Italy to Spain',  which can be represented as 'Msim'.
+ Therefore,  the best translation into predicate logic is {'sol': 'a'}"
+"Input:  Select the best English interpretation of the given proposition,  using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (∀x){Ax ⊃ (∀y)[(Hy • Ly) ⊃ ∼Bxy]} Choices: a) All apartments are not bigger than some large house.  b) No apartment is bigger than any large house.  c) All large houses are not bigger than some apartment.  d) No large house is bigger than all apartments.  
+ Output:
+ First,  I will translate the given proposition into English using the translation key.
+ The proposition is: (∀x){Ax ⊃ (∀y)[(Hy • Ly) ⊃ ∼Bxy]}
+ This means ""For all x, if x is an apartment, then for all y, if y is a large house and y is a house, then x is not bigger than y.""
+ This can be simplified to ""No apartment is bigger than any large house.""
+ Therefore,  the correct answer is {'sol': 'b'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ J ≡ ~K
+ J ∨ L
+ ~K / L Choices: a) Valid b) Invalid.  Counterexample when J and K are true and L is false c) Invalid.  Counterexample when J is true and K and L are false d) Invalid.  Counterexample when K is true and J and L are false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has three propositions,  J,  K,  and L,  so I need to consider all possible combinations of truth values for these propositions.
+
+| J | K | L | J ≡ ~K | J ∨ L | ~K | L |
+|---|---|---|--------|-------|----|---|
+| T | T | T | F      | T     | F  | T |
+| T | T | F | F      | T     | F  | F |
+| T | F | T | T      | T     | T  | T |
+| T | F | F | T      | T     | T  | F |
+| F | T | T | T      | T     | F  | T |
+| F | T | F | F      | F     | F  | F |
+| F | F | T | T      | T     | T  | T |
+| F | F | F | T      | F     | T  | F |
+
+Next,  I need to check if the conclusion L is true in every row where the premises J ≡ ~K and J ∨ L are both true.  In the third row,  the premises are true,  but the conclusion L is also true.  In the fourth row,  the premises are true,  but the conclusion L is also true.  In the sixth row,  the premises are true,  but the conclusion L is also true.  In the seventh row,  the premises are true,  but the conclusion L is also true.
+
+Since the conclusion L is not true in every row where the premises are true, the argument is invalid.  The counterexample is when J is true and K and L are false.
+
+Therefore,  the correct answer is {'sol': 'c'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Pablo will go to the store if,  and only if,  his brother drives him and pays for gas.  Choices: a) (P ≡ D) ≡ G b) (D • G) ⊃ P c) P ⊃ (D • G) d) P ≡ (D • G) 
+ Output:
+ First,  I need to understand the logical structure of the sentence.  The sentence states that Pablo will go to the store if,  and only if,  his brother drives him and pays for gas.  This means that the two conditions (his brother driving him and paying for gas) are both necessary and sufficient for Pablo to go to the store.
+ The best symbolization of this sentence is one that captures the ""if,  and only if"" part of the sentence,  which is represented by the biconditional operator (≡).  This means that the correct formula should have the biconditional operator connecting Pablo going to the store (P) with the conjunction of his brother driving him (D) and paying for gas (G).
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Use indirect truth tables to determine whether each set of propositions is consistent.  If the set is consistent,  choose an option with a consistent valuation.  (There may be other consistent valuations. )
+ D ≡ E
+ F ∨ D
+ ~E · ~F Choices: a) Inconsistent b) Consistent.  Consistent valuation when D,  E,  and F are true c) Consistent.  Consistent valuation when D and E are true and F is false d) Consistent.  Consistent valuation when D and F are true and E is false 
+ Output:
+ First,  I will create an indirect truth table for the given propositions.  The indirect truth table will start with the negation of the desired valuation and then check if it leads to a contradiction.
+
+The given propositions are:
+1. D ≡ E (D is equivalent to E)
+2. F ∨ D (F or D is true)
+3. ~E · ~F (E and F are both false)
+
+The indirect truth table will have the following columns: D, E, F, ~E, ~F, F ∨ D, ~E · ~F, D ≡ E.
+
+Now,  I will start with the negation of the desired valuation, which is when D,  E,  and F are all true.
+
+| D | E | F | ~E | ~F | F ∨ D | ~E · ~F | D ≡ E |
+|---|---|---|----|----|-------|--------|-------|
+| T | T | T | F  | F  | T     | F      | F     |
+
+In this row,  D ≡ E is false because D and E are not equivalent (T ≡ F).  This means that the negation of the desired valuation leads to a contradiction.
+
+Now,  I will check the other options.
+
+| D | E | F | ~E | ~F | F ∨ D | ~E · ~F | D ≡ E |
+|---|---|---|----|----|-------|--------|-------|
+| T | T | F | F  | T  | T     | F      | T     |
+
+In this row,  D ≡ E is true,  but ~E · ~F is false,  which leads to a contradiction.
+
+| D | E | F | ~E | ~F | F ∨ D | ~E · ~F | D ≡ E |
+|---|---|---|----|----|-------|--------|-------|
+| T | F | T | T  | F  | T     | T      | F     |
+
+In this row,  D ≡ E is false,  which means that the negation of the desired valuation leads to a contradiction.
+
+| D | E | F | ~E | ~F | F ∨ D | ~E · ~F | D ≡ E |
+|---|---|---|----|----|-------|--------|-------|
+| T | F | F | T  | T  | T     | T      | F     |
+
+In this row,  D ≡ E is false,  which means that the negation of the desired valuation leads to a contradiction.
+
+Since all the negations lead to contradictions,  the set of propositions is consistent.  Therefore,  the correct answer is {'sol': 'b'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ The restaurant serves pie or cheesecake or ice cream for dessert.  Choices: a) P ∨ (C ∨ I) b) (P ∨ C) ∨ I c) P ∨ C ∨ I d) Options A and B 
+ Output:
+ First,  I need to understand the sentence.  It says that the restaurant serves pie,  cheesecake,  or ice cream for dessert.  This is an inclusive ""or,""  meaning that any of the three options can be served.
+ Next,  I need to consider the given formulas.  I will analyze each option to see if it correctly symbolizes the sentence.
+ a) P ∨ (C ∨ I) - This option uses the inclusive ""or"" symbol (∨) to represent the options of pie, cheesecake, and ice cream.  It correctly symbolizes the sentence.
+ b) (P ∨ C) ∨ I - This option also uses the inclusive ""or"" symbol to represent the options of pie and cheesecake,  followed by the option of ice cream.  It correctly symbolizes the sentence.
+ c) P ∨ C ∨ I - This option uses the inclusive ""or"" symbol to represent all three options without parentheses.  This could be interpreted as an exclusive ""or,""  meaning exactly one of the options must be true.  This does not correctly symbolize the sentence.
+ d) Options A and B - This option acknowledges that both options a) and b) correctly symbolize the sentence.
+
+Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ If Beth rides her bike,  she gets to work earlier.  Choices: a) B ⊃ W b) W ⊃ B c) B ≡ W d) Both A and B 
+ Output:
+ First,  I need to understand the symbols in the options.  B represents ""Beth rides her bike"",  W represents ""Beth gets to work earlier"".
+ The sentence says ""If Beth rides her bike,  she gets to work earlier"",  which means riding her bike is a sufficient condition for her to get to work earlier.
+ Option a) B ⊃ W represents ""B implies W"",  which means if B is true,  then W is true.
+ Option b) W ⊃ B represents ""W implies B"",  which means if W is true,  then B is true.
+ Option c) B ≡ W represents ""B is equivalent to W"",  which means B and W are both true or both false.
+ Option d) Both A and B means both a) and b) are correct.
+
+ The correct symbolization should show that riding her bike (B) is sufficient for her to get to work earlier (W).  So,  the best symbolization is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: Either Taylor or Eric is a latte boy.  Choices: a) Lt ∨ Le b) Lx ∨ Ly c) tL ∨ eL d) Tl ⊃ El 
+ Output:
+ First,  I need to identify the subject and the predicate in the given sentence.  The subject is ""Taylor or Eric"" and the predicate is ""is a latte boy.""
+ Next,  I need to represent the subject and the predicate using predicate logic.  I can use a predicate L to represent ""is a latte boy"" and variables t for Taylor and e for Eric.
+ Now,  I can translate the sentence into predicate logic.  The sentence ""Either Taylor or Eric is a latte boy"" can be written as L(t) ∨ L(e), which means ""Taylor is a latte boy or Eric is a latte boy.""
+ Comparing this with the given choices,  I can see that the correct translation is {'sol': 'a'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ E ⊃ F
+ G ⊃ ~F / ~G ∨ ~E Choices: a) Valid b) Invalid.  Counterexample when E,  F,  and G are true c) Invalid.  Counterexample when E and G are true and F is false d) Invalid.  Counterexample when F and G are true and E is false 
+ Output:
+ First,  I will construct an indirect truth table for the given argument.  The goal is to show that the conclusion (~G ∨ ~E) is true under all circumstances where the premises (E ⊃ F and G ⊃ ~F) are true.
+ The indirect truth table will have columns for E,  F,  and G,  as well as for the premises and the conclusion.  I will start by assuming that the conclusion is false and then check if the premises are true.
+ The truth table will look like this:
+
+ E | F | G | E ⊃ F | G ⊃ ~F | ~G ∨ ~E
+---|---|---|-------|--------|--------
+ T | T | T |   T   |    F   |    F
+ T | T | F |   T   |    T   |    F
+ T | F | T |   F   |    F   |    F
+ T | F | F |   T   |    T   |    F
+ F | T | T |   T   |    F   |    T
+ F | T | F |   T   |    T   ,|    T
+ F | F | T |   T   |    T   |    T
+ F | F | F |   T   |    T   |    T
+
+From the truth table, I can see that there is only one case where the conclusion is false (when E, F, and G are true). In this case, the premises are not true because G ⊃ ~F is false. Therefore, the argument is valid.
+
+Therefore, the correct answer is {'sol': 'a'}"
+"Input:  Use indirect truth tables to determine whether each set of propositions is consistent.  If the set is consistent,  choose an option with a consistent valuation.  (There may be other consistent valuations. )
+ A ⊃ (~B ∨ C)
+ C ⊃ D
+ A ∨ (B · ~D)
+ A ≡ (B ⊃ D) Choices: a) Inconsistent b) Consistent.  Consistent valuation when A and D are true and B and C are false c) Consistent.  Consistent valuation when A,  B,  and D are true and C is false d) Consistent.  Consistent valuation when C and D are true and A and B are false 
+ Output:
+ First,  I will create an indirect truth table for the given propositions.  I will assume the negation of the conclusion and see if it leads to a contradiction.  The propositions are:
+ 1. A ⊃ (~B ∨ C)
+ 2. C ⊃ D
+ 3. A ∨ (B · ~D)
+ 4. A ≡ (B ⊃ D)
+
+ I will start by assuming ¬(A ∨ B),  which is the negation of the conclusion.
+
+Next, I will evaluate the truth values of the given propositions under the assumption of ¬(A ∨ B).
+
+1. A ⊃ (~B ∨ C): If A is false, the implication is true regardless of the truth values of B and C.
+2. C ⊃ D: If C is false, the implication is true regardless of the truth value of D.
+3. A ∨ (B · ~D): If A is false, the disjunction is true only if B is true and D is false.
+4. A ≡ (B ⊃ D): If A is false, the biconditional is true only if B is true and D is false.
+
+Now, I will look for a contradiction. If A is false, then according to proposition 3, B must be true and D must be false for the disjunction to be true. However, this also makes proposition 4 true, which implies that A must be true, which contradicts our initial assumption that A is false. Therefore, the set of propositions is consistent.
+
+Among the given options, the consistent valuation when C and D are true and A and B are false (option d) matches the valuation we found that avoids a contradiction.
+
+Therefore, the correct answer is {'sol': 'd'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ M ∨ N
+ ~M · O / N Choices: a) Valid b) Invalid.  Counterexample when M and O are true and N is false c) Invalid.  Counterexample when M is true and O and N are false d) Invalid.  Counterexample when O is true and M and N are false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has three propositions,  M,  O, and N.  So,  I need to consider all possible combinations of truth values for M,  O, and N.
+
+ M | O | N | M ∨ N | ~M | ~M · O | (~M · O) ∨ N
+---|---|---|-------|----|-------|-------------
+ T | T | T |   T  |  F |   F  |      T
+ T | T | F |   T  |  F |   F  |      F
+ T | F | T |   T  |  F |   F  |      T
+ T | F | F |   T  |  F |   F  |      F
+ F | T | T |   T  |  T |   T  |      T
+ F | T | F |   T  |  T |   T  |      T
+ F | F | T |   T  |  T |   T  |      T
+ F | F | F |   F  |  T |   F  |      F
+
+Next,  I need to check if the premises are true and the conclusion is true in all rows of the truth table.  In this case,  the premises are M ∨ N and ~M · O,  and the conclusion is N.
+
+Looking at the truth table,  I see that there is at least one row where the premises are true (M ∨ N is true and ~M · O is true) but the conclusion is false (N is false).  This row is when M is true,  O is true, and N is false.
+
+Therefore,  the argument is invalid.  The correct option is {'sol': 'b'}"
+"Input:  Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?
+ U ⊃ W
+ W ⊃ (X ≡ ~Y)
+ (X ≡ ~Y) ⊃ Z
+ ~Z Choices: a) U ⊃ Z b) U ∨ W c) ~W d) ~(X ≡ ~Y) 
+ Output:
+ First, I will analyze the given premises and their logical connections.
+ Premise 1: U ⊃ W
+ Premise 2: W ⊃ (X ≡ ~Y)
+ Premise 3: (X ≡ ~Y) ⊃ Z
+ Premise 4: ~Z
+
+ Now, I will examine the choices and see which one can be derived from the given premises.
+
+ a) U ⊃ Z: This can be derived by combining Premise 1 and Premise 2 using the Hypothetical Syllogism rule (if A ⊃ B and B ⊃ C, then A ⊃ C). So, U ⊃ W and W ⊃ (X ≡ ~Y) together imply U ⊃ (X ≡ ~Y). Then, combining this with Premise 3 using the same rule, we get U ⊃ Z.
+
+ b) U ∨ W: This cannot be derived from the given premises.
+
+ c) ~W: This cannot be derived from the given premises.
+
+ d) ~(X ≡ ~Y): This cannot be derived from the given premises.
+
+ Therefore, the immediate consequence of the given premises is {'sol': 'a'}"
+"Input: Identify the antecedent of the following conditional proposition: If the Bees don't win their first game,  then both the Aardvarks and the Chipmunks win their first games.  Choices: a) The Aardvarks win their first game.  b) The Bees don't win their first game.  c) The Chipmunks win their first game.  d) Both the Aardvarks and the Chipmunks win their first games.  
+ Output:
+ First,  I need to identify the antecedent of the conditional proposition,  which is the part of the statement that comes after the 'if'.
+ In this case,  the antecedent is ""the Bees don't win their first game.""
+ Therefore,  the correct answer is {'sol': 'b'}"
+"Input: Select the best translation into predicate logic.  Holly loves Frances.  (f: Frances; h: Holly; Lxy: x loves y) Choices: a) hLf b) fLh c) Lfh d) Lhf 
+ Output:
+ First,  I need to identify the subject and the predicate in the sentence.  The subject is ""Holly"" and the predicate is ""loves Frances"".
+ Next,  I need to match the subject and the predicate with the appropriate variables and predicates in the choices.  The subject ""Holly"" corresponds to ""h"" and the predicate ""loves Frances"" corresponds to ""Lxy"".
+ Finally,  I need to determine the correct order of the variables in the predicate ""Lxy"".  Since ""x loves y"",  the subject ""Holly"" (h) should be the first variable and the object ""Frances"" (f) should be the second variable.
+ Therefore,  the correct translation is {'sol': 'c'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ P ⊃ (Q ∨ R)
+ (Q · S) ⊃ ~P
+ ~(~Q ∨ R) / ~P Choices: a) Valid b) Invalid.  Counterexample when P,  Q,  R,  and S are true c) Invalid.  Counterexample when P and Q are true and R and S are false d) Invalid.  Counterexample when P,  R,  and S are true and Q is false 
+ Output:
+ First,  I will construct an indirect truth table for the given premises and conclusion.  The columns will represent P, Q, R, and S.  I will include the negation of the conclusion as a premise to find a counterexample.
+
+| P | Q | R | S | Q ∨ R | Q · S | ~Q ∨ R | ~Q {""sol"": ""d""} |
+|---|---|---|---|-------|-------|--------|----------------|
+| T | T | T | T | T     | T    | F      | F             |
+| T | T | T | F | T     | T    | F      | F             |
+| T | T | F | T | T     | T    | T      | F             |
+| T | T | F | F | T     | F    | T      | F             |
+| T | F | T | T | T     | F    | T      | F             |
+| T | F | T | F | T     | F    | T      | F             |
+| T | F | F | T | F     | F    | T      | F             |
+| T | F | F | F | F     | F    | T      | F             |
+| F | T | T | T | T     | T    | F      | T             |
+| F | T | T | F | T     | T    | F      | T             |
+| F | T | F | T | T     | F    | T      | T             |
+| F | T | F | F | T     | F    | T      | T             |
+| F | F | T | T | T     | F    | T      | T             |
+| F | F | T | F | T     | F    | T      | T             |
+| F | F | F | T | F     | F    | T      | T             |
+| F | F | F | F | F     | F    | T      | T             |
+
+In the truth table, I look for a row where the premises are true and the conclusion is false. The only row that satisfies this is the 15th row, where P, R, and S are true and Q is false. This is a counterexample to the argument.
+
+Therefore, the correct answer is {'sol': 'd'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ T ∨ U
+ W · T / U Choices: a) Valid b) Invalid.  Counterexample when T and W are true and U is false c) Invalid.  Counterexample when T is true and W and U are false d) Invalid.  Counterexample when W is true and T and U are false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has three propositions,  T,  W,  and U.  So,  I need to consider all possible combinations of truth values for T,  W,  and U.
+
+| T | W | U | T ∨ U | W · T | W · T ∨ U |
+|---|---|---|-------|-------|-----------|
+| T | T | T |   T   |   T   |     T     |
+| T | T | F |   T   |   T   |     T     |
+| T | F | T |   T   |   F   |     T     |
+| T | F | F |   T   |   F   |     T     |
+| F | T | T |   T   |   F   |     T     |
+| F | T | F |   F   |   F   |     F     |
+| F | F | T |   T   |   F   |     T     |
+| F | F | F |   F   |   F   |     F     |
+
+Next,  I need to determine whether the argument is valid or invalid.  The argument is valid if,  and only if,  in every row where the premises are true,  the conclusion is also true.  Looking at the truth table,  I see that there is one row where the premises W · T and T ∨ U are true,  but the conclusion U is false.  This is the row where T and W are true and U is false.
+
+Therefore,  the argument is invalid.  The correct answer is {'sol': 'b'}"
+"Input: Identify the antecedent of the following conditional proposition: The university raises tuition if both the governor approves of it and the board of trustees recommends it.  Choices: a) The university raises tuition.  b) The governor approves of it.  c) The board of trustees recommends it.  d) The governor approves of it and the board of trustees recommends it.  
+ Output:
+ First, let's analyze the conditional proposition: ""The university raises tuition if both the governor approves of it and the board of trustees recommends it.""
+ The antecedent of a conditional proposition is the part of the statement that follows the word ""if.""
+ In this case, the antecedent is ""both the governor approves of it and the board of trustees recommends it.""
+ Therefore, the correct answer is {'sol': 'd'}"
+"Input:  Identify the antecedent of the following conditional proposition: The restaurant does not have peas,  so instead they serve corn and potatoes.  Choices: a) The restaurant has peas.  b) The restaurant does not have peas.  c) The restaurant serves corn.  d) The restaurant serves potatoes.  
+ Output:
+ First,  I need to identify the antecedent of the conditional proposition.  The antecedent is the part of the proposition that comes before the 'so'.  In this case,  the antecedent is 'The restaurant does not have peas'.
+ Next,  I need to determine which of the given choices is logically equivalent to the antecedent.  The antecedent states that the restaurant does not have peas,  so the logically equivalent choice is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic.  All jellybeans are sweeter than all fruit.  (Fx: x is a fruit; Jx: x is a jellybean; Sxy: x is sweeter than y) Choices: a) (∀x)Fx ⊃ (∀y)(Jy ⊃ Sxy) b) (∀x)(∀y)(Fx • Jy) • Sxy c) (∀x)(∀y)Sxy ⊃ (Fy • Jx) d) (∀x)Jx ⊃ (∀y)(Fy ⊃ Sxy) 
+ Output:
+ First, I need to understand the given statement: ""All jellybeans are sweeter than all fruit."" This means that for any jellybean, it is sweeter than any fruit.
+
+Next, I will analyze each choice and see which one accurately represents this statement using the given predicates.
+
+a) (∀x)Fx ⊃ (∀y)(Jy ⊃ Sxy) - This translates to ""If x is a fruit, then for all y, if y is a jellybean, then y is sweeter than x."" This does not accurately represent the original statement, as it implies that only fruits are sweeter than jellybeans, not the other way around.
+
+b) (∀x)(∀y)(Fx • Jy) • Sxy - This translates to ""For all x and y, if x is a fruit and y is a jellybean, then y is sweeter than x."" This also does not accurately represent the original statement, for the same reason as option a.
+
+c) (∀x)(∀y)Sxy ⊃ (Fy • Jx) - This translates to ""For all x and y, if x is sweeter than y, then y is a fruit and x is a jellybean."" This does not accurately represent the original statement, as it implies that only certain combinations of x and y are relevant, not all jellybeans being sweeter than all fruits.
+
+d) (∀x)Jx ⊃ (∀y)(Fy ⊃ Sxy) - This translates to ""If x is a jellybean, then for all y, if y is a fruit, then x is sweeter than y."" This accurately represents the original statement, as it states that for any jellybean, it is sweeter than any fruit.
+
+Therefore, the correct answer is {'sol': 'd'}"
+"Input: Identify the conclusion of the following argument.  That the world is my idea is a truth valid for every living creature,  though only man can contemplate it.  In doing so,  he attains philosophical wisdom.  No truth is more absolutely certain than that all that exists for knowledge and therefore this world is only object in relation to subject,  perception of a perceiver.  The world is an idea.  (Arthur Schopenhauer,  The World as Will and Idea) Choices: a) The world is an idea.  b) That the world is my idea is a truth valid for every living creature,  though only man can contemplate it.  c) In doing so,  he attains philosophical wisdom.  d) No truth is more absolutely certain than that all that exists for knowledge and therefore this world is only object in relation to subject,  perception of a perceiver.  
+ Output:
+ First,  I need to identify the main point or conclusion of the argument.  The argument starts by stating that the world is an idea and then goes on to explain how this idea is valid for every living creature,  but only man can contemplate it.
+ Next,  the argument mentions that when a man contemplates this idea,  he attains philosophical wisdom.
+ Finally,  the argument emphasizes the absolute certainty of this truth.
+ The conclusion of the argument is the statement that summarizes the main point.  In this case,  the conclusion is that the world is an idea.
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic.  Leo is taller than Cathy.  (c: Cathy; l: Leo; Txy: x is taller than y) Choices: a) Tlc b) Tcl c) lTc d) cTl 
+ Output:
+ First,  I need to identify the subject and the predicate in the sentence.  The subject is ""Leo"" and the predicate is ""is taller than Cathy.""
+ Next,  I need to match the subject and predicate with the appropriate variables and predicates in the choices.  The subject ""Leo"" corresponds to ""l"" and the predicate ""is taller than Cathy"" corresponds to ""Txy.""
+ Finally,  I need to determine the correct order of the variables in the predicate.  Since Leo is taller than Cathy, the correct order is ""Leo"" (l) comes before ""Cathy"" (c).
+ Therefore,  the correct translation is {'sol': 'a'}"
+"Input:  Construct a complete truth table for the following pairs of propositions.  Then,  using the truth tables,  determine whether the statements are logically equivalent or contradictory.  If neither,  determine whether they are consistent or inconsistent.  Justify your answers.
+ C ⊃ (D ∨ C) and C · ~D Choices: a) Logically equivalent b) Contradictory c) Neither logically equivalent nor contradictory,  but consistent d) Inconsistent 
+ Output:
+ First,  I need to construct a truth table for both propositions.  The first proposition is C ⊃ (D ∨ C),  which can be simplified to C ⊃ D using the absorption law.  The second proposition is C · ~D.
+
+| C | D | C ⊃ D | C · ~D |
+|---|---|-------|--------|
+| T | T |   T   |   F    |
+| T | F |   F   |   T    |
+| F | T |   T   |   F    |
+| F | F |   T   |   F    |
+
+Next,  I compare the truth values of both propositions.  I can see that they do not have the same truth values for all possible combinations of C and D.  Therefore,  they are not logically equivalent.
+
+Now,  I need to determine if they are contradictory.  Contradictory statements have opposite truth values for all possible combinations of their variables.  In this case,  I can see that there is at least one case where both propositions are true (when C is true and D is false),  so they are not contradictory.
+
+Since they are neither logically equivalent nor contradictory,  I will check if they are consistent.  Consistent statements can have the same truth values for some combinations of their variables.  In this case,  I can see that there is at least one case where both propositions are true,  so they are consistent.
+
+Therefore,  the correct answer is {'sol': 'c'}"
+"Input:  Construct a complete truth table for the following pairs of propositions.  Then,  using the truth tables,  determine whether the statements are logically equivalent or contradictory.  If neither,  determine whether they are consistent or inconsistent.  Justify your answers.
+ ~O ⊃ P and O ∨ P Choices: a) Logically equivalent b) Contradictory c) Neither logically equivalent nor contradictory,  but consistent d) Inconsistent 
+ Output:
+ First,  I need to construct a complete truth table for the given pairs of propositions.  The propositions are ~O ⊃ P and O ∨ P.  I will use the following symbols: T for true, F for false, ~ for negation, ⊃ for implication, and ∨ for disjunction.
+
+| O | P | ~O | ~O ⊃ P | O ∨ P |
+|---|---|----|--------|-------|
+| T | T | F  | T      | T     |
+| T | F | F  | T      | T     |
+| F | T | T  | T      | T     |
+| F | F | T  | F      | F     |
+
+Next,  I need to compare the truth values of the two propositions.  For all rows in the table, the truth values of ~O ⊃ P and O ∨ P are the same.
+
+Since the truth values of the two propositions are the same for all possible combinations of truth values of O and P, the statements are logically equivalent.
+
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ (T · ~U) ⊃ ~W
+ ~W ⊃ X
+ ~Z ⊃ W
+ ~(X · Z) / T ⊃ U Choices: a) Valid b) Invalid.  Counterexample when T,  X,  and Z are true and U and W are false c) Invalid.  Counterexample when T and X are true and U,  W,  and Z are false d) Invalid.  Counterexample when T,  W,  and Z are true and U and X are false 
+ Output:
+ First,  I need to construct an indirect truth table for the given argument.  The goal is to show that if the premises are true,  then the conclusion must be true as well.  To do this,  I will assume the negation of the conclusion and see if it leads to a contradiction.
+
+The premises are:
+1. (T · ~U) ⊃ ~W
+2. ~W ⊃ X
+3. ~Z ⊃ W
+4. ~(X · Z)
+
+The negation of the conclusion is:
+¬(T ⊃ U) which is equivalent to T · ~U
+
+Now,  I will construct the truth table with the negation of the conclusion:
+
+| T | U | W | X | Z | (T · ~U) ⊃ ~W | ~W ⊃ X | ~Z ⊃ W | ~(X · Z) | T ⊃ U | ¬(T ⊃ U) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| T | T | F | F | T | T | T | T | T | F | T |
+| T | T | T | F | F | T | T | F | T | F | T |
+| T | F | F | T | F | T | F | T | T | T | T |
+| T | F | T | T | T | T | T | T | F | T | F |
+| F | T | F | F | T | T | T | T | T | T | T |
+| F | T | T | F | F | T | T | F | T | T | T |
+| F | F | F | T | F | T | F | T | T | T | T |
+| F | F | T | T | T | T | T | T | F | T | F |
+
+In the truth table,  I can see that there is no row where all the premises are true and the negation of the conclusion is true without leading to a contradiction. This means that the argument is valid.
+
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: Cecilia breaks my heart if,  and only if,  Maria is either a problem or a girl.  Choices: a) Bc ≡ (Pm ∨ Gm) b) Bc ≡ (Pm • Gm) c) Bc ⊃ (Pm ∨ Gm) d) Cb ⊃ (Pm • Gm) 
+ Output:
+ First,  let's break down the sentence into its logical components.  ""Cecilia breaks my heart if,  and only if,  Maria is either a problem or a girl"" can be translated as ""Bc ↔ (Pm ∨ Gm)"",  where Bc represents ""Cecilia breaks my heart"",  Pm represents ""Maria is a problem"",  and Gm represents ""Maria is a girl"".
+ The symbol ""↔"" represents ""if and only if"",  which means that both directions of the implication are true: if Cecilia breaks my heart,  then Maria is either a problem or a girl,  and if Maria is either a problem or a girl,  then Cecilia breaks my heart.
+ Now,  let's look at the choices and see which one matches our translation.
+ a) Bc ≡ (Pm ∨ Gm) - This choice uses ""≡"",  which represents equivalence,  and matches our translation.
+ b) Bc ≡ (Pm • Gm) - This choice uses ""•"",  which represents logical conjunction,  not equivalence.
+ c) Bc ⊃ (Pm ∨ Gm) - This choice uses ""⊃"",  which represents logical implication,  not equivalence.
+ d) Cb ⊃ (Pm • Gm) - This choice uses ""Cb"",  which is not the same as ""Bc"",  and ""•"",  which represents logical conjunction,  not equivalence.
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: If Delilah is in New York City,  then Juana is in Bogota or Layla is in San Juan.  Choices: a) Nd ⊃ (Bj • Sl) b) Dn ≡ (Bx • Ly) c) Nd ≡ (Bj • Sl) d) Nd ⊃ (Bj ∨ Sl) 
+ Output:
+ First,  I need to understand the given statement.  The statement says that if Delilah is in New York City (Nd),  then either Juana is in Bogota (Bj) or Layla is in San Juan (Sl).
+ Now,  I need to match this statement with one of the given choices.  The symbol ⊃ represents ""implies"" or ""if...then.""
+ Choice a) Nd ⊃ (Bj • Sl) translates to ""If Delilah is in New York City,  then Juana is in Bogota and Layla is in San Juan."" This is not the correct translation because it uses ""and"" instead of ""or.""
+ Choice b) Dn ≡ (Bx • Ly) translates to ""Delilah is in New York City if and only if Juana is in Bogota and Layla is in San Juan."" This is not the correct translation because it uses ""if and only if"" instead of ""if...then.""
+ Choice c) Nd ≡ (Bj • Sl) translates to ""Delilah is in New York City if and only if Juana is in Bogota and Layla is in San Juan."" This is not the correct translation for the same reason as choice b.
+ Choice d) Nd ⊃ (Bj ∨ Sl) translates to ""If Delilah is in New York City,  then either Juana is in Bogota or Layla is in San Juan."" This is the correct translation because it uses ""if...then"" and ""or"" as in the given statement.
+ Therefore,  the best translation is {'sol': 'd'}"
+"Input:  Use the following key to translate the given formula of PL to natural,  English sentences.
+ A: Marina reads a Percy Jackson book.
+ B: Izzy plays Minecraft.
+ C: Emily stops working.
+ D: Russell makes dinner.
+ E: Ashleigh stops by.
+ ~(A ⊃ B) • (B ⊃ ~E) Choices: a) It's not the case that Marina's reading a Percy Jackson book entails that Izzy plays Minecraft,  but Izzy's playing Minecraft does entail that Ashleigh doesn't stop by.  b) If Marina doesn't read a Percy Jackson book,  then Izzy plays Minecraft,  which entails that Ashleigh doesn't stop by.  c) Marina's reading a Percy Jackson book does not entail that Izzy plays Minecraft,  but Izzy plays Minecraft provided that Ashleigh doesn't stop by.  d) It's not true that Marina reads a Percy Jackson book only when Izzy plays Minecraft,  but Izzy plays Minecraft only when Ashleigh stops by.  
+ Output:
+ First,  let's break down the formula into its components.  The formula is ~(A ⊃ B) • (B ⊃ ~E).
+ ~(A ⊃ B) means ""It's not the case that Marina reads a Percy Jackson book entails that Izzy plays Minecraft.""
+ (B ⊃ ~E) means ""Izzy plays Minecraft entails that Ashleigh doesn't stop by.""
+ Putting these two components together, we get ""It's not the case that Marina reads a Percy Jackson book entails that Izzy plays Minecraft,  but Izzy plays Minecraft entails that Ashleigh doesn't stop by.""
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ (A ∨ B) ⊃ C
+ C ⊃ ~D / D ⊃ A Choices: a) Valid b) Invalid.  Counterexample when B,  C,  and D are true and A is false c) Invalid.  Counterexample when B and D are true and A and C are false d) Invalid.  Counterexample when A,  B,  and C are false and D is true 
+ Output:
+ First,  I will construct an indirect truth table for the given argument.  The premises are (A ∨ B) ⊃ C and C ⊃ ~D,  and the conclusion is D ⊃ A.
+ To do this,  I will consider all possible truth values for A,  B,  C,  and D.
+ The truth table will look like this:
+
+ A | B | C | D | (A ∨ B) | (A ∨ B) ⊃ C | C ⊃ ~D | D ⊃ A
+---|---|---|---|---------|-------------|--------|------
+ T | T | T | T |    T    |      T      |    T   |    T
+ T | T | T | F |    T    |      T      |    T   |    T
+ T | T | F | T |    T    |      F      |    F   |    T
+ T | T | F | F |    T    |      F      |    T   |    T
+ T | F | T | T |    T    |      T      |    T   |    T
+ T | F | T | F |    T    |      T      |    T   |    T
+ T | F | F | T |    T    |      F      |    F   |    T
+ T | F | F | F |    T    |      F      |    T   |    T
+ F | T | T | T |    T    |      T      |    T   |    T
+ F | T | T | F |    T    |      T      |    T   |    T
+ F | T | F | T |    T    |      F      |    F   |    T
+ F | T | F | F |    T    |      F      |    T   |    T
+ F | F | T | T |    F    |      T      |    T   |    T
+ F | F | T | F |    F    |      T      |    T   |    T
+ F | F | F | T |    F    |      T      |    F   |    T
+ F | F | F | F |    F    |      T      |    T   |    T
+
+ In the truth table,  I look for a row where the premises are true and the conclusion is false.  If such a row exists,  the argument is invalid.
+ I see that in the third row,  the premises are true (A is true,  B is true,  C is true,  D is false) and the conclusion is false (D is true,  A is false).
+ Therefore,  the argument is invalid.  The counterexample is when B,  C,  and D are true and A is false.
+ The correct answer is {'sol': 'b'}"
+"Input:  Select the best English interpretation of the given arguments in predicate logic.
+ Dh ⊃ ~Pt
+ (∀x)Px ∨ (∀x)Mx
+ ~Mb	 / ~Dh Choices: a) If my headache is dualist state,  then your tickle is a physical state.  Either everything is physical or everything is mental.  But my broken toe is not a mental state.  So my headache is not a dualist state.  b) If my headache is dualist state,  then your tickle is not a physical state.  Either everything is physical or everything is mental.  But my broken toe is not a mental state.  So my headache is not a dualist state.  c) If my headache is dualist state,  then your tickle is not a physical state.  If everything is physical then everything is mental.  But my broken toe is not a mental state.  So my headache is not a dualist state.  d) If my headache is dualist state,  then your tickle is not a physical state.  Everything is either physical or mental.  But my broken toe is not a mental state.  So my headache is not a dualist state.  
+ Output:
+ First, let's break down the given arguments in predicate logic:
+ Dh ⊃ ~Pt: If my headache is a dualist state, then your tickle is not a physical state.
+ (∀x)Px ∨ (∀x)Mx: Either everything is physical or everything is mental.
+ ~Mb: But my broken toe is not a mental state.
+ / ~Dh: So my headache is not a dualist state.
+
+Now, let's match the given arguments with the English interpretations:
+a) If my headache is dualist state, then your tickle is a physical state. (Wrong, it should be ""not a physical state"")
+b) If my headache is dualist state, then your tickle is not a physical state. (Correct)
+c) If my headache is dualist state, then your tickle is not a physical state. (Correct)
+d) If my headache is dualist state, then your tickle is not a physical state. (Correct)
+
+The first part of the interpretations matches with the given arguments in predicate logic. Now let's check the second part:
+a) Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state. (Wrong, it should be ""Everything is either physical or mental."")
+b) Either everything is physical or everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state. (Correct)
+c) If everything is physical then everything is mental. But my broken toe is not a mental state. So my headache is not a dualist state. (Wrong, it should be ""Everything is either physical or mental."")
+d) Everything is either physical or mental. But my broken toe is not a mental state. So my headache is not a dualist state. (Correct)
+
+Both interpretations b) and d) match the given arguments in predicate logic. However, interpretation b) is more concise and directly translates the given arguments. Therefore, the best English interpretation of the given arguments in predicate logic is {'sol': 'b'}"
+"Input:  Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?
+ A ⊃ (B • C)
+ ~(B • C)
+ A ∨ (D ∨ B) Choices: a) A b) ~A c) B d) ~B 
+ Output:
+ First, let's analyze the given premises:
+ Premise 1: A ⊃ (B • C)
+ Premise 2: ~(B • C)
+
+ From Premise 1, we know that if A is true, then B and C must be true (since B • C is the same as B AND C).
+ From Premise 2, we know that B and C cannot both be true (since ~(B • C) means not (B AND C)).
+
+ Now, let's consider the choices:
+ a) A - If A is true, then B and C must be true, but we know that B and C cannot both be true, so A cannot be true.
+ b) ~A - If A is false, then the implication A ⊃ (B • C) is true regardless of the truth values of B and C. Since we know that B and C cannot both be true, ~A could be a possibility.
+ c) B - If B is true, then C must also be true, but we know that B and C cannot both be true, so B cannot be true.
+ d) ~B - If ~B is true, then B is false, which is consistent with the given premises.
+
+ Therefore, the immediate consequence of the given premises is ~B.
+ Output: {'sol': 'd'}"
+"Input:  Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?
+ (N ⊃ ~O) ⊃ (O ∨ Q)
+ P ⊃ (N ⊃ ~O)
+ N ⊃ P Choices: a) P b) N ⊃ ~O c) O ∨ Q d) ~P 
+ Output:
+ First, I will analyze the given premises and the choices to determine which proposition is an immediate consequence.
+
+Premise 1: (N ⊃ ~O) ⊃ (O ∨ Q)
+Premise 2: P ⊃ (N ⊃ ~O)
+Premise 3: N ⊃ P
+
+Step 1: Identify the premises that can be used to derive the given choices.
+
+From Premise 2 and Premise 3, we can use the transitive property to combine them:
+(N ⊃ P) ∧ (P ⊃ (N ⊃ ~O)) ⇒ (N ⊃ (N ⊃ ~O))
+
+Step 2: Simplify the combined premise.
+
+(N ⊃ (N ⊃ ~O)) can be simplified using the importation rule:
+(N ⊃ ~O)
+
+Step 3: Compare the simplified premise with the given choices.
+
+The simplified premise is (N ⊃ ~O), which matches choice b) N ⊃ ~O.
+
+Therefore, the correct answer is {'sol': 'b'}"
+"Input: Select the best translation into predicate logic.  Earth isn't bigger than Jupiter.  (e: Earth; j: Jupiter; Bxy: x is bigger than y) Choices: a) ~Bje b) Bej c) Bje~ d) ~Bej 
+ Output:
+ First,  I need to translate the sentence ""Earth isn't bigger than Jupiter"" into predicate logic.  The negation of ""Earth is bigger than Jupiter"" is ""Earth isn't bigger than Jupiter"".
+ The predicate logic symbol for negation is ""~"".  So,  the negation of ""Bje"" (Jupiter is bigger than Earth) is ""~Bje"".
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Identify the antecedent of the following conditional proposition: The Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game.  Choices: a) The Aardvarks do not win their first game.  b) The Bees win their first game.  c) The Chipmunks do not win their first game.  d) Either the Aardvarks or the Chipmunks do not win their first game.  
+ Output:
+ First,  I need to understand the conditional proposition.  It states that the Bees winning their first game is necessary for either the Aardvarks or the Chipmunks not winning their first game.
+ The antecedent of a conditional proposition is the part that comes before the ""if"" part,  and the consequent is the part that comes after the ""if"" part.
+ In this case,  the antecedent is the part that needs to happen for the consequent to be true.
+ The consequent is ""either the Aardvarks or the Chipmunks not winning their first game.""
+ The antecedent is ""The Bees winning their first game.""
+ Therefore,  the correct answer is {'sol': 'b'}"
+"Input: Identify the antecedent of the following conditional proposition: The Bees win their first game only if either the Aardvarks or the Chipmunks do not win their first games.  Choices: a) The Aardvarks do not win their first game.  b) The Bees win their first game.  c) The Chipmunks do not win their first game.  d) Either the Aardvarks or the Chipmunks do not win their first games.  
+ Output:
+ First, let's break down the conditional proposition: ""The Bees win their first game only if either the Aardvarks or the Chipmunks do not win their first games.""
+ This can be rewritten as ""If the Bees win their first game, then either the Aardvarks or the Chipmunks do not win their first games.""
+ The antecedent is the part of the conditional statement that comes before the ""if,"" which in this case is ""The Bees win their first game.""
+ Therefore, the antecedent is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic: Some athletes don't get injured.  Choices: a) ~Ia b) (∃x)(Ax • ~Ix) c) ~Ai d) (∃x)(Ix ∨ ~Ax) 
+ Output:
+ First,  I need to identify the key elements in the sentence: ""athletes"" and ""don't get injured.""
+ Next,  I need to determine the logical structure of the sentence.  The sentence states that there exists at least one athlete who doesn't get injured.
+ Now,  I can compare the given choices to the logical structure.  The correct choice should express the existence of at least one athlete who doesn't get injured.
+ a) ~Ia - This choice doesn't clearly define the variables, so it's not clear what it represents.
+ b) (∃x)(Ax • ~Ix) - This choice states that there exists an x (athlete) such that x is an athlete (Ax) and x doesn't get injured (~Ix). This matches the logical structure of the sentence.
+ c) ~Ai - This choice doesn't clearly define the variables, so it's not clear what it represents.
+ d) (∃x)(Ix ∨ ~Ax) - This choice states that there exists an x (athlete) such that x gets injured (Ix) or x isn't an athlete (~Ax). This doesn't match the logical structure of the sentence.
+
+Therefore,  the correct answer is {'sol': 'b'}"
+"Input:  Construct a complete truth table for the following pairs of propositions.  Then,  using the truth tables,  determine whether the statements are logically equivalent or contradictory.  If neither,  determine whether they are consistent or inconsistent.  Justify your answers.
+ I ≡ ~H and ~(~I ≡ H) Choices: a) Logically equivalent b) Contradictory c) Neither logically equivalent nor contradictory,  but consistent d) Inconsistent 
+ Output:
+ First,  let's construct the truth table for the given propositions. We need to consider four possible combinations of truth values for I and H: I is true and H is true, I is true and H is false, I is false and H is true, and I is false and H is false.
+
+| I | H | ~I | ~H | I ≡ ~H | ~I ≡ H | ~(~I ≡ H) |
+|---|---|----|----|--------|--------|-----------|
+| T | T | F  | F  | F      | F      | T         |
+| T | F | F  | T  | T      | T      | F         |
+| F | T | T  | F  | F      | F      | T         |
+| F | F | T  | T  | T      | T      | F         |
+
+Next,  let's compare the truth values of the original proposition (I ≡ ~H) and the negation of the original proposition (~I ≡ H).
+
+- When I is true and H is true, I ≡ ~H is false and ~I ≡ H is false.
+- When I is true and H is false, I ≡ ~H is true and ~I ≡ H is true.
+- When I is false and H is true, I ≡ ~H is false and ~I ≡ H is false.
+- When I is false and H is false, I ≡ ~H is true and ~I ≡ H is true.
+
+The original proposition and its negation do not have the same truth values in all cases. Therefore, they are not logically equivalent.
+
+However, the original proposition and its negation do not have a row in which both are true simultaneously. They are not contradictory.
+
+Since they are neither logically equivalent nor contradictory, but they are not both false in any row, they are consistent.
+
+Therefore, the correct answer is {'sol': 'c'}"
+"Input:  Use indirect truth tables to determine whether each set of propositions is consistent.  If the set is consistent,  choose an option with a consistent valuation.  (There may be other consistent valuations. )
+ (T ⊃ U) ⊃ (W ⊃ U)
+ T ⊃ ~(U ⊃ X)
+ (T ⊃ ~X) ⊃ W Choices: a) Inconsistent b) Consistent.  Consistent valuation when U,  W,  and X are true and T is false c) Consistent.  Consistent valuation when W and X are true and T and U are false d) Consistent.  Consistent valuation when T and U are true and W and X are false 
+ Output:
+ First, I will create an indirect truth table for the given propositions. The table will have columns for T, U, W, X, and the implications.
+
+| T | U | W | X | (T ⊃ U) ⊃ (W ⊃ U) | T ⊃ ~(U ⊃ X) | (T ⊃ ~X) ⊃ W |
+|---|---|---|---|------------------|---------------|---------------|
+| T | T | T | T | F                | F             | F             |
+| T | T | T | F | F                | T             | T             |
+| T | T | F | T | F                | F             | T             |
+| T | T | F | F | F                | T             | T             |
+| T | F | T | T | T                | T             | T             |
+| T | F | T | F | T                | T             | T             |
+| T | F | F | T | T                | T             | T             |
+| T | F | F | F | T                | T             | T             |
+| F | T | T | T | T                | T             | T             |
+| F | T | T | F | T                | T             | T             |
+| F | T | F | T | T                | T             | T             |
+| F | T | F | F | T                | T             | T             |
+| F | F | T | T | T                | T             | T             |
+| F | F | T | F | T                | T             | T             |
+| F | F | F | T | T                | T             | T             |
+| F | F | F | F | T                | T             | T             |
+
+From the table, we can see that there are rows where all the propositions are true. For example, when T is false, U is true, W is true, and X is false. In this case, all the propositions are true.
+
+Therefore, the set of propositions is consistent. A consistent valuation when T is false, U is true, W is true, and X is false is {'sol': 'c'}"
+"Input: Select the best translation into predicate logic: Caroline is sweet if,  and only if,  Janet is engaged to Brad.  Choices: a) Cs ⊃ Ej b) Sc ≡ Ej c) sC ≡ eJ d) Sx ≡ Jy 
+ Output:
+ First,  I need to identify the key elements in the sentence: Caroline is sweet (Sc),  Janet is engaged to Brad (Ej),  and the ""if,  and only if"" relationship (≡).
+ Next,  I need to match the given choices with the key elements.  The correct choice should represent the relationship between Caroline being sweet and Janet being engaged to Brad.
+ Looking at the choices,  I can see that option b) Sc ≡ Ej matches the relationship.  The ≡ symbol represents ""if,  and only if,"" and the variables match the key elements.
+ Therefore,  the best translation into predicate logic is {'sol': 'b'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Either England's importing beef is a sufficient condition for France's subsidizing agriculture,  or China doesn't promote human rights when and only when South Africa supplies diamonds.  Choices: a) (E ⊃ F) ∨ (~C ⊃ S) b) (F ⊃ E) ∨ (S ⊃ ~C c) (E ⊃ F) ∨ ~(S ≡ C) d) (E ⊃ F) ∨ (~C ≡ S) 
+ Output:
+ First, I need to break down the sentence into its main components. The sentence states that either England's importing beef is a sufficient condition for France's subsidizing agriculture (E ⊃ F), or there is a specific condition where China doesn't promote human rights (~C) when and only when South Africa supplies diamonds (S).
+
+Next, I need to identify the logical structure of the second part of the sentence. The sentence uses ""when and only when,"" which is a biconditional (≡). So, the second part of the sentence can be represented as (~C ≡ S).
+
+Now, I need to combine these two parts using the ""or"" operator (∨). This gives me the formula (E ⊃ F) ∨ (~C ≡ S).
+
+Therefore, the best symbolization of the given sentence is {'sol': 'd'}"
+"Input:  Use the following key to translate the given formula of PL to natural,  English sentences.
+ A: Marina reads a Percy Jackson book.
+ B: Izzy plays Minecraft.
+ C: Emily stops working.
+ D: Russell makes dinner.
+ E: Ashleigh stops by.
+ (~A ∨ ~B) ⊃ C Choices: a) If neither Marina reads a Percy Jackson book nor Izzy plays Minecraft,  then Emily stops working.  b) If it's not the case that both Marina reads a Percy Jackson book and Izzy plays Minecraft,  then Emily stops working.  c) Either Marina not reading a Percy Jackson book or Izzy not playing Minecraft entails that Emily stops working.  d) Emily stopping working is a sufficient condition for either Marina not reading a Percy Jackson book or Izzy not playing Minecraft.  
+ Output:
+ First,  I will break down the formula into its components.  The formula is (~A ∨ ~B) ⊃ C,  which means that if (~A ∨ ~B) is true,  then C is true.
+ Next,  I will translate the components into natural language.  A is ""Marina reads a Percy Jackson book,"" B is ""Izzy plays Minecraft,"" and C is ""Emily stops working.""
+ The negation symbols (~) indicate the opposite of the statements,  so ~A means ""Marina does not read a Percy Jackson book"" and ~B means ""Izzy does not play Minecraft.""
+ The disjunction symbol (∨) means ""or,""  so ~A ∨ ~B means ""Marina does not read a Percy Jackson book or Izzy does not play Minecraft.""
+ The implication symbol (⊃) means ""if... then,""  so (~A ∨ ~B) ⊃ C means ""If Marina does not read a Percy Jackson book or Izzy does not play Minecraft,  then Emily stops working.""
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Identify the conclusion of the following argument.  There are those who use predicate variables; the values of these variables are attributes.  Predicates are wanted in all sentences regardless of whether there are attributes to refer to.  The dummy predicate 'F' is wanted generally for expository purposes.  If we are going to quantify over attributes and refer to them,  then clarity is served by using recognizable variables and distinctive names for the purposes,  and not mixing these up with the predicates.  (Quine,  Philosophy of Logic) Choices: a) There are those who use predicate variables; the values of these variables are attributes.  b) Predicates are wanted in all sentences regardless of whether there are attributes to refer to.  c) The dummy predicate 'F' is wanted generally for expository purposes.  d) If we are going to quantify over attributes and refer to them,  then clarity is served by using recognizable variables and distinctive names for the purposes,  and not mixing these up with the predicates.  
+ Output:
+ First,  I need to identify the main point or the final statement that follows from the given information.  The argument discusses the use of predicate variables,  attributes,  and the dummy predicate 'F' in sentences.  It emphasizes the importance of clarity in using recognizable variables and distinctive names for attributes.
+
+Next,  I will look at the given choices and see which one represents the main point.  Choice a) is a restatement of the first sentence,  choice b) focuses on the inclusion of predicates,  choice c) mentions the dummy predicate 'F' for expository purposes,  and choice d) highlights the importance of clarity in using variables and names for attributes.
+
+The conclusion of the argument is the statement that emphasizes the importance of clarity in using variables and names for attributes.  Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Use the following key to translate the given formula of PL to natural,  English sentences.
+ A: Marina reads a Percy Jackson book.
+ B: Izzy plays Minecraft.
+ C: Emily stops working.
+ D: Russell makes dinner.
+ E: Ashleigh stops by.
+ ~C ∨ D Choices: a) If Emily doesn't stop working then Russell makes dinner.  b) Emily stops working unless Russell makes dinner.  c) Emily stops working unless Russell doesn't make dinner.  d) Emily doesn't stop working unless Russell makes dinner.  
+ Output:
+ First, I will translate the given formula ~C ∨ D into English.
+ ~C means ""not C,"" so ""not C"" translates to ""Russell doesn't make dinner.""
+ ∨ means ""or,"" so ""or D"" translates to ""Russell makes dinner.""
+ Putting it together, the formula ~C ∨ D translates to ""Russell doesn't make dinner or Russell makes dinner.""
+ This can be simplified to ""Either Russell doesn't make dinner or Russell makes dinner.""
+ Comparing this to the given choices, the closest translation is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: Abdul and Cleopatra are Egyptian.  Choices: a) Ea • Ec b) Ea • c c) Ae ∨ Ce d) Ex • Ey 
+ Output:
+ First,  I need to identify the key elements in the sentence.  The sentence states that both Abdul and Cleopatra are Egyptian.
+ Next,  I need to choose the correct logical operator to represent the relationship between the elements.  In this case,  the use of ""and"" indicates that both elements must be true for the statement to be true.
+ Finally,  I need to select the correct choice that represents the logical relationship.  The correct choice is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: Sheena is a punk rocker.  Choices: a) Sx b) xS c) sP d) Ps 
+ Output:
+ First,  I need to identify the subject and the predicate in the sentence ""Sheena is a punk rocker.""  The subject is ""Sheena,""  and the predicate is ""is a punk rocker.""
+ Next,  I need to choose the correct letter combination that represents the subject and the predicate in the correct order.  Since predicate logic typically follows the format ""Predicate(Subject)"",  the correct order is to place the subject before the predicate.
+ Therefore,  the best translation into predicate logic is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic.  Kevin is introduced to José by Wilma.  (j: José; k: Kevin; w: Wilma; Ixyz: x introduces y to z) Choices: a) Iwjk b) Ijkw c) Ikjw d) Iwkj 
+ Output:
+ First,  I need to identify the subjects,  objects,  and predicates in the sentence.  The sentence states that Wilma introduces José to Kevin.
+ Next,  I need to match the predicates with the corresponding variables in the given choices.  The predicate ""Ixyz"" corresponds to ""Wilma introduces José to Kevin"",  which is ""Iwjk"".
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: If Eileen plays fiddle then Sherri sings.  Choices: a) Fe ∨ Ss b) eF ⊃ Ss c) Fe ∨ Es d) Fe ⊃ Ss 
+ Output:
+ First,  I need to identify the key elements of the sentence: ""If Eileen plays fiddle"" is the condition,  and ""then Sherri sings"" is the consequence.
+ Next,  I need to represent these elements in predicate logic.  ""Eileen plays fiddle"" can be represented as Fe (Eileen playing fiddle),  and ""Sherri sings"" can be represented as Ss (Sherri singing).
+ The condition ""If Eileen plays fiddle then Sherri sings"" can be represented as Fe ⊃ Ss (if Fe then Ss).
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input: Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~C ⊃ D
+ D ⊃ C / C Choices: a) Valid b) Invalid.  Counterexample when C and D are true c) Invalid.  Counterexample when C is true and D is false d) Invalid.  Counterexample when D is true and C is false 
+ Output:
+ First,  I will construct a complete truth table for the given argument.  The argument consists of two premises and a conclusion.  The premises are ~C ⊃ D and D ⊃ C,  and the conclusion is C.  I will include columns for each premise,  the disjunction of the premises,  and the conclusion.
+
+| C | D | ~C | ~C ⊃ D | D ⊃ C | (~C ⊃ D) ∧ (D ⊃ C) | C |
+|---|---|----|---------|-------|------------------|---|
+| T | T | F  | T       | T     | T                | T |
+| T | F | F  | T       | F     | F                | T |
+| F | T | T  | F       | T     | F                | F |
+| F | F | T  | T       | T     | T                | F |
+
+Next,  I will determine whether the argument is valid or invalid.  An argument is valid if the conclusion is true whenever the premises are true.  Looking at the truth table,  I see that the conclusion is true in the first row where both premises are true.  However,  the conclusion is false in the third row where both premises are true.
+
+Therefore,  the argument is invalid.  The correct answer is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic:: Some blue herons migrate.  Choices: a) (∀x)(Hx • Bx) • Mx b) (∃x)(Hx • Bx) ⊃ Mx c) (∀x)(Hx • Bx) ⊃ Mx d) (∃x)(Hx • Bx) • Mx 
+ Output:
+ First,  I need to understand the meaning of the given sentence.  ""Some blue herons migrate"" means that there exists at least one blue heron that migrates.
+ Next,  I need to translate the sentence into predicate logic.  The predicate logic notation uses quantifiers (∀ for all,  ∃ for some) and logical operators (• for and,  ⊃ for implies).
+ The sentence ""Some blue herons migrate"" can be translated as ""There exists an x such that x is a blue heron and x migrates"".  In predicate logic,  this is written as (∃x)(Hx • Bx) ⊃ Mx, where Hx represents ""x is a blue heron"", Bx represents ""x is blue"", and Mx represents ""x migrates"".
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Select the best English interpretation of the given arguments in predicate logic.
+ (∃x)(Cx • Ox)
+ (∀x)[(~Cx ⊃ ~Bx) ⊃ ~Og]	 / ~Og Choices: a) Some cookies have oatmeal.  If something's not being a cookie entails that it doesn't have chocolate chips,  then this cookie doesn't have oatmeal.  So this cookie doesn't have oatmeal.  b) Some cookies have oatmeal.  If something is not a cookie and does not have chocolate chips,  it doesn't have oatmeal.  So this cookie doesn't have oatmeal.  c) Some cookies have oatmeal.  If something doesn't have oatmeal,  then it is not a cookie and it doesn't have chocolate chips.  So this cookie doesn't have oatmeal.  d) Some cookies have oatmeal.  If something's not having chocolate chips entails that it is not a cookie,  then it doesn't have oatmeal.  So this cookie doesn't have oatmeal.  
+ Output:
+ First, let's break down the given arguments in predicate logic:
+ (∃x)(Cx • Ox) - There exists an x such that x is a cookie (Cx) and x has oatmeal (Ox).
+ (∀x)[(~Cx ⊃ ~Bx) ⊃ ~Og] - For all x, if x is not a cookie (~Cx) and not having chocolate chips (~Bx), then x doesn't have oatmeal (~Og).
+ The conclusion is ~Og - This cookie doesn't have oatmeal.
+
+ Now, let's match the given interpretations with the arguments:
+ a) Some cookies have oatmeal.  If something's not being a cookie entails that it doesn't have chocolate chips,  then this cookie doesn't have oatmeal.  So this cookie doesn't have oatmeal. - This interpretation matches the given arguments and conclusion.
+ b) Some cookies have oatmeal.  If something is not a cookie and does not have chocolate chips,  it doesn't have oatmeal.  So this cookie doesn't have oatmeal. - This interpretation is similar but the conditional statement is not accurately represented.
+ c) Some cookies have oatmeal.  If something doesn't have oatmeal,  then it is not a cookie and it doesn't have chocolate chips.  So this cookie doesn't have oatmeal. - This interpretation reverses the conditional statement and doesn't match the given arguments.
+ d) Some cookies have oatmeal.  If something's not having chocolate chips entails that it is not a cookie,  then it doesn't have oatmeal.  So this cookie doesn't have oatmeal. - This interpretation misrepresents the conditional statement and doesn't match the given arguments.
+
+ Therefore, the best English interpretation of the given arguments in predicate logic is {'sol': 'a'}"
+"Input: Identify the conclusion of the following argument.  All of psychology has gotten stuck in moral prejudices and fears.  No one has come close to understanding it as the development of the will to power.  However,  if a person even begins to regard the effects of hatred,  envy,  covetousness,  and the lust to rule as conditions of life and furthermore,  as factors essential to the general economy of life,  he will begin to get seasick.  At this point,  he begins to lose himself,  and sail over morality.  Thus,  psychology becomes again the path to fundamental problems.  (Friedrich Nietzsche,  Beyond Good and Evil) Choices: a) All of psychology has gotten stuck in moral prejudices and fears.  b) No one has come close to understanding it as the development of the will to power.  c) If a person even begins to regard the effects of hatred,  envy,  covetousness,  and the lust to rule as conditions of life and furthermore,  as factors essential to the general economy of life,  he will begin to get seasick.  d) Psychology becomes again the path to fundamental problems.  
+ Output:
+ First,  I need to identify the main point or the conclusion of the argument.  The argument is discussing the limitations of psychology and how it relates to understanding the will to power.
+ Next,  I look for a statement that summarizes the overall message or the ultimate point of the argument.  The last sentence states,  ""Psychology becomes again the path to fundamental problems.""
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Use indirect truth tables to determine whether each set of propositions is consistent.  If the set is consistent,  choose an option with a consistent valuation.  (There may be other consistent valuations. )
+ ~N ≡ (O · P)
+ ~O ⊃ Q
+ N · ~Q Choices: a) Inconsistent b) Consistent.  Consistent valuation when N,  O,  and P are true and Q is false c) Consistent.  Consistent valuation when N and O are true and P and Q are false d) Consistent.  Consistent valuation when N and P are true and O and Q are false 
+ Output:
+ First,  I need to create an indirect truth table for the given propositions.  The indirect method assumes the negation of the conclusion is true and looks for a contradiction.  In this case,  the conclusion is that the set of propositions is consistent.  So,  I assume the set is inconsistent and look for a contradiction.
+ The truth table will have columns for N,  O,  P,  and Q.  I will start by assuming the negation of the conclusion is true,  which means I will assume N,  O,  P,  and Q are all true.
+ | N | O | P | Q |
+ |---|---|---|---|
+ | T | T | T | T |
+
+Next,  I will evaluate the propositions using this valuation.
+ ~N ≡ (O · P) becomes N ≡ (O · P),  which is T ≡ (T · T),  or T ≡ T,  which is true.
+ ~O ⊃ Q becomes O ⊃ ~Q,  which is T ⊃ ~T,  or T �> F,  which is false.
+ N · ~Q becomes T · ~T,  or T · F,  which is false.
+
+The second proposition is false,  which means there is a contradiction.  Therefore,  the set of propositions is consistent.
+The consistent valuation when N,  O,  and P are true and Q is false is {'sol': 'b'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ A person is considered to have lived with you for all of the present year if the person was born or died in the present year and your home was this person's home for the entire time this person was alive.  Choices: a) (B ∨ D) • H ⊃ L b) L ⊃ (B ∨ D) • H c) L ⊃ (B ∨ D) • H d) (B ∨ D • H) ⊃ L 
+ Output:
+ First, let's break down the sentence into its main components:
+ 1. The person was born (B) or died (D) in the present year.
+ 2. Your home was this person's home (H) for the entire time this person was alive.
+ 3. A person is considered to have lived with you for all of the present year (L).
+
+Now, let's construct the formula based on these components. The sentence states that if both conditions 1 and 2 are true, then condition 3 is true. This can be represented as:
+
+(B ∨ D) • H ⊃ L
+
+This means that if the person was born or died in the present year (B ∨ D) and your home was this person's home (H), then the person is considered to have lived with you for all of the present year (L).
+
+Therefore, the correct answer is {'sol': 'a'}"
+"Input: Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ (O ≡ P) ∨ P / P ∨ ~O Choices: a) Valid b) Invalid.  Counterexample when O and P are true c) Invalid.  Counterexample when O is true and P is false d) Invalid.  Counterexample when P is true and O is false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has two propositions,  O and P.  So,  I need to consider all possible truth values for O and P.
+
+| O | P | O ≡ P | (O ≡ P) ∨ P | P ∨ ~O |
+|---|---|-------|-------------|--------|
+| T | T |   T   |      T      |   T    |
+| T | F |   F   |      F      |   F    |
+| F | T |   F   |      T      |   T    |
+| F | F |   T   |      T      |   T    |
+
+Next,  I need to check if the conclusion (P ∨ ~O) is true in every row where the premise ((O ≡ P) ∨ P) is true.
+
+Looking at the table,  I see that in the first and fourth rows,  the premise is true,  and the conclusion is also true.  In the second row,  the premise is false,  so it doesn't matter if the conclusion is true or false.  In the third row,  the premise is false,  so it doesn't matter if the conclusion is true or false.
+
+Since the conclusion is true in every row where the premise is true,  the argument is valid.
+
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: Leroy is bad only if DJ Khaled shouts his name.  Choices: a) Sk ≡ Bl b) Bl ≡ Sk c) Bx ⊃ Sy d) Bl ⊃ Sk 
+ Output:
+ First,  I need to understand the meaning of the given sentence.  The sentence states that Leroy is bad only if DJ Khaled shouts his name.  This means that Leroy being bad is dependent on DJ Khaled shouting his name.
+ Now,  I need to translate this meaning into predicate logic.  The symbol '≡' represents equivalence,  meaning that two statements are either both true or both false.  The symbol '⊃' represents implication,  meaning that if the first statement is true,  then the second statement must also be true.
+ Looking at the choices,  I can eliminate a) and b) because they use equivalence,  which does not accurately represent the conditional relationship between the two statements.
+ Between c) and d),  c) uses '⊃' to represent the implication,  but it uses 'Bx' to represent Leroy being bad and 'Sy' to represent DJ Khaled shouting his name.  This is not a clear representation of the relationship between the two statements.
+ d) uses '⊃' to represent the implication,  and it uses 'Bl' to represent Leroy being bad and 'Sk' to represent DJ Khaled shouting his name.  This choice clearly represents the conditional relationship between the two statements.
+ Therefore,  the best translation into predicate logic is {'sol': 'd'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ If either George enrolls or Harry enrolls,  then Ira does not enroll.  Choices: a) (G ⊃ H) ∨ I b) (G ∨ H) ⊃ I c) (G ⊃ H) ∨ ~I d) (G ∨ H) ⊃ ~I 
+ Output:
+ First,  I need to understand the logical structure of the sentence.  The sentence says that if either George enrolls or Harry enrolls,  then Ira does not enroll.  This is a conditional statement with an ""or"" in the antecedent.
+ Next,  I need to identify the correct symbolization.  The correct symbolization should reflect the structure of the sentence.  The antecedent is an ""or"" statement,  so it should be represented by (G ∨ H).  The consequent is a negation of I,  so it should be represented by ~I.
+ The correct symbolization should use the ""implies"" operator (⊃) to connect the antecedent and the consequent.  So,  the correct symbolization is (G ∨ H) ⊃ ~I.
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Select the best translation into predicate logic: Ms.  Jackson lent me some sugar,  but neither Janet nor Latoya did.  Choices: a) Lm ∨ ~(Jl ∨ Ll) b) Lm • ~(Lj • Ll) c) Lm • ~(Lj ∨ Ll) d) Lm ∨ ~(Lj • Ll) 
+ Output:
+ First, let's break down the sentence into its main components.  Ms. Jackson lent me some sugar can be represented as Lm (Ms. Jackson lent me), but neither Janet nor Latoya did can be represented as ~(Lj ∨ Ll) (not (Janet lent or Latoya lent)).
+ The sentence can be translated as Lm ∧ ~(Lj ∨ Ll), which means Ms. Jackson lent me some sugar and neither Janet nor Latoya did.
+ Therefore, the correct answer is {'sol': 'c'}"
+"Input:  Select the best translation into predicate logic.  Some animals are neglected by cruel people.  (Ax: x is an animal; Cx: x is cruel; Px: x is a person; Nxy: x neglects y) Choices: a) (∃x)(Ax • Cx) • (∃y)(Py • Nyx) b) (∃x)(Cx • Px) • (∃y)(Ay • Nxy) c) (∃x)(Ax • Px) • (∃y)(Cy • Nxy) d) (∃x)(∃y){(Ax • Cy) • Py • Nxy)} 
+ Output:
+ First, I need to identify the key components of the sentence: ""Some animals are neglected by cruel people.""
+
+1. ""Some animals"" can be represented as (∃x)(Ax), where Ax means ""x is an animal.""
+2. ""neglected by cruel people"" can be represented as (∃y)(Cy • Nxy), where Cy means ""y is cruel"" and Nxy means ""x neglects y.""
+3. ""people"" can be represented as Py, where Py means ""y is a person.""
+
+Now, I need to combine these components to represent the entire sentence. The correct translation should show that there exists at least one animal that is neglected by at least one cruel person.
+
+The correct translation is (∃x)(Ax) • (∃y)(Cy • Nxy), which is a subset of option d) (∃x)(∃y){(Ax • Cy) • Py • Nxy)}.
+
+Therefore, the best translation into predicate logic is {'sol': 'd'}"
+"Input:  Use indirect truth tables to determine whether each set of propositions is consistent.  If the set is consistent,  choose an option with a consistent valuation.  (There may be other consistent valuations. )
+ (E ⊃ F) ⊃ G
+ (~E ∨ F) ≡ (H ∨ I)
+ I ⊃ (J ⊃ ~H)
+ ~G ⊃ ~J Choices: a) Inconsistent b) Consistent.  Consistent valuation when E is true and F,  G,  H,  I,  and J are false c) Consistent.  Consistent valuation when E and H are true and F,  G,  I,  and J are false d) Consistent.  Consistent valuation when E and I are true and F,  G,  H,  and J are false 
+ Output:
+ First,  I will create an indirect truth table for the given propositions.  I will assume the negation of the conclusion (~G ⊃ ~J) and see if the premises lead to a contradiction.
+
+| E | F | G | H | I | J | (E ⊃ F) ⊃ G | (~E ∨ F) ≡ (H ∨ I) | I ⊃ (J ⊃ ~H) | ~G ⊃ ~J |
+|---|---|---|---|---|---|-------------|-------------------|----------------|-------------|
+| T | T | T | T | T | T | T           | T                 | T              | T           |
+| T | T | T | T | T | F | T           | F                 | T              | T           |
+| T | T | T | T | F | T | T           | T                 | F              | F           |
+| T | T | T | T | F | F | T           | T                 | T              | T           |
+| T | T | T | F | T | T | T           | T                 | T              | T           |
+| T | T | T | F | T | F | T           | T                 | T              | T           |
+| T | T | T | F | F | T | T           | T                 | T              | T           |
+| T | T | T | F | F | F | T           | T                 | T              | T           |
+| T | F | T | T | T | T | T           | T                 | T              | T           |
+| T | F | T | T | T | F | T           | T                 | T              | T           |
+| T | F | T | T | F | T | T           | T                 | T              | T           |
+| T | F | T | T | F | F | T           | T                 | T              | T           |
+| T | F | T | F | T | T | T           | T                 | T              | T           |
+| T | F | T | F | T | F | T           | T                 | T              | T           |
+| T | F | T | F | F | T | T           | T                 | T              | T           |
+| T | F | T | F | F | F | T           | T                 | T              | T           |
+| F | T | F | T | T | T | F           | F                 | T              | T           |
+| F | T | F | T | T | F | F           | T                 | T              | T           |
+| F | T | F | T | F | T | F           | T                 | T              | T           |
+| F | T | F | T | F | F | F           | T                 | T              | T           |
+| F | T | F | F | T | T | F           | T                 | T              | T           |
+| F | T | F | F | T | F | F           | T                 | T              | T           |
+| F | T | F | F | F | T | F           | T                 | T              | T           |
+| F | T | F | F | F | F | F           | T                 | T              | T           |
+| F | F | F | T | T | T | T           | T                 | T              | T           |
+| F | F | F | T | T | F | T           | T                 | T              | T           |
+| F | F | F | T | F | T | T           | T                 | T              | T           |
+| F | F | F | T | F | F | T           | T                 | T              | T           |
+| F | F | F | F | T | T | T           | T                 | T              | T           |
+| F | F | F | F | T | F | T           | T                 | T              | T           |
+| F | F | F | F | F | T | T           | T                 | T              | T           |
+| F | F | F | F | F | F | T           | T                 | T              | T           |
+
+From the truth table,  I can see that there is no row where all the premises are true and the conclusion is false.  Therefore,  the set of propositions is consistent.
+
+Now,  I will choose a consistent valuation from the given options.  Option b) states that E is true and F,  G,  H,  I,  and J are false.  Let's check if this valuation is consistent with the premises.
+
+| E | F | G | H | I | J | (E ⊃ F) ⊃ G | (~E ∨ F) ≡ (H ∨ I) | I ⊃ (J ⊃ ~H) | ~G ⊃ ~J |
+|---|---|---|---|---|---|-------------|-------------------|----------------|-------------|
+| T | F | F | F | F | F | T           | T                 | T              | T           |
+
+The valuation is consistent with the premises, so the correct answer is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic: Some students work hard.  Choices: a) (∃x)(Wx ∨ Sx) b) (∃x)(Sx ∨ Wx) c) (∃x)(Sx • Wx) d) (∃x)(Sx ⊃ Wx) 
+ Output:
+ First, I need to understand the meaning of the given sentence. The sentence ""Some students work hard"" means that there exists at least one student who works hard.
+
+Next, I will translate the sentence into predicate logic. The predicate ""Sx"" represents ""x is a student"" and the predicate ""Wx"" represents ""x works hard"".
+
+Now, I will analyze the choices:
+
+a) (∃x)(Wx ∨ Sx) - This means ""There exists an x such that x works hard or x is a student"". This is not the correct translation because it includes students who do not work hard.
+
+b) (∃x)(Sx ∨ Wx) - This is the same as choice a and has the same issue.
+
+c) (∃x)(Sx • Wx) - This means ""There exists an x such that x is a student and x works hard"". This is a correct translation because it specifies that the student works hard.
+
+d) (∃x)(Sx ⊃ Wx) - This means ""There exists an x such that if x is a student, then x works hard"". This is also a correct translation because it implies that all students work hard.
+
+However, since the original sentence says ""Some students work hard"", it implies that not all students work hard. Therefore, choice c) (∃x)(Sx • Wx) is the best translation.
+
+Output: {'sol': 'c'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Either England's importing beef is not a necessary condition for France's subsidizing agriculture,  or China promotes human rights if South Africa supplies diamonds.  Choices: a) (~F ⊃ E) ∨ (C ≡ ~S) b) (~E ⊃ F) ∨ (C ⊃ S) c) (~F ⊃ E) ∨ (C ≡ S) d) ~(F ⊃ E) ∨ (S ⊃ C) 
+ Output:
+ First, let's break down the sentence into its main components:
+ 1. Either England's importing beef (E) is not a necessary condition for France's subsidizing agriculture (F).
+ 2. Or China (C) promotes human rights if South Africa (S) supplies diamonds.
+
+Now, let's analyze the given formulas:
+
+a) (~F ⊃ E) ∨ (C ≡ ~S) - This formula says that if France is not subsidizing agriculture (F), then England is importing beef (E), and China promotes human rights (C) if and only if South Africa is not supplying diamonds (S). This does not match the original sentence.
+
+b) (~E ⊃ F) ∨ (C ⊃ S) - This formula says that if England is not importing beef (E), then France is subsidizing agriculture (F), and if China is promoting human rights (C), then South Africa is supplying diamonds (S). This also does not match the original sentence.
+
+c) (~F ⊃ E) ∨ (C ≡ S) - This formula says that if France is not subsidizing agriculture (F), then England is importing beef (E), and China promotes human rights (C) if and only if South Africa is supplying diamonds (S). This matches the original sentence.
+
+d) ~(F ⊃ E) ∨ (S ⊃ C) - This formula says that it is not the case that if France is subsidizing agriculture (F), then England is importing beef (E), and if South Africa is supplying diamonds (S), then China is promoting human rights (C). This does not match the original sentence.
+
+Therefore, the best symbolization of the given sentence is {'sol': 'c'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~A · ~B
+ (A ∨ C) ∨ B / C Choices: a) Valid b) Invalid.  Counterexample when A and B are true and C is false c) Invalid.  Counterexample when A is true and B and C are false d) Invalid.  Counterexample when B is true and A and C are false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has three propositions,  A,  B,  and C,  so I need to consider all possible combinations of truth values for these propositions.
+
+| A | B | C | ~A | ~B | ~A · ~B | A ∨ C | (A ∨ C) ∨ B | (A � C) ∨ B → C |
+|---|---|---|----|----|---------|-------|------------|------------------|
+| T | T | T | F  | F  | F       | T     | T          | T                |
+| T | T | F | F  | F  | F       | T     | T          | F                |
+| T | F | T | F  | T  | F       | T     | T          | T                |
+| T | F | F | F  | T  | F       | T     | T          | F                |
+| F | T | T | T  | F  | F       | T     | T          | T                |
+| F | T | F | T  | F  | F       | T     | T          | F                |
+| F | F | T | T  | T  | T       | T     | T          | T                |
+| F | F | F | T  | T  | T       | F     | F          | T                |
+
+Next,  I need to check if the conclusion (C) is true in every row where the premises (~A · ~B) and the conditional ((A ∨ C) ∨ B) are both true.  Looking at the table,  I see that in the second row,  the premises are true but the conclusion is false.
+
+Therefore,  the argument is invalid.  The counterexample is when A and B are true and C is false.  So the correct answer is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic.  All birds live in some nest.  (Bx: x is a bird; Nx: x is a nest; Lxy: x lives in y) Choices: a) (∀x)(∀y)(Bx • Ny) ⊃ Lxy b) (∀x)Bx ⊃ (∃y)(Ny • Lxy) c) (∀x)(∃y)(Ny • Bx) ⊃ Lxy d) (∀x)(∃y)(Bx • Ny) ⊃ Lxy 
+ Output:
+ First, I need to understand the given statement ""All birds live in some nest."" This means that for every bird, there exists at least one nest where it lives.
+
+Next, I will analyze each choice and see which one accurately represents this statement using predicate logic.
+
+a) (∀x)(∀y)(Bx • Ny) ⊃ Lxy - This choice says that for all x and y, if x is a bird and y is a nest, then x lives in y. This is not correct because it implies that every x (whether a bird or not) lives in every y (whether a nest or not), which is not what the original statement says.
+
+b) (∀x)Bx ⊃ (∃y)(Ny • Lxy) - This choice says that for every x, if x is a bird, then there exists a y such that y is a nest and x lives in y. This is a correct representation of the original statement, as it accurately conveys that all birds live in some nest.
+
+c) (∀x)(∃y)(Ny • Bx) ⊃ Lxy - This choice says that for every x, there exists a y such that y is a nest and x is a bird, and if that's the case, then x lives in y. This is not correct because it implies that if there exists a y that is a nest and x is a bird, then x lives in y, which does not account for the fact that all birds live in some nest.
+
+d) (∀x)(∃y)(Bx • Ny) ⊃ Lxy - This choice is similar to choice a, saying that for every x, there exists a y such that if x is a bird and y is a nest, then x lives in y. This is not correct for the same reason as choice a; it implies that every x lives in every y, regardless of whether they are birds or nests.
+
+Therefore, the correct answer is b) (∀x)Bx ⊃ (∃y)(Ny • Lxy).
+
+Output: {'sol': 'b'}"
+"Input: Identify the conclusion of the following argument.  Utilitarian theory is embarrassed by the possibility of utility monsters.  A utility monster gets enormous gains in utility,  greater than the utility lost by the sacrifices of others.  The sacrifices of even large numbers of other people are outweighed by the gains of the utility monster.  The theory seems to require that we all be sacrificed in the monste's maw in order to increase total utility.  (Robert Nozick,  Anarchy,  State,  and Utopia) Choices: a) Utilitarian theory is embarrassed by the possibility of utility monsters.  b) A utility monster gets enormous gains in utility.  c) A utility monster gets gains in utility greater than the utility lost by the sacrifices of others.  d) The sacrifices of even large numbers of other people are outweighed by the gains of the utility monster.  
+ Output:
+ First,  I need to understand the argument presented.  The argument is about the limitations of utilitarian theory,  specifically the issue of utility monsters.  A utility monster is a hypothetical being that receives such large gains in utility that the sacrifices of others are not enough to balance it out.
+
+Next,  I need to identify the conclusion of the argument.  The conclusion is the point that the argument is trying to establish or prove.  In this case,  the argument is discussing the implications of utility monsters for utilitarian theory.
+
+The argument presents the idea that utilitarian theory faces a problem with utility monsters,  as the sacrifices of others are not enough to balance the gains of the utility monster.  The conclusion of the argument is that this possibility embarrasses utilitarian theory.
+
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Use the following key to translate the given formula of PL to natural,  English sentences.
+ A: Marina reads a Percy Jackson book.
+ B: Izzy plays Minecraft.
+ C: Emily stops working.
+ D: Russell makes dinner.
+ E: Ashleigh stops by.
+ (A ∨ ~E) ≡ (D • ~B) Choices: a) Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary condition for both Russell making dinner and Izzy not playing Minecraft.  b) Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary and sufficient condition for Russell making dinner and Izzy playing Minecraft.  c) Marina reads a Percy Jackson book unless Ashleigh stops by if,  and only if,  both Russell makes dinner and Izzy doesn't play Minecraft.  d) Either Marina reads a Percy Jackson book or Ashleigh does not stop by just in case both Russell makes dinner and Izzy doesn't play Minecraft.  
+ Output:
+ First,  I need to understand the given formula (A ∨ ~E) ≡ (D • ~B).  This is a biconditional statement,  which means that the truth of the two sides is equivalent.
+ Next,  I will translate each part of the formula into English using the given key.  A is ""Marina reads a Percy Jackson book,"" ~E is ""Ashleigh not stopping by,"" D is ""Russell makes dinner,"" and ~B is ""Izzy not playing Minecraft.""
+ Now,  I will put the translated parts together to form the sentence: ""Either Marina reading a Percy Jackson book or Ashleigh not stopping by is a necessary and sufficient condition for both Russell making dinner and Izzy not playing Minecraft.""
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Brittany likes fish and lizards,  but not cats.  Choices: a) F • L • ~C b) (F • L) • ~C c) (F • L) ∨ ~C d) C • (F • L) 
+ Output:
+ First,  I need to identify the main components of the sentence.  The sentence states that Brittany likes fish and lizards,  but not cats.  This can be broken down into three parts: Brittany likes fish (F),  Brittany likes lizards (L),  and Brittany does not like cats (C).
+ Next,  I need to determine how these components are related.  The sentence uses the word ""and"" to connect the first two parts,  indicating that both F and L are true.  The word ""but"" indicates a contrast with the third part,  C,  which is false.
+ To symbolize this sentence using propositional logic (PL),  I need to use the conjunction (AND) operator to connect F and L,  and the negation (NOT) operator to indicate that C is false.  The correct formula should have both F and L connected by the conjunction operator,  and the negation operator applied to C.
+ Comparing the given choices,  the best symbolization is {'sol': 'b'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ If either Harry enrolls or George does not enroll,  then Jim enrolls.  Choices: a) H ∨ (~G ⊃ J) b) ~(H ∨ G) ⊃ J c) (H ∨ ~G) ⊃ J d) (H ⊃ ~G) ∨ J 
+ Output:
+ First,  I need to understand the logical structure of the given sentence.  The sentence states that if either Harry enrolls or George does not enroll,  then Jim enrolls.  This is a conditional statement with a disjunction in the antecedent.
+ Next,  I will analyze each of the given formulas to see which one represents this structure.
+ a) H ∨ (~G ⊃ J) - This formula represents ""Harry enrolls or if George does not enroll,  then Jim enrolls.""  It does not capture the full disjunction of the original sentence.
+ b) ~(H ∨ G) ⊃ J - This formula represents ""If neither Harry nor George enrolls,  then Jim enrolls.""  This is not the same as the original sentence.
+ c) (H ∨ ~G) ⊃ J - This formula represents ""If either Harry enrolls or George does not enroll,  then Jim enrolls.""  This matches the structure of the original sentence.
+ d) (H ⊃ ~G) ∨ J - This formula represents ""If Harry enrolls,  then George does not enroll,  or Jim enrolls.""  This is not the same as the original sentence.
+ Therefore,  the correct answer is {'sol': 'c'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~X ⊃ Y
+ Y ⊃ Z
+ ~Z / ~X Choices: a) Valid b) Invalid.  Counterexample when X,  Y,  and Z are true c) Invalid.  Counterexample when Y and Z are true and Z is false d) Invalid.  Counterexample when X is true and Y and Z are false 
+ Output:
+ First,  I will construct a complete truth table for the given argument.  The columns will represent the truth values of X,  Y,  and Z.  I will use the symbols T and F to represent true and false,  respectively.
+
+| X | Y | Z | ~X | ~X ⊃ Y | Y ⊃ Z | ~Z | ~X & ~Z |
+|---|---|---|----|--------|-------|----|--------|
+| T | T | T | F  | T      | T     | F  | F      |
+| T | T | F | F  | F      | F     | T  | F      |
+| T | F | T | F  | T      | T     | F  | F      |
+| T | F | F | F  | T      | T     | T  | F      |
+| F | T | T | T  | T      | T     | F  | F      |
+| F | T | F | T  | F      | F     | T  | T      |
+| F | F | T | T  | T      | T     | F  | F      |
+| F | F | F | T  | T      | T     | T  | F      |
+
+Next,  I will check if the conclusion ~X follows from the premises.  The conclusion ~X is true in the rows where ~X & ~Z is true.  In this case,  the only row where ~X & ~Z is true is when X is false,  Y is true,  and Z is false.
+
+Therefore,  the argument is invalid.  The counterexample is when X is false,  Y is true,  and Z is false.  So the correct answer is {'sol': 'd'}"
+"Input:  S Select the best translation into predicate logic.  Some kind people help some endangered species.  (Ex: x is endangered; Kx: x is kind; Px: x is a person; Sx: x is a species; Hxy: x helps y) Choices: a) (∃x){(Kx • Px) • (∃y)(Ey • Sy) • Hxy} b) (∃x)(∃y){(Kx • Sx) • (Ey • Py) • Hxy} c) (∃x)(∃y){(Kx • Sx) • (Ey • Py) • Hyx} d) (∃x)(∃y){(Kx • Px) • (Ey • Sy) ⊃ Hxy} 
+ Output:
+ First, I need to translate the given statement into predicate logic. The statement is ""Some kind people help some endangered species.""
+
+The key components of the statement are:
+1. ""Some kind people"": There exists at least one kind person.
+2. ""help"": The action of helping.
+3. ""some endangered species"": There exists at least one endangered species.
+
+Now, I will use the given predicates to represent these components:
+1. Kx: x is kind
+2. Px: x is a person
+3. Sx: x is a species
+4. Hxy: x helps y
+
+Putting it all together, the translation should express that there exists a kind person (Kx • Px) that helps an endangered species (Ey • Sy).
+
+Now, let's look at the choices:
+a) (∃x){(Kx • Px) • (∃y)(Ey • Sy) • Hxy} - This choice correctly represents the existence of a kind person and an endangered species that are connected by the action of helping.
+b) (∃x)(∃y){(Kx • Sx) • (Ey • Py) • Hxy} - This choice incorrectly places the endangered species (Sx) with the kind person (Kx) and vice versa.
+c) (∃x)(∃y){(Kx • Sx) • (Ey • Py) • Hyx} - This choice incorrectly places the endangered species (Sx) with the kind person (Kx) and uses Hyx instead of Hxy, which is not equivalent.
+d) (∃x)(∃y){(Kx • Px) • (Ey • Sy) ⊃ Hxy} - This choice uses the implication (⊃) instead of the direct connection (•) between the kind person and the endangered species that are helped.
+
+Therefore, the correct answer is {'sol': 'a'}"
+"Input:  Select the best English interpretation of the given proposition,  using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (∀x)[Ax ⊃ (∃y)(Hy • Bxy)] Choices: a) Every apartment is bigger than some house.  b) Every house is bigger than all apartments.  c) Every house is bigger than some apartment.  d) Some house is bigger than every apartment.  
+ Output:
+ First,  I will break down the given proposition using the translation key:
+ (∀x)[Ax ⊃ (∃y)(Hy • Bxy)]
+ This proposition can be read as ""For all x, if x is an apartment, then there exists a y such that y is a house and x is bigger than y.""
+ Now,  I will compare this interpretation to the given choices:
+ a) Every apartment is bigger than some house.
+ b) Every house is bigger than all apartments.
+ c) Every house is bigger than some apartment.
+ d) Some house is bigger than every apartment.
+ The best English interpretation of the given proposition is {'sol': 'a'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ Q ≡ R
+ ~(S ∨ Q) / R Choices: a) Valid b) Invalid.  Counterexample when Q and S are true and R is false c) Invalid.  Counterexample when Q is true and S and R are false d) Invalid.  Counterexample when Q,  S,  and R are false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has three variables,  Q,  S,  and R,  so I will create a column for each of these variables,  as well as columns for the subexpressions and the main expression.
+
+| Q | S | R | Q ≡ R | ~(S ∨ Q) | S ∨ Q | R (conclusion) |
+|---|---|---|-------|----------|-------|---------------|
+| T | T | T |   T   |     F    |   T   |      T        |
+| T | T | F |   F   |     F    |   T   |      F        |
+| T | F | T |   T   |     F    |   T   |      T        |
+| T | F | F |   F   |     T    |   T   |      F        |
+| F | T | T |   T   |     F    |   T   |      T        |
+| F | T | F |   F   |     F    |   T   |      F        |
+| F | F | T |   T   |     F    |   F   |      T        |
+| F | F | F |   F   |     T    |   F   |      F        |
+
+Next,  I need to check if the argument is valid or invalid.  An argument is valid if and only if there is no row in the truth table where the premises are all true and the conclusion is false.  Looking at the truth table,  I see that there is a row where Q ≡ R and ~(S ∨ Q) are both true,  but R is false.  This means that the argument is invalid.
+
+The counterexample is when Q and S are true and R is false.  So,  the correct answer is {'sol': 'b'}"
+"Input: Identify the antecedent of the following conditional proposition: The university raises tuition only if both the governor approves of it and the board of trustees recommends it.  Choices: a) The university raises tuition.  b) The governor approves of it.  c) The board of trustees recommends it.  d) The governor approves of it and the board of trustees recommends it.  
+ Output:
+ First, let's analyze the conditional proposition given: ""The university raises tuition only if both the governor approves of it and the board of trustees recommends it.""
+ This can be rewritten as ""If the university raises tuition, then both the governor approves of it and the board of trustees recommends it.""
+ In a conditional proposition of the form ""If P, then Q,"" the antecedent is P, and the consequent is Q.
+ In this case, the antecedent is ""the university raises tuition"" and the consequent is ""both the governor approves of it and the board of trustees recommends it.""
+ Therefore, the correct answer is {'sol': 'a'}"
+"Input: Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?
+ (A ∨ B) ⊃ (C ∨ D)
+ A ∨ B
+ ~C Choices: a) ~A ∨ ~B b) ~~C c) C ∨ D d) (A ∨ B) ⊃ D 
+ Output:
+ First, I will analyze the given premises and the logical connectives involved. The premises are (A ∨ B) ⊃ (C ∨ D), A ∨ B, and ~C.
+
+Next, I will consider the rules of inference and the properties of propositional logic. In this case, I will focus on the Modus Tollens rule, which states that if P ⊃ Q and ~Q are given, then I can infer ~P.
+
+Now, I will apply the Modus Tollens rule to the given premises. The first premise is (A ∨ B) ⊃ (C ∨ D), and the second premise is A ∨ B. Since ~C is given, I can apply Modus Tollens to infer ~(C ∨ D).
+
+Finally, I will examine the given choices and determine which one is an immediate consequence of the premises. The correct answer is {'sol': 'a'}"
+"Input: Identify the antecedent of the following conditional proposition: When the university raises tuition,  then either the governor approves of it or the board of trustees doesn't prevent it.  Choices: a) The university raises tuition.  b) The governor approves of it.  c) The board of trustees prevents it.  d) The board of trustees doesn't prevent it.  
+ Output:
+ First,  I need to identify the antecedent of the conditional proposition.  The antecedent is the part of the proposition that comes before the 'then'.  In this case,  the antecedent is 'the university raises tuition'.
+ Next,  I need to match the antecedent to one of the given choices.  The correct choice is {'sol': 'a'}"
+"Input:  Select the best translation into predicate logic.  Marco doesn't move from Spain to Italy.  (i: Italy; m: Marco; s: Spain; Mxyz: x moves to y from z) Choices: a) ~Mmsi b) M~mis c) ~Mmis d) M~msi 
+ Output:
+ First,  I need to identify the key elements in the sentence: Marco,  doesn't move,  from Spain to Italy.
+ Next,  I need to translate the key elements into predicate logic using the given predicates: m for Marco,  s for Spain,  i for Italy,  and Mxyz for x moves to y from z.
+ The negation of the movement can be represented by the negation symbol (~).
+ The sentence states that Marco doesn't move from Spain to Italy,  so the translation would be ~Mmsi.
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~S ∨ T
+ ~S · U
+ ~T ∨ U / T · U Choices: a) Valid b) Invalid.  Counterexample when S,  T,  and U are true c) Invalid.  Counterexample when S and U are true and T is false d) Invalid.  Counterexample when U is true and S and T are false 
+ Output:
+ First,  I need to construct a complete truth table for the given premises and the conclusion.  The variables are S, T, and U.  I will use T for true and F for false.
+
+| S | T | U | ~S | ~T | ~S ∨ T | ~S · U | ~T ∨ U | T · U |
+|---|---|---|----|----|--------|-------|-------|------|
+| T | T | T | F  | F  | T      | F     | T     | T    |
+| T | T | F | F  | F  | T      | F     | T     | F    |
+| T | F | T | F  | T  | T      | F     | T     | F    |
+| T | F | F | F  | T  | T      | F     | T     | F    |
+| F | T | T | T  | F  | T      | T     | T     | T    |
+| F | T | F | T  | F  | T      | T     | T     | F    |
+| F | F | T | T  | T  | T      | F     | T     | F    |
+| F | F | F | T  | T  | T      | F     | T     | F    |
+
+Next,  I need to check if the conclusion T · U is true in every row where the premises ~S ∨ T and ~S · U are both true.  In the table,  the rows where ~S ∨ T is true are rows 1, 2, 5, and 6.  In these rows,  ~S · U is also true.  However,  the conclusion T · U is true only in rows 1 and 5.
+
+Therefore,  the argument is {'sol': 'b'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Doctors are helpful unless their patients are rude.  Choices: a) H ≡ R b) H • R c) H ∨ ~R d) H ∨ R 
+ Output:
+ First,  let's break down the sentence into its logical components.  The sentence states that doctors are helpful (H) unless their patients are rude (R).  This means that if the patients are not rude (~R), then the doctors are helpful (H).
+ Now,  let's analyze the given formulas:
+ a) H ≡ R - This means that H is equivalent to R, which is not the correct representation of the sentence.
+ b) H • R - This means that H and R must both be true for the formula to be true, which is not the correct representation of the sentence.
+ c) H ∨ ~R - This means that H is true or the patients are not rude (~R), which aligns with the original sentence.
+ d) H ∨ R - This means that H is true or the patients are rude (R), which does not align with the original sentence.
+ Therefore,  the best symbolization of the sentence is {'sol': 'c'}"
+"Input:  Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ L ⊃ [(M ∨ ~N) ⊃ O]
+ (N ⊃ O) ⊃ (~P ⊃ Q)
+ R ⊃ ~Q / L ⊃ (R ⊃ P) Choices: a) Valid b) Invalid.  Counterexample when L,  M,  O,  Q,  and R are true and N and P are false c) Invalid.  Counterexample when L,  N,  O,  Q,  and R are true and M and P are false d) Invalid.  Counterexample when L,  N,  and R are true and M,  O,  P,  and Q are false 
+ Output:
+ First,  I need to construct an indirect truth table for the given premises and conclusion.  The premises are (L ⊃ [(M ∨ ~N) ⊃ O]) and ((N ⊃ O) ⊃ (~P ⊃ Q)),  and the conclusion is (L ⊃ (R ⊃ P)).
+ The truth table should have columns for L,  M,  N,  O,  P,  Q,  and R,  as well as for the premises and the conclusion.
+ I will start by assuming that the conclusion is false.  This means that L is true and R is true,  but P is false.
+ Next,  I need to consider the premises.  The first premise is (L ⊃ [(M ∨ ~N) ⊃ O]).  Since L is true,  I need to consider the case where [(M ∨ ~N) ⊃ O] is false.  This means that (M ∨ ~N) is true and O is false.
+ The second premise is ((N ⊃ O) ⊃ (~P ⊃ Q)).  Since P is false,  I need to consider the case where (~P ⊃ Q) is false.  This means that Q is false.
+ Now,  I need to consider the possible values for M,  N,  and O that satisfy the premises.  One possible combination is M is true,  N is false,  and O is false.
+ This combination satisfies all the premises,  but does not satisfy the conclusion.  Therefore,  the argument is invalid.
+ The correct answer is {'sol': 'b'}"
+"Input: Identify the conclusion of the following argument.  The sense of a term is supposed to determine its reference.  But reference can vary without any difference in thought.  So,  the senses of terms must be able to vary without variation in thought.  So,  our thoughts do not determine the meanings of our terms; meanings are not in the head.  (Hilary Putnam) Choices: a) The sense of a term is supposed to determine its reference.  b) But reference can vary without any difference in thought.  c) Reference can vary without any difference in thought.  d) Our thoughts do not determine the meanings of our terms; meanings are not in the head.  
+ Output:
+ First,  I need to identify the main point or conclusion of the argument.  The argument starts by stating that the sense of a term is supposed to determine its reference.  Then,  it presents a counterpoint that reference can vary without any difference in thought.  The argument then draws a conclusion from this counterpoint.
+ The conclusion is that our thoughts do not determine the meanings of our terms; meanings are not in the head.
+ Therefore,  the correct answer is {'sol': 'd'}"
+"Input:  Construct a complete truth table for the following pairs of propositions.  Then,  using the truth tables,  determine whether the statements are logically equivalent or contradictory.  If neither,  determine whether they are consistent or inconsistent.  Justify your answers.
+ (G ∨ ~H) ⊃ G and ~G ≡ (~H · G) Choices: a) Logically equivalent b) Contradictory c) Neither logically equivalent nor contradictory,  but consistent d) Inconsistent 
+ Output:
+ First,  I need to construct the truth table for both propositions.
+
+For (G ∨ ~H) ⊃ G:
+
+| G | H | ~H | G ∨ ~H | (G ∨ ~H) ⊃ G |
+|---|---|----|--------|--------------|
+| T | T | F  | T      | T            |
+| T | F | T  | T      | T            |
+| F | T | F  | F      | T            |
+| F | F | T  | T      | F            |
+
+For ~G ≡ (~H · G):
+
+| G | H | ~H | ~G | ~H · G | ~G ≡ (~H · G) |
+|---|---|----|----|--------|---------------|
+| T | T | F  | F  | F      | T             |
+| T | F | T  | F  | F      | T             |
+| F | T | F  | T  | F      | F             |
+| F | F | T  | T  | F      | F             |
+
+Now,  I need to compare the final columns of the truth tables.  The final column of (G ∨ ~H) ⊃ G is T,  T,  F,  F,  while the final column of ~G ≡ (~H · G) is T,  T,  F,  F.
+
+Since the final columns of the truth tables are identical,  the statements are logically equivalent.
+
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Either England's importing beef is a necessary condition for France's subsidizing agriculture or China's promoting human rights is not a sufficient condition for South Africa's supplying diamonds.  Choices: a) (E ≡ F) ∨ ~(C ≡ S) b) (E ≡ F) ∨ (~C ⊃ S) c) (E ⊃ F) ∨ ~(C ⊃ S) d) (F ⊃ E) ∨ ~(C ⊃ S) 
+ Output:
+ First, I need to understand the logical structure of the sentence. It is an ""or"" statement, so I will use the disjunction symbol (∨). The sentence has two parts: one about England and France, and the other about China and South Africa.
+
+The first part states that England's importing beef is a necessary condition for France's subsidizing agriculture. This means that if England does not import beef, then France will not subsidize agriculture. In logical terms, this can be represented as ~E ⊃ ~F.
+
+The second part states that China's promoting human rights is not a sufficient condition for South Africa's supplying diamonds. This means that even if China promotes human rights, South Africa may still not supply diamonds. In logical terms, this can be represented as C ≡ ~S.
+
+Now, I will combine these two parts using the disjunction symbol (∨) to represent the ""or"" statement. So, the best symbolization is (E ≡ F) ∨ (~C ⊃ S).
+
+Therefore, the correct answer is {'sol': 'b'}"
+"Input:  Select the best English interpretation of the given arguments in predicate logic.
+ Wn ∨ Wm
+ (∀x)[Lx ⊃ (Dx ⊃ ~Wx)]
+ Ln • Dn	 / ~(∀x)~Wx Choices: a) Either Nancy or Marvin are at work.  All lawyers are not at work if they are out to dinner.  Nancy is a lawyer and out to dinner.  So not everything is not at work.  b) Either Nancy or Marvin are at work.  All lawyers are out to dinner if they are not at work.  Nancy is a lawyer and out to dinner.  So not everything is not at work.  c) Either Nancy or Marvin are at work.  All lawyers are out to dinner if they are not at work.  Nancy is a lawyer and out to dinner.  So not everything is at work.  d) Either Nancy or Marvin are at work.  All lawyers are not at work if they are out to dinner.  Nancy is a lawyer and out to dinner.  So not everything is at work.  
+ Output:
+ First, let's break down the given arguments in predicate logic:
+ Wn ∨ Wm: Either Nancy (n) or Marvin (m) are at work.
+ (∀x)[Lx ⊃ (Dx ⊃ ~Wx)]: For all x, if x is a lawyer (Lx), then if x is out to dinner (Dx), x is not at work (~Wx).
+ Ln • Dn: Nancy (n) is a lawyer (Ln) and out to dinner (Dn).
+ / ~(∀x)~Wx: Therefore, not everything is not at work.
+
+Now, let's match the given arguments with the English interpretations:
+
+a) Either Nancy or Marvin are at work.  All lawyers are not at work if they are out to dinner.  Nancy is a lawyer and out to dinner.  So not everything is not at work.
+
+This interpretation matches the given arguments in predicate logic. Therefore, the correct answer is {'sol': 'a'}"
+"Input: Identify the conclusion of the following argument.  Remember to remove any conclusion indicators.  It is wrong for society to kill a murderer.  This follows for the reason that if a murderer is wrong in killing his victim,  then society is also wrong in killing the murderer.  And a murderer is wrong in killing his victim.  Choices: a) It is wrong for society to kill a murderer.  b) This follows for the reason that if a murderer is wrong in killing his victim,  then society is also wrong in killing the murderer.  c) If a murderer is wrong in killing his victim,  then society is also wrong in killing the murderer.  d) And a murderer is wrong in killing his victim.  
+ Output:
+ First,  I need to identify the conclusion of the argument.  The conclusion is the statement that the argument is trying to prove or establish.
+ The argument states that it is wrong for society to kill a murderer.  This follows for the reason that if a murderer is wrong in killing his victim,  then society is also wrong in killing the murderer.  And a murderer is wrong in killing his victim.
+ The conclusion indicator is ""This follows for the reason that..."" which is removed.
+ The conclusion is the statement that remains after removing the conclusion indicators.
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Which of the following propositions is not an immediate (one-step) consequence in PL of the given premises?
+ I ⊃ (J ≡ K)
+ (J ≡ K) ⊃ (L ∨ M)
+ I ⊃ ~L Choices: a) ~L b) J ≡ K c) I ⊃ (L ∨ M) d) ~L ⊃ (J ≡ K) 
+ Output:
+ First, let's analyze the given premises and their logical connections.
+ Premise 1: I ⊃ (J ≡ K)
+ Premise 2: (J ≡ K) ⊃ (L ∨ M)
+
+ Now, let's examine each choice to see if it can be derived as an immediate consequence of the premises.
+
+ a) ~L - This cannot be directly derived from the premises.
+ b) J ≡ K - This can be derived from Premise 1 by simplification (since I ⊃ (J ≡ K) is equivalent to ∼I ∨ (J ≡ K)).
+ c) I ⊃ (L ∨ M) - This can be derived from Premise 1 and Premise 2 by syllogism (since (J ≡ K) ⊃ (L ∨ M) and I ⊃ (J ≡ K) together imply I ⊃ (L ∨ M)).
+ d) ~L ⊃ (J ≡ K) - This can be derived from Premise 1 by implication (since I ⊃ (J ≡ K) is equivalent to ∼(J ≡ K) ⊃ I, and then using the contrapositive rule, it becomes ∼L ⊃ (J ≡ K)).
+
+ Therefore, the proposition that is not an immediate consequence of the given premises is {'sol': 'a'}"
+"Input: Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ I ≡ ~J
+ I ∨ J / I Choices: a) Valid b) Invalid.  Counterexample when I and J are true c) Invalid.  Counterexample when I is true and J is false d) Invalid.  Counterexample when J is true and I is false 
+ Output:
+ First,  I will construct a complete truth table for the given argument.  The argument consists of two premises: I ≡ ~J and I ∨ J.  The conclusion is I.
+ The truth table will have 4 rows,  as there are two variables,  I and J,  each with two possible truth values: true or false.
+ The first column will show the truth values of I,  and the second column will show the truth values of J.
+ The third column will show the truth values of ~J,  which is the negation of J.
+ The fourth column will show the truth values of I ≡ ~J,  which is the biconditional of I and ~J.
+ The fifth column will show the truth values of I ∨ J,  which is the disjunction of I and J.
+ The sixth column will show the truth values of the conclusion,  I.
+
+| I | J | ~J | I ≡ ~J | I ∨ J | Conclusion (I) |
+|---|---|----|--------|-------|----------------|
+| T | T | F  | F      | T     | T              |
+| T | F | T  | T      | T     | T              |
+| F | T | F  | F      | T     | F              |
+| F | F | T  | F      | F     | F              |
+
+Now,  I will check if the argument is valid or invalid.  A valid argument is one where,  in every row where the premises are true,  the conclusion is also true.
+In this case,  the argument is valid because,  in every row where I ≡ ~J and I ∨ J are true,  the conclusion I is also true.
+Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Select the best translation into predicate logic: Some folks are lucky.  Choices: a) (∃x)(Fx • Lx) b) Fl c) Lf d) (∀x)(Fx • Lx) 
+ Output:
+ First, I need to understand the meaning of the given statement: ""Some folks are lucky."" This statement implies that there exists at least one person who is both a 'fool' and 'lucky'.
+
+Next, I will translate this meaning into predicate logic. The predicate 'F' represents being a 'fool', and 'L' represents being 'lucky'. The statement ""Some folks are lucky"" can be translated as there exists an 'x' that is both a 'fool' and 'lucky'.
+
+Therefore, the correct translation is (∃x)(Fx • Lx).
+
+The output is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic.  Alexis is greeted by Ben.  (a: Alexis; b: Ben; Gxy: x greets y) Choices: a) Gab b) ~Gba c) aGb d) Gba 
+ Output:
+ First,  I need to identify the subject and the object in the sentence.  The subject is ""Alexis"" and the object is ""Ben.""
+ Next,  I need to determine the correct predicate logic symbol for the action.  The action is ""is greeted by,"" which means that Ben greets Alexis.
+ Finally,  I need to match the subject and object with the correct variables in the predicate logic statement.  Since the subject is Alexis and the object is Ben, the correct translation is {'sol': 'd'}"
+"Input:  Select the best translation into predicate logic: Not all lobsters are red.  Choices: a) ~(∀x)(Lx ⊃ Rx) b) ~(∃x)(Lx ⊃ Rx) c) ~(∃x)(Lx • Rx) d) ~(∀x)(Lx • Rx) 
+ Output:
+ First, let's analyze the given statement ""Not all lobsters are red."" This statement is negating the idea that every lobster is red.
+
+Next, let's consider the options and their meanings:
+
+a) ~(∀x)(Lx ⊃ Rx) - This translates to ""It is not the case that for all x, if x is a lobster (Lx), then x is red (Rx)."" This is equivalent to saying ""There exists at least one lobster that is not red.""
+
+b) ~(∃x)(Lx ⊃ Rx) - This translates to ""It is not the case that there exists an x such that if x is a lobster (Lx), then x is red (Rx)."" This is a confusing option because the implication is inside the existential quantifier, which doesn't accurately represent the original statement.
+
+c) ~(∃x)(Lx • Rx) - This translates to ""It is not the case that there exists an x such that x is both a lobster (Lx) and red (Rx)."" This means ""No lobster is red,"" which is the opposite of the original statement.
+
+d) ~(∀x)(Lx • Rx) - This translates to ""It is not the case that for all x, x is both a lobster (Lx) and red (Rx)."" This means ""Not all lobsters are red,"" which accurately represents the original statement.
+
+Therefore, the best translation into predicate logic is d) ~(∀x)(Lx • Rx).
+
+The answer is {'sol': 'd'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ H ≡ (I · ~J)
+ K ≡ ~H
+ ~(K ⊃ J) / I ≡ J Choices: a) Valid b) Invalid.  Counterexample when I,  H,  and K are true and J is false c) Invalid.  Counterexample when I and H are true and J and K are false d) Invalid.  Counterexample when K is true and I,  H,  and J are false 
+ Output:
+ First,  I will construct an indirect truth table for the given argument.  The argument is of the form (H ≡ (I · ~J)) ∧ (K ≡ ~H) ∧ ~(K ⊃ J) / I ≡ J.
+ The columns of the truth table will be for I,  H,  J,  K,  ~J,  H ≡ (I · ~J),  K ≡ ~H,  K ⊃ J,  and ~(K ⊃ J).
+ I will start by filling in the truth values for I and J,  since they are the only variables in the conclusion.
+ I will then use the given premises to determine the truth values for H,  K,  and the other equivalences.
+ After constructing the truth table,  I will look for a row where the premises are all true and the conclusion is false.  If such a row exists,  the argument is invalid.
+ If no such row exists,  the argument is valid.
+
+ After constructing the truth table,  I find that there is no row where the premises are all true and the conclusion is false.
+ Therefore,  the argument is valid.
+ The correct answer is {'sol': 'a'}"
+"Input:  Construct a complete truth table for the following pairs of propositions.  Then,  using the truth tables,  determine whether the statements are logically equivalent or contradictory.  If neither,  determine whether they are consistent or inconsistent.  Justify your answers.
+ ~(J ∨ K) · L and (L ⊃ J) · K Choices: a) Logically equivalent b) Contradictory c) Neither logically equivalent nor contradictory,  but consistent d) Inconsistent 
+ Output:
+ First,  I need to construct a complete truth table for the given pairs of propositions.  The truth table will have 8 rows,  since there are three propositions (J,  K,  and L).
+
+| J | K | L | J ∨ K | ~(J ∨ K) | ~(J ∨ K) · L | L ⊃ J | (L ⊃ J) · K |
+|---|---|---|-------|----------|--------------|-------|-------------|
+| T | T | T |   T   |    F     |      F       |   T   |      F      |
+| T | T | F |   T   |    F     |      F       |   T   |      F      |
+| T | F | T |   T   |    F     |      F       |   T   |      F      |
+| T | F | F |   T   |    F     |      F       |   T   |      F      |
+| F | T | T |   T   |    F     |      F       |   T   |      F      |
+| F | T | F |   T   |    F     |      F       |   T   |      F      |
+| F | F | T |   F   |    T     |      T       |   T   |      F      |
+| F | F | F |   F   |    T     |      T       |   T   |      F      |
+
+Next,  I compare the truth values of the two given propositions.  I see that they are not always the same.  Therefore,  the statements are not logically equivalent.
+
+Now,  I need to determine if they are contradictory.  Contradictory statements have opposite truth values in all rows of the truth table.  In this case,  the statements do not have opposite truth values in all rows.  Therefore,  they are not contradictory.
+
+Since the statements are neither logically equivalent nor contradictory,  I need to determine if they are consistent or inconsistent.  Consistent statements can both be true or both be false,  while inconsistent statements cannot both be true.  In this case,  the statements can both be true in the 7th row (when J = F, K = F, and L = T).  Therefore,  they are consistent.
+
+Therefore,  the correct answer is {'sol': 'c'}"
+"Input:  Select the best translation into predicate logic: All first-year students take a swim test.  Choices: a) (∀x)(Sx ⊃ Fx) b) (∀x)(Fx ⊃ Sx) c) (∀x)(Fx ∨ Sx) d) (∀x)(Fx ≡ Sx) 
+ Output:
+ First, I need to identify the key elements in the given statement: ""All first-year students take a swim test.""
+ The key elements are ""first-year students"" and ""take a swim test.""
+ I will use the predicate F(x) to represent ""x is a first-year student"" and the predicate S(x) to represent ""x takes a swim test.""
+ Now, I need to translate the statement into predicate logic. The statement says that for all x, if x is a first-year student, then x takes a swim test.
+ This can be represented as (∀x)(Fx ⊃ Sx), which means ""for all x, if Fx (x is a first-year student), then Sx (x takes a swim test).""
+ Therefore, the correct answer is {'sol': 'a'}"
+"Input: Select the best translation into predicate logic: Johnny came late.  Choices: a) jL b) Lj c) Cj ∨ Lj d) Lx 
+ Output:
+ First,  I need to identify the subject and the predicate of the sentence.  The subject is ""Johnny"" and the predicate is ""came late"".
+ Next,  I need to choose a letter to represent the subject.  I will use 'j' for Johnny.
+ Now,  I need to represent the predicate in predicate logic.  ""Came late"" can be represented as 'L'.
+ The correct translation into predicate logic is to combine the subject and the predicate: Cj ∨ Lj.
+ Therefore,  the correct answer is {'sol': 'c'}"
+"Input:  Select the best translation into predicate logic: No senior graduates without a major.  Choices: a) (∀x)(Sx ⊃ ~Gx) b) ~(∀x)(Sx ⊃ Gx) c) (∀x)( ~Sx ⊃ ~Gx) d) (∀x) ~(Sx ⊃ ~Gx) 
+ Output:
+ First, let's break down the given statement: ""No senior graduates without a major.""
+ This statement implies that if a person is a senior, then they must have a major before they can graduate.
+ Now, let's analyze the choices given:
+ a) (∀x)(Sx ⊃ ~Gx) - This translates to ""For all x, if x is a senior (Sx), then x does not graduate (Gx)."" This is not a correct translation because it implies that all seniors do not graduate, which is not what the original statement says.
+ b) ~(∀x)(Sx ⊃ Gx) - This translates to ""It is not the case that for all x, if x is a senior (Sx), then x graduates (Gx)."" This is a correct translation because it means that there exists at least one senior who does not graduate without a major.
+ c) (∀x)( ~Sx ⊃ ~Gx) - This translates to ""For all x, if x is not a senior (~Sx), then x does not graduate (Gx)."" This is not a correct translation because it talks about non-seniors, not seniors.
+ d) (∀x) ~(Sx ⊃ ~Gx) - This translates to ""For all x, it is not the case that if x is a senior (Sx), then x does not graduate (Gx)."" This is a correct translation because it means that for all seniors, they must have a major before they can graduate.
+
+ Comparing the translations, we can see that both b) and d) correctly represent the original statement. However, since the question asks for the ""best"" translation, we should choose the one that is more concise and directly reflects the original statement. Therefore, the best translation is d) (∀x) ~(Sx ⊃ ~Gx).
+
+The answer is {'sol': 'd'}"
+"Input: Identify the conclusion of the following argument.  From a historical point of view,  genetics is a young science.  The principles that govern inheritance traits were described less than 150  years ago.  Furthermore,  around the turn of the twentieth century,  the laws of inheritance were rediscovered.  But even then,  the importance of DNA was not really understood until the 1950 s.  Choices: a) But even then,  the importance of DNA was not really understood until the 1950 s.  b) The importance of DNA was not really understood until the 1950 s.  c) From a historical point of view,  genetics is a young science.  d) The principles that govern inheritance traits were described less than 150  years ago.  
+ Output:
+ First,  I need to identify the main point of the argument.  The argument discusses the history of genetics and its development over time.
+ Next,  I look for the statement that summarizes the main point or provides a conclusion.  The statement that does this is ""But even then,  the importance of DNA was not really understood until the 1950 s.""
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Either England's importing beef is a necessary condition for France's subsidizing agriculture or China promotes human rights given that South Africa doesn't supply diamonds.  Choices: a) (E ⊃ F) ∨ (C ≡ ~S) b) (F ⊃ E) ∨ (~S ≡ C) c) (E ⊃ F) ∨ (S ⊃~C) d) (F ⊃ E) ∨ (~S ⊃ C) 
+ Output:
+ First, I need to understand the logical structure of the sentence. The sentence has two disjuncts connected by ""or"". The first disjunct is ""England's importing beef is a necessary condition for France's subsidizing agriculture"", which can be symbolized as (E ⊃ F). The second disjunct is ""China promotes human rights given that South Africa doesn't supply diamonds"", which can be symbolized as (C ≡ ~S).
+
+Next, I need to connect these two disjuncts with the ""or"" operator. This gives me (E ⊃ F) ∨ (C ≡ ~S).
+
+Therefore, the correct answer is {'sol': 'a'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Either England's importing beef is a sufficient condition for France's subsidizing agriculture or China's promoting human rights is a necessary condition for South Africa's supplying diamonds.  Choices: a) (E ⊃ F) ∨ (S ⊃ C) b) (F ⊃ E) ∨ (C ⊃ S) c) (E ⊃ F) ∨ (C ⊃ S) d) (F ⊃ E) ∨ (S ⊃ C) 
+ Output:
+ First, I need to understand the logical structure of the sentence. It is an ""or"" statement, so I will use the disjunction symbol (∨).
+ Next, I need to identify the sufficient and necessary conditions. The first part of the sentence says ""Either England's importing beef is a sufficient condition for France's subsidizing agriculture,"" which can be represented as E ⊃ F.
+ The second part of the sentence says ""or China's promoting human rights is a necessary condition for South Africa's supplying diamonds,"" which can be represented as C ⊃ S.
+ Now, I need to combine these two parts using the disjunction symbol (∨). So, the best symbolization is (E ⊃ F) ∨ (C ⊃ S).
+ Therefore, the correct answer is {'sol': 'c'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Dylan likes neither math nor science.  Choices: a) M ∨ S b) ~(M • S) c) ~(M ∨ S) d) ~M ∨ ~S 
+ Output:
+ First, let's analyze the sentence ""Dylan likes neither math nor science."" This means that Dylan does not like math and he does not like science.
+
+Next, let's consider the given formulas of PL (Propositional Logic) and their meanings:
+a) M ∨ S - Dylan likes math or science (OR operator)
+b) ~(M • S) - Dylan does not like both math and science (NOT operator applied to AND operator)
+c) ~(M ∨ S) - Dylan does not like math or science (NOT operator applied to OR operator)
+d) ~M ∨ ~S - Dylan does not like math or does not like science (NOT operator applied to M and S, and OR operator)
+
+Now, let's compare the sentence with the formulas:
+The sentence states that Dylan does not like both math and science. This is best represented by option b) ~(M • S), which means ""Dylan does not like both math and science.""
+
+Therefore, the correct answer is {'sol': 'b'}"
+"Input:  Select the best translation into predicate logic: All robots are artifacts.  Choices: a) (∀x)(Ax ∨ Rx) b) (∀x)(Ax • Rx) c) (∀x)(Rx ⊃ Ax) d) (∀x)(Rx • Ax) 
+ Output:
+ First, I need to understand the meaning of the given statement: ""All robots are artifacts."" This statement can be translated into predicate logic as ""For every x, if x is a robot, then x is an artifact.""
+
+Next, I will analyze each choice and see which one matches the translation:
+
+a) (∀x)(Ax ∨ Rx) - This means ""For every x, x is an artifact or x is a robot."" This choice includes both artifacts and robots but does not specify that all robots are artifacts.
+
+b) (∀x)(Ax • Rx) - This means ""For every x, x is an artifact and x is a robot."" This choice implies that everything is both an artifact and a robot, which is not the intended meaning.
+
+c) (∀x)(Rx ⊃ Ax) - This means ""For every x, if x is a robot, then x is an artifact."" This choice matches the intended translation.
+
+d) (∀x)(Rx • Ax) - This means ""For every x, x is a robot and x is an artifact."" Similar to choice b, this choice implies that everything is both a robot and an artifact, which is not the intended meaning.
+
+Therefore, the best translation into predicate logic is (∀x)(Rx ⊃ Ax), which corresponds to choice c).
+
+Output: {'sol': 'c'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Since the university raised tuition,  the president approved of it and the board didn't prevent it.  Choices: a) (P • ~B) ⊃ U b) (U ⊃ P) • B c) U ⊃ (P • ~B) d) U ⊃ (P ∨ ~B) 
+ Output:
+ First,  let's break down the sentence into its main components.  The sentence states that the university raised tuition (U),  the president approved of it (P),  and the board didn't prevent it (~B).
+ Now,  I need to find the formula that best represents this relationship.  The sentence implies that the university raising tuition (U) causes both the president's approval (P) and the board's failure to prevent it (~B).
+ Looking at the choices,  I can eliminate b) (U ⊃ P) • B because it implies that the university raising tuition causes the president's approval and the board's approval, which is not what the sentence states.
+ Next,  I can eliminate d) U ⊃ (P ∨ ~B) because it implies that the university raising tuition causes either the president's approval or the board's failure to prevent it, which is not a complete representation of the sentence.
+ Now,  I am left with a) (P • ~B) ⊃ U and c) U ⊃ (P • ~B).  The sentence states that the university raising tuition causes the president's approval and the board's failure to prevent it, so the correct formula should be in the form of U ⊃ (P • ~B).
+ Therefore,  the best symbolization is {'sol': 'c'}"
+"Input: Identify the conclusion of the following argument.  We shouldn't abolish capital punishment.  If we do,  prisons will become more crowded.  If prisons become more crowded,  then we will have to build more prisons.  And we don't want to build more prisons.  Choices: a) We shouldn't abolish capital punishment.  b) If we do,  prisons will become more crowded.  c) If prisons become more crowded,  then we will have to build more prisons.  d) We will have to build more prisons.  
+ Output:
+ First,  I need to identify the premises and the conclusion of the argument.  The premises are: ""If we do (abolish capital punishment),  prisons will become more crowded."", ""If prisons become more crowded,  then we will have to build more prisons."", and ""We don't want to build more prisons.""
+ The conclusion is the statement that follows from the premises.  In this case,  the conclusion is the opposite of the first premise,  which is that ""We shouldn't abolish capital punishment.""
+ Therefore,  the correct answer is {'sol': 'a'}"
+"Input:  Which of the given formulas of PL is the best symbolization of the following sentence?
+ Either England's not importing beef is a necessary condition for France's subsidizing agriculture,  or China promotes human rights if and only if South Africa doesn't supply diamonds.  Choices: a) (F ⊃ ~E) ∨ (C ≡ ~S) b) (~E ⊃ F) ∨ (C ⊃ ~S) c) ~(F ⊃ E) ∨ (~S ⊃ C) d) (F ⊃ E) ∨ (C ≡ ~S) 
+ Output:
+ First, I need to break down the sentence into its main components and their relationships. The sentence states that either England's not importing beef is a necessary condition for France's subsidizing agriculture, or China promotes human rights if and only if South Africa doesn't supply diamonds.
+
+1. ""Either England's not importing beef is a necessary condition for France's subsidizing agriculture"" can be symbolized as ""If France is subsidizing agriculture, then England is not importing beef"" or F ⊃ ~E.
+2. ""or China promotes human rights if and only if South Africa doesn't supply diamonds"" can be symbolized as ""China promotes human rights if and only if South Africa doesn't supply diamonds"" or C ≡ ~S.
+
+The sentence combines these two parts with the ""or"" operator, so the entire sentence can be symbolized as (F ⊃ ~E) ∨ (C ≡ ~S).
+
+Therefore, the correct answer is {'sol': 'a'}"
+"Input: Use indirect truth tables to determine whether the following argument is valid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ (K · L) ⊃ M
+ N ⊃ ~M
+ N ∨ K / L ⊃ K Choices: a) Valid b) Invalid.  Counterexample when L,  M,  and N are true and K is false c) Invalid.  Counterexample when L and M are true and K and N are false d) Invalid.  Counterexample when L and N are true and K and M are false 
+ Output:
+ First,  I will construct an indirect truth table for the given argument.  The argument is invalid if there is a row in the table where all the premises are true and the conclusion is false.
+ The premises are (K · L) ⊃ M and N ⊃ ~M.  The conclusion is L ⊃ K.
+ I will use the following symbols: T for true, F for false.
+ The truth table will have 8 rows,  since there are 2  variables (K and L) and 3  additional variables (M,  N,  and ~M).
+ I will start by filling in the truth values for K and L.  Then,  I will calculate the truth values for M and ~M using the given premises.
+ After filling in the truth table,  I find that there is a row where all the premises are true and the conclusion is false.  This row is when L,  M,  and N are true and K is false.
+ Therefore,  the argument is invalid.  The correct answer is {'sol': 'b'}"
+"Input:  Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ (G ≡ H) · ~I
+ ~G ∨ (~H ∨ I) / G Choices: a) Valid b) Invalid.  Counterexample when H and I are true and G is false c) Invalid.  Counterexample when H is true and I and G are false d) Invalid.  Counterexample when H,  I,  and G are false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has three propositions: G, H, and I.  So,  I need to consider all possible combinations of truth values for G, H, and I.
+
+| G | H | I | G ≡ H | ~I | (G ≡ H) · ~I | ~G | ~H | ~H ∨ I | ~G ∨ (~H ∨ I) |
+|---|---|---|-------|----|-------------|----|----|-------|----------------|
+| T | T | T |   T   |  F |      F      |  F |  F |   F  |         F      |
+| T | T | F |   T   |  T |      T      |  F |  F |   T  |         T      |
+| T | F | T |   F   |  F |      F      |  F |  T |   T  |         T      |
+| T | F | F |   F   |  T |      F      |  F |  T |   F  |         F      |
+| F | T | T |   F   |  F |      F      |  T |  F |   F  |         T      |
+| F | T | F |   F   |  T |      F      |  T |  F |   T  |         T      |
+| F | F | T |   T   |  F |      F      |  T |  T |   T  |         T      |
+| F | F | F |   T   |  T |      T      |  T |  T |   F  |         T      |
+
+Next,  I need to check if the conclusion G is true in all rows where the premises (G ≡ H) · ~I and ~G ∨ (~H ∨ I) are both true.  From the table,  I can see that there is only one row where both premises are true, and in that row, the conclusion G is also true.
+
+Therefore,  the argument is valid.  So,  the correct answer is {'sol': 'a'}"
+"Input: Construct a complete truth table for the following argument.  Then,  using the truth table,  determine whether the argument is valid or invalid.  If the argument is invalid,  choose an option which presents a counterexample.  (There may be other counterexamples as well. )
+ ~(M ≡ ~N)
+ M / N Choices: a) Valid b) Invalid.  Counterexample when M and N are true c) Invalid.  Counterexample when M is true and N is false d) Invalid.  Counterexample when N is true and M is false 
+ Output:
+ First,  I need to construct a complete truth table for the given argument.  The argument has two propositions,  M and N.  So,  I need to consider all possible truth values for M and N.
+ M  N  ~(M ≡ ~N)
+ T  T  ?
+ T  F  ?
+ F  T  ?
+ F  F  ?
+ To fill in the table,  I need to understand the truth values of the biconditional (≡) and the negation (~).  The biconditional is true if both propositions have the same truth value,  and false otherwise.  The negation simply flips the truth value of a proposition.
+ M  N  ~N  (M ≡ ~N)  ~(M {""sol"": 'a'}"
+"Input:  Select the best translation into predicate logic.  Some CEO is wealthier than everyone.  (Cx: x is a CEO; Px: x is a person; Wxy: x is wealthier than y) Choices: a) (∃x)Cx • (∀y)(Py • Wxy) b) (∃x)Cx ⊃ (∀y)(Py ⊃ Wxy) c) (∃x)Cx • (∀y)(Py ⊃ Wxy) d) (∀x)Px ⊃ (∃y)(Cy ⊃ Wxy) 
+ Output:
+ First,  I need to understand the meaning of the given statement.  The statement says that there exists at least one CEO who is wealthier than every person.
+ Now,  I will analyze each choice and see which one accurately represents the statement.
+ a) This choice says that there exists a CEO, and for all people, that CEO is wealthier than them.  This is not the correct translation because it implies that the same CEO is wealthier than all people, which is not what the original statement says.
+ b) This choice says that if there exists a CEO, then for all people, if they are a person, they are wealthier than that CEO.  This is not the correct translation because it implies that all people are wealthier than the CEO, which is not what the original statement says.
+ c) This choice says that there exists a CEO, and for all people, if they are a person, they are wealthier than that CEO.  This is the correct translation because it accurately represents the original statement.
+ d) This choice says that for all people, if they are a person, there exists a CEO who is wealthier than them.  This is not the correct translation because it implies that all people are wealthier than the CEO, which is not what the original statement says.
+
+Therefore,  the correct answer is {'sol': 'c'}"
+"Input:  Select the best translation into predicate logic.  All children go to some school.  (Cx: x is a child; Sx: x is a school; Gxy: x goes to y) Choices: a) (∀x)(∃y)(Cx • Sy) • Gxy) b) (∀x)Sx ⊃ (∃y)(Cy • Gxy) c) (∀x)Cx ⊃ (∃y)(Sy • Gxy) d) (∀x)Sx • (∃y)(Cy • Gxy) 
+ Output:
+ First,  I need to understand the meaning of the given statement.  The statement says that all children go to some school.  This means that for every child,  there exists at least one school that they go to.
+ Now,  I will analyze each choice and see which one represents this meaning.
+ a) (∀x)(∃y)(Cx • Sy) • Gxy) - This choice says that for every x,  there exists a y such that x is a child and y is a school,  and x goes to y.  This is not the correct translation because it implies that every x is a child and a school,  which is not what the original statement says.
+ b) (∀x)Sx ⊃ (∃y)(Cy • Gxy) - This choice says that for every x,  if x is a school,  then there exists a y such that y is a child and y goes to x.  This is not the correct translation because it implies that every school has a child who goes to it,  which is not what the original statement says.
+ c) (∀x)Cx ⊃ (∃y)(Sy • Gxy) - This choice says that for every x,  if x is a child,  then there exists a y such that y is a school and x goes to y.  This is the correct translation because it says that every child goes to some school.
+ d) (∀x)Sx • (∃y)(Cy • Gxy) - This choice says that for every x,  x is a school and there exists a y such that y is a child and y goes to x.  This is not the correct translation because it implies that every x is a school,  which is not what the original statement says.
+
+Therefore,  the correct answer is {'sol': 'c'}"
