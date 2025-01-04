@@ -1,10 +1,29 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def getDf(filename_dir, filename_think):
 
-    df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-    df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+def getAverageProb(df):
+    df['max_value'] = df[['a', 'b', 'c', 'd']].max(axis=1)
+    average_max_value = df['max_value'].mean()
+    return average_max_value
+def getDf(filename_dir, filename_think):
+    if isinstance(filename_dir, str) & isinstance(filename_think, str):
+        df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+        df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    if isinstance(filename_dir, list) & isinstance(filename_think, list):
+        df_dir = []
+        for filename_1 in filename_dir:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df_dir.append(df_tmp)
+        df_dir = pd.concat(df_dir, ignore_index=True)
+
+        df_think = []
+        for filename_1 in filename_think:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df_think.append(df_tmp)
+        df_think = pd.concat(df_think, ignore_index=True)
 
     df_dir = deleteOutliers(df_dir)
     df_think = deleteOutliers(df_think)
@@ -12,8 +31,24 @@ def getDf(filename_dir, filename_think):
 
 def getWrongDf(filename_dir, filename_think):
 
-    df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-    df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    if isinstance(filename_dir, str) & isinstance(filename_think, str):
+        df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+        df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    if isinstance(filename_dir, list) & isinstance(filename_think, list):
+        df_dir = []
+        for filename_1 in filename_dir:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df_dir.append(df_tmp)
+        df_dir = pd.concat(df_dir, ignore_index=True)
+
+        df_think = []
+        for filename_1 in filename_think:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df_think.append(df_tmp)
+        df_think = pd.concat(df_think, ignore_index=True)
+
     df_dir = deleteOutliers(df_dir)
     df_think = deleteOutliers(df_think)
     answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
@@ -30,9 +65,24 @@ def getWrongDf(filename_dir, filename_think):
     return df_dir_wrong, df_think_wrong
 
 def getCorrectDf(filename_dir, filename_think):
+    if isinstance(filename_dir, str) & isinstance(filename_think, str):
+        df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+        df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    if isinstance(filename_dir, list) & isinstance(filename_think, list):
+        df_dir = []
+        for filename_1 in filename_dir:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df_dir.append(df_tmp)
+        df_dir = pd.concat(df_dir, ignore_index=True)
 
-    df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-    df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+        df_think = []
+        for filename_1 in filename_think:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df_think.append(df_tmp)
+        df_think = pd.concat(df_think, ignore_index=True)
+
     df_dir = deleteOutliers(df_dir)
     df_think = deleteOutliers(df_think)
     answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
@@ -94,10 +144,22 @@ def getAgreedProb(filename_dir, filename_think):
     return df_dir_consistent, df_think_consistent
 
 def getAccuracy(filename):
+    if isinstance(filename, list):
+        df = []
+        for filename_1 in filename:
+            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+            df_tmp = deleteOutliers(df_tmp)
+            df.append(df_tmp)
+        df = pd.concat(df, ignore_index=True)
 
-    df = pd.read_csv(filename, encoding='ISO-8859-1')
-    df = deleteOutliers(df)
 
+    elif isinstance(filename, str):
+        df = pd.read_csv(filename, encoding='ISO-8859-1')
+        df = deleteOutliers(df)
+    elif isinstance(filename, pd.DataFrame):
+        df = filename
+    else:
+        raise TypeError("filename is not a list neither a str")
     answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
 
     df[['a', 'b', 'c', 'd']] = df[['a', 'b', 'c', 'd']].fillna(0) # fill null value

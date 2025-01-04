@@ -1,57 +1,69 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getDf,getCorrectDf
+from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getDf,getCorrectDf,getAverageProb
 import itertools
-
+import seaborn as sns
 def main():
 
-    filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
-                        'anatomy_LogProbs_Direct.csv',
-                        'college_biology_LogProbs_Direct.csv']
-    filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
-                       'anatomy_LogProbs_afterThinking.csv',
-                       'college_biology_LogProbs_afterThinking.csv']
+    file_names = [
+        'abstract_algebra', 'anatomy', 'astronomy', 'business_ethics', 'clinical_knowledge', 'college_biology',
+        'college_chemistry', 'college_computer_science', 'college_mathematics', 'college_medicine', 'college_physics',
+        'computer_security', 'conceptual_physics', 'econometrics', 'electrical_engineering', 'elementary_mathematics',
+        'formal_logic', 'global_facts', 'high_school_biology', 'high_school_chemistry', 'high_school_computer_science',
+        'high_school_european_history', 'high_school_geography', 'high_school_government_and_politics',
+        'high_school_macroeconomics', 'high_school_mathematics', 'high_school_microeconomics', 'high_school_physics',
+        'high_school_psychology', 'high_school_statistics', 'high_school_us_history', 'high_school_world_history',
+        'human_aging', 'human_sexuality', 'international_law', 'jurisprudence', 'logical_fallacies', 'machine_learning',
+        'management', 'marketing', 'medical_genetics', 'miscellaneous', 'moral_disputes', 'moral_scenarios',
+        'nutrition',
+        'philosophy', 'prehistory', 'professional_accounting', 'professional_law', 'professional_medicine',
+        'professional_psychology', 'public_relations', 'security_studies', 'sociology', 'us_foreign_policy',
+        'virology', 'world_religions'
+    ]
+    filenames_direct = [f"{file}_LogProbs_Direct.csv" for file in file_names]
+
+    filenames_think = [f"{file}_LogProbs_afterThinking.csv" for file in file_names]
+
     # prefix = 'Results/gpt4o-mini/'
-    # prefix = 'Results/llama3.1-8B/'
-    # prefix = 'Results/llama3.2-11B-vision-instruct/'
-    # prefix = 'Results/gemma2-9b-it/'
-    # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
-    prefix = 'Results/Yi-1.5-9B-Chat/'
-
-    filenames_direct = [prefix + name for name in filenames_direct]
-    filenames_think = [prefix + name for name in filenames_think]
-
-    plotAccuracy(filenames_direct,filenames_think)
-
-    plotChosenProb(filenames_direct,filenames_think)
-    plotNotChosenProb(filenames_direct,filenames_think)
-
-    plotWrongAnswerProbChange(filenames_direct, filenames_think)
-    plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
-    plotHistogramsAll(filenames_direct, filenames_think)
-    plotHistogramsCorrect(filenames_direct, filenames_think)
-    plotHistogramsWrong(filenames_direct, filenames_think)
+    # # prefix = 'Results/llama3.1-8B/'
+    # # prefix = 'Results/llama3.2-11B-vision-instruct/'
+    # # prefix = 'Results/gemma2-9b-it/'
+    # # prefix = 'Results/Mistral-7B-Instruct-v0.3/'
+    # # prefix = 'Results/Yi-1.5-9B-Chat/'
+    #
+    # filenames_direct = [prefix + name for name in filenames_direct]
+    # filenames_think = [prefix + name for name in filenames_think]
+    #
+    # # plotAccuracy(filenames_direct,filenames_think)
+    #
+    # # plotChosenProb(filenames_direct,filenames_think)
+    # # plotNotChosenProb(filenames_direct,filenames_think)
+    #
+    # # plotWrongAnswerProbChange(filenames_direct, filenames_think)
+    # # plotWrongAnswerRemainingProbChange(filenames_direct, filenames_think)
+    # plotHistogramsAll(filenames_direct, filenames_think)
+    # plotHistogramsCorrect(filenames_direct, filenames_think)
+    # plotHistogramsWrong(filenames_direct, filenames_think)
 
 ## ******************************
-    # filenames_direct = ['abstract_algebra_LogProbs_Direct.csv',
-    #                     'anatomy_LogProbs_Direct.csv',
-    #                     'college_biology_LogProbs_Direct.csv']
-    # filenames_think = ['abstract_algebra_LogProbs_afterThinking.csv',
-    #                    'anatomy_LogProbs_afterThinking.csv',
-    #                    'college_biology_LogProbs_afterThinking.csv']
-    #
-    # # filenames_direct = ['anatomy_LogProbs_Direct.csv']
-    # # filenames_think = ['anatomy_LogProbs_afterThinking.csv']
-    #
-    # prefixs = ['Results/gpt4o-mini/','Results/llama3.1-8B/','Results/llama3.2-11B-vision-instruct/',
-    #            'Results/gemma2-9b-it/','Results/Mistral-7B-Instruct-v0.3/','Results/Yi-1.5-9B-Chat/']
-    # model_names = ['GPT-4o-mini','Llama-3.1-8B-Instruct','Llama-3.2-11B-Vision-Instruct','gemma-2-9b-it','Mistral-7B-Instruct-v0.3','Yi-1.5-9B-Chat']
-    # filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
-    # filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
-    #
+
+    prefixs = ['Results/gpt4o-mini/','Results/gpt4o/','Results/llama3.1-8B/','Results/llama3.2-11B-vision-instruct/',
+               'Results/gemma2-9b-it/','Results/Mistral-7B-Instruct-v0.3/','Results/Yi-1.5-9B-Chat/']
+    model_names = ['GPT-4o-mini','GPT-4o','Llama-3.1-8B-Instruct','Llama-3.2-11B-Vision-Instruct','gemma-2-9b-it','Mistral-7B-Instruct-v0.3','Yi-1.5-9B-Chat']
+    filenames_direct = [[prefix + name for name in filenames_direct] for prefix in prefixs]
+    filenames_think = [[prefix + name for name in filenames_think] for prefix in prefixs]
+
     # plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
     # plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
+    model_names = ['GPT-4o-mini', 'GPT-4o', 'Llama-3.1-8B', 'Llama-3.2-11B', 'gemma-2-9b',
+                   'Mistral-7B', 'Yi-1.5-9B']
+
+    # plotAccuracy_AllDataset(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    # plotAverageProb_Selected_All(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    # plotAverageProb_Selected_Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    # plotAverageProb_Selected_Wrong(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    plotAverageProb_VS_GainAccuracy(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
 
 ## **************************
     # model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
@@ -94,12 +106,12 @@ def plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names)
         logprob_dir = list(itertools.chain(*logprob_dir))
         logprob_think = list(itertools.chain(*logprob_think))
 
-        print(model_name+'Correct_dir:'+str(np.std([x - 1 for x in logprob_dir])))
-        print(model_name+'Correct_think:'+str(np.std([x - 1 for x in logprob_think])))
+        # print(model_name+'Correct_dir:'+str(np.std([x - 1 for x in logprob_dir])))
+        # print(model_name+'Correct_think:'+str(np.std([x - 1 for x in logprob_think])))
         data.append(logprob_dir)
         data.append(logprob_think)
         labels.append(f"{model_name} - Direct")
-        labels.append(f"{model_name} - Think")
+        labels.append(f"{model_name} - Thinking")
     PlotComparisonHistogram_subplots(filenames_direct,data,labels)
 
 
@@ -120,13 +132,13 @@ def plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names):
         data.append(logprob_dir)
         data.append(logprob_think)
         labels.append(f"{model_name} - Direct")
-        labels.append(f"{model_name} - Think")
+        labels.append(f"{model_name} - Thinking")
     PlotComparisonHistogram_subplots(filenames_direct,data,labels)
 
 
 
 def PlotComparisonHistogram_subplots(filenames_direct, data, labels):
-    # 确保数据格式正确
+
     if len(data) % 2 != 0:
         raise ValueError("Data length must be even as it assumes pairs of comparison groups.")
 
@@ -135,7 +147,7 @@ def PlotComparisonHistogram_subplots(filenames_direct, data, labels):
 
     # 设置 bins 和样式
     bins = [i / 10 for i in range(11)]
-    colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'] * 2
+    colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'brown']* 2
     hatches = ['', '/'] * len(filenames_direct)
 
     # 创建子图
@@ -305,6 +317,148 @@ def plotChosenProb(filenames_direct,filenames_think):
     plotAccuracyComparison(average_logprob_dir, average_logprob_think, xlabel_name='Dataset', ylabel_name='Average Probability',
                            title='Comparison of Average Probability for Chosen Option')
 
+
+def plotAccuracy_AllDataset(filenames_direct, filenames_think, model_names):
+    acc_dir = []
+    acc_think = []
+    for filename_direct in filenames_direct:
+        acc_dir.append(getAccuracy(filename_direct))
+    for filename_think in filenames_think:
+        acc_think.append(getAccuracy(filename_think))
+    plotBarComparison_all(data1=acc_dir,data2=acc_think,labels=model_names)
+
+
+def plotAverageProb_Selected_All(filenames_direct, filenames_think, model_names):
+    average_logprob_dir = []
+    average_logprob_think = []
+    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
+        df_dir,df_think = getDf(filename_direct,filename_think)
+
+        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value = df_dir['max_value'].mean()
+        average_logprob_dir.append(average_max_value)
+
+        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value2 = df_think['max_value'].mean()
+        average_logprob_think.append(average_max_value2)
+    average_logprob_dir = [x * 100 for x in average_logprob_dir]
+    average_logprob_think = [x * 100 for x in average_logprob_think]
+    plotBarComparison_all(data1=average_logprob_dir,data2=average_logprob_think,ylabel_name='Average Probability of Selected Options (%)',labels=model_names,legendOut=True,yrange=10)
+
+
+def plotAverageProb_Selected_Correct(filenames_direct, filenames_think, model_names):
+    average_logprob_dir = []
+    average_logprob_think = []
+    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
+        df_dir,df_think = getCorrectDf(filename_direct,filename_think)
+
+        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value = df_dir['max_value'].mean()
+        average_logprob_dir.append(average_max_value)
+
+        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value2 = df_think['max_value'].mean()
+        average_logprob_think.append(average_max_value2)
+    average_logprob_dir = [x * 100 for x in average_logprob_dir]
+    average_logprob_think = [x * 100 for x in average_logprob_think]
+    plotBarComparison_all(data1=average_logprob_dir,data2=average_logprob_think,ylabel_name='Average Probability of Selected Options (%)',labels=model_names,legendOut=True,yrange=10)
+
+
+def plotAverageProb_Selected_Wrong(filenames_direct, filenames_think, model_names):
+    average_logprob_dir = []
+    average_logprob_think = []
+    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
+        df_dir,df_think = getWrongDf(filename_direct,filename_think)
+
+        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value = df_dir['max_value'].mean()
+        average_logprob_dir.append(average_max_value)
+
+        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value2 = df_think['max_value'].mean()
+        average_logprob_think.append(average_max_value2)
+    average_logprob_dir = [x * 100 for x in average_logprob_dir]
+    average_logprob_think = [x * 100 for x in average_logprob_think]
+    plotBarComparison_all(data1=average_logprob_dir,data2=average_logprob_think,ylabel_name='Average Probability of Selected Options (%)',labels=model_names,legendOut=True,yrange=10)
+
+
+
+def plotAverageProb_VS_GainAccuracy(filenames_direct, filenames_think, model_names):
+    data = {model_name: [] for model_name in model_names}
+    for filename_direct, filename_think,model_name in zip(filenames_direct, filenames_think, model_names):
+        for catogory_direct,catogory_think in zip(filename_direct,filename_think):
+            df_direct, df_think = getDf(catogory_direct,catogory_think)
+            prob_increase = getAverageProb(df_think) - getAverageProb(df_direct)
+            acc_increase = getAccuracy(df_think)-getAccuracy(df_direct)
+            data[model_name].append([acc_increase,prob_increase])
+    plotGainAccuracyVsProbIncrease(data,model_names)
+
+def plotGainAccuracyVsProbIncrease(data, model_names):
+
+    all_data = []
+    for model_name in model_names:
+        for i, (acc_increase, prob_increase) in enumerate(data[model_name]):
+            all_data.append([acc_increase, prob_increase, model_name])
+
+    # 将 all_data 转换为 DataFrame
+    df = pd.DataFrame(all_data, columns=['Accuracy Gain', 'Probability Increase', 'Model'])
+    fontsize = 16
+    # palette = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'brown']
+    palette = sns.color_palette('Set1')
+    # palette = ['#8ca5c0','#6280a5','#56648a','#8d7e95','#ca9a96','#facaa9','#544b6d']
+    palette[2] = '#1d3039'
+    palette[5] = '#f2c0c6'
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(x='Accuracy Gain', y='Probability Increase', hue='Model', data=df, palette=palette, s=100)
+
+    # 设置标题和标签
+    # plt.title('Accuracy Gain vs. Average Probability Increase', fontsize=fontsize)
+    plt.xlabel('Gain in Accuracy', fontsize=fontsize)
+    plt.ylabel('Increase in Average Probability', fontsize=fontsize)
+    # plt.xticks(ticks=[-0.1, 0.0, 0.1, 0.2, 0.3, 0.4, 0.5], fontsize=fontsize)
+    # plt.yticks(ticks=[0.0, 0.1, 0.2, 0.3, 0.4, 0.5], fontsize=fontsize)
+    plt.xticks(fontsize=fontsize)
+    plt.yticks(fontsize=fontsize)
+    # plt.xlim(-0.15, 0.5)
+    # plt.ylim(-0.05, 0.5)
+    plt.legend(title='Model', loc='upper left',fontsize=fontsize)
+
+    # 显示图形
+    plt.tight_layout()
+    plt.show()
+
+
+def plotBarComparison_all(data1, data2, labels, xlabel_name='Model Name', ylabel_name='Accuracy',pos = 'best', legendOut: bool = False,yrange=0.1):
+
+    # Plot barchart
+
+    fontsize = 16
+    x = range(len(labels))
+    width = 0.35
+
+    fig, ax = plt.subplots(figsize=(10, 6))  # 增大图表尺寸
+
+    ax.bar(x, data1, width, label='Direct', color='blue')
+    ax.bar([i + width for i in x], data2, width, label='After Thinking', color='orange')
+
+    ax.set_xlabel(xlabel_name, fontsize=fontsize)
+    ax.set_ylabel(ylabel_name, fontsize=fontsize)
+    # ax.set_title(title, fontsize=fontsize)
+    ax.set_xticks([i + width / 2 for i in x])
+    ax.set_xticklabels(labels, fontsize=fontsize)
+    ax.tick_params(axis='y', labelsize=fontsize)
+    ax.set_yticks([i * yrange for i in range(11)])
+    frameon = True
+    if legendOut:
+        fontsize -= 4
+        frameon = False
+    ax.legend(fontsize=fontsize,loc=pos, frameon=frameon)
+    # else:
+    #     ax.legend(fontsize=fontsize, loc=pos, bbox_to_anchor=(1, 1))
+    plt.tight_layout()
+    plt.show()
+
+
 def plotAccuracy(filenames_direct, filenames_think):
 
     # plot accuracy comparison barchart
@@ -321,7 +475,7 @@ def plotAccuracy(filenames_direct, filenames_think):
 
 def plotAccuracyComparison(accuracies_direct, accuracies_think, xlabel_name='Dataset', ylabel_name='Accuracy',
                            title='Comparison of Accuracy for Different Datasets',pos = 'upper left'):
-
+    # Deprecated
     labels = ['abstract_algebra', 'anatomy', 'college_biology']
 
     fontsize = 16
