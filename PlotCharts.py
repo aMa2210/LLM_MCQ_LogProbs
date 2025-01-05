@@ -136,22 +136,29 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
 
 
     # plt.ioff()
-    vmin, vmax = 0.0, 0.5
+    vmin, vmax = 0, 0.5
     cbar_ticks = np.linspace(vmin, vmax, num=int((vmax - vmin) / 0.1) + 1)
     label = []
     sorted_indices = None
     for start_index, end_index, in zip(start_indexs,end_indexs):
         fig, axes = plt.subplots(1, 7, figsize=(20, 16))
-        fig.subplots_adjust(hspace=0.2, wspace=-0.3)  # 调整子图之间的间距
+        fig.subplots_adjust(hspace=0.2, wspace=-0.3)
         for i, ax in enumerate(axes.flat):  # use flat to get every subplot
             row, col = divmod(i, len(model_names))  # calculate row col
 
             # data_plot = np.array([lst[1:] for lst in data[model_names[col]][start_index:end_index]])
             if sorted_indices is None:
                 result = np.zeros_like(np.array(data[model_names[0]]), dtype=np.float64)
+                datas_tmp = []
                 for modelIndex in range(len(model_names)):
                     data_plot_i = np.array(data[model_names[modelIndex]])[:, 1:].astype(np.float64)
-                    result[:, 1:] += data_plot_i
+                    data_plot_i = data_plot_i / np.mean(data_plot_i, axis=0)
+                    datas_tmp.append(data_plot_i)
+                datas_tmp_array = np.array(datas_tmp)
+                sorted_datas = np.sort(datas_tmp_array, axis=0)
+                middle_5_data = sorted_datas[1:6, :, :]
+                final_result = np.sum(middle_5_data, axis=0)
+                result[:, 1:] += final_result
 
                 sorted_indices = np.argsort(result[:, 4])  # sort by this column
 
@@ -160,10 +167,13 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
 
             data_plot = data_plot[sorted_indices]
 
+            label = data_plot[start_index:end_index][:, 0].tolist()
+            # label = data_plot[:, 0].tolist()
+            data_plot = data_plot[:, 1:].astype(np.float64)
+            # data_plot = data_plot / np.mean(data_plot, axis=0)
+            # data_plot = data_plot[:, 1:]
             data_plot = data_plot[start_index:end_index]
-            label = data_plot[:, 0].tolist()
-            data_plot = data_plot[:, 1:]
-            data_plot = data_plot.astype(float)
+            # data_plot = data_plot.astype(float)
             sns.heatmap(
                 data_plot,
                 fmt=".2f",
