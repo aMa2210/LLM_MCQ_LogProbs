@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getDf,getCorrectDf,getAverageProb
 import itertools
 import seaborn as sns
+from matplotlib.colors import LinearSegmentedColormap
+import pickle
 def main():
 
     file_names = [
@@ -63,7 +65,8 @@ def main():
     # plotAverageProb_Selected_All(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_Selected_Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_Selected_Wrong(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
-    plotAverageProb_VS_GainAccuracy(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    # plotAverageProb_VS_GainAccuracy(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    plotHeatMap(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
 
 ## **************************
     # model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
@@ -92,6 +95,172 @@ def main():
     # plotHistogramsWrongAllModels(filenames_direct,filenames_think,model_names)
 
 
+def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
+    data = {model_name: [] for model_name in model_names}
+
+    data_filename = 'heatmap_data_cache.pkl'
+    try:
+        # Try reading existing data
+        with open(data_filename, 'rb') as f:
+            data = pickle.load(f)
+        print("Data loaded from pickle file.")
+    except FileNotFoundError:
+        for filename_direct, filename_think,model_name in zip(filenames_direct, filenames_think, model_names):
+            for category_direct,category_think,category_name in zip(filename_direct,filename_think,category_names):
+                df_direct, df_think = getDf(category_direct,category_think)
+                prob_increase = getAverageProb(df_think) - getAverageProb(df_direct)
+                acc_increase = getAccuracy(df_think)-getAccuracy(df_direct)
+
+                df_direct_correct, df_think_correct = getCorrectDf(category_direct,category_think)
+                prob_increase_correct = getAverageProb(df_think_correct) - getAverageProb(df_direct_correct)
+
+                df_direct_wrong, df_think_wrong = getWrongDf(category_direct,category_think)
+                prob_increase_wrong = getAverageProb(df_think_wrong) - getAverageProb(df_direct_wrong)
+
+                data[model_name].append([category_name,acc_increase,prob_increase,prob_increase_correct,prob_increase_wrong])
+        save_data_as_pickle(data, data_filename)
+    # plotGainAccuracyVsProbIncrease(data,model_names)
+
+    # heatmapcolor
+    custom_cmap_1 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "blue"])
+    custom_cmap_2 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "orange"])
+    custom_cmap_3 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "green"])
+    custom_cmap_4 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "pink"])
+    custom_cmap_5 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "purple"])
+    custom_cmap_6 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "brown"])
+    custom_cmap_7 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "black"])
+    custom_cmap = [custom_cmap_1, custom_cmap_2, custom_cmap_3, custom_cmap_4, custom_cmap_5, custom_cmap_6,
+                   custom_cmap_7]
+    start_index = 0
+    end_index = 20
+    fig, axes = plt.subplots(1, 7, figsize=(20, 16))
+    fig.subplots_adjust(hspace=0.2, wspace=-0.3)  # 调整子图之间的间距
+    # plt.ioff()
+    vmin, vmax = 0.0, 0.5
+    cbar_ticks = np.linspace(vmin, vmax, num=int((vmax - vmin) / 0.1) + 1)
+    for i, ax in enumerate(axes.flat):  # use flat to get every subplot
+        row, col = divmod(i, len(model_names))  # calculate row col
+
+        data_plot = np.array([lst[1:] for lst in data[model_names[col]][start_index:end_index]])
+
+        sns.heatmap(
+            data_plot,
+            fmt=".2f",
+            annot=True,
+            cmap=custom_cmap[col],
+            cbar=False,  # 隐藏颜色条
+            square=True,
+            ax=ax,
+            annot_kws={"size": 8},  # number font size
+            vmin=vmin,
+            vmax=vmax,
+        )
+        if col != 0:
+            ax.set_xticks([])
+            ax.set_xticklabels([])
+            ax.set_yticks([])
+            ax.set_yticklabels([])
+        else:
+            ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'],fontsize=8, rotation=90)
+            ax.set_yticklabels(category_names[start_index:end_index],fontsize=8, rotation=0)
+        cbar = ax.figure.colorbar(ax.collections[0], ax=ax, location="top",orientation='horizontal', fraction=0.03, pad=0.035, shrink=0.55)
+        cbar.set_label(model_names[i], fontsize=12)
+        cbar.outline.set_visible(False)
+        cbar.set_ticks(cbar_ticks)
+        cbar.ax.tick_params(labelsize=8)
+        # cbar.ax.xaxis.set_label_position('bottom')
+        cbar.ax.xaxis.set_ticks_position('bottom')
+
+    # # 设置整体标题
+    # fig.suptitle("4x7 Heatmap Grid", fontsize=16, y=0.95)
+    # plt.tight_layout(pad=1.0)
+    # 显示图像
+    plt.subplots_adjust(left=0.1, right=0.9, top=0.95, bottom=0.2)
+    plt.show()
+
+def plotHeatMap_deprecated(filenames_direct,filenames_think,model_names,category_names):
+    data = {model_name: [] for model_name in model_names}
+
+    data_filename = 'heatmap_data_cache.pkl'
+    try:
+        # Try reading existing data
+        with open(data_filename, 'rb') as f:
+            data = pickle.load(f)
+        print("Data loaded from pickle file.")
+    except FileNotFoundError:
+        for filename_direct, filename_think,model_name in zip(filenames_direct, filenames_think, model_names):
+            for category_direct,category_think,category_name in zip(filename_direct,filename_think,category_names):
+                df_direct, df_think = getDf(category_direct,category_think)
+                prob_increase = getAverageProb(df_think) - getAverageProb(df_direct)
+                acc_increase = getAccuracy(df_think)-getAccuracy(df_direct)
+
+                df_direct_correct, df_think_correct = getCorrectDf(category_direct,category_think)
+                prob_increase_correct = getAverageProb(df_think_correct) - getAverageProb(df_direct_correct)
+
+                df_direct_wrong, df_think_wrong = getCorrectDf(category_direct,category_think)
+                prob_increase_wrong = getAverageProb(df_think_wrong) - getAverageProb(df_direct_wrong)
+
+                data[model_name].append([category_name,acc_increase,prob_increase,prob_increase_correct,prob_increase_wrong])
+        save_data_as_pickle(data, data_filename)
+    # plotGainAccuracyVsProbIncrease(data,model_names)
+
+    # heatmapcolor
+    custom_cmap_1 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "blue"])
+    custom_cmap_2 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "orange"])
+    custom_cmap_3 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "green"])
+    custom_cmap_4 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "pink"])
+    custom_cmap_5 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "purple"])
+    custom_cmap_6 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "brown"])
+    custom_cmap_7 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "black"])
+    custom_cmap = [custom_cmap_1, custom_cmap_2, custom_cmap_3, custom_cmap_4, custom_cmap_5, custom_cmap_6,
+                   custom_cmap_7]
+    # set size
+    lengthPergraph = 20
+    # fig, axes = plt.subplots(len(category_names), len(model_names), figsize=(200, 120))
+    fig, axes = plt.subplots(1, 7, figsize=(20, 12))
+    fig.subplots_adjust(hspace=0.2, wspace=0.2)  # 调整子图之间的间距
+    plt.ioff()
+    for i, ax in enumerate(axes.flat):  # use flat to get every subplot
+        row, col = divmod(i, len(model_names))  # calculate row col
+
+        # print('***************')
+        # print(i)
+        # print(row)
+        # print(col)
+        # print('***************')
+        data_plot = np.array(data[model_names[col]][row][1:])
+
+        data_plot = data_plot.reshape(1, -1)
+        print(data_plot)
+
+        sns.heatmap(
+            data_plot,
+            fmt=".2f",
+            annot=True,
+            cmap=custom_cmap[col],
+            cbar=False,  # 隐藏颜色条
+            square=True,
+            ax=ax,
+            annot_kws={"size": 8}  # number font size
+        )
+        if col != 0:
+            ax.set_xticks([])
+            ax.set_xticklabels([])
+            ax.set_yticks([])
+            ax.set_yticklabels([])
+        else:
+            ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'])
+            ax.set_yticklabels([category_names[row]])
+            # if row == 0:
+        #     ax.set_title(f"Heatmap {col + 1}", fontsize=10)
+        # if row == 2:
+        #     break
+
+    # # 设置整体标题
+    # fig.suptitle("4x7 Heatmap Grid", fontsize=16, y=0.95)
+
+    # 显示图像
+    plt.show()
 
 def plotHistogramsCorrectAllModels(filenames_direct,filenames_think,model_names):
     data = []
@@ -472,7 +641,7 @@ def plotAccuracy(filenames_direct, filenames_think):
     plotAccuracyComparison(accuracies_direct, accuracies_think)
 
 
-
+# Deprecated
 def plotAccuracyComparison(accuracies_direct, accuracies_think, xlabel_name='Dataset', ylabel_name='Accuracy',
                            title='Comparison of Accuracy for Different Datasets',pos = 'upper left'):
     # Deprecated
@@ -513,6 +682,9 @@ def plotHistograms(data, title):
 
     plt.show()
 
+def save_data_as_pickle(data, filename):
+    with open(filename, 'wb') as f:
+        pickle.dump(data, f)
 
 if __name__ == '__main__':
     main()
