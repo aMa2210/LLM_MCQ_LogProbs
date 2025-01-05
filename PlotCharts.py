@@ -131,52 +131,73 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
     custom_cmap_7 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "black"])
     custom_cmap = [custom_cmap_1, custom_cmap_2, custom_cmap_3, custom_cmap_4, custom_cmap_5, custom_cmap_6,
                    custom_cmap_7]
-    start_index = 0
-    end_index = 20
-    fig, axes = plt.subplots(1, 7, figsize=(20, 16))
-    fig.subplots_adjust(hspace=0.2, wspace=-0.3)  # 调整子图之间的间距
+    start_indexs = [0,20,40]
+    end_indexs = [20,40,None]
+
+
     # plt.ioff()
     vmin, vmax = 0.0, 0.5
     cbar_ticks = np.linspace(vmin, vmax, num=int((vmax - vmin) / 0.1) + 1)
-    for i, ax in enumerate(axes.flat):  # use flat to get every subplot
-        row, col = divmod(i, len(model_names))  # calculate row col
+    label = []
+    sorted_indices = None
+    for start_index, end_index, in zip(start_indexs,end_indexs):
+        fig, axes = plt.subplots(1, 7, figsize=(20, 16))
+        fig.subplots_adjust(hspace=0.2, wspace=-0.3)  # 调整子图之间的间距
+        for i, ax in enumerate(axes.flat):  # use flat to get every subplot
+            row, col = divmod(i, len(model_names))  # calculate row col
 
-        data_plot = np.array([lst[1:] for lst in data[model_names[col]][start_index:end_index]])
+            # data_plot = np.array([lst[1:] for lst in data[model_names[col]][start_index:end_index]])
+            if sorted_indices is None:
+                result = np.zeros_like(np.array(data[model_names[0]]), dtype=np.float64)
+                for modelIndex in range(len(model_names)):
+                    data_plot_i = np.array(data[model_names[modelIndex]])[:, 1:].astype(np.float64)
+                    result[:, 1:] += data_plot_i
 
-        sns.heatmap(
-            data_plot,
-            fmt=".2f",
-            annot=True,
-            cmap=custom_cmap[col],
-            cbar=False,  # 隐藏颜色条
-            square=True,
-            ax=ax,
-            annot_kws={"size": 8},  # number font size
-            vmin=vmin,
-            vmax=vmax,
-        )
-        if col != 0:
-            ax.set_xticks([])
-            ax.set_xticklabels([])
-            ax.set_yticks([])
-            ax.set_yticklabels([])
-        else:
-            ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'],fontsize=8, rotation=90)
-            ax.set_yticklabels(category_names[start_index:end_index],fontsize=8, rotation=0)
-        cbar = ax.figure.colorbar(ax.collections[0], ax=ax, location="top",orientation='horizontal', fraction=0.03, pad=0.035, shrink=0.55)
-        cbar.set_label(model_names[i], fontsize=12)
-        cbar.outline.set_visible(False)
-        cbar.set_ticks(cbar_ticks)
-        cbar.ax.tick_params(labelsize=8)
-        # cbar.ax.xaxis.set_label_position('bottom')
-        cbar.ax.xaxis.set_ticks_position('bottom')
+                sorted_indices = np.argsort(result[:, 4])  # sort by this column
 
-    # # 设置整体标题
-    # fig.suptitle("4x7 Heatmap Grid", fontsize=16, y=0.95)
-    # plt.tight_layout(pad=1.0)
-    # 显示图像
-    plt.subplots_adjust(left=0.1, right=0.9, top=0.95, bottom=0.2)
-    plt.show()
+
+            data_plot = np.array(data[model_names[col]])
+
+            data_plot = data_plot[sorted_indices]
+
+            data_plot = data_plot[start_index:end_index]
+            label = data_plot[:, 0].tolist()
+            data_plot = data_plot[:, 1:]
+            data_plot = data_plot.astype(float)
+            sns.heatmap(
+                data_plot,
+                fmt=".2f",
+                annot=True,
+                cmap=custom_cmap[col],
+                cbar=False,  # 隐藏颜色条
+                square=True,
+                ax=ax,
+                annot_kws={"size": 8},  # number font size
+                vmin=vmin,
+                vmax=vmax,
+            )
+            if col != 0:
+                ax.set_xticks([])
+                ax.set_xticklabels([])
+                ax.set_yticks([])
+                ax.set_yticklabels([])
+            else:
+                ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'],fontsize=8, rotation=90)
+                ax.set_yticklabels(label,fontsize=8, rotation=0)
+            cbar = ax.figure.colorbar(ax.collections[0], ax=ax, location="top",orientation='horizontal', fraction=0.03, pad=0.035, shrink=0.55)
+            cbar.set_label(model_names[i], fontsize=12)
+            cbar.outline.set_visible(False)
+            cbar.set_ticks(cbar_ticks)
+            cbar.ax.tick_params(labelsize=8)
+            # cbar.ax.xaxis.set_label_position('bottom')
+            cbar.ax.xaxis.set_ticks_position('bottom')
+
+        # # 设置整体标题
+        # fig.suptitle("4x7 Heatmap Grid", fontsize=16, y=0.95)
+        # plt.tight_layout(pad=1.0)
+        # 显示图像
+        plt.subplots_adjust(left=0.1, right=0.9, top=0.95, bottom=0.2)
+        plt.show()
 
 def plotHeatMap_deprecated(filenames_direct,filenames_think,model_names,category_names):
     data = {model_name: [] for model_name in model_names}
