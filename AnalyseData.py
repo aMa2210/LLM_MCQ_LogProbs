@@ -65,23 +65,24 @@ def getWrongDf(filename_dir, filename_think):
     return df_dir_wrong, df_think_wrong
 
 def getCorrectDf(filename_dir, filename_think):
-    if isinstance(filename_dir, str) & isinstance(filename_think, str):
-        df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-        df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
-    if isinstance(filename_dir, list) & isinstance(filename_think, list):
-        df_dir = []
-        for filename_1 in filename_dir:
-            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-            df_tmp = deleteOutliers(df_tmp)
-            df_dir.append(df_tmp)
-        df_dir = pd.concat(df_dir, ignore_index=True)
-
-        df_think = []
-        for filename_1 in filename_think:
-            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-            df_tmp = deleteOutliers(df_tmp)
-            df_think.append(df_tmp)
-        df_think = pd.concat(df_think, ignore_index=True)
+    df_dir,df_think = getDf(filename_dir,filename_think)
+    # if isinstance(filename_dir, str) & isinstance(filename_think, str):
+    #     df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+    #     df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    # if isinstance(filename_dir, list) & isinstance(filename_think, list):
+    #     df_dir = []
+    #     for filename_1 in filename_dir:
+    #         df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+    #         df_tmp = deleteOutliers(df_tmp)
+    #         df_dir.append(df_tmp)
+    #     df_dir = pd.concat(df_dir, ignore_index=True)
+    #
+    #     df_think = []
+    #     for filename_1 in filename_think:
+    #         df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+    #         df_tmp = deleteOutliers(df_tmp)
+    #         df_think.append(df_tmp)
+    #     df_think = pd.concat(df_think, ignore_index=True)
 
     df_dir = deleteOutliers(df_dir)
     df_think = deleteOutliers(df_think)
@@ -102,8 +103,9 @@ def getCorrectDf(filename_dir, filename_think):
 
 def getBothWrongDf(filename_dir, filename_think):
 
-    df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-    df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    df_dir,df_think = getDf(filename_dir,filename_think)
+    # pd.read_csv(filename_dir, encoding='ISO-8859-1')
+    # df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
 
     answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
 
@@ -123,6 +125,31 @@ def getBothWrongDf(filename_dir, filename_think):
     df_dir_both_wrong = deleteOutliers(df_dir_both_wrong)
     df_think_both_wrong = deleteOutliers(df_think_both_wrong)
     return df_dir_both_wrong, df_think_both_wrong
+
+def getWrong2CorrectDf(filename_dir, filename_think):
+
+    # df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+    # df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+    df_dir,df_think = getDf(filename_dir,filename_think)
+    answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+
+    df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0) # fill null value
+    df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
+
+    df_think[['a', 'b', 'c', 'd']] = df_think[['a', 'b', 'c', 'd']].fillna(0) # fill null value
+    df_think['predicted'] = df_think[['a', 'b', 'c', 'd']].idxmax(axis=1)
+
+    # 计算错误行：predicted != answer
+    df_dir_wrong = df_dir[df_dir['predicted'] != df_dir['answer'].map(answer_map)]
+    df_think_correct = df_think[df_think['predicted'] == df_think['answer'].map(answer_map)]
+
+    # 交集：同时错误的行
+    df_dir_result = df_dir_wrong[df_dir_wrong.index.isin(df_think_correct.index)]
+    df_think_result = df_think_correct[df_think_correct.index.isin(df_dir_wrong.index)]
+    df_dir_result = deleteOutliers(df_dir_result)
+    df_think_result = deleteOutliers(df_think_result)
+    return df_dir_result, df_think_result
+
 
 def getAgreedProb(filename_dir, filename_think):
 

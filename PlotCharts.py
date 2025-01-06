@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getDf,getCorrectDf,getAverageProb
+from AnalyseData import getBothWrongDf,getAgreedProb,getAccuracy,getWrongDf,getDf,getCorrectDf,getAverageProb,getWrong2CorrectDf
 import itertools
 import seaborn as sns
 from matplotlib.colors import LinearSegmentedColormap
@@ -66,7 +66,8 @@ def main():
     # plotAverageProb_Selected_Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_Selected_Wrong(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_VS_GainAccuracy(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
-    plotHeatMap(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
+    # plotHeatMap(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
+    plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
 
 ## **************************
     # model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
@@ -131,8 +132,8 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
     custom_cmap_7 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "black"])
     custom_cmap = [custom_cmap_1, custom_cmap_2, custom_cmap_3, custom_cmap_4, custom_cmap_5, custom_cmap_6,
                    custom_cmap_7]
-    start_indexs = [0,20,40]
-    end_indexs = [20,40,None]
+    start_indexs = [0,19,38]
+    end_indexs = [19,38,None]
 
 
     # plt.ioff()
@@ -192,8 +193,12 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
                 ax.set_yticks([])
                 ax.set_yticklabels([])
             else:
-                ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'],fontsize=8, rotation=90)
-                ax.set_yticklabels(label,fontsize=8, rotation=0)
+                ax.set_yticklabels(label, fontsize=8, rotation=0)
+                if end_index is None:
+                    ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'],fontsize=8, rotation=90)
+                else:
+                    ax.set_xticks([])
+                    ax.set_xticklabels([])
             cbar = ax.figure.colorbar(ax.collections[0], ax=ax, location="top",orientation='horizontal', fraction=0.03, pad=0.035, shrink=0.55)
             cbar.set_label(model_names[i], fontsize=12)
             cbar.outline.set_visible(False)
@@ -209,6 +214,7 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
         plt.subplots_adjust(left=0.1, right=0.9, top=0.95, bottom=0.2)
         plt.show()
 
+# deprecated
 def plotHeatMap_deprecated(filenames_direct,filenames_think,model_names,category_names):
     data = {model_name: [] for model_name in model_names}
 
@@ -528,6 +534,45 @@ def plotAccuracy_AllDataset(filenames_direct, filenames_think, model_names):
     plotBarComparison_all(data1=acc_dir,data2=acc_think,labels=model_names)
 
 
+def plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct, filenames_think, model_names):
+    average_logprob_dir = []
+    average_logprob_think = []
+
+    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
+        df_dir,df_think = getBothWrongDf(filename_direct,filename_think)
+
+        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value = df_dir['max_value'].mean()
+        average_logprob_dir.append(average_max_value)
+
+        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value2 = df_think['max_value'].mean()
+        average_logprob_think.append(average_max_value2)
+    average_logprob_bothWrong = [think - dir for think, dir in zip(average_logprob_think, average_logprob_dir)]
+
+
+    average_logprob_dir = []
+    average_logprob_think = []
+    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
+        df_dir,df_think = getWrong2CorrectDf(filename_direct,filename_think)
+
+        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value = df_dir['max_value'].mean()
+        average_logprob_dir.append(average_max_value)
+
+        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+        average_max_value2 = df_think['max_value'].mean()
+        average_logprob_think.append(average_max_value2)
+    average_logprob_Wrong2Correct = [think - dir for think, dir in zip(average_logprob_think, average_logprob_dir)]
+
+    result_bothWrong = [x * 100 for x in average_logprob_bothWrong]
+    result_Wrong2Direct = [x * 100 for x in average_logprob_Wrong2Correct]
+    plotBarComparison_all(data1=result_bothWrong,data2=result_Wrong2Direct,
+                          ylabel_name='Average Probability Increase of Selected Options (%)',labels=model_names,
+                          legendOut=False,yrange=5,legends=['Both Incorrect','Incorrect to Correct'])
+
+
+
 def plotAverageProb_Selected_All(filenames_direct, filenames_think, model_names):
     average_logprob_dir = []
     average_logprob_think = []
@@ -628,7 +673,7 @@ def plotGainAccuracyVsProbIncrease(data, model_names):
     plt.show()
 
 
-def plotBarComparison_all(data1, data2, labels, xlabel_name='Model Name', ylabel_name='Accuracy',pos = 'best', legendOut: bool = False,yrange=0.1):
+def plotBarComparison_all(data1, data2, labels, xlabel_name='Model Name', ylabel_name='Accuracy',pos = 'best', legendOut: bool = False,yrange=0.1, legends = ['Direct','After Thinking']):
 
     # Plot barchart
 
@@ -638,8 +683,8 @@ def plotBarComparison_all(data1, data2, labels, xlabel_name='Model Name', ylabel
 
     fig, ax = plt.subplots(figsize=(10, 6))  # 增大图表尺寸
 
-    ax.bar(x, data1, width, label='Direct', color='blue')
-    ax.bar([i + width for i in x], data2, width, label='After Thinking', color='orange')
+    ax.bar(x, data1, width, label=legends[0], color='blue')
+    ax.bar([i + width for i in x], data2, width, label=legends[1], color='orange')
 
     ax.set_xlabel(xlabel_name, fontsize=fontsize)
     ax.set_ylabel(ylabel_name, fontsize=fontsize)
