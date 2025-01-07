@@ -67,7 +67,7 @@ def main():
     # plotAverageProb_Selected_Wrong(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_VS_GainAccuracy(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotHeatMap(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
-    plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
 
 ## **************************
     # model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
@@ -121,6 +121,46 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
                 data[model_name].append([category_name,acc_increase,prob_increase,prob_increase_correct,prob_increase_wrong])
         save_data_as_pickle(data, data_filename)
     # plotGainAccuracyVsProbIncrease(data,model_names)
+    plot_heatmap(data,model_names,sort_column=3)
+
+def plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct, filenames_think, model_names, category_names):
+
+    data = {model_name: [] for model_name in model_names}
+
+    data_filename = 'heatmap_data_cache_bothVSWrong2Correct.pkl'
+    try:
+        # Try reading existing data
+        with open(data_filename, 'rb') as f:
+            data = pickle.load(f)
+        print("Data loaded from pickle file.")
+    except FileNotFoundError:
+        for filename_direct,filename_think,model_name in zip(filenames_direct,filenames_think,model_names):
+            for category_direct, category_think, category_name in zip(filename_direct, filename_think, category_names):
+                df_dir,df_think = getBothWrongDf(category_direct,category_think)
+
+                df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+                Both_average_max_value = df_dir['max_value'].mean()
+
+                df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+                Both_average_max_value2 = df_think['max_value'].mean()
+
+                df_dir,df_think = getWrong2CorrectDf(category_direct,category_think)
+
+                df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
+                In2C_average_max_value = df_dir['max_value'].mean()
+
+                df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
+                In2C_average_max_value2 = df_think['max_value'].mean()
+                increase_both = Both_average_max_value2-Both_average_max_value
+                Increase_in2Co = In2C_average_max_value2-In2C_average_max_value
+
+                data[model_name].append([category_name, increase_both, Increase_in2Co, Increase_in2Co-increase_both])
+        save_data_as_pickle(data, data_filename)
+
+    plot_heatmap(data,model_names,vmin =0,vmax =0.5,sort_column = 3, xlabels = ['Prob. inc. (Both Incorr.)', 'Prob. inc. (Incorr. to Corr.)', 'Difference'])
+
+
+def plot_heatmap(data,model_names,vmin = 0,vmax = 0.5, sort_column = 1,xlabels = ['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)']):
 
     # heatmapcolor
     custom_cmap_1 = LinearSegmentedColormap.from_list("lightgray_to_green", ["#f0f0f5", "blue"])
@@ -137,7 +177,7 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
 
 
     # plt.ioff()
-    vmin, vmax = 0, 0.5
+    # vmin, vmax = 0, 0.5
     cbar_ticks = np.linspace(vmin, vmax, num=int((vmax - vmin) / 0.1) + 1)
     label = []
     sorted_indices = None
@@ -161,7 +201,7 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
                 final_result = np.sum(middle_5_data, axis=0)
                 result[:, 1:] += final_result
 
-                sorted_indices = np.argsort(result[:, 4])  # sort by this column
+                sorted_indices = np.argsort(result[:, sort_column])  # sort by this column
 
 
             data_plot = np.array(data[model_names[col]])
@@ -195,7 +235,7 @@ def plotHeatMap(filenames_direct,filenames_think,model_names,category_names):
             else:
                 ax.set_yticklabels(label, fontsize=8, rotation=0)
                 if end_index is None:
-                    ax.set_xticklabels(['Acc. inc.','Prob. inc. (all)','Prob. inc. (corr.)','Prob. inc. (incorr.)'],fontsize=8, rotation=90)
+                    ax.set_xticklabels(xlabels,fontsize=8, rotation=90)
                 else:
                     ax.set_xticks([])
                     ax.set_xticklabels([])
@@ -534,42 +574,7 @@ def plotAccuracy_AllDataset(filenames_direct, filenames_think, model_names):
     plotBarComparison_all(data1=acc_dir,data2=acc_think,labels=model_names)
 
 
-def plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct, filenames_think, model_names):
-    average_logprob_dir = []
-    average_logprob_think = []
 
-    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
-        df_dir,df_think = getBothWrongDf(filename_direct,filename_think)
-
-        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
-        average_max_value = df_dir['max_value'].mean()
-        average_logprob_dir.append(average_max_value)
-
-        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
-        average_max_value2 = df_think['max_value'].mean()
-        average_logprob_think.append(average_max_value2)
-    average_logprob_bothWrong = [think - dir for think, dir in zip(average_logprob_think, average_logprob_dir)]
-
-
-    average_logprob_dir = []
-    average_logprob_think = []
-    for filename_direct,filename_think in zip(filenames_direct,filenames_think):
-        df_dir,df_think = getWrong2CorrectDf(filename_direct,filename_think)
-
-        df_dir['max_value'] = df_dir[['a', 'b', 'c', 'd']].max(axis=1)
-        average_max_value = df_dir['max_value'].mean()
-        average_logprob_dir.append(average_max_value)
-
-        df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
-        average_max_value2 = df_think['max_value'].mean()
-        average_logprob_think.append(average_max_value2)
-    average_logprob_Wrong2Correct = [think - dir for think, dir in zip(average_logprob_think, average_logprob_dir)]
-
-    result_bothWrong = [x * 100 for x in average_logprob_bothWrong]
-    result_Wrong2Direct = [x * 100 for x in average_logprob_Wrong2Correct]
-    plotBarComparison_all(data1=result_bothWrong,data2=result_Wrong2Direct,
-                          ylabel_name='Average Probability Increase of Selected Options (%)',labels=model_names,
-                          legendOut=False,yrange=5,legends=['Both Incorrect','Incorrect to Correct'])
 
 
 
