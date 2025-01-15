@@ -6,99 +6,141 @@ def getAverageProb(df):
     df['max_value'] = df[['a', 'b', 'c', 'd']].max(axis=1)
     average_max_value = df['max_value'].mean()
     return average_max_value
-def getDf(filename_dir, filename_think):
-    if isinstance(filename_dir, str) & isinstance(filename_think, str):
-        df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-        df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
-    if isinstance(filename_dir, list) & isinstance(filename_think, list):
-        df_dir = []
-        for filename_1 in filename_dir:
-            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-            df_tmp = deleteOutliers(df_tmp)
-            df_dir.append(df_tmp)
-        df_dir = pd.concat(df_dir, ignore_index=True)
+def getDf(filename_dir, filename_think = None):
+    if filename_think is not None:
+        if isinstance(filename_dir, str) & isinstance(filename_think, str):
+            df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+            df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+        if isinstance(filename_dir, list) & isinstance(filename_think, list):
+            df_dir = []
+            for filename_1 in filename_dir:
+                df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+                df_tmp = deleteOutliers(df_tmp)
+                df_dir.append(df_tmp)
+            df_dir = pd.concat(df_dir, ignore_index=True)
 
-        df_think = []
-        for filename_1 in filename_think:
-            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-            df_tmp = deleteOutliers(df_tmp)
-            df_think.append(df_tmp)
-        df_think = pd.concat(df_think, ignore_index=True)
+            df_think = []
+            for filename_1 in filename_think:
+                df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+                df_tmp = deleteOutliers(df_tmp)
+                df_think.append(df_tmp)
+            df_think = pd.concat(df_think, ignore_index=True)
 
-    df_dir = deleteOutliers(df_dir)
-    df_think = deleteOutliers(df_think)
-    return df_dir, df_think
+        df_dir = deleteOutliers(df_dir)
+        df_think = deleteOutliers(df_think)
+        return df_dir, df_think
+    else:
+        if isinstance(filename_dir, str):
+            df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+        if isinstance(filename_dir, list):
+            df_dir = []
+            for filename_1 in filename_dir:
+                df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+                df_tmp = deleteOutliers(df_tmp)
+                df_dir.append(df_tmp)
+            df_dir = pd.concat(df_dir, ignore_index=True)
+        df_dir = deleteOutliers(df_dir)
 
-def getWrongDf(filename_dir, filename_think):
+        return df_dir
 
-    if isinstance(filename_dir, str) & isinstance(filename_think, str):
-        df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-        df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
-    if isinstance(filename_dir, list) & isinstance(filename_think, list):
-        df_dir = []
-        for filename_1 in filename_dir:
-            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-            df_tmp = deleteOutliers(df_tmp)
-            df_dir.append(df_tmp)
-        df_dir = pd.concat(df_dir, ignore_index=True)
-
-        df_think = []
-        for filename_1 in filename_think:
-            df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-            df_tmp = deleteOutliers(df_tmp)
-            df_think.append(df_tmp)
-        df_think = pd.concat(df_think, ignore_index=True)
-
-    df_dir = deleteOutliers(df_dir)
-    df_think = deleteOutliers(df_think)
+def getWrongDf(filename_dir, filename_think = None):
     answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+    if filename_think is not None:
+        if isinstance(filename_dir, str) & isinstance(filename_think, str):
+            df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+            df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+        if isinstance(filename_dir, list) & isinstance(filename_think, list):
+            df_dir = []
+            for filename_1 in filename_dir:
+                df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+                df_tmp = deleteOutliers(df_tmp)
+                df_dir.append(df_tmp)
+            df_dir = pd.concat(df_dir, ignore_index=True)
 
-    df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0) # fill null value
-    df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
+            df_think = []
+            for filename_1 in filename_think:
+                df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+                df_tmp = deleteOutliers(df_tmp)
+                df_think.append(df_tmp)
+            df_think = pd.concat(df_think, ignore_index=True)
 
-    df_think[['a', 'b', 'c', 'd']] = df_think[['a', 'b', 'c', 'd']].fillna(0) # fill null value
-    df_think['predicted'] = df_think[['a', 'b', 'c', 'd']].idxmax(axis=1)
+        df_dir = deleteOutliers(df_dir)
+        df_think = deleteOutliers(df_think)
 
-    df_dir_wrong = df_dir[df_dir['predicted'] != df_dir['answer'].map(answer_map)]
-    df_think_wrong = df_think[df_think['predicted'] != df_think['answer'].map(answer_map)]
 
-    return df_dir_wrong, df_think_wrong
+        df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0) # fill null value
+        df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
 
-def getCorrectDf(filename_dir, filename_think):
-    df_dir,df_think = getDf(filename_dir,filename_think)
-    # if isinstance(filename_dir, str) & isinstance(filename_think, str):
-    #     df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
-    #     df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
-    # if isinstance(filename_dir, list) & isinstance(filename_think, list):
-    #     df_dir = []
-    #     for filename_1 in filename_dir:
-    #         df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-    #         df_tmp = deleteOutliers(df_tmp)
-    #         df_dir.append(df_tmp)
-    #     df_dir = pd.concat(df_dir, ignore_index=True)
-    #
-    #     df_think = []
-    #     for filename_1 in filename_think:
-    #         df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
-    #         df_tmp = deleteOutliers(df_tmp)
-    #         df_think.append(df_tmp)
-    #     df_think = pd.concat(df_think, ignore_index=True)
+        df_think[['a', 'b', 'c', 'd']] = df_think[['a', 'b', 'c', 'd']].fillna(0) # fill null value
+        df_think['predicted'] = df_think[['a', 'b', 'c', 'd']].idxmax(axis=1)
 
-    df_dir = deleteOutliers(df_dir)
-    df_think = deleteOutliers(df_think)
+        df_dir_wrong = df_dir[df_dir['predicted'] != df_dir['answer'].map(answer_map)]
+        df_think_wrong = df_think[df_think['predicted'] != df_think['answer'].map(answer_map)]
+
+        return df_dir_wrong, df_think_wrong
+    else:
+        if isinstance(filename_dir, str):
+            df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+        if isinstance(filename_dir, list):
+            df_dir = []
+            for filename_1 in filename_dir:
+                df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+                df_tmp = deleteOutliers(df_tmp)
+                df_dir.append(df_tmp)
+            df_dir = pd.concat(df_dir, ignore_index=True)
+        df_dir = deleteOutliers(df_dir)
+        answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+        df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0)  # fill null value
+        df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
+        df_dir_wrong = df_dir[df_dir['predicted'] != df_dir['answer'].map(answer_map)]
+        return df_dir_wrong
+
+
+def getCorrectDf(filename_dir, filename_think = None):
     answer_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+    if filename_think is not None:
+        df_dir,df_think = getDf(filename_dir,filename_think)
+        # if isinstance(filename_dir, str) & isinstance(filename_think, str):
+        #     df_dir = pd.read_csv(filename_dir, encoding='ISO-8859-1')
+        #     df_think = pd.read_csv(filename_think, encoding='ISO-8859-1')
+        # if isinstance(filename_dir, list) & isinstance(filename_think, list):
+        #     df_dir = []
+        #     for filename_1 in filename_dir:
+        #         df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+        #         df_tmp = deleteOutliers(df_tmp)
+        #         df_dir.append(df_tmp)
+        #     df_dir = pd.concat(df_dir, ignore_index=True)
+        #
+        #     df_think = []
+        #     for filename_1 in filename_think:
+        #         df_tmp = pd.read_csv(filename_1, encoding='ISO-8859-1')
+        #         df_tmp = deleteOutliers(df_tmp)
+        #         df_think.append(df_tmp)
+        #     df_think = pd.concat(df_think, ignore_index=True)
 
-    df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0) # fill null value
-    df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
-
-    df_think[['a', 'b', 'c', 'd']] = df_think[['a', 'b', 'c', 'd']].fillna(0) # fill null value
-    df_think['predicted'] = df_think[['a', 'b', 'c', 'd']].idxmax(axis=1)
-
-    df_dir_correct = df_dir[df_dir['predicted'] == df_dir['answer'].map(answer_map)]
-    df_think_correct = df_think[df_think['predicted'] == df_think['answer'].map(answer_map)]
+        df_dir = deleteOutliers(df_dir)
+        df_think = deleteOutliers(df_think)
 
 
-    return df_dir_correct, df_think_correct
+        df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0) # fill null value
+        df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
+
+        df_think[['a', 'b', 'c', 'd']] = df_think[['a', 'b', 'c', 'd']].fillna(0) # fill null value
+        df_think['predicted'] = df_think[['a', 'b', 'c', 'd']].idxmax(axis=1)
+
+        df_dir_correct = df_dir[df_dir['predicted'] == df_dir['answer'].map(answer_map)]
+        df_think_correct = df_think[df_think['predicted'] == df_think['answer'].map(answer_map)]
+
+
+        return df_dir_correct, df_think_correct
+
+    else:
+        df_dir = getDf(filename_dir)
+        df_dir = deleteOutliers(df_dir)
+        df_dir[['a', 'b', 'c', 'd']] = df_dir[['a', 'b', 'c', 'd']].fillna(0)  # fill null value
+        df_dir['predicted'] = df_dir[['a', 'b', 'c', 'd']].idxmax(axis=1)
+        df_dir_correct = df_dir[df_dir['predicted'] == df_dir['answer'].map(answer_map)]
+        return df_dir_correct
 
 
 def getBothWrongDf(filename_dir, filename_think):
@@ -196,7 +238,7 @@ def getAccuracy(filename):
     # calculate accuracy
     correct_predictions = (df['predicted'] == df['answer'].map(answer_map)).sum()
     total_predictions = len(df)
-    print(total_predictions)
+    # print(total_predictions)
     accuracy = correct_predictions / total_predictions
     return accuracy
 

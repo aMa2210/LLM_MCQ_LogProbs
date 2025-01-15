@@ -62,12 +62,12 @@ def main():
                    'Mistral-7B', 'Yi-1.5-9B']
 
     # plotAccuracy_AllDataset(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
-    # plotAverageProb_Selected_All(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
+    plotAverageProb_Selected_All(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_Selected_Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_Selected_Wrong(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotAverageProb_VS_GainAccuracy(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names)
     # plotHeatMap(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
-    plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
+    # plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct=filenames_direct,filenames_think=filenames_think,model_names=model_names,category_names=file_names)
 
 ## **************************
     # model_names = ['GPT-4o-mini', 'Llama-3.1-8B-Instruct', 'Llama-3.2-11B-Vision-Instruct', 'gemma-2-9b-it',
@@ -151,10 +151,10 @@ def plotAverageProb_BothWrong_vs_Wrong2Correct(filenames_direct, filenames_think
 
                 df_think['max_value'] = df_think[['a', 'b', 'c', 'd']].max(axis=1)
                 In2C_average_max_value2 = df_think['max_value'].mean()
-                increase_both = Both_average_max_value2-Both_average_max_value
+                Increase_both = Both_average_max_value2-Both_average_max_value
                 Increase_in2Co = In2C_average_max_value2-In2C_average_max_value
 
-                data[model_name].append([category_name, increase_both, Increase_in2Co, Increase_in2Co-increase_both])
+                data[model_name].append([category_name, Increase_both, Increase_in2Co, Increase_in2Co-Increase_both])
         save_data_as_pickle(data, data_filename)
 
     plot_heatmap(data,model_names,vmin =0,vmax =0.5,sort_column = 3, xlabels = ['Prob. inc. (Both Incorr.)', 'Prob. inc. (Incorr. to Corr.)', 'Difference'])
