@@ -1,4 +1,5 @@
-This repo provides the data and scripts for the paper: Multiple Choice Questions: Thinking Makes Large Language Models (LLMs) More Self-Confident Even When They are Wrong
+This repo provides the data and scripts for the paper:  
+**Multiple Choice Questions: Thinking Makes Large Language Models (LLMs) More Self-Confident Even When They are Wrong**, *IEEE Intelligent Systems* (in press).
 
 Repository Contents
 - MMLU: Contains the MMLU datasets from https://huggingface.co/datasets/cais/mmlu
